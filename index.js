@@ -24,7 +24,7 @@ app.use(cors({
 app.post('/', async function(request, response){
   let input = request.body
   console.log(request.body);
-  let user_id = request.body['message']['from']['id']
+  let user_id = request.body['message']['chat']['id']
   let message = request.body['message']
   let update_id = request.body['update_id'].toString()
   user_id = user_id.toString()
