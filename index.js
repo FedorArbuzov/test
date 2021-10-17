@@ -22,18 +22,16 @@ app.use(cors({
 }));
 
 app.post('/', async function(request, response){
-  let input = request.body
-  console.log(request.body);
-  let user_id = request.body['message']['chat']['id']
-  let message = request.body['message']
+  try {
   let update_id = request.body['update_id'].toString()
-  user_id = user_id.toString()
-  const cityRef = db.collection('messages').doc(user_id);
-  // const doc = await cityRef.get();
-  let newMessage = {}
-  newMessage[update_id] = message
-  const res = await cityRef.set(newMessage, { merge: true })
+  const msg = db.collection('messages').doc(update_id);
+  const res = await msg.set(request.body, { merge: true })
+  } catch(err){
+    console.log(err)
+  }
   response.status(200).send({});
+
+  // const doc = await cityRef.get();
   // if (message === '/start' && !doc.exists) {
   //   console.log('onboard user logic');
   //   // onboard user logic
