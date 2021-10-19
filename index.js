@@ -55,8 +55,8 @@ app.post('/', async function(request, response){
 });
 
 app.get('/success-submit/:task/:userID', async function(request, response){
-  let task = req.param("tagId");
-  let userID = parseInt(req.param("userID"));
+  let task = request.param("tagId");
+  let userID = parseInt(request.param("userID"));
   axios.post(`${url}${apiToken}/sendMessage`,
     {
         chat_id: userID,
