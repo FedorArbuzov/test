@@ -60,7 +60,7 @@ app.get('/success-submit/:task/:userID', async function(request, response){
   axios.post(`${url}${apiToken}/sendMessage`,
     {
         chat_id: userID,
-        text: "хорошая работа, делай задачи дальше!"
+        text: `Вы сделали задачу ${task}. Хорошая работа, делай задачи дальше!`
     })
     .then((res) => { 
         response.status(200).send(res);
@@ -68,29 +68,11 @@ app.get('/success-submit/:task/:userID', async function(request, response){
         response.send(error);
     });
   res.send("tagId is set to " + req.param("tagId"));
-
-  // const doc = await cityRef.get();
-  // if (message === '/start' && !doc.exists) {
-  //   console.log('onboard user logic');
-  //   // onboard user logic
-  // } else if (message === '/start') {
-  //   console.log('Document data:', doc.data());
-  //   // restart progress
-  // }
-  // else {
-  //   // save user question and send to mentor
-  // }
-  // axios.post(`${url}${apiToken}/sendPhoto`,
-  // {
-  //      chat_id: -744777013,
-  //      photo: 'AgACAgIAAxkBAANEYWl5pFfpYd3np-PSrmpDDSgVa7AAApa3MRuKrFFLXw1hMutgUuwBAAMCAAN4AAMhBA'
-  // })
-  // .then((res) => { 
-  //     response.status(200).send(res);
-  // }).catch((error) => {
-  //     response.send(error);
-  // });
 });
+
+app.get('/cron-status', async function(request, response){
+
+})
 
 app.listen(PORT);
 

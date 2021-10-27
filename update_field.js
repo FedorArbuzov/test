@@ -1,5 +1,3 @@
-
-const { machineLearning } = require('firebase-admin');
 let admin = require('firebase-admin');
 let fs = require('fs');
 
