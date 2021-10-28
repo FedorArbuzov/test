@@ -55,7 +55,7 @@ app.post('/', async function(request, response){
 });
 
 app.get('/success-submit/:task/:userID', async function(request, response){
-  let task = request.param("tagId");
+  let task = request.param("task");
   let userID = parseInt(request.param("userID"));
   axios.post(`${url}${apiToken}/sendMessage`,
     {
