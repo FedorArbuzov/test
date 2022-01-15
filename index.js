@@ -47,7 +47,7 @@ app.post('/', async function(request, response){
   //      chat_id: -744777013,
   //      photo: 'AgACAgIAAxkBAANEYWl5pFfpYd3np-PSrmpDDSgVa7AAApa3MRuKrFFLXw1hMutgUuwBAAMCAAN4AAMhBA'
   // })
-  // .then((res) => { 
+  // .then((res) => {
   //     response.status(200).send(res);
   // }).catch((error) => {
   //     response.send(error);
@@ -60,9 +60,9 @@ app.get('/success-submit/:task/:userID', async function(request, response){
   axios.post(`${url}${apiToken}/sendMessage`,
     {
         chat_id: userID,
-        text: `Вы сделали задачу ${task}. Хорошая работа, делай задачи дальше!`
+        text: `Вы прошли задание ${task}. Хорошая работа, продалжай дальше!`
     })
-    .then((res) => { 
+    .then((res) => {
         response.status(200).send(res);
     }).catch((error) => {
         response.send(error);
