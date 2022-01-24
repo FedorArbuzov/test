@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="../codemirror.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../codemirror.js"></script>
+    <script src="../python.js"></script>
+  </head>
+  <body onload="brython(1)">
+    <div class="login-form">
+      <form>
+        <label for="fname">Telegram ID</label>
+        <input class="telegram-input" type="text" id="fname" name="firstname" placeholder="telegram id из чата">
+
+
+        <input class="login-btn" type="submit" value="Войти">
+      </form>
+    </div>
+      <input id="show_task" type="submit" class="submit-btn" value="Показать задание">
+      <div class="task">
+      </div>
+    <div class="buttons">
+      <input id="run_button" type="submit" class="submit-btn" value="Выполнить код" title="Вы можете использовать комбинацию ALT+P для выполнения кода!">
+      <input id="submit_button" type="submit" class="submit-btn" value="Отправить задание" title="Вы можете использовать комбинацию ALT+P для выполнения кода!">
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="20" max="80" value="50" class="slider" id="myRange">
+    </div>
+    <div class="main">
+      <textarea id="code" name="code">a = int(input())
+b = int(input())
+c = int(input())
+print('qwe' + str(a))</textarea>
+      <textarea id="results" name="results"></textarea>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+    <script>
+      function s(){
+        console.log('!!!')
+      }
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCPnRZJWX2Yr9FpXZjEhlzw66sgi4mMXtg",
+        authDomain: "exallenge.firebaseapp.com",
+        databaseURL: "https://exallenge.firebaseio.com",
+        projectId: "exallenge",
+        storageBucket: "exallenge.appspot.com",
+        messagingSenderId: "183127626486",
+        appId: "1:183127626486:web:8fb4ccfec17a09949b12d7",
+        measurementId: "G-8GBR72WH20",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+        const urlParams = new URLSearchParams(window.location.search);
+        const course = urlParams.get('course');
+        const task = urlParams.get('task');
+        firebase
+          .firestore()
+          .collection("courses")
+          .doc(course)
+          .collection("items")
+          .doc(task)
+          .get()
+          .then(doc => {
+            const result = doc.data();
+            console.log(result);
+            localStorage.setItem("task", JSON.stringify(result.test_data));
+          })
+          .catch(err => {
+            console.log(err); // eslint-disable-line no-console
+          });
+      let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        indentUnit: 4,
+        lineWrapping: true,
+        mode: { name: "python", version: 3, singleLineStringErrors: false },
+      });
+
+      let editorResult = CodeMirror.fromTextArea(document.getElementById("results"), {
+        lineNumbers: true,
+        indentUnit: 4,
+        lineWrapping: true,
+      });
+      document.editor = editor;
+      document.editorResult = editorResult;
+
+      let slider = document.getElementById("myRange");
+      //let firstCodeEditor = document.querySelector(".CodeMirror:nth-child(2)");
+      let codeEditors = document.querySelectorAll(".CodeMirror");
+
+      // Update the current slider value (each time you drag the slider handle)
+      slider.oninput = function() {
+        console.log(this.value);
+        codeEditors[0].style.width = `${this.value}%`
+        codeEditors[1].style.width = `${100 - this.value}%`
+      }
+
+      //For combine keys like Alt+P
+      document.onkeyup = function (e) {
+          var evt = window.event || e;
+              if (evt.keyCode == 80 && evt.altKey) {
+                  document.querySelector("#run_button").click()
+              }
+      }
+      let show_task=document.querySelector("#show_task")
+        show_task.addEventListener("click", function(){
+        if (document.querySelector(".task").style.display !== 'block'){
+          document.querySelector(".task").style.display = 'block';
+        } else {
+          document.querySelector(".task").style.display = 'none';
+        }
+
+        })
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.8.10/brython_stdlib.js"
+    ></script>
+    <script type="text/python">
+      from browser import document, window
+      import sys
+      import json
+
+      storage = window.localStorage
+
+      editor = document.editor
+      editorResult = document.editorResult
+
+      input_data = []
+      output_data = []
+
+      def read_data():
+        return input_data.pop(0)
+
+      def set_data(t):
+        output_data.append(str(t))
+
+      class CallScriptOutput:
+        def __init__(self):
+            self.console = document["results"]
+
+        def write(self, text):
+            editorResult.setValue(editorResult.getValue() + text)
+
+      class TestScriptOutput:
+        def __init__(self):
+            self.console = document["results"]
+
+        def write(self, text):
+            editorResult.setValue(editorResult.getValue() + text)
+
+      def callScript(event):
+        sys.stdout = CallScriptOutput()
+        editorResult.setValue("")
+        exec(editor.getValue())
+
+      def testScript(event):
+        task_info = json.loads(storage.getItem('task'))
+        size = len(task_info)
+        idx_list = [idx + 1 for idx, val in enumerate(task_info) if val == '_________________________']
+        res = [task_info[i: j] for i, j in
+          zip([0] + idx_list, idx_list +
+          ([size] if idx_list[-1] != size else []))]
+        res = res[1:]
+        print(res)
+
+        global input_data
+        input_data = []
+
+        sys.stdout = TestScriptOutput()
+        editorResult.setValue("")
+        code = editor.getValue().replace('input', 'read_data')
+        code = code.replace('print', 'set_data')
+
+        for case in res:
+          global output_data
+          output_data = []
+          idx = 0
+          for idx, data in enumerate(case[:-1]):
+            if data != '=========================':
+              input_data.append(data)
+            else:
+              exec(code)
+              break
+          if output_data == case[idx+1:-1]:
+            editorResult.setValue(editorResult.getValue() + 'ok\n')
+          else:
+            editorResult.setValue(editorResult.getValue() + 'not ok\n')
+            editorResult.setValue(editorResult.getValue() + 'Данные не совпали ...\n')
+            break
+        else:
+          window.s()
+          editorResult.setValue(editorResult.getValue() + 'Задача решена!!!!\n')
+
+
+
+      document["run_button"].bind("click", callScript)
+      document["submit_button"].bind("click", testScript)
+    </script>
+
+  </body>
+</html>

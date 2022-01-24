@@ -2,6 +2,7 @@ let express = require('express');
 let axios = require('axios');
 let admin = require('firebase-admin');
 const cors = require('cors');
+const path = require('path');
 
 const PORT = process.env.PORT || 5000;
 
@@ -15,6 +16,9 @@ admin.initializeApp({credential: admin.credential.cert(config)});
 db = admin.firestore();
 
 var app = express();
+
+//app.use(express.static('editor-interface-js'))
+app.use(express.static('editor-interface-python'))
 
 app.use(express.json());
 app.use(cors({
@@ -72,6 +76,14 @@ app.get('/success-submit/:task/:userID', async function(request, response){
 
 app.get('/cron-status', async function(request, response){
 
+})
+
+app.get('/editor-interface-js/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/editor-interface-js/index.html'));
+})
+
+app.get('/editor-interface-python/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/editor-interface-python/index.html'));
 })
 
 app.listen(PORT);
