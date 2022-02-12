@@ -43,6 +43,7 @@ def testScript(event):
   res = []
   for i in task_info:
     res.append(i.split('========================='))
+  print(res)
 
   global input_data
   input_data = []
@@ -53,6 +54,7 @@ def testScript(event):
   code = code.replace('print', 'set_data')
 
   for case in res:
+    print(case)
     global output_data
     output_data = []
     input_data = case[0].split('\\n')[1:-1]
