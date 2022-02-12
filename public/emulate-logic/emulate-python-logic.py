@@ -45,9 +45,6 @@ def testScript(event):
     res.append(i.split('========================='))
   print(res)
 
-  global input_data
-  input_data = []
-
   sys.stdout = TestScriptOutput()
   editorResult.setValue("")
   code = editor.getValue().replace('input', 'read_data')
@@ -57,6 +54,7 @@ def testScript(event):
     print(case)
     global output_data
     output_data = []
+    global input_data
     input_data = case[0].split('\\n')[1:-1]
     print(input_data)
     try:
