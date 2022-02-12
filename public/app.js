@@ -51,6 +51,7 @@ firebase
   .then(doc => {
     const result = doc.data();
     document.task = result;
+    window.localStorage.setItem("task", result['test_data_txt'])
     console.log(document.querySelector(".task"))
     document.querySelector(".task").innerHTML = result.theory;
   })
