@@ -1,3 +1,5 @@
+const jsConfetti = new JSConfetti()
+
 function convertTrase(trase) {
   trase = trase.split('\n')
   errMsg = trase[0]
@@ -7,7 +9,9 @@ function convertTrase(trase) {
   return errMsg
 }
 
-function taskSuccessSubmit(task){
+function taskSuccessSubmit(){
+  const task = urlParams.get('task');
+  jsConfetti.addConfetti()
   fetch(`https://quiet-stream-57326.herokuapp.com/success-submit/${task}/${localStorage.getItem('telegramID')}`).then(function(response) {
       return response.json();
     }).then(function(data) {
@@ -30,32 +34,25 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+const urlParams = new URLSearchParams(window.location.search);
+const course = urlParams.get('course');
+const task = urlParams.get('task');
 firebase
   .firestore()
-  .collection("c")
-  .doc("SF")
-  .onSnapshot(function(doc) {
-    console.log("Current data: ", doc.data());
+  .collection("courses")
+  .doc(course)
+  .collection("items")
+  .doc(task)
+  .get()
+  .then(doc => {
+    const result = doc.data();
+    document.task = result;
+    console.log(document.querySelector(".task"))
+    document.querySelector(".task").innerHTML = result.theory;
+  })
+  .catch(err => {
+    console.log(err); // eslint-disable-line no-console
   });
-  const urlParams = new URLSearchParams(window.location.search);
-  const course = urlParams.get('course');
-  const task = urlParams.get('task');
-  firebase
-    .firestore()
-    .collection("courses")
-    .doc(course)
-    .collection("items")
-    .doc(task)
-    .get()
-    .then(doc => {
-      const result = doc.data();
-      document.task = result;
-      console.log(document.querySelector(".task"))
-      document.querySelector(".task").innerHTML = result.theory;
-    })
-    .catch(err => {
-      console.log(err); // eslint-disable-line no-console
-    });
 let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   indentUnit: 4,
@@ -232,7 +229,7 @@ if (good_cases === result.length){
   let today = new Date()
   res[`${task}`] = today
   userDoc.set(res, {merge: true});
-  taskSuccessSubmit(task);
+  taskSuccessSubmit();
 }
 else{
   editorResult.setValue(`ПРОЙДЕНО ТЕСТОВ: ${good_cases} ИЗ ${result.length}, ИЗУЧИТЕ ВЫВОД И ПОПРОБУЙТЕ ЕЩЕ РАЗ!)` + "\n" + editorResult.getValue())
