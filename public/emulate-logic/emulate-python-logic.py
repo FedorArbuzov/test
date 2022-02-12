@@ -51,27 +51,35 @@ def testScript(event):
   code = code.replace('print', 'set_data')
 
   for case in res:
-    print(case)
+    print('==================================')
+    print("ВХОДНЫЕ ДАННЫЕ: ")
     global output_data
     output_data = []
     global input_data
-    input_data = case[0].split('\\n')[1:-1]
-    print(input_data)
+    input_data = case[0].split('\n')[1:-1]
+    for i in input_data:
+      print(i)
     try:
       exec(code)
     except:
       tb = traceback.format_exc()
       print(tb)
       break
-    if output_data == case[1].split('\\n')[1:-1]:
-      editorResult.setValue(editorResult.getValue() + 'ok\n')
+    print('ОЖИДАЕМЫЙ РЕЗУЛЬТАТ: ')
+    for i in output_data:
+      print(i)
+    print('ВАШ РЕЗУЛЬТАТ: ')
+    for i in case[1].split('\n')[1:-1]:
+      print(i)
+    if output_data == case[1].split('\n')[1:-1]:
+      editorResult.setValue(editorResult.getValue() + 'ДАННЫЕ СОВПАЛИ!!!\n')
     else:
-      editorResult.setValue(editorResult.getValue() + 'not ok\n')
-      editorResult.setValue(editorResult.getValue() + 'Данные не совпали ...\n')
+      editorResult.setValue(editorResult.getValue() + 'ДАННЫЕ НЕ СОВПАЛИ...\n')
+      editorResult.setValue('ТЕСТЫ НЕ СОВПАЛИ, ИЗУЧИТЕ ВЫВОД И ПОПРОБУЙТЕ ЕЩЕ РАЗ ...\n' + editorResult.getValue())
       break
   else:
     window.taskSuccessSubmit()
-    editorResult.setValue(editorResult.getValue() + 'Задача решена!!!!\n')
+    editorResult.setValue('ЗАДАЧА РЕШЕНА, ВСЕ ТЕСТЫ ПРОЙДЕНЫ!!!!\n' + editorResult.getValue())
 
 
 
