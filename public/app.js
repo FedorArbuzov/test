@@ -37,6 +37,10 @@ firebase.analytics();
 const urlParams = new URLSearchParams(window.location.search);
 const course = urlParams.get('course');
 const task = urlParams.get('task');
+let editorType = "javascript"
+if (window.location.pathname === '/editor-interface-python/'){
+  editorType = "python"
+}
 firebase
   .firestore()
   .collection("courses")
@@ -57,7 +61,7 @@ let editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   indentUnit: 4,
   lineWrapping: true,
-  mode: 'javascript',
+  mode: editorType,
   theme: 'duotone-light'
 });
 
