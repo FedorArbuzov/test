@@ -58,6 +58,7 @@ def testScript(event):
     global output_data
     output_data = []
     input_data = case[0].split('\\n')[1:-1]
+    print(input_data)
     try:
       exec(code)
     except:
