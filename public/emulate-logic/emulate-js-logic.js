@@ -22,12 +22,7 @@ try {
     editorResult.setValue(convertTrase(e.stack))
     return
   }
-  let userDoc = firebase.firestore().collection('users').doc(localStorage.getItem('telegramID'));
-  // Atomically increment by 1.
-  let res = {}
-  let today = (new Date()).toLocaleDateString("en-US").replaceAll('/', '')
-  res[`${today}.${task}.runs`] = firebase.firestore.FieldValue.increment(1)
-  userDoc.update(res);
+  taskRun();
 })
 let submit1=document.querySelector("#submit_button")
 submit1.addEventListener("click",function(){
@@ -83,21 +78,10 @@ for (let i = 0; i < result.length; i++) {
 }
 if (good_cases === result.length){
   editorResult.setValue("ВСЕ ТЕСТЫ ПРОЙДЕНЫ, ПОЗДРАВЛЯЕМ!" + "\n" + editorResult.getValue())
-  let userDoc = firebase.firestore().collection('traction').doc(localStorage.getItem('telegramID'));
-  // Atomically increment by 1.
-  let res = {}
-  let today = new Date()
-  res[`${task}`] = today
-  userDoc.set(res, {merge: true});
   taskSuccessSubmit();
 }
 else{
   editorResult.setValue(`ПРОЙДЕНО ТЕСТОВ: ${good_cases} ИЗ ${result.length}, ИЗУЧИТЕ ВЫВОД И ПОПРОБУЙТЕ ЕЩЕ РАЗ!)` + "\n" + editorResult.getValue())
 }
-let userDoc = firebase.firestore().collection('users').doc(localStorage.getItem('telegramID'));
-// Atomically increment by 1.
-let res = {}
-let today = (new Date()).toLocaleDateString("en-US").replaceAll('/', '')
-res[`${today}.${task}.submits`] = firebase.firestore.FieldValue.increment(1)
-userDoc.update(res);
+taskSubmit()
 })

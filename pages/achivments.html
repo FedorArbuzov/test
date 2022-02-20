@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>test</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../login.css" />
+    <link rel="stylesheet" href="../achivment.css" />
+  </head>
+  <body>
+  <div class="login-form">
+    <form>
+      <label for="fname">Telegram ID</label>
+      <input class="telegram-input" type="text" id="fname" name="firstname" placeholder="telegram id из чата">
+      <input class="login-btn" type="submit" value="Войти">
+    </form>
+  </div>
+  <h1>Ваши достижения!</h1>
+  <div class="achivments">
+
+    <div class="achivment-block">
+      <img src="../achivment-icons/trust.png" />
+      <h2>Начало обучения!</h2>
+      <p>Выполнить первое задание</p>
+    </div>
+  </div>
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+  <script src="../firebase-config.js"></script>
+  <script src="../login.js"></script>
+  <script src="../achivment.js"></script>
+  </body>
+</html>

@@ -10,8 +10,17 @@ function convertTrase(trase) {
 }
 
 function taskSuccessSubmit(){
+
   const task = urlParams.get('task');
+  let userDoc = firebase.firestore().collection('traction').doc(localStorage.getItem('telegramID'));
+  // Atomically increment by 1.
+  let res = {}
+  let today = new Date()
+  res[`${task}`] = today
+  userDoc.set(res, {merge: true});
+
   jsConfetti.addConfetti()
+
   fetch(`https://quiet-stream-57326.herokuapp.com/success-submit/${task}/${localStorage.getItem('telegramID')}`).then(function(response) {
       return response.json();
     }).then(function(data) {
@@ -21,7 +30,25 @@ function taskSuccessSubmit(){
     });
 }
 
-var firebaseConfig = {
+function taskSubmit(){
+  let userDoc = firebase.firestore().collection('users').doc(localStorage.getItem('telegramID'));
+  // Atomically increment by 1.
+  let res = {}
+  let today = (new Date()).toLocaleDateString("en-US").replaceAll('/', '_')
+  res[`${today}.${task}.submits`] = firebase.firestore.FieldValue.increment(1)
+  userDoc.update(res);
+}
+
+function taskRun(){
+  let userDoc = firebase.firestore().collection('users').doc(localStorage.getItem('telegramID'));
+  // Atomically increment by 1.
+  let res = {}
+  let today = (new Date()).toLocaleDateString("en-US").replaceAll('/', '_')
+  res[`${today}.${task}.runs`] = firebase.firestore.FieldValue.increment(1)
+  userDoc.update(res);
+}
+
+let firebaseConfig = {
   apiKey: "AIzaSyCPnRZJWX2Yr9FpXZjEhlzw66sgi4mMXtg",
   authDomain: "exallenge.firebaseapp.com",
   databaseURL: "https://exallenge.firebaseio.com",
@@ -101,6 +128,9 @@ document.querySelector('.login-form > form').addEventListener('submit', function
   userDoc.set({}, {merge: true});
 
   userDoc = firebase.firestore().collection('traction').doc(localStorage.getItem('telegramID'));
+  userDoc.set({}, {merge: true});
+
+  userDoc = firebase.firestore().collection('user-achivments').doc(localStorage.getItem('telegramID'));
   userDoc.set({}, {merge: true});
 })
 

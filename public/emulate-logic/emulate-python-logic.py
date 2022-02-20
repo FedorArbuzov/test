@@ -35,6 +35,7 @@ def callScript(event):
   sys.stdout = CallScriptOutput()
   editorResult.setValue("")
   exec(editor.getValue())
+  window.taskRun()
 
 def testScript(event):
   task_info = storage.getItem('task')
@@ -80,6 +81,7 @@ def testScript(event):
   else:
     window.taskSuccessSubmit()
     editorResult.setValue('ЗАДАЧА РЕШЕНА, ВСЕ ТЕСТЫ ПРОЙДЕНЫ!!!!\n' + editorResult.getValue())
+  window.taskSubmit()
 
 
 

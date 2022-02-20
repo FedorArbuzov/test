@@ -86,6 +86,11 @@ app.get('/editor-interface-python/', function(req, res) {
   res.sendFile(path.join(__dirname, '/pages/py-editor.html'));
 })
 
+app.get('/achivments/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/pages/achivments.html'));
+})
+
+
 app.listen(PORT);
 
 
