@@ -108,19 +108,18 @@ async function achivmentSetLogic(userID){
   console.log(userTractionData)
 
   // проверка числа сделанных задач и наличия ачивок, если задачи сделаны, а ачивок нет - добавляем
-
-  if (Object.keys(userTractionData).length >= 1 && !userAchivmentsData.includes('trust')){
-    // добавить ачивку пользователю и сказать об этом в сообщениях
-    let arrUnion = userAchivments.update({
-      achivments: admin.firestore.FieldValue.arrayUnion('trust')
-    });
-
-    return achivmentMessage
-  }
   if (Object.keys(userTractionData).length >= 5 && !userAchivmentsData.includes('struggle')){
     // добавить ачивку пользователю и сказать об этом в сообщениях
     let arrUnion = userAchivments.update({
       achivments: admin.firestore.FieldValue.arrayUnion('struggle')
+    });
+
+    return achivmentMessage
+  }
+  if (Object.keys(userTractionData).length >= 1 && !userAchivmentsData.includes('trust')){
+    // добавить ачивку пользователю и сказать об этом в сообщениях
+    let arrUnion = userAchivments.update({
+      achivments: admin.firestore.FieldValue.arrayUnion('trust')
     });
 
     return achivmentMessage
