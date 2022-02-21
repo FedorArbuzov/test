@@ -21,7 +21,7 @@ function taskSuccessSubmit(){
 
   jsConfetti.addConfetti()
 
-  fetch(`https://quiet-stream-57326.herokuapp.com/success-submit/${task}/${localStorage.getItem('telegramID')}`).then(function(response) {
+  fetch(`/success-submit/${task}/${localStorage.getItem('telegramID')}`).then(function(response) {
       return response.json();
     }).then(function(data) {
       console.log(data);

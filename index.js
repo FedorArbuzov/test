@@ -61,17 +61,20 @@ app.post('/', async function(request, response){
 app.get('/success-submit/:task/:userID', async function(request, response){
   let task = request.param("task");
   let userID = parseInt(request.param("userID"));
+  let achivmentMessage =  await achivmentSetLogic(userID)
+  console.log(achivmentMessage);
   axios.post(`${url}${apiToken}/sendMessage`,
     {
         chat_id: userID,
-        text: `Вы прошли задание ${task}. Хорошая работа, продалжай дальше!`
+        text: `Вы прошли задание ${task}. Хорошая работа, продалжай дальше! \n ${achivmentMessage}`,
+        parse_mode: 'HTML'
     })
     .then((res) => {
         response.status(200).send(res);
     }).catch((error) => {
+        console.log(error)
         response.send(error);
     });
-  res.send("tagId is set to " + req.param("tagId"));
 });
 
 app.get('/cron-status', async function(request, response){
@@ -89,6 +92,41 @@ app.get('/editor-interface-python/', function(req, res) {
 app.get('/achivments/', function(req, res) {
   res.sendFile(path.join(__dirname, '/pages/achivments.html'));
 })
+
+
+async function achivmentSetLogic(userID){
+  let achivmentMessage = 'У вас новое достижение! Вы можете их посмотреть <a href="https://quiet-stream-57326.herokuapp.com/achivments">тут</a>'
+  console.log('achivmentSetLogic')
+  let userAchivments = db.collection('user-achivments').doc(userID.toString());
+  let userAchivmentsData = await userAchivments.get();
+  userAchivmentsData = userAchivmentsData.data()['achivments']
+  console.log(userAchivmentsData)
+
+  let userTraction = db.collection('traction').doc(userID.toString());
+  let userTractionData = await userTraction.get();
+  userTractionData = userTractionData.data()
+  console.log(userTractionData)
+
+  // проверка числа сделанных задач и наличия ачивок, если задачи сделаны, а ачивок нет - добавляем
+
+  if (Object.keys(userTractionData).length >= 1 && !userAchivmentsData.includes('trust')){
+    // добавить ачивку пользователю и сказать об этом в сообщениях
+    let arrUnion = userAchivments.update({
+      achivments: admin.firestore.FieldValue.arrayUnion('trust')
+    });
+
+    return achivmentMessage
+  }
+  if (Object.keys(userTractionData).length >= 5 && !userAchivmentsData.includes('struggle')){
+    // добавить ачивку пользователю и сказать об этом в сообщениях
+    let arrUnion = userAchivments.update({
+      achivments: admin.firestore.FieldValue.arrayUnion('struggle')
+    });
+
+    return achivmentMessage
+  }
+}
+
 
 
 app.listen(PORT);
