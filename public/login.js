@@ -19,5 +19,5 @@ document.querySelector('.login-form > form').addEventListener('submit', function
   userDoc.set({}, {merge: true});
 
   userDoc = firebase.firestore().collection('user-achivments').doc(localStorage.getItem('telegramID'));
-  userDoc.set({}, {merge: true});
+  userDoc.set({'achivments': []}, {merge: true});
 })

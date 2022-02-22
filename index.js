@@ -70,7 +70,7 @@ app.get('/success-submit/:task/:userID', async function(request, response){
         parse_mode: 'HTML'
     })
     .then((res) => {
-        response.status(200).send(res);
+        response.status(200);
     }).catch((error) => {
         console.log(error)
         response.send(error);
