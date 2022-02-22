@@ -124,6 +124,7 @@ async function achivmentSetLogic(userID){
 
     return achivmentMessage
   }
+  return ""
 }
 
 
