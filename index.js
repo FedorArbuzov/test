@@ -70,7 +70,7 @@ app.get('/success-submit/:task/:userID', async function(request, response){
         parse_mode: 'HTML'
     })
     .then((res) => {
-        response.status(200);
+        response.status(200).send({'status': 'ok'});
     }).catch((error) => {
         console.log(error)
         response.send(error);
@@ -79,6 +79,10 @@ app.get('/success-submit/:task/:userID', async function(request, response){
 
 app.get('/cron-status', async function(request, response){
 
+})
+
+app.get('/test-task/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/pages/test-task.html'));
 })
 
 app.get('/editor-interface-js/', function(req, res) {
@@ -91,6 +95,10 @@ app.get('/editor-interface-python/', function(req, res) {
 
 app.get('/achivments/', function(req, res) {
   res.sendFile(path.join(__dirname, '/pages/achivments.html'));
+})
+
+app.get('/path-js/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/pages/js-path.html'));
 })
 
 
