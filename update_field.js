@@ -20,7 +20,7 @@ async function f(){
         } else {
             fs.writeFile(`data/${i}.json`, JSON.stringify(res.data()), function(){});
             data = res.data()['meta']['task_name']
-            console.log(`<li><a href="https://quiet-stream-57326.herokuapp.com/editor-interface-js/?course=t1&task=${i}">${data}</a></li>`);
+            console.log(`<li><a href="https://quiet-stream-57326.herokuapp.com/editor-interface-js/?course=t1&task=${i}">${data} (id задачи ${i})</a></li>`);
         }
 
 
