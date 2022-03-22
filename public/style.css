@@ -172,4 +172,9 @@ input[type=text] {
     border: 1px solid #30b58b;
     border-radius: 4px;
   }
+  .task{
+    font-size: 12px;
+    width: 80%;
+    right: 10%;
+  }
 }
