@@ -13,7 +13,7 @@ submit.addEventListener("click", function(){
 console.log(editor.getValue())
 let userCode = editor.getValue()
 userCode = "'use strict';" + userCode
-userCode = userCode.replaceAll("console.log", "consoleInFakeEditor")
+userCode = userCode.replace(/console.log/g, "consoleInFakeEditor")
 
 editorResult.setValue("")
 try {
@@ -29,8 +29,8 @@ submit1.addEventListener("click",function(){
 editorResult.setValue("")
 let userCode=editor.getValue()
 userCode = "'use strict';" + userCode
-userCode = userCode.replaceAll("prompt", "promptFromFakeStorage")
-userCode = userCode.replaceAll("console.log", "consoleInResultsStorage")
+userCode = userCode.replace(/prompt/g, "promptFromFakeStorage")
+userCode = userCode.replace(/console.log/g, "consoleInResultsStorage")
 let testData = []
 let result = [];
 let j = 0;

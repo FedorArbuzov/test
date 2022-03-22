@@ -34,7 +34,7 @@ function taskSubmit(){
   let userDoc = firebase.firestore().collection('users').doc(localStorage.getItem('telegramID'));
   // Atomically increment by 1.
   let res = {}
-  let today = (new Date()).toLocaleDateString("en-US").replaceAll('/', '_')
+  let today = (new Date()).toLocaleDateString("en-US").replace(/\//g, '_')
   res[`${today}.${task}.submits`] = firebase.firestore.FieldValue.increment(1)
   userDoc.update(res);
 }
@@ -43,7 +43,7 @@ function taskRun(){
   let userDoc = firebase.firestore().collection('users').doc(localStorage.getItem('telegramID'));
   // Atomically increment by 1.
   let res = {}
-  let today = (new Date()).toLocaleDateString("en-US").replaceAll('/', '_')
+  let today = (new Date()).toLocaleDateString("en-US").replace(/\//g, '_')
   res[`${today}.${task}.runs`] = firebase.firestore.FieldValue.increment(1)
   userDoc.update(res);
 }
@@ -144,12 +144,17 @@ let slider = document.getElementById("myRange");
 //let firstCodeEditor = document.querySelector(".CodeMirror:nth-child(2)");
 let codeEditors = document.querySelectorAll(".CodeMirror");
 
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  console.log(this.value);
-  codeEditors[0].style.width = `${this.value}%`
-  codeEditors[1].style.width = `${100 - this.value}%`
+if (window.screen.width <= 1024) {
+  // Resolution is 1024x768 or above
+  // Update the current slider value (each time you drag the slider handle)
+  slider.oninput = function() {
+    console.log(this.value);
+    codeEditors[0].style.width = `${this.value}%`
+    codeEditors[1].style.width = `${100 - this.value}%`
+  }
 }
+
+
 
 //For combine keys like Alt+P
 document.onkeyup = function (e) {
