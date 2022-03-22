@@ -160,4 +160,16 @@ input[type=text] {
     width: 100%;
     height: 50vh;
   }
+  .submit-btn {
+    font-size: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 2px;
+    margin-left: 2px;
+    padding: 4px 2px;
+    background: #fff;
+    color: #30b58b;
+    border: 1px solid #30b58b;
+    border-radius: 4px;
+  }
 }
