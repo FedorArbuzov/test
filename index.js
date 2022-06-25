@@ -4,9 +4,12 @@ let admin = require('firebase-admin');
 const cors = require('cors');
 const path = require('path');
 
+const { onboarding } = require('./send_messages/onboarding');
+
 const PORT = process.env.PORT || 5000;
 
 let configDict = require('./config');
+const { text } = require('express');
 const config = configDict['config'];
 const url = configDict['url'];
 const apiToken = configDict['apiToken'];
@@ -26,14 +29,21 @@ app.use(cors({
 }));
 
 app.post('/', async function(request, response){
-  try {
-  let update_id = request.body['update_id'].toString()
-  const msg = db.collection('messages').doc(update_id);
-  const res = await msg.set(request.body, { merge: true })
-  } catch(err){
-    console.log(err)
+  console.log(request.body);
+  const chat_id = request.body.message.chat.id;
+  const text = request.body.message.text;
+  if (text === '/start'){
+    onboarding(chat_id);
   }
   response.status(200).send({});
+  // try {
+  // let update_id = request.body['update_id'].toString()
+  // const msg = db.collection('messages').doc(update_id);
+  // const res = await msg.set(request.body, { merge: true })
+  // } catch(err){
+  //   console.log(err)
+  // }
+  // response.status(200).send({});
 
   // const doc = await cityRef.get();
   // if (message === '/start' && !doc.exists) {
@@ -46,10 +56,12 @@ app.post('/', async function(request, response){
   // else {
   //   // save user question and send to mentor
   // }
-  // axios.post(`${url}${apiToken}/sendPhoto`,
+  // chat_id = request.body.message.chat.id;
+  // console.log(chat_id);
+  // axios.post(`${url}${apiToken}/sendMessage`,
   // {
-  //      chat_id: -744777013,
-  //      photo: 'AgACAgIAAxkBAANEYWl5pFfpYd3np-PSrmpDDSgVa7AAApa3MRuKrFFLXw1hMutgUuwBAAMCAAN4AAMhBA'
+  //      chat_id: chat_id,
+  //      text: '123'
   // })
   // .then((res) => {
   //     response.status(200).send(res);
@@ -100,7 +112,9 @@ app.get('/achivments/', function(req, res) {
 app.get('/path-js/', function(req, res) {
   res.sendFile(path.join(__dirname, '/pages/js-path.html'));
 })
-
+async function setCoins(userID, task){
+  
+}
 
 async function achivmentSetLogic(userID){
   let achivmentMessage = 'У вас новое достижение! Вы можете их посмотреть <a href="https://quiet-stream-57326.herokuapp.com/achivments">тут</a>'
@@ -136,7 +150,7 @@ async function achivmentSetLogic(userID){
 }
 
 
-
+console.log(`start on ${PORT}`);
 app.listen(PORT);
 
 
