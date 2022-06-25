@@ -11,4 +11,4 @@ exports.config = {
     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/exallenge%40appspot.gserviceaccount.com"
 }
 exports.url = 'https://api.telegram.org/bot'
-exports.apiToken = '514641629:AAGyRyh5kvd1f59l9nQ4787-AGl7NOauyNg'
+exports.apiToken = '2080851679:AAHe4ELNXqRxfymhzeSST5swFE7i5qYgjkE'
