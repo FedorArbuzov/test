@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<title>Комбинация клавиш HTML — Веб учебники</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web,W3CSS,W3C,Python,веб,учебники,веб-разработка,разработка,тестирование,учебное пособие,программирование,обучение,тренировка,учебник,викторина,примеры,занятия,уроки,справочник,образцы,упражнения,исходники,исходный код,цвет,демо,советы"><meta http-equiv="refresh" content="84600"><meta name="Description" content="Хорошо организованные и просты для понимания, бесплатные учебники для самостоятельного веб строительства, с примерами HTML, CSS, JavaScript и т.д."><meta name="Description" content="Сочетания клавиш часто используются в современных операционных системах и компьютерных программах."><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/w3css/4/w3.css"><link rel="stylesheet" href="/w3css/4/w3_2.css">
+<script src='/lib/prism2.js'></script><link rel='stylesheet' href='/lib/prism1.css'><!-- Yandex.RTB --><script>window.yaContextCb=window.yaContextCb||[]</script><script src="https://yandex.ru/ads/system/context.js" async></script><!-- //Yandex.RTB -->
+</head><body><div class='w3-container top'><a class='w3schools-logo notranslate' href='../index.html'>schoolsw3<span class='dotcom'>.com</span></a><div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ</div></div><div style='display:none;position:absolute;z-index:4;right:52px;height:40px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'><div class='gcse-search'></div></div><div style='display:none;position:absolute;z-index:3;right:111px;height:40px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div><div class='w3-card-2 topnav notranslate' id='topnav'><div style="overflow:auto;"><div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:41px"><a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Меню'></a><a href='../index.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Главная'></a><a class="w3-bar-item w3-button" href='../html/index.php' title='HTML Учебник'>HTML</a><a class="w3-bar-item w3-button" href='../css/index.php' title='CSS Учебник'>CSS</a><a class="w3-bar-item w3-button" href='../js/index.php' title='JavaScript Учебник'>JAVASCRIPT</a><a class="w3-bar-item w3-button" href='../sql/index.php' title='SQL Учебник'>SQL</a><a class="w3-bar-item w3-button" href='../python/index.php' title='Python Учебник'>PYTHON</a><a class="w3-bar-item w3-button" href='../php/index.php' title='PHP Учебник'>PHP</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.php' title='Bootstrap Учебник'>BOOTSTRAP</a><a class="w3-bar-item w3-button" href='../howto/index.php' title='Сделать инструкции HTML, CSS и JavaScript'>КАК</a><a class="w3-bar-item w3-button" href='../w3css/index.php' title='W3.CSS Учебник'>W3.CSS</a><a class="w3-bar-item w3-button" href='../jquery/index.php' title='jQuery Учебник'>JQUERY</a><a class="w3-bar-item w3-button" href='../java/index.php' title='Java Учебник'>JAVA</a><a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Учебники для программиста'>ВСЕ <i class='fa fa-caret-down'></i> <i class='fa fa-caret-up' style='display:none'></i></a><a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Поиск на Schoolsw3'>&#xe802;</a><a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Перевод на Schoolsw3'>&#xe801;</a><a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключение темного кода'>&#xe80b;</a><a class="w3-bar-item w3-button w3-right" target="_blank" href='../forum/index.php'>ФОРУМ</a><a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения для программиста'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a><a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники для программиста'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a></div><div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;"><span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:10px;font-weight:bold;">&times;</span><div class='w3-row-padding' style="padding:24px 48px"><div class='w3-col l3 m6'><h3>HTML и CSS</h3><a class="w3-bar-item w3-button" href='../html/index.php'>Учебник HTML</a><a class="w3-bar-item w3-button" href='../css/index.php'>Учебник CSS</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.php'>Учебник Bootstrap</a><a class="w3-bar-item w3-button" href='../w3css/index.php'>Учебник W3.CSS</a><a class="w3-bar-item w3-button" href='../colors/index.php'>Учебник Colors</a><a class="w3-bar-item w3-button" href='../icons/index.php'>Учебник Icons</a><a class="w3-bar-item w3-button" href='../graphics/index.php'>Учебник Graphics</a><a class="w3-bar-item w3-button" href='../graphics/svg_intro.php'>Учебник SVG</a><a class="w3-bar-item w3-button" href='../graphics/canvas_intro.php'>Учебник Canvas</a><a class="w3-bar-item w3-button" href='../howto/index.php'>Учебник Как</a><a class="w3-bar-item w3-button" href='../sass/index.php'>Учебник Sass</a><div class="w3-hide-large w3-hide-small"><h3>XML</h3><a class="w3-bar-item w3-button" href='../xml/index.php'>Учебник XML</a><a class="w3-bar-item w3-button" href='../xml/ajax_intro.php'>Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.php'>Учебник XML DTD</a><a class="w3-bar-item w3-button" href='../xml/schema_intro.php'>Учебник XML Schema</a><a class="w3-bar-item w3-button" href='../xml/xsl_intro.php'>Учебник XSLT</a><a class="w3-bar-item w3-button" href='../xml/xpath_intro.php'>Учебник XPath</a><a class="w3-bar-item w3-button" href='../xml/xquery_intro.php'>Учебник XQuery</a></div></div><div class='w3-col l3 m6'><h3>JavaScript</h3><a class="w3-bar-item w3-button" href='../js/index.php'>Учебник JavaScript</a><a class="w3-bar-item w3-button" href='../jquery/index.php'>Учебник jQuery</a><a class="w3-bar-item w3-button" href='../react/index.php'>Учебник React</a><a class="w3-bar-item w3-button" href='../angular/index.php'>Учебник AngularJS</a><a class="w3-bar-item w3-button" href="../js/js_json_intro.php">Учебник JSON</a><a class="w3-bar-item w3-button" href='../js/js_ajax_intro.php'>Учебник AJAX</a><a class="w3-bar-item w3-button" href="../w3js/index.php">Учебник W3.JS</a><h3>Программирование</h3><a class="w3-bar-item w3-button" href='../python/index.php'>Учебник Python</a><a class="w3-bar-item w3-button" href='../java/index.php'>Учебник Java</a><a class="w3-bar-item w3-button" href='../cpp/index.php'>Учебник C++</a><a class="w3-bar-item w3-button" href='../cs/index.php'>Учебник C#</a><a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.php'>Учебник машинное обучение</a><div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div></div><div class='w3-col l3 m6'><h3>На Сервере</h3><a class="w3-bar-item w3-button" href='../sql/index.php'>Учебник SQL</a><a class="w3-bar-item w3-button" href='../php/index.php'>Учебник PHP</a><a class="w3-bar-item w3-button" href='../asp/index.php'>Учебник ASP</a><a class="w3-bar-item w3-button" href='../nodejs/index.php'>Учебник Node.js</a><a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.php'>Учебник Raspberry Pi</a> <h3>Веб Стоительство</h3><a class="w3-bar-item w3-button" href="../w3css/w3css_templates.php">Веб шаблоны</a><a class="w3-bar-item w3-button" href='../browsers/index.php'>Веб Статистика</a><a class="w3-bar-item w3-button" href='../cert/index.php'>Веб Сертификаты</a><a class="w3-bar-item w3-button" href='../tryit/index.php'>Веб Редактор</a><a class="w3-bar-item w3-button" href="../whatis/index.php">Веб Разработка</a><a class="w3-bar-item w3-button" href="../typingspeed/index.php">Проверьте скорость набора текста</a></div><div class='w3-col l3 m6 w3-hide-medium'><h3>XML</h3><a class="w3-bar-item w3-button" href='../xml/index.php'>Учебник XML</a><a class="w3-bar-item w3-button" href='../xml/ajax_intro.php'>Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.php'>Учебник XML DTD</a><a class="w3-bar-item w3-button" href='../xml/schema_intro.php'>Учебник XML Schema</a><a class="w3-bar-item w3-button" href='../xml/xsl_intro.php'>Учебник XSLT</a><a class="w3-bar-item w3-button" href='../xml/xpath_intro.php'>Учебник XPath</a><a class="w3-bar-item w3-button" href='../xml/xquery_intro.php'>Учебник XQuery</a></div></div><br></div><div id='nav_references' class='w3-bar-block w3-card-2'><span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span><div class='w3-row-padding' style="padding:24px 48px"><div class='w3-col l3 m6'><h3>HTML</h3><a class="w3-bar-item w3-button" href='../tags/index.php'>HTML Справочник тегов</a><a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.php'>HTML Поддержка Браузера</a><a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.php'>HTML Справочник событий</a><a class="w3-bar-item w3-button" href='../colors/index.php'>HTML Справочник цвета</a><a class="w3-bar-item w3-button" href='../tags/ref_attributes.php'>HTML Справочник атрибутов</a><a class="w3-bar-item w3-button" href='../tags/ref_canvas.php'>HTML Справочник Canvas</a><a class="w3-bar-item w3-button" href='../graphics/svg_reference.php'>HTML Справочник SVG</a><a class="w3-bar-item w3-button" href='../charsets/index.php'>HTML Character Sets</a><a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.php'>Google Maps Справочник</a><h3>CSS</h3><a class="w3-bar-item w3-button" href='../cssref/index.php'>CSS Справочник</a><a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.php'>CSS Поддержка Браузера</a><a class="w3-bar-item w3-button" href='../cssref/css_selectors.php'>CSS Справочник селекторов</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.php'>Bootstrap 3 Справочник</a><a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.php'>Bootstrap 4 Справочник</a><a class="w3-bar-item w3-button" href='../w3css/w3css_references.php'>W3.CSS Справочник</a><a class="w3-bar-item w3-button" href='../icons/icons_reference.php'>Icon Справочник</a><a class="w3-bar-item w3-button" href='../sass/sass_functions_string.php'>Sass Справочник</a></div><div class='w3-col l3 m6'><h3>JavaScript</h3><a class="w3-bar-item w3-button" href='../jsref/index.php'>JavaScript Справочник</a><a class="w3-bar-item w3-button" href='../jsref/index.php'>HTML DOM Справочник</a><a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.php'>jQuery Справочник</a><a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.php'>AngularJS Справочник</a><a class="w3-bar-item w3-button" href="../w3js/w3js_references.php">W3.JS Справочник</a><h3>Программмирование</h3><a class="w3-bar-item w3-button" href='../python/python_reference.php'>Python Справочник</a><a class="w3-bar-item w3-button" href='../java/java_ref_keywords.php'>Java Справочник</a></div><div class='w3-col l3 m6'><h3>На сервере</h3><a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.php'>SQL Справочник</a><a class="w3-bar-item w3-button" href='../php/php_ref_overview.php'>PHP Справочник</a><a class="w3-bar-item w3-button" href='../asp/asp_ref_response.php'>ASP Справочник</a><h3>XML</h3><a class="w3-bar-item w3-button" href='../xml/dom_nodetype.php'>XML Справочник</a><a class="w3-bar-item w3-button" href='../xml/dom_http.php'>XML Http Справочник</a><a class="w3-bar-item w3-button" href='../xml/xsl_elementref.php'>XSLT Справочник</a><a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.php'>XML Schema Справочник</a></div><div class='w3-col l3 m6 w3-hide-medium w3-hide-small'><h3>Набор Кодировок</h3><a class="w3-bar-item w3-button" href='../charsets/index.php'>HTML Набор Кодировок</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.php'>HTML ASCII</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.php'>HTML ANSI</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.php'>HTML Windows-1252</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.php'>HTML ISO-8859-1</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.php'>HTML Символы</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.php'>HTML UTF-8</a></div></div><br></div><div id='nav_exercises' class='w3-bar-block w3-card-2'><span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span><div class='w3-row-padding' style="padding:24px 48px"><div class='w3-col l4 m6'><h3>Упражнения</h3><a class="w3-bar-item w3-button" href="../html/html_exercises.php">HTML Упражнения</a><a class="w3-bar-item w3-button" href="../css/css_exercises.php">CSS Упражнения</a><a class="w3-bar-item w3-button" href="../js/js_exercises.php">JavaScript Упражнения</a><a class="w3-bar-item w3-button" href="../sql/sql_exercises.php">SQL Упражнения</a><a class="w3-bar-item w3-button" href="../php/php_exercises.php">PHP Упражнения</a><a class="w3-bar-item w3-button" href="../python/python_exercises.php">Python Упражнения</a><a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.php">jQuery Упражнения</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.php">Bootstrap Упражнения</a><a class="w3-bar-item w3-button" href="../java/java_exercises.php">Java Упражнения</a><a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.php">C++ Упражнения</a><a class="w3-bar-item w3-button" href="../cs/cs_exercises.php">C# Упражнения</a></div><div class='w3-col l4 m6'><h3>Викторины</h3><a class="w3-bar-item w3-button" href='html_quiz.php' target='_top'>HTML Викторина</a><a class="w3-bar-item w3-button" href='../css/css_quiz.php' target='_top'>CSS Викторина</a><a class="w3-bar-item w3-button" href='../js/js_quiz.php' target='_top'>JavaScript Викторина</a><a class="w3-bar-item w3-button" href="../sql/sql_quiz.php" target="_top">SQL Викторина</a><a class="w3-bar-item w3-button" href='../php/php_quiz.php' target='_top'>PHP Викторина</a><a class="w3-bar-item w3-button" href='../python/python_quiz.php' target='_top'>Python Викторина</a><a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.php' target='_top'>jQuery Викторина</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.php' target='_top'>Bootstrap Викторина</a><a class="w3-bar-item w3-button" href='../java/java_quiz.php' target='_top'>Java Викторина</a><a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.php' target='_top'>C++ Викторина</a><a class="w3-bar-item w3-button" href='../cs/cs_quiz.php' target='_top'>C# Викторина</a><a class="w3-bar-item w3-button" href='../xml/xml_quiz.php' target='_top'>XML Викторина</a></div><div class='w3-col l4 m12'><h3>Сертификаты</h3><a class="w3-bar-item w3-button" href="../cert/cert_html.php" target="_top">HTML Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_css.php" target="_top">CSS Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_javascript.php" target="_top">JavaScript Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_sql.php" target="_top">SQL Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_php.php" target="_top">PHP Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_python.php" target="_top">Python Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_jquery.php" target="_top">jQuery Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.php" target="_top">Bootstrap Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_xml.php" target="_top">XML Сертификат</a></div></div><br></div></div></div><div class='w3-sidebar w3-collapse' id='sidenav'>
+<div id='leftmenuinner'>
+<div class='w3-light-grey' id='leftmenuinnerinner'>
+<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>
+<h2 class="left"><span class="left_h2">HTML</span> Справочник</h2>
+<a target="_top" href="index.php">HTML Теги по алфавиту</a>
+<a target="_top" href="ref_byfunc.php">HTML Теги по категории</a>
+<a target="_top" href="ref_html_browsersupport.php">HTML Поддержка</a>
+<a target="_top" href="ref_attributes.php">HTML Атрибуты</a>
+<a target="_top" href="ref_standardattributes.php">HTML Глобальные</a>
+<a target="_top" href="ref_eventattributes.php">HTML События</a>
+<a target="_top" href="ref_colornames.php">HTML Названия цвета</a>
+<a target="_top" href="ref_canvas.php">HTML Холст</a>
+<a target="_top" href="ref_av_dom.php">HTML Аудио/Видео</a>
+<a target="_top" href="ref_html_dtd.php">HTML Декларации</a>
+<a target="_top" href="ref_charactersets.php">HTML Набор кодировок</a>
+<a target="_top" href="ref_urlencode.php">HTML URL код</a>
+<a target="_top" href="ref_language_codes.php">HTML Коды языка</a>
+<a target="_top" href="ref_country_codes.php">HTML Коды стран</a>
+<a target="_top" href="ref_httpmessages.php">HTTP Сообщения</a>
+<a target="_top" href="ref_httpmethods.php">HTTP методы</a>
+<a target="_top" href="ref_pxtoemconversion.php">Ковертер PX в EM</a>
+<a target="_top" href="ref_keyboardshortcuts.php">Клавишные комбинации</a>
+<br>
+<div class="notranslate">
+<h2 class="left"><span class="left_h2">HTML</span> Теги</h2>
+<a target="_top" href="tag_comment.php">&lt;!--...--&gt;</a>
+<a target="_top" href="tag_doctype.php">&lt;!DOCTYPE&gt;</a>
+<a target="_top" href="tag_a.php">&lt;a&gt;</a>
+<a target="_top" href="tag_abbr.php">&lt;abbr&gt;</a>
+<a target="_top" href="tag_acronym.php">&lt;acronym&gt;</a>
+<a target="_top" href="tag_address.php">&lt;address&gt;</a>
+<a target="_top" href="tag_applet.php">&lt;applet&gt;</a>
+<a target="_top" href="tag_area.php">&lt;area&gt;</a>
+<a target="_top" href="tag_article.php">&lt;article&gt;</a>
+<a target="_top" href="tag_aside.php">&lt;aside&gt;</a>
+<a target="_top" href="tag_audio.php">&lt;audio&gt;</a>
+<a target="_top" href="tag_b.php">&lt;b&gt;</a>
+<a target="_top" href="tag_base.php">&lt;base&gt;</a>
+<a target="_top" href="tag_basefont.php">&lt;basefont&gt;</a>
+<a target="_top" href="tag_bdi.php">&lt;bdi&gt;</a>
+<a target="_top" href="tag_bdo.php">&lt;bdo&gt;</a>
+<a target="_top" href="tag_big.php">&lt;big&gt;</a>
+<a target="_top" href="tag_blockquote.php">&lt;blockquote&gt;</a>
+<a target="_top" href="tag_body.php">&lt;body&gt;</a>
+<a target="_top" href="tag_br.php">&lt;br&gt;</a>
+<a target="_top" href="tag_button.php">&lt;button&gt;</a>
+<a target="_top" href="tag_canvas.php">&lt;canvas&gt;</a>
+<a target="_top" href="tag_caption.php">&lt;caption&gt;</a>
+<a target="_top" href="tag_center.php">&lt;center&gt;</a>
+<a target="_top" href="tag_cite.php">&lt;cite&gt;</a>
+<a target="_top" href="tag_code.php">&lt;code&gt;</a>
+<a target="_top" href="tag_col.php">&lt;col&gt;</a>
+<a target="_top" href="tag_colgroup.php">&lt;colgroup&gt;</a>
+<a target="_top" href="tag_data.php">&lt;data&gt;</a>
+<a target="_top" href="tag_datalist.php">&lt;datalist&gt;</a>
+<a target="_top" href="tag_dd.php">&lt;dd&gt;</a>
+<a target="_top" href="tag_del.php">&lt;del&gt;</a>
+<a target="_top" href="tag_details.php">&lt;details&gt;</a>
+<a target="_top" href="tag_dfn.php">&lt;dfn&gt;</a>
+<a target="_top" href="tag_dialog.php">&lt;dialog&gt;</a>
+<a target="_top" href="tag_dir.php">&lt;dir&gt;</a>
+<a target="_top" href="tag_div.php">&lt;div&gt;</a>
+<a target="_top" href="tag_dl.php">&lt;dl&gt;</a>
+<a target="_top" href="tag_dt.php">&lt;dt&gt;</a>
+<a target="_top" href="tag_em.php">&lt;em&gt;</a>
+<a target="_top" href="tag_embed.php">&lt;embed&gt;</a>
+<a target="_top" href="tag_fieldset.php">&lt;fieldset&gt;</a>
+<a target="_top" href="tag_figcaption.php">&lt;figcaption&gt;</a>
+<a target="_top" href="tag_figure.php">&lt;figure&gt;</a>
+<a target="_top" href="tag_font.php">&lt;font&gt;</a>
+<a target="_top" href="tag_footer.php">&lt;footer&gt;</a>
+<a target="_top" href="tag_form.php">&lt;form&gt;</a>
+<a target="_top" href="tag_frame.php">&lt;frame&gt;</a>
+<a target="_top" href="tag_frameset.php">&lt;frameset&gt;</a>
+<a target="_top" href="tag_hn.php">&lt;h1&gt; - &lt;h6&gt;</a>
+<a target="_top" href="tag_head.php">&lt;head&gt;</a>
+<a target="_top" href="tag_header.php">&lt;header&gt;</a>
+<a target="_top" href="tag_hr.php">&lt;hr&gt;</a>
+<a target="_top" href="tag_html.php">&lt;html&gt;</a>
+<a target="_top" href="tag_i.php">&lt;i&gt;</a>
+<a target="_top" href="tag_iframe.php">&lt;iframe&gt;</a>
+<a target="_top" href="tag_img.php">&lt;img&gt;</a>
+<a target="_top" href="tag_input.php">&lt;input&gt;</a>
+<a target="_top" href="tag_ins.php">&lt;ins&gt;</a>
+<a target="_top" href="tag_kbd.php">&lt;kbd&gt;</a>
+<a target="_top" href="tag_label.php">&lt;label&gt;</a>
+<a target="_top" href="tag_legend.php">&lt;legend&gt;</a>
+<a target="_top" href="tag_li.php">&lt;li&gt;</a>
+<a target="_top" href="tag_link.php">&lt;link&gt;</a>
+<a target="_top" href="tag_main.php">&lt;main&gt;</a>
+<a target="_top" href="tag_map.php">&lt;map&gt;</a>
+<a target="_top" href="tag_mark.php">&lt;mark&gt;</a>
+<a target="_top" href="tag_meta.php">&lt;meta&gt;</a>
+<a target="_top" href="tag_meter.php">&lt;meter&gt;</a>
+<a target="_top" href="tag_nav.php">&lt;nav&gt;</a>
+<a target="_top" href="tag_noframes.php">&lt;noframes&gt;</a>
+<a target="_top" href="tag_noscript.php">&lt;noscript&gt;</a>
+<a target="_top" href="tag_object.php">&lt;object&gt;</a>
+<a target="_top" href="tag_ol.php">&lt;ol&gt;</a>
+<a target="_top" href="tag_optgroup.php">&lt;optgroup&gt;</a>
+<a target="_top" href="tag_option.php">&lt;option&gt;</a>
+<a target="_top" href="tag_output.php">&lt;output&gt;</a>
+<a target="_top" href="tag_p.php">&lt;p&gt;</a>
+<a target="_top" href="tag_param.php">&lt;param&gt;</a>
+<a target="_top" href="tag_picture.php">&lt;picture&gt;</a>
+<a target="_top" href="tag_pre.php">&lt;pre&gt;</a>
+<a target="_top" href="tag_progress.php">&lt;progress&gt;</a>
+<a target="_top" href="tag_q.php">&lt;q&gt;</a>
+<a target="_top" href="tag_rp.php">&lt;rp&gt;</a>
+<a target="_top" href="tag_rt.php">&lt;rt&gt;</a>
+<a target="_top" href="tag_ruby.php">&lt;ruby&gt;</a>
+<a target="_top" href="tag_s.php">&lt;s&gt;</a>
+<a target="_top" href="tag_samp.php">&lt;samp&gt;</a>
+<a target="_top" href="tag_script.php">&lt;script&gt;</a>
+<a target="_top" href="tag_section.php">&lt;section&gt;</a>
+<a target="_top" href="tag_select.php">&lt;select&gt;</a>
+<a target="_top" href="tag_small.php">&lt;small&gt;</a>
+<a target="_top" href="tag_source.php">&lt;source&gt;</a>
+<a target="_top" href="tag_span.php">&lt;span&gt;</a>
+<a target="_top" href="tag_strike.php">&lt;strike&gt;</a>
+<a target="_top" href="tag_strong.php">&lt;strong&gt;</a>
+<a target="_top" href="tag_style.php">&lt;style&gt;</a>
+<a target="_top" href="tag_sub.php">&lt;sub&gt;</a>
+<a target="_top" href="tag_summary.php">&lt;summary&gt;</a>
+<a target="_top" href="tag_sup.php">&lt;sup&gt;</a>
+<a target="_top" href="tag_svg.php">&lt;svg&gt;</a>
+<a target="_top" href="tag_table.php">&lt;table&gt;</a>
+<a target="_top" href="tag_tbody.php">&lt;tbody&gt;</a>
+<a target="_top" href="tag_td.php">&lt;td&gt;</a>
+<a target="_top" href="tag_template.php">&lt;template&gt;</a>
+<a target="_top" href="tag_textarea.php">&lt;textarea&gt;</a>
+<a target="_top" href="tag_tfoot.php">&lt;tfoot&gt;</a>
+<a target="_top" href="tag_th.php">&lt;th&gt;</a>
+<a target="_top" href="tag_thead.php">&lt;thead&gt;</a>
+<a target="_top" href="tag_time.php">&lt;time&gt;</a>
+<a target="_top" href="tag_title.php">&lt;title&gt;</a>
+<a target="_top" href="tag_tr.php">&lt;tr&gt;</a>
+<a target="_top" href="tag_track.php">&lt;track&gt;</a>
+<a target="_top" href="tag_tt.php">&lt;tt&gt;</a>
+<a target="_top" href="tag_u.php">&lt;u&gt;</a>
+<a target="_top" href="tag_ul.php">&lt;ul&gt;</a>
+<a target="_top" href="tag_var.php">&lt;var&gt;</a>
+<a target="_top" href="tag_video.php">&lt;video&gt;</a>
+<a target="_top" href="tag_wbr.php">&lt;wbr&gt;</a>
+</div>
+<br><br>
+</div>
+</div>
+</div>
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+<div class='w3-row w3-white'><!-- Main-->
+<div class='w3-col l10 m12' id='main'>
+<div id='mainLeaderboard' style='overflow:hidden;'><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>Клавишные комбинации</h1>
+<hr>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="ref_pxtoemconversion.php">&#10094; Назад</a>
+<a class="w3-right w3-btn" href="tag_comment.php">Вперед  &#10095;</a>
+</div>
+<hr>
+<p class="intro">Экономия время, используя сочетания клавиш.</p>
+<hr>
+<h2>Сочетания клавиш для Windows и Mac</h2>
+<p>Сочетания клавиш часто используются в современных операционных системах и компьютерных программах.</p>
+<p>Использование клавиш быстрого доступа может сэкономить вам много времени.</p>
+<hr>
+<h2>Основные сочетания клавиш</h2>
+<table class=" w3-table-all notranslate">
+<tr>
+<th>Описание</th>
+<th>Windows</th>
+<th>Mac OS</th>
+</tr>
+<tr>
+<td>Редактировать меню</td>
+<td>Alt + E</td>
+<td>Ctrl + F2 + F</td>
+</tr>
+<tr>
+<td>Файл меню</td>
+<td>Alt + F</td>
+<td>Ctrl + F2 + E</td>
+</tr>
+<tr>
+<td>Вид меню</td>
+<td>Alt + V</td>
+<td>Ctrl + F2 + V</td>
+</tr>     
+<tr>
+<td>Выделить весь текст</td>
+<td>Ctrl + A</td>
+<td>Cmd + A</td>
+</tr>
+<tr>
+<td>Скопировать текст</td>
+<td>Ctrl + C</td>
+<td>Cmd + C</td>
+</tr>
+<tr>
+<td>Найти текст</td>
+<td>Ctrl + F</td>
+<td>Cmd + F</td>
+</tr>  
+<tr>
+<td>Поиск и замена текста</td>
+<td>Ctrl + H</td>
+<td>Cmd + F</td>
+</tr>     
+<tr>
+<td>Новый документ</td>
+<td>Ctrl + N</td>
+<td>Cmd + N</td>
+</tr>
+<tr>
+<td>Открыть файл</td>
+<td>Ctrl + O</td>
+<td>Cmd + O</td>
+</tr>
+<tr>
+<td>Параметр печати</td>
+<td>Ctrl + P</td>
+<td>Cmd + P</td>
+</tr>
+<tr>
+<td>Сохранить файл</td>
+<td>Ctrl + S</td>
+<td>Cmd + S</td>
+</tr>  
+<tr>
+<td>Вставка текста</td>
+<td>Ctrl + V</td>
+<td>Cmd + V</td>
+</tr>
+<tr>
+<td>Вырезать текст</td>
+<td>Ctrl + X</td>
+<td>Cmd + X</td>
+</tr>
+<tr>
+<td>Повторить текст</td>
+<td>Ctrl + Y</td>
+<td>Shift + Cmd + Z </td>
+</tr>
+<tr>
+<td>Отменить текст</td>
+<td>Ctrl + Z</td>
+<td>Cmd + Z</td>
+</tr>
+</table>
+<h2>Редактирование текста</h2>
+<table class="w3-responsive w3-table-all notranslate">
+<tr>
+<th style="width:52%">Описание</th>
+<th style="width:24%">Windows</th>
+<th style="width:24%">Mac OS</th>
+</tr>
+<tr>
+<td style="height:25px"><strong>Перемещение курсора</strong></td>
+<td style="height:25px"></td>
+<td style="height:25px"></td>
+</tr>
+<tr>
+<td>Перейти вправо или к началу следующего разрыва строки</td>
+<td>Right Arrow</td>
+<td>Right Arrow</td>
+</tr>
+<tr>
+<td>Перейти влево или в конец предыдущего разрыва строки</td>
+<td>Left Arrow</td>
+<td>Left Arrow</td>
+</tr>
+<tr>
+<td>Поднимитесь на один ряд</td>
+<td>Up Arrow</td>
+<td>Up Arrow</td>
+</tr>
+<tr>
+<td>Спуститесь на один ряд</td>
+<td>Down Arrow</td>
+<td>Down Arrow</td>
+</tr>   
+<tr>
+<td>Перейти к началу текущей строки</td>
+<td>Home</td>
+<td>Cmd + Left Arrow</td>
+</tr>  
+<tr>
+<td>Перейти к концу текущей строки</td>
+<td>End</td>
+<td>Cmd + Right Arrow</td>
+</tr>   
+<tr>
+<td>Перейти к началу документа</td>
+<td>Ctrl + Home</td>
+<td>Cmd + Up Arrow</td>
+</tr>  
+<tr>
+<td>Перейти к концу документа</td>
+<td>Ctrl + End</td>
+<td>Cmd + Down Arrow</td>
+</tr>   
+<tr>
+<td>Переместить вверх на один кадр</td>
+<td>Page Up</td>
+<td>Fn + Up Arrow</td>
+</tr>
+<tr>
+<td>Переместить вниз на один кадр</td>
+<td>Page Down</td>
+<td>Fn + Down Arrow</td>
+</tr>   
+<tr>
+<td>Перейти к началу предыдущего слова</td>
+<td>Ctrl + Left Arrow</td>
+<td>Option + Left Arrow </td>
+</tr>
+<tr>
+<td>Перейти к началу следующего слова</td>
+<td>Ctrl + Right Arrow</td>
+<td>Option + Right Arrow</td>
+</tr>
+<tr>
+<td>Перейти в начало строки</td>
+<td>Ctrl + Up Arrow</td>
+<td>Cmd + Left Arrow</td>
+</tr>
+<tr>
+<td>Перейти к концу строки</td>
+<td>Ctrl + Down Arrow</td>
+<td>Cmd + Right Arrow</td>   
+</tr>    
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Выделение текста</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Выберите символы слева</td>
+<td>Shift + Left Arrow</td>
+<td>Shift + Left Arrow</td>
+</tr>
+<tr>
+<td>Выберите символы справа</td>
+<td>Shift + Right Arrow</td>
+<td>Shift + Right Arrow</td>
+</tr>
+<tr>
+<td>Выбрать линии вверху</td>
+<td>Shift + Up Arrow</td>
+<td>Shift + Up Arrow</td>
+</tr>
+<tr>
+<td>Выбрать линии ввнизу</td>
+<td>Shift + Down Arrow</td>
+<td>Shift + Down Arrow</td>
+</tr>
+<tr>
+<td>Выберите слова слева</td>
+<td>Shift + Ctrl + Left</td>
+<td>Shift + Opt + Left</td>
+</tr>
+<tr>
+<td>Выберите слова справа</td>
+<td>Shift + Ctrl + Right</td>
+<td>Shift + Opt + Right</td>
+</tr>
+<tr>
+<td>Выберите параграф слева</td>
+<td>Shift + Ctrl + Up</td>
+<td>Shift + Opt + Up</td>
+</tr>
+<tr>
+<td>Выберите параграф справа</td>
+<td>Shift + Ctrl + Down</td>
+<td>Shift + Opt + Down</td>
+</tr>
+<tr>
+<td>Выделить текст между курсором и началом текущей строки</td>
+<td>Shift + Home</td>
+<td>Cmd + Shift + Left Arrow</td>
+</tr>
+<tr>
+<td>Выделение текста между курсором и концом текущей строки</td>
+<td>Shift + End</td>
+<td>Cmd + Shift + Right Arrow</td>
+</tr>
+<tr>
+<td>Выделите текст между курсором и началом документа</td>
+<td>Shift + Ctrl + Home</td>
+<td>Cmd + Shift + Up Arrow или Cmd + Shift + Fn + Left Arrow</td>
+</tr>
+<tr>
+<td>Выделить текст от курсора и до конца документа</td>
+<td>Shift + Ctrl + End</td>
+<td>Cmd + Shift + Down Arrow или Cmd + Shift + Fn + Right Arrow</td>
+</tr>
+<tr>
+<td>Выделите один кадр за один раз текста над курсором</td>
+<td>Shift + Page Up</td>
+<td>Shift + Fn + Up Arrow</td>
+</tr>
+<tr>
+<td>Выделите один кадр за один раз текста под курсором</td>
+<td>Shift + Page Down</td>
+<td>Shift + Fn + Down Arrow</td>
+</tr>
+<tr>
+<td>Выделить весь текст</td>
+<td>Ctrl + A</td>
+<td>Cmd + A</td>
+</tr>
+<tr>
+<td>Find text</td>
+<td>Ctrl + F</td>
+<td>Cmd + F</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Форматирование текста</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Сделать выделенный текст жирным</td>
+<td>Ctrl + B</td>
+<td>Cmd + B</td>
+</tr>
+<tr>
+<td>Сделать выделенный текст курсивом</td>
+<td>Ctrl + I</td>
+<td>Cmd + I</td>
+</tr>
+<tr>
+<td>Подчеркивание выделенного текста</td>
+<td>Ctrl + U</td>
+<td>Cmd + U</td>
+</tr>
+<tr>
+<td>Сделать выделенный текст надстрочным</td>
+<td>Ctrl + Shift + =</td>
+<td>Cmd + Shift + =</td>
+</tr>
+<tr>
+<td>Сделать выделенный текст подстрочным</td>
+<td>Ctrl + =</td>
+<td>Cmd + =</td>
+</tr> 
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Редактирование текста</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Удалить символы слева</td>
+<td>Backspace</td>
+<td>Backspace</td>
+</tr>
+<tr>
+<td>Удалить символы справа</td>
+<td>Delete</td>
+<td>Fn + Backspace</td>
+</tr>
+<tr>
+<td>Удаление слова справа</td>
+<td>Ctrl + Del</td>
+<td>Cmd + Backspace</td>
+</tr>  
+<tr>
+<td>Удаление слова слева</td>
+<td>Ctrl + Backspace</td>
+<td>Cmd + Fn + Backspace</td>
+</tr>
+<tr>
+<td>Отступ</td>
+<td>Tab</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>Выступ</td>
+<td>Shift + Tab</td>
+<td>Shift + Tab</td>
+</tr>
+<tr>
+<td>Скопировать текст</td>
+<td>Ctrl + C</td>
+<td>Cmd + C</td>
+</tr>
+<tr>
+<td>Поиск и замена текста</td>
+<td>Ctrl + H</td>
+<td>Cmd + F</td>
+</tr> 
+<tr>
+<td>Вставка текста</td>
+<td>Ctrl + V</td>
+<td>Cmd + V</td>
+</tr>
+<tr>
+<td>Вырезать текст</td>
+<td>Ctrl + X</td>
+<td>Cmd + X</td>
+</tr>
+<tr>
+<td>Повторить текст</td>
+<td>Ctrl + Y</td>
+<td>Shift + Cmd + Z </td>
+</tr>
+<tr>
+<td>Отменить текст</td>
+<td>Ctrl + Z</td>
+<td>Cmd + Z</td>
+</tr>
+</table>
+<hr>
+<h2>Веб браузеры</h2>
+<table class="w3-responsive w3-table-all notranslate">
+<tr>
+<th style="width:52%">Описание</th>
+<th style="width:24%">Windows</th>
+<th style="width:24%">Mac OS</th>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Навигация</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>   
+<tr>
+<td>Прокрутка кадра вниз</td>
+<td>Space или Page Down</td>
+<td>Space или Fn + Down Arrow</td>
+</tr>
+<tr>
+<td>Прокрутка кадра вверх</td>
+<td>Shift + Space или Page Up</td>
+<td>Shift + Space или Fn + Up Arrow</td>
+</tr>
+<tr>
+<td>Перейти к нижней части страницы</td>
+<td>End</td>
+<td>Cmd + Down Arrow</td>
+</tr>
+<tr>
+<td>Перейти к началу страницы</td>
+<td>Home</td>
+<td>Cmd + Up Arrow</td>
+</tr>
+<tr>
+<td>Возвращаться</td>
+<td>Alt + Left Arrow или Backspace</td>
+<td>Cmd + Left Arrow</td>
+</tr>
+<tr>
+<td>Идти вперед</td>
+<td>Alt + Right Arrow или Shift + Backspace</td>
+<td>Cmd + Right Arrow</td>
+</tr>
+<tr>
+<td>Обновление веб страницы</td>
+<td>F5</td>
+<td>Cmd + R</td>
+</tr>
+<tr>
+<td>Обновление веб страницы (без кэша)</td>
+<td>Ctrl + F5</td>
+<td>Cmd + Shift + R</td>
+</tr>
+<tr>
+<td>Остановить</td>
+<td>Esc</td>
+<td>Esc</td>
+</tr>
+<tr>
+<td>Переключение полноэкранного режима</td>
+<td>F11</td>
+<td>Cmd + Shift + F</td>
+</tr>
+<tr>
+<td>Увеличить</td>
+<td>Ctrl + +</td>
+<td>Cmd + +</td>
+</tr>
+<tr>
+<td>Уменьшить</td>
+<td>Ctrl + -</td>
+<td>Cmd + -</td>
+</tr>
+<tr>
+<td>Увеличение 100% (по умолчанию)</td>
+<td>Ctrl + 0</td>
+<td>Cmd + 0</td>
+</tr>
+<tr>
+<td>Открыть домашнюю страницу</td>
+<td>Alt + Home</td>
+<td>Option + Home или Option + Fn + Left Arrow</td>
+</tr>
+<tr>
+<td>Найденный текст</td>
+<td>Ctrl + F</td>
+<td>Cmd + F </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong> Тег/Управление окнами</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Открыть новую вкладку</td>
+<td>Ctrl + T</td>
+<td>Cmd + T</td>
+</tr>
+<tr>
+<td>Закрыть текущую вкладку</td>
+<td>Ctrl + W</td>
+<td>Cmd + W</td>
+</tr>
+<tr>
+<td>Закрыть все вкладки</td>
+<td>Ctrl + Shift + W</td>
+<td>Cmd + Q</td>
+</tr>
+<tr>
+<td>Закрыть все вкладки, кроме текущей</td>
+<td>Ctrl + Alt + F4 </td>
+<td>Cmd + Opt + W</td>
+</tr>
+<tr>
+<td>Перейти к следующей вкладке</td>
+<td>Ctrl + Tab</td>
+<td>Control + Tab или Cmd + Shift + Right Arrow</td>
+</tr>
+<tr>
+<td>Перейти к предыдущей вкладке</td>
+<td>Ctrl + Shift + Tab</td>
+<td>Shift + Control + Tab или Cmd + Shift + Left Arrow</td>
+</tr>
+<tr>
+<td>Перейти к определенному номеру вкладки</td>
+<td>Ctrl + 1-8</td>
+<td>Cmd + 1-8 </td>
+</tr>
+<tr>
+<td>Перейти к последней вкладке</td>
+<td>Ctrl + 9</td>
+<td>Cmd + 9</td>
+</tr>
+<tr>
+<td>Открыть последнюю закрытую вкладку </td>
+<td>Ctrl + Shift + T</td>
+<td>Cmd + Shift + T </td>
+</tr>
+<tr>
+<td>Открыть новое окно</td>  
+<td>Ctrl + N</td>
+<td>Cmd + N</td>
+</tr>
+<tr>
+<td>Закрыть текущее окно</td>  
+<td>Alt + F4</td>
+<td>Cmd + W</td>
+</tr>
+<tr>
+<td>Перейти к следующему окну</td>
+<td>Alt + Tab</td>
+<td>Cmd + Tab</td>
+</tr>
+<tr>
+<td>Перейти к предыдущему окну</td>
+<td>Alt + Shift + Tab</td>
+<td>Cmd + Shift + Tab</td>
+</tr>
+<tr>
+<td>Открыть последнее закрытое окно</td>
+<td>Ctrl + Shift + N</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Открытие ссылок в новой вкладке в фоновом режиме</td>
+<td>Ctrl + Click</td>
+<td>Cmd + Click</td>
+</tr>
+<tr>
+<td>Открытие ссылок в новой вкладке на переднем плане</td>
+<td>Ctrl + Shift + Click</td>
+<td>Cmd + Shift + Click</td>
+</tr>
+ <tr>
+<td>Печать текущей страницы</td>
+<td>Ctrl + P</td>
+<td>Cmd + P</td>
+</tr>
+<tr>
+<td>Сохранить текущую веб страницу</td>
+<td>Ctrl + S</td>
+<td>Cmd + S</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Адресная строка</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Цикл между панелью инструментов, панелью поиска и элементами страницы</td>
+<td>Тег</td>
+<td>Тег</td>
+</tr>
+<tr>
+<td>Перейти в адресную строку браузера</td>
+<td>Ctrl + L или Alt + D</td>
+<td>Cmd + L</td>
+</tr>
+<tr>
+<td>Сфокусируйтесь и выберите строку поиска браузера</td>
+<td>Ctrl + E</td>
+<td>Cmd + E / Cmd + K</td>
+</tr>
+<tr>
+<td>Откройте расположение адресной строки в новой вкладке</td>
+<td>Alt + Enter</td>
+<td>Opt + Enter</td>
+</tr>
+<tr>
+<td>Отображение списка ранее введенных адресов</td>
+<td>F4</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Добавить "www." к началу и ".com" до конца текста, набранного в адресной строке (например, введите "schoolsw3" и нажмите Ctrl + Enter открыть "www.schoolsw3.com")</td>
+<td>Ctrl + Enter</td>
+<td>Cmd + Enter или Control + Enter</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style="height:25px;"><strong>Книжные закладки</strong></td>
+<td style="height:25px;"></td>
+<td style="height:25px;"></td>
+</tr>
+<tr>
+<td>Откройте меню закладки</td>
+<td>Ctrl + B</td>
+<td>Cmd + B </td>
+</tr>
+<tr>
+<td>Добавить закладку на текущую страницу</td>
+<td>Ctrl + D</td>
+<td>Cmd + Opt + B или Cmd + Shift + B</td>
+</tr>
+<tr>
+<td>Открыть историю журнала браузера</td>
+<td>Ctrl + H</td>
+<td>Cmd + Shift + H или Cmd + Y</td>
+</tr>
+<tr>
+<td>Открыть историю загрузок</td>
+<td>Ctrl + J</td>
+<td>Cmd + J или Cmd + Shift + J </td>
+</tr>
+</table>
+<h2>Снятие скриншотов</h2>
+<table class="w3-responsive w3-table-all notranslate">
+<tr>
+<th style="width:52%">Описание</th>
+<th style="width:24%">Windows</th>
+<th style="width:24%">Mac OS</th>
+</tr>
+<tr>
+<td>Сохранить скриншот всего экрана как файл</td>
+<td>&nbsp;</td>
+<td>Cmd + Shift + 3</td>
+</tr>
+<tr>
+<td>Копировать скриншот всего экрана в буфер обмена</td>
+<td>PrtScr (Print Screen) или Ctrl + PrtScr</td>
+<td>Cmd + Ctrl + Shift + 3</td>
+</tr>
+<tr>
+<td>Сохранить скриншот окна, как файл</td>
+<td>&nbsp;</td>
+<td>Cmd + Shift + 4, затем Space</td>
+</tr>
+<tr>
+<td>Скопировать скриншот окна в буфер обмена</td>
+<td>Alt + PrtScr</td>
+<td>Cmd + Ctrl + Shift + 4, затем Space</td>
+</tr>
+<tr>
+<td style="height: 31px">Скопировать скриншот нужной области в буфер обмена</td>
+<td style="height: 31px"></td>
+<td style="height: 31px">Cmd + Ctrl + Shift + 4</td>
+</tr>
+<tr>
+<td>Сохранить скриншот нужной области как файл</td>
+<td>&nbsp;</td>
+<td>Cmd + Shift + 4</td>
+</tr>
+</table>
+<div class="w3-note w3-panel">
+<p><b>Примечание:</b> Из-за различных настроек клавиатуры некоторые сочетания клавиш могут быть несовместимы не для всех пользователей.</p>
+</div>
+<hr>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="ref_pxtoemconversion.php">&#10094; Назад</a>
+<a class="w3-right w3-btn" href="tag_comment.php">Вперед  &#10095;</a>
+</div>
+</div>
+<!-- /Main-->
+
+<div class="w3-col l2 m12" id="right"><!--<div class="sidesection"><h4><a href="">ВАКАНСИИ НА SCHOOLSW3</a></h4></div>-->
+<div class="sidesection"><div id="skyscraper">
+
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+
+</div>
+</div>
+
+<!--<div class="sidesection"><h4><a href="../colors/colors_picker.php">ПОДБОР ЦВЕТА</a></h4><a href="../colors/colors_picker.php"><img src="https://www.schoolsw3.com/images/colorpicker.gif" alt="colorpicker"></a></div>--><div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Упражнения</h4></div><div><div class="w3-light-grey"><a target="_blank" href="/html/exercise.php" style="padding-top:8px">HTML</a><a target="_blank" href="/css/exercise.php" style="padding-top:8px">CSS</a><a target="_blank" href="/js/exercise_js.php" style="padding-top:8px">JavaScript</a><a target="_blank" href="/sql/exercise.php" style="padding-top:8px">SQL</a><a target="_blank" href="/php/exercise.php" style="padding-top:8px">PHP</a><a target="_blank" href="/python/exercise.php" style="padding-top:8px">Python</a><!--<a target="_blank" href="/bootstrap/exercise_bs3.php">Bootstrap</a><a target="_blank" href="/jquery/exercise_jq.php" style="padding-bottom:8px">jQuery</a>--></div></div></div><div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Тесты</h4></div><div><div class="w3-light-grey"><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_HTML.php" style="padding-top:8px">HTML</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_CSS.php" style="padding-top:8px">CSS</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_JS.php" style="padding-top:8px">JavaScript</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_SQL.php" style="padding-top:8px">SQL</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_PYTHON.php" style="padding-top:8px">PYTHON</a></div></div></div><div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px"><div class="w3-container w3-dark-grey"><h4><a href="../howto/index.php" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4></div><div class="w3-container w3-left-align w3-padding-16"><a href="../howto/howto_js_tabs.php">Теги</a><br><a href="../howto/howto_css_dropdown.php">Выпадающий</a><br><a href="../howto/howto_js_accordion.php">Аккардионы</a><br><a href="../howto/howto_js_sidenav.php">Боковой Навигатор</a><br><a href="../howto/howto_js_topnav.php">Верхний Навигатор</a><br><a href="../howto/howto_css_modals.php">Модель Бокс</a><br><a href="../howto/howto_js_progressbar.php">Индикатор Полоса</a><br><a href="../howto/howto_css_parallax.php">Паралакс</a><br><a href="../howto/howto_css_login_form.php">Логин Форма</a><br><a href="../howto/howto_html_include.php">HTML Подключение</a><br><a href="../howto/howto_google_maps.php">Гугл Карта</a><br><a href="../howto/howto_js_rangeslider.php">Ползунки Диапазон</a><br><a href="../howto/howto_css_tooltip.php">Подсказки</a><br><a href="../howto/howto_js_slideshow.php">Слайд-шоу</a><br><a href="../howto/howto_js_filter_lists.php">Фильтр Списка</a><br><a href="../howto/howto_js_sort_list.php">Сортировка Списка</a><br></div></div>
+<div class="sidesection">
+<h4>ПОДЕЛИТЬСЯ</h4>
+<div class="w3-text-grey sharethis">
+<script><!--try{loc=location.pathname;if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"index.php";txt='<a href="http://www.facebook.com/sharer.php?u=https://schoolsw3.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';txt=txt+'<a href="https://twitter.com/home?status=Currently reading https://schoolsw3.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';document.write(txt);} catch(e) {}//--></script>
+<br><br><a href="javascript:void(0);" onclick="clickFBLike()" title="Клик SchoolsW3 на Facebook"><span class="fa fa-thumbs-o-up fa-2x"></span></a>
+<div id="fblikeframe" class="w3-modal"><div class="w3-modal-content w3-padding-64 w3-animate-zoom" id="popupDIV"></div></div>
+</div>
+</div>
+<div class="sidesection"><h4><a target="_blank" href="../cert/index.php">СЕРТИФИКАТЫ</a></h4><p><a href="../cert/cert_html.php">HTML</a><br><a href="../cert/cert_css.php">CSS</a><br><a href="../cert/cert_javascript.php">JavaScript</a><br><a href="../cert/cert_sql.php">SQL</a><br><a href="../cert/cert_python.php">Python</a><br><a href="../cert/cert_php.php">PHP</a><br><a href="../cert/cert_jquery.php">jQuery</a><br><a href="../cert/cert_bootstrap.php">Bootstrap</a><br><a href="../cert/cert_xml.php">XML</a></p><a href="../cert/index.php" class="w3-button w3-dark-grey" style="text-decoration:none">Читать далее &raquo;</a>
+</div>
+<div class="sidesection">
+<!--<form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" style="padding:0; margin:1px"><input type="hidden" name="receiver" value="410011618810988"> <input type="hidden" name="formcomment" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="short-dest" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="label" value="$order_id"><input type="hidden" name="quickpay-form" value="donate"> <input type="hidden" name="targets" value="транзакция {order_id}"> <input type="hidden" name="sum" value=" " data-type="number"> <input type="hidden" name="comment" value="САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ."><input type="hidden" name="need-fio" value="true"> <input type="hidden" name="need-email" value="true"> <input type="hidden" name="need-phone" value="false"> <input type="hidden" name="need-address" value="false"> <input type="submit" class="" value="Пожертвовать"><input type="hidden" name="sum" value="199" data-type="number" size="4"> <br>Yoomoney<br>410011618810988</form>--><!--<iframe src="https://yoomoney.ru/quickpay/button-widget?targets=schoolsw3&default-sum=199&button-text=14&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=410011618810988&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>-->
+<form class="form i-bem" data-bem='{"form":{}}' method="POST" target="_blank" action="https://yoomoney.ru/quickpay/confirm.xml"><input class="native-input native-input_type_hidden" name="quickpay-form" value="small" type="hidden"><input class="native-input native-input_type_hidden" name="is-inner-form" value="true" type="hidden"><input class="native-input native-input_type_hidden" name="paymentType" value="PC" type="hidden"><input class="native-input native-input_type_hidden" name="receiver" value="410011618810988" type="hidden"><input class="native-input native-input_type_hidden" name="targets" value="schoolsw3" type="hidden"><input class="native-input native-input_type_hidden" name="sum" value="100" type="hidden"><input class="native-input native-input_type_hidden" name="successURL" value="" type="hidden"><input class="native-input native-input_type_hidden" name="label" value="" type="hidden"><input class="native-input native-input_type_hidden" name="referer" value="" type="hidden"><div class="widget-small__button"><button data-bem='{"button":{}}' role="button" type="submit"><span class="button__text">Пожертвовать</span></button><br>Yoomoney<br>410011618810988</div></form></div>
+
+<div class="sidesection">
+
+<div id="skyscraper">
+
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+
+</div>
+
+</div>
+
+
+<!--
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+<div id="stickyadcontainer"><div style="position:relative;margin:auto;"> 
+<div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>
+</div>
+</div>
+</div>
+-->
+</div>
+</div>
+
+
+<div id="footer" class="footer w3-container w3-white"><hr>
+<div style="overflow:auto">
+<div class="bottomad">
+<!-- Yandex.RTB R-A-1358578-3 --><div id="yandex_rtb_R-A-1358578-3"></div><script>window.yaContextCb.push(()=>{ Ya.Context.AdvManager.render({ renderTo: 'yandex_rtb_R-A-1358578-3', blockId: 'R-A-1358578-3' })})</script><!-- // Yandex.RTB R-A-1358578-3 --></div>
+</div><hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px"><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ОШИБКУ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../forum/index.php" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ФОРУМ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../about/index.php" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">О НАС</a></div></div><hr><div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative"><span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span><h2>Сообщить об ошибке</h2><p>Если вы хотите сообщить об ошибке или сделать предложение, не стесняйтесь, присылайте нам электронное письмо:</p><p>and-shhipunov@mail.ru</p><br><h2>Ваше предложение:</h2><form><div class="w3-section"> <label for="err_email">Ваш E-mail:</label><input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email"></div><div class="w3-section"> <label for="err_email">Адрес страницы:</label><input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled"></div><div class="w3-section"><label for="err_email">Описание:</label><textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea></div><div class="form-group"> <button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button></div><br></form></div><div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative"><span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span> <h2>Спасибо, за вашу помощь!</h2><p>Ваше сообщение было отправлено в SchoolsW3.</p></div><div class="w3-row w3-center w3-small"><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Учебники </h4><a href="../html/index.php">HTML Учебник</a><br><a href="../css/index.php">CSS Учебник</a><br><a href="../js/index.php">JavaScript Учебник</a><br><a href="../howto/index.php">КАК Учебник</a><br><a href="../sql/index.php">SQL Учебник</a><br><a href="../python/index.php">Python Учебник</a><br><a href="../w3css/index.php">W3.CSS Учебник</a><br><a href="../bootstrap/bootstrap_ver.php">Bootstrap Учебник</a><br><a href="../php/index.php">PHP Учебник</a><br><a href="../jquery/index.php">jQuery Учебник</a><br><a href="../java/index.php">Java Учебник</a><br><a href="../cpp/index.php">C++ Учебник</a><br></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Справочники</h4><a href="../tags/index.php">HTML Справочник</a><br><a href="../cssref/index.php">CSS Справочник</a><br><a href="../jsref/index.php">JavaScript Справочник</a><br><a href="../sql/sql_ref_keywords.php">SQL Справочник</a><br><a href="../python/python_reference.php">Python Справочник</a><br><a href="../w3css/w3css_references.php">W3.CSS Справочник</a><br><a href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap Справочник</a><br><a href="../php/php_ref_overview.php">PHP Справочник</a><br><a href="../colors/colors_names.php">HTML Цвета</a><br><a href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><br><a href="../java/java_ref_keywords.php">Java Справочник</a><br><a href="../angular/angular_ref_directives.php">Angular Справочник</a><br></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Примеры</h4><a href="html_examples.php">HTML Примеры</a><br><a href="../css/css_examples.php">CSS Примеры</a><br><a href="../js/js_examples.php">JavaScript Примеры</a><br><a href="../howto/index.php">How To Примеры</a><br><a href="../sql/sql_examples.php">SQL Примеры</a><br><a href="../python/python_examples.php">Python Примеры</a><br><a href="../w3css/w3css_examples.php">W3.CSS Примеры</a><br><a href="../bootstrap/bootstrap_examples.php">Bootstrap Примеры</a><br><a href="../php/php_examples.php">PHP Примеры</a><br><a href="../jquery/jquery_examples.php">jQuery Примеры</a><br><a href="../java/java_examples.php">Java Примеры</a><br><a href="../xml/xml_examples.php">XML Примеры</a><br></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Веб Сертификаты</h4><a href="../cert/index.php">HTML Сертификат</a><br><a href="../cert/index.php">CSS Сертификат</a><br><a href="../cert/index.php">JavaScript Сертификат</a><br><a href="../cert/index.php">SQL Сертификат</a><br><a href="../cert/index.php">Python Сертификат</a><br><a href="../cert/index.php">jQuery Сертификат</a><br><a href="../cert/index.php">PHP Сертификат</a><br><a href="../cert/index.php">Bootstrap Сертификат</a><br><a href="../cert/index.php">XML Сертификат</a><br><a href="../cert/index.php" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">Получить Сертификат &raquo;</a></div></div> </div> <hr><div class="w3-center w3-small">SchoolsW3 оптимизирован для обучения, тестирования и тренировки. Примеры упрощают и улучшают чтение и базовое понимание.Учебники, справочники, примеры постоянно пересматриваются, для того, чтобы избежать ошибки, невозможно гарантировать правильность всего содержимого.Используя данный сайт, вы соглашаетесь прочитать и принять <a href="../about/about_copyright.php">условия использования</a>,<a href="../about/about_privacy.php">cookie и Политика конфиденциальности</a>.<a href="../about/about_copyright.php">Авторское право 1999 - 2022</a> Все права защищены.<br><a href="../w3css/index.php">Работает на W3.CSS</a>.<br><br><a href="../index.html"><img style="width:150px;height:28px;border:0" src="https://www.schoolsw3.com/images/w3schoolscom_gray.gif" alt="SchoolsW3.com"></a></div><br><br></div></div><script src="../lib/schools_footer.js"></script><script src="https://cse.google.com/cse.js?cx=009251009105284944376:hm8um3ylyzo"></script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-106562886-1');</script><!-- Yandex.Metrika counter --><script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45941085, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true });</script><!-- /Yandex.Metrika counter --><script>var stickyadstatus = "";function fix_stickyad() {document.getElementById("stickypos").style.position = "sticky";var elem = document.getElementById("stickyadcontainer");if (!elem) {return false;}if (document.getElementById("skyscraper")) {var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", "")); }else {var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", "")); }elem.style.width = skyWidth + "px";if (window.innerWidth <= 992) {elem.style.position = "";elem.style.top = stickypos + "px";return false;}var stickypos = document.getElementById("stickypos").offsetTop;var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));if (stickyadstatus == "") {if ((stickypos - docTop) < 60) {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}} else {if ((docTop + 60) - stickypos < 0) { elem.style.position = "";elem.style.top = stickypos + "px";stickyadstatus = "";document.getElementById("stickypos").style.position = "static";}}if (stickyadstatus == "sticky") {if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {elem.style.position = "absolute";elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";document.getElementById("stickypos").style.position = "static";} else {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}}}function w3_getStyleValue(elmnt,style) {if (window.getComputedStyle) {return window.getComputedStyle(elmnt,null).getPropertyValue(style);} else {return elmnt.currentStyle[style];}}</script></body></html>

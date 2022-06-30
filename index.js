@@ -5,11 +5,13 @@ const cors = require('cors');
 const path = require('path');
 
 const { onboarding } = require('./send_messages/onboarding');
+const { status, Last7Days } = require('./send_messages/satus');
 
 const PORT = process.env.PORT || 5000;
 
 let configDict = require('./config');
 const { text } = require('express');
+const { stat } = require('fs');
 const config = configDict['config'];
 const url = configDict['url'];
 const apiToken = configDict['apiToken'];
@@ -90,7 +92,14 @@ app.get('/success-submit/:task/:userID', async function(request, response){
 });
 
 app.get('/cron-status', async function(request, response){
-
+  let users = db.collection('users');
+  const snapshot = await users.get();
+  const last7Days = Last7Days();
+  snapshot.forEach(doc => {
+    console.log(doc.id, '=>', doc.data());
+    status(doc.id, doc.data(), last7Days, db);
+  });
+  response.json({})
 })
 
 app.get('/test-task/', function(req, res) {
