@@ -107,7 +107,8 @@ app.get('/test-task/', function(req, res) {
 })
 
 app.get('/css-task/', function(req, res) {
-  res.sendFile(path.join(__dirname, '/pages/css_tasks/exercise_combinators2.html'));
+  let page = req.query.page;
+  res.sendFile(path.join(__dirname, `/pages/css_tasks/${page}.html`));
 })
 
 app.get('/editor-interface-js/', function(req, res) {
