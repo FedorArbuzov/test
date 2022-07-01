@@ -1,0 +1,114 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Особенности</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_units.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_borders.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>В чем особенности?</h2>
+<p>Если есть два или более конфликтующих правила CSS, которые указывают на тот же
+элемент, браузер следует некоторым правилам, чтобы определить, какой из них 
+самый конкретный и поэтому он применяться.</p>
+<p>Подумайте о специфике как о балле / ранге, который определяет, какие объявления стиля 
+в конечном итоге применяются к элементу.</p>
+<p>Всеобщий селектор (<code class="w3-codespan">*</code> имеет низкую характерность,
+а <code class="w3-codespan">id</code> селекторы высокую конкретность!</p>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Особенность - это распространенная причина, почему ваши CSS правила не применяются к некоторым 
+элементам, хотя вы думаете, что они должны применяться.</p>
+</div>
+<hr/>
+<h2>Иерархия особенности</h2>
+<p>Каждый селектор имеет свое место в иерархии. Есть четыре 
+категории, определяющие уровень особенности селектора:</p>
+<p><strong>Встроенный стиль</strong> - Встроенный стиль прикрепляется непосредственно к элементу, для которого создается стиль.</p>
+<p>Пример: <code class="w3-codespan">&lt;h1 style="color: #ffffff;"&gt;</code>.</p>
+<p><strong>Идентификатор</strong> - это уникальный идентификатор элементов страницы, таких как, <code class="w3-codespan">#navbar</code>.</p>
+<p><strong>Классы, атрибуты и псевдо-классы</strong> - Эти категории включают <code class="w3-codespan">.класс [атрибут]</code>
+и псевдо-классы как например <code class="w3-codespan">:hover</code>, <code class="w3-codespan">:focus</code> и т.д..</p>
+<p><strong>Элементы и псевдо-элементы</strong> - Эта категория включает элемент имена и псевдо-элементы,
+как например <code class="w3-codespan">h1</code>, <code class="w3-codespan">div</code> , <code class="w3-codespan">:before</code>  и <code class="w3-codespan">:after</code> .</p>
+<hr/>
+<h2>Как рассчитать особенности?</h2>
+<p>Запомните, как рассчитать особенности!</p>
+<p>Начните с 0, добавьте 1000 атрибутов для стиля, добавить 100 для каждого идентификатора, добавить 10 для каждого атрибута класса или 
+псевдокласс, добавьте 1 для каждого имени элемента или псевдо-элемента.</p>
+<p>Рассмотрим следующие три фрагмента кода:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+A: h1<br/>B: #content h1<br/>C: &lt;div id="content"&gt;&lt;h1 style="color: #ffffff"&gt;Заголовок&lt;/h1&gt;&lt;/div&gt;
+</div>
+</div>
+<p>Особенность A - 1 (один элемент)<br/>
+Особенность Б - 101 (одна ссылка ID и один элемент)<br/>
+Особенность C - 1000 (встроенный стиль)</p>
+<p>Так как 1 &lt; 101 &lt; 1000, третье правило (C) имеет более высокий уровень 
+специфичность, а значит будет применяться</p>
+<hr/>
+<h2>Правила особенности</h2>
+<p><strong>Равная особенность: последним пунктам правил</strong> - 
+Если одно и то же правило записывается дважды во внешнюю таблицу стилей, то 
+нижнее правило в таблице стилей ближе к элементу, будет применяться, и поэтому оно будет работать:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {background-color: yellow;}<br/>
+h1 {background-color: red;}
+</div>
+<p><a class="w3-btn" href="trycss_specificity1.php" target="_blank">Попробуйте сами »</a></p>
+</div>
+<p>Последнее правило применяется всегда.</p>
+<hr/>
+<p><strong>ID селекторы имеют более высокую специфичность, чем селекторы атрибутов</strong> - Посмотрите на следующие три строки кода:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div#a {background-color: green;}<br/>#a {background-color: yellow;}<br/>div[id=a] {background-color: blue;}
+</div>
+<p><a class="w3-btn" href="trycss_specificity2.php" target="_blank">Попробуйте сами »</a></p>
+</div>
+<p>Первое правило является более конкретным, чем два других, оно будет применяться.</p>
+<hr/>
+<p><strong>Контекстные селекторы являются более конкретными, чем селектор одного элемента</strong>
+- Внедренная таблица стилей расположена ближе к элементу, для которого требуется применить стиль:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+<strong>Из внешнего файла CSS:</strong><br/>#content h1 {background-color: red;}<br/><br/><strong>
+В HTML файле:</strong><br/>&lt;style&gt;<br/>#content h1 {<br/>    background-color: 
+yellow;<br/>}<br/>&lt;/style&gt;
+</div>
+</div>
+<p>Будет применяться последнее правило.</p>
+<hr/>
+<p><strong>Селектор класс превосходит любое количество селекторов элементов</strong> - селектор класса,
+например: <code class="w3-codespan">.intro</code> выигрывает у <code class="w3-codespan">h1</code>, <code class="w3-codespan">p</code>,
+<code class="w3-codespan">div</code> и т.д.:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.intro {background-color: yellow;}<br/>h1 {background-color: 
+red;}
+</div>
+<p><a class="w3-btn" href="trycss_specificity3.php" target="_blank">Попробуйте сами »</a></p>
+</div>
+<hr/>
+<p><strong>Универсальный селектор и наследуемые значения имеют спецификацию 0</strong> - <code class="w3-codespan">*</code>, 
+<code class="w3-codespan">body*</code> и подобное имеют нулевую специфичность.
+Унаследованные значения также имеют спецификацию <code class="w3-codespan">0</code>.</p>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_units.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_borders.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

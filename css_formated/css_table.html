@@ -1,0 +1,439 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Таблицы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_list.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_display_visibility.php">Далее ❯</a>
+</div>
+<hr/>
+<p class="intro">Внешний вид таблицы HTML может быть значительно улучшена с помощью CSS:</p>
+<table id="customers">
+<tr>
+<th>Компания</th>
+<th>Контакты</th>
+<th>Страна</th>
+</tr>
+<tr>
+<td>Alfreds Futterkiste</td>
+<td>Мария Андерс</td>
+<td>Германия</td>
+</tr>
+<tr class="alt">
+<td>Berglunds snabbköp</td>
+<td>Кристина Берглунд</td>
+<td>Швеция</td>
+</tr>
+<tr>
+<td>Centro comercial Moctezuma</td>
+<td>Франсиско Чанг</td>
+<td>Мексика</td>
+</tr>
+<tr class="alt">
+<td>Ernst Handel</td>
+<td>Роланд Мендель</td>
+<td>Австрия</td>
+</tr>
+<tr>
+<td>Island Trading</td>
+<td>Хелен Беннетт</td>
+<td>Великобритания</td>
+</tr>
+<tr class="alt">
+<td>Königlich Essen</td>
+<td>Филипп Крамер</td>
+<td>Германия</td>
+</tr>
+<tr>
+<td>Laughing Bacchus Winecellars</td>
+<td>Йоши Таннфмури</td>
+<td>Канада</td>
+</tr>
+<tr class="alt">
+<td>Magazzini Alimentari Riuniti</td>
+<td>Иоанн Ровелли</td>
+<td>Италия</td>
+</tr>
+</table>
+<hr/>
+<h2>Границы таблицы</h2>
+<p>Чтобы задать границы таблицы в CSS, используйте свойство <code class="w3-codespan">border</code>.</p>
+<p>Пример ниже определяет черными границами для элемнтов <code class="w3-codespan">&lt;table&gt;</code>,
+<code class="w3-codespan">&lt;th&gt;</code>, и <code class="w3-codespan">&lt;td&gt;</code>:</p>
+<iframe src="trycss_table_border_iframe.htm" style="border:none;height:105px;"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+table, th, td {<br/>
+   border: 1px solid black;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_border.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Обратите внимание, что таблица в примере выше имеет двойную границу.
+Это потому, что обе таблицы и элименты <code class="w3-codespan">&lt;th&gt;</code>,
+и <code class="w3-codespan">&lt;td&gt;</code> имеют отдельные границы.</p>
+<hr/>
+<h2>Свернуть границы таблицы</h2>
+<p>Свойство <code class="w3-codespan">border-collapse</code> задает, будут ли границы таблиц свернуты в одну границу:</p>
+<iframe src="trycss_table_border-collapse_iframe.htm" style="border:none;height:95px;"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+table {<br/>
+   border-collapse: collapse;<br/>}<br/><br/>
+table, th, td {<br/>
+   border: 1px solid black;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_border-collapse.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p style="margin-top:25px;">Если вы хотите установить границы только вокруг таблицы, укажите свойство <code class="w3-codespan">border</code>
+для <code class="w3-codespan">&lt;table&gt;</code>:</p>
+<iframe src="trycss_table_border2_iframe.htm" style="border:none;height:95px;"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+table {<br/>
+    border: 1px solid black;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_border2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Ширина и высота таблицы</h2>
+<p>Ширина и высота таблицы определяются свойством <code class="w3-codespan">width</code> и <code class="w3-codespan">height</code>.</p>
+<p>В примере ниже задается ширина таблицы 100 пикселей, а высота 50 пикселей:</p>
+<iframe src="trycss_table_width_iframe.htm" style="border:none;width:100%;height:146px;"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+table {<br/>
+   width: 100%;<br/>}<br/><br/>
+th {<br/>
+   height: 50px;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_width.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Горизонтальное выравнивание таблицы</h2>
+<p>Свойство <code class="w3-codespan">text-align</code> задает горизонтальное выравнивание  (слева, справа, или по центру) контента в тегах
+<code class="w3-codespan">&lt;th&gt;</code> или <code class="w3-codespan">&lt;td&gt;</code>.</p>
+<p>По умолчанию содержание элемента <code class="w3-codespan">&lt;th&gt;</code> выравниваниет по центру и содержание элемента
+<code class="w3-codespan">&lt;td&gt;</code> выравниваниет по левому краю.</p>
+<p>В следующем примере выравнивает текст слева в элементе <code class="w3-codespan">&lt;th&gt;</code>:</p>
+<iframe src="trycss_table_align_iframe.htm" style="border:none;width:100%;height:120px;"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+th {<br/>
+   text-align: left;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_align.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Вертикальное выравнивание таблицы</h2>
+<p>Свойство <code class="w3-codespan">vertical-align</code> задает вертикальное выравнивание в (верхней, нижней или по центру) контент в
+<code class="w3-codespan">&lt;th&gt;</code> или <code class="w3-codespan">&lt;td&gt;</code>.</p>
+<p>По умолчанию вертикальное выравнивание содержимого в таблице, будет по центру (для обоих элементов <code class="w3-codespan">&lt;th&gt;</code>
+и <code class="w3-codespan">&lt;td&gt;</code>).</p>
+<p>Следующий пример задает вертикальное выравнивание текста в нижней части для элемента <code class="w3-codespan">&lt;td&gt;</code>):</p>
+<iframe src="trycss_table_vertical-align_iframe.htm" style="border:none;width:100%;height:206px;"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+td {<br/>
+   height: 50px;<br/>
+   vertical-align: bottom;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_vertical-align.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Отступы в таблице</h2>
+<p>Чтобы контролировать пространство между границей и содержимым в таблице, используйте свойство <code class="w3-codespan">padding</code>
+в элементе <code class="w3-codespan">&lt;th&gt;</code> и <code class="w3-codespan">&lt;td&gt;</code>:</p>
+<iframe src="trycss_table_border-padding_iframe.htm" style="border:none;width:100%;height:231px;"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+th, td {<br/>
+   padding: 15px;<br/>
+   text-align: left;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_padding.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Горизонтальные разделители таблицы</h2>
+<table class="tabletest2">
+<thead>
+<tr>
+<th>Имя</th>
+<th>Фамилия</th>
+<th>Сбережение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Андрей</td>
+<td>Щипунов</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>Сергей</td>
+<td>Щипунов</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Леонид</td>
+<td>Щипунов</td>
+<td>$300</td>
+</tr>
+</tbody>
+</table>
+<p>Добавить свойство <code class="w3-codespan">border-bottom</code> в <code class="w3-codespan">&lt;th&gt;</code> и
+<code class="w3-codespan">&lt;td&gt;</code> для горизонтальных разделителей:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+th, td {<br/>
+   border-bottom: 1px solid #ddd;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_border_divider.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Таблица при наведении</h2>
+<p>Использовать селектор <code class="w3-codespan">:hover</code> в <code class="w3-codespan">&lt;tr&gt;</code> для выделения строк таблицы при наведении:</p>
+<table class="tabletest4">
+<tr>
+<th>Имя</th>
+<th>Фамилия</th>
+<th>Сбережение</th>
+</tr>
+<tr>
+<td>Андрей</td>
+<td>Щипунов</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>Сергей</td>
+<td>Щипунов</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Леонид</td>
+<td>Щипунов</td>
+<td>$300</td>
+</tr>
+</table>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">tr:hover {background-color: #f5f5f5}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_hover.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Полосатая таблица</h2>
+<table class="tabler">
+<tr>
+<th>Имя</th>
+<th>Фамилия</th>
+<th>Сбережение</th>
+</tr>
+<tr>
+<td>Андрей</td>
+<td>Щипунов</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>Сергей</td>
+<td>Щипунов</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Леонид</td>
+<td>Щипунов</td>
+<td>$300</td>
+</tr>
+</table>
+<p>Для полосатой таблицы, использовать селектор <code class="w3-codespan">nth-child()</code> и добавить
+<code class="w3-codespan">background-color</code> на всех четных (или нечетных) строк таблицы:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">tr:nth-child(even) {background-color: #f2f2f2}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_striped.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Цвет заголовка таблицы</h2>
+<p>Пример ниже указывает цвет фона и цвет текста элемента <code class="w3-codespan">&lt;th&gt;</code>:</p>
+<table class="tabler">
+<tr style="background-color:#4CAF50;color:white;">
+<th>Имя</th>
+<th>Фамилия</th>
+<th>Сбережение</th>
+</tr>
+<tr>
+<td>Андрей</td>
+<td>Щипунов</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>Сергей</td>
+<td>Щипунов</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Леонид</td>
+<td>Щипунов</td>
+<td>$300</td>
+</tr>
+</table>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+th {<br/>
+   background-color: #4CAF50;<br/>
+   color: white;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_color.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Отзывчивая таблица</h2>
+<p>В отзывчивой таблице будет отображаться горизонтальная полоса прокрутки, если экран слишком мал для отображения полного содержимого:</p>
+<div class="w3-responsive">
+<table class="w3-table w3-margin-top w3-margin-bottom w3-striped w3-bordered"><tr>
+<th>Имя</th>
+<th>Фамилия</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+</tr>
+<tr>
+<td>Андрей</td>
+<td>Щипунов</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Сергей</td>
+<td>Щипунов</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+</tr>
+<tr>
+<td>Леонид</td>
+<td>Щипунов</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+</tr></table>
+</div>
+<p style="margin-top:40px;">Добавьте контейнер элемент <code class="w3-codespan">&lt;div&gt;</code> в
+<code class="w3-codespan">overflow-x:auto</code> внутри элемента <code class="w3-codespan">&lt;table&gt;</code>, чтобы сделать его отзывчивым:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div style="overflow-x:auto;"&gt;<br/><br/>
+&lt;table&gt;<br/>
+... содержание таблицы ...<br/>
+&lt;/table&gt;<br/><br/>
+&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_table_responsive.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Еще примеры</h2>
+<p><a href="trycss_table_fancy.php" target="_blank">Установить шикарную таблицу</a><br/>
+Пример демонстрирует, как создать шикарную таблицу.</p>
+<p><a href="trycss_table_caption-side.php" target="_blank">Установить заголовок таблицы</a><br/>
+Пример демонстрирует, как расположить заголовок таблицы.</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_table1.php" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_table2.php" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_table3.php" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_table4.php" target="_blank">Упражнение 4 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_table5.php" target="_blank">Упражнение 5 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_table6.php" target="_blank">Упражнение 6 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS таблицы</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="/cssref/pr_border.php">border</a></td>
+<td>Устанавливает все свойства границы в одном объявлении</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_border-collapse.php">border-collapse</a></td>
+<td>Устанавливает границы таблицы должны ли быть свернуты</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_border-spacing.php">border-spacing</a></td>
+<td>Устанавливает расстояние между границами соседних ячеек</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_tab_caption-side.php">caption-side</a></td>
+<td>Устанавливает размещение таблицы заголовка</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_tab_empty-cells.php">empty-cells</a></td>
+<td>Устанавливает следует ли отображать границы и фон пустых ячеек в таблице</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_tab_table-layout.php">table-layout</a></td>
+<td>Устанавливает алгоритм макета компоновки для использования в таблице</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_list.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_display_visibility.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

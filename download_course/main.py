@@ -1,9 +1,10 @@
+from base64 import encode
 import requests
 from bs4 import BeautifulSoup
 
-theme = 'css_task'
+theme = 'css'
 
-url = f'https://schoolsw3.com/css/exercise_selectors1.php'
+url = f'https://schoolsw3.com/css/index.php'
 
 r = requests.get(url)
 with open('index.html', 'w') as file:
@@ -11,8 +12,8 @@ with open('index.html', 'w') as file:
 
 soup = BeautifulSoup(r.text, 'html.parser')
 
-header = soup.find('div', {"class": "exercisemenuinner"})
-res = header.select('a[class="exbtn"]')
+header = soup.find('div', {"id": "leftmenuinnerinner"})
+res = header.select('a[target="_top"]')
 
 url = f'https://schoolsw3.com/css/'
 for i in res:
@@ -20,5 +21,5 @@ for i in res:
     name = link.split('.')[0]
     r = requests.get(url + link)
     print(name)
-    with open(f'{theme}/{name}.html', 'w') as file:
+    with open(f'{theme}/{name}.html', 'w', encoding='utf-8') as file:
         file.write(r.text)

@@ -1,0 +1,236 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Тени</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_gradients.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_text_effects.php">Далее ❯</a>
+</div>
+<hr/>
+<div class="w3-row">
+<div class="w3-half">
+<div class="card" style="width:80%;max-width:400px;box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;">
+<img alt="Norway" src="rock600x400.jpg" style="width:100%"/>
+<div class="cardcontainer">
+<p>Бокс Тень</p>
+</div>
+</div>
+</div>
+<div class="w3-half">
+<p id="textintro">С помощью CSS3 вы можете создавать теневые эффекты!</p>
+<div class="bordershadow">Наведи на меня!</div>
+</div>
+</div>
+<hr/>
+<h2>CSS3 эффект тени</h2>
+<p>С помощью CSS вы можете добавить тень к тексту и элементам.</p>
+<p>В этой главе вы узнаете о следующих свойствах:</p>
+<ul>
+<li><code class="w3-codespan">text-shadow</code></li>
+<li><code class="w3-codespan">box-shadow</code></li>
+</ul>
+<hr/>
+<h2>CSS тень текста</h2>
+<p>CSS свойство <code class="w3-codespan">text-shadow</code> применяет тень к тексту.</p>
+<p>В простейшем случае можно указать только горизонтальную тень (2 пикселя) и вертикальную тень (2 пикселя):</p>
+<h2 id="simpleshadow">Эффект тени текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>     text-shadow: 2px 2px;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow1.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Сначала, добавить цвет к тени:</p>
+<h2 id="simpleshadow2">Эффект тени текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>     text-shadow: 2px 2px red;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow2.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Затем добавьте эффект размытия в тень:</p>
+<h2 id="simpleshadow3">Эффект тени текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>     text-shadow: 2px 2px 5px red;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow3.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>В следующем примере показан белый текст с черной тенью:</p>
+<h2 id="simpleshadow4">Эффект тени текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>     color: white;<br/>
+    text-shadow: 2px 2px 4px #000000;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow4.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Следующий пример показывает красную неоновую тень:</p>
+<h2 id="simpleshadow5">Эффект тени текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>     text-shadow: 0 0 3px #FF0000;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow5.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>Несколько теней</h2>
+<p>Чтобы добавить в текст несколько теней, нужно добавить список теней разделенные запятыми .</p>
+<p>Следующий пример показывает красную и голубую неоновую тень:</p>
+<h2 id="simpleshadow6">Эффект тени текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow6.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>В следующем примере показан белый текст с черной, синей и темно-синей тенью:</p>
+<h2 id="simpleshadow7">Эффект тени текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>    color: white;<br/>
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow7.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Можно также использовать свойство <code class="w3-codespan">text-shadow</code> для создания простой границы вокруг текста (без теней):</p>
+<h2 id="simpleshadowborder">Граница вокруг текста!</h2>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>    color: yellow;<br/>
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-shadow_border.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>Свойство CSS <code class="w3-codespan">box-shadow</code></h2>
+<p>CSS свойство <code class="w3-codespan">box-shadow</code> устанавливает тень к элементам.</p>
+<p>В простейшем случае можно указать только горизонтальную и вертикальную тень:</p>
+<div id="boxshadow1">Это желтый элемент &lt;div&gt; с черным box-shadow</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    box-shadow: 10px 10px;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_box-shadow.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Сначала, добавить цвет к тени:</p>
+<div id="boxshadow2">Это желтый элемент &lt;div&gt; с серым цветом box-shadow</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    box-shadow: 10px 10px grey;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_box-shadow2.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Сначала, добавить эффект размытия к тени:</p>
+<div id="boxshadow3">Это желтый элемент &lt;div&gt; с размытым, серым box-shadow</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    box-shadow: 10px 10px 5px grey;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_box-shadow3.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Вы также можете добавить тени к псевдо-элементам <code class="w3-codespan">::before</code> и <code class="w3-codespan">::after</code>,
+чтобы создать интересный эффект:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#boxshadow {<br/>    position: relative;<br/>    
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);<br/>    padding: 
+10px;<br/>    background: white;<br/>}<br/><br/>#boxshadow img {<br/>    
+width: 100%;<br/>    border: 1px solid #8a4419;<br/>    
+border-style: inset;<br/>}<br/>
+<br/>#boxshadow::after {<br/>    content: '';<br/>    
+position: absolute;<br/>    z-index: -1; /* скрыть тень 
+изображение */<br/>    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+<br/>    width: 70%; <br/>    left: 15%; /* половина оставшегося 30% */<br/>
+    height: 100px;<br/>    
+bottom: 0;<br/>} </div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_box-shadow6.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>Карточки</h2>
+<p>Пример использования свойства <code class="w3-codespan">box-shadow</code> для создания красивх карточек:</p>
+<div class="w3-row">
+<div class="w3-half">
+<div class="card">
+<div class="cardheader">
+<h1 style="font-size:91px;font-family: 'Times New Roman', Times, serif;font-weight:bold;">1</h1>
+</div>
+<div class="cardcontainer">
+<p>Январь 1, 2016</p>
+</div>
+</div>
+</div>
+<div class="w3-half">
+<div class="card">
+<img alt="Norway" src="rock600x400.jpg" style="width:100%"/>
+<div class="cardcontainer">
+<p>Хардангер, Норвегия</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div.card {<br/>
+    width: 250px;<br/>
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 
+0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);<br/>
+    text-align: center;<br/>
+}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_box-shadow4.php" target="_blank">Редактор (Карточка Текстовая ) »</a>
+<a class="w3-btn w3-margin-bottom" href="trycss3_box-shadow5.php" target="_blank">Редактор (Карточка Изображения) »</a>
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_shadows1.php" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_shadows1.php" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_shadows1.php" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_shadows1.php" target="_blank">Упражнение 4 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_shadows1.php" target="_blank">Упражнение 5 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS3 Тени</h2>
+<p>В следующей таблице перечислены теневые свойства CSS3:</p>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:28%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_box-shadow.php">box-shadow</a></td>
+<td>Добавляет одну или несколько теней к элементу</td>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_text-shadow.php">text-shadow</a></td>
+<td>Добавляет одну или несколько теней к тексту</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_gradients.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_text_effects.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

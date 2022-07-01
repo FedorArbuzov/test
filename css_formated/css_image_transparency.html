@@ -1,0 +1,212 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - opacity</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_pseudo_elements.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_navbar.php">Далее ❯</a>
+</div>
+<hr/>
+<p class="intro">Свойство <code class="w3-codespan">opacity</code> определяет непрозрачность / прозрачность элемента.</p>
+<hr/>
+<h2>Прозрачное изображение</h2>
+<p>Свойство <code class="w3-codespan">opacity</code> может принимать значение от 0.0 - 1.0. Чем меньше значение, тем прозрачнее:</p>
+<div class="w3-row-padding" style="margin:0 -16px">
+<div class="w3-third w3-center">
+<img alt="Лес" src="img_forest.jpg" style="width:100%;opacity:0.2;"/>
+<p>opacity 0.2</p>
+</div>
+<div class="w3-third w3-center">
+<img alt="Лес" src="img_forest.jpg" style="width:100%;opacity:0.5"/>
+<p>opacity 0.5</p>
+</div>
+<div class="w3-third w3-center">
+<img alt="Лес" src="img_forest.jpg" style="width:100%;"/>
+<p>opacity 1<br/>(по умолчаню)</p>
+</div>
+</div>
+<p><strong>Примечание:</strong> IE8 и более раннее использование <code class="w3-codespan">filter:alpha(opacity=x)</code>. 
+<code class="w3-codespan">x</code> может принимать значение от <code class="w3-codespan">0</code> до <code class="w3-codespan">100</code>.
+Чем значение меньше, тем элемент более прозрачный.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+img {<br/>    opacity: 0.5;<br/>    filter: 
+alpha(opacity=50); /* Для IE8 и более ранних версий */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_image_opacity.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Прозрачный эффект при наведении</h2>
+<p>Свойство <code class="w3-codespan">opacity</code> часто используется вместе с селектором <code class="w3-codespan">:hover</code> 
+для изменения непрозрачности при наведении мыши:</p>
+<div class="w3-row-padding" style="margin:0 -16px">
+<div class="w3-third w3-center">
+<img alt="Северное сияние" class="imgopac2" src="img_lights.jpg" style="width:100%;"/>
+</div>
+<div class="w3-third w3-center">
+<img alt="Горы" class="imgopac2" src="img_mountains.jpg" style="width:100%;"/>
+</div>
+<div class="w3-third w3-center">
+<img alt="Фьорды" class="imgopac2" src="img_fjords.jpg" style="width:100%;"/>
+</div>
+</div>
+<div class="w3-example" style="margin-bottom:24px;">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+img {<br/>    opacity: 0.5;<br/>    filter: 
+alpha(opacity=50); /* Для IE8 и более ранних версий */<br/>}<br/><br/>img:hover {<br/>    
+opacity: 1.0;<br/>    filter: alpha(opacity=100); /* Для IE8 и более ранних версий */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_image_transparency.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3>Объяснение примера</h3>
+<p>Первый блок CSS похож на код в Примере 1. Кроме того, мы добавили, что должно происходить, когда пользователь наводит курсор на одно из изображений.
+В этом случае мы хотим, чтобы изображение не было прозрачным, когда пользователь нависает над ним.
+CSS для этого примера <code class="w3-codespan">opacity:1;</code>.</p>
+<p>Когда указатель мыши отходит от изображения, изображение снова становится прозрачным.</p>
+<p>Пример обратного эффекта наведения:</p>
+<div class="w3-row-padding" style="margin:0 -16px">
+<div class="w3-third w3-center">
+<img alt="Северное сияние" class="imgopac" src="img_lights.jpg" style="width:100%;"/>
+</div>
+<div class="w3-third w3-center">
+<img alt="Горы" class="imgopac" src="img_mountains.jpg" style="width:100%;"/>
+</div>
+<div class="w3-third w3-center">
+<img alt="Фьорды" class="imgopac" src="img_fjords.jpg" style="width:100%;"/>
+</div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+img:hover {<br/>    
+opacity: 0.5;<br/>    filter: alpha(opacity=50); /* Для IE8 и более ранних версий */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_image_transparency2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Прозрачный бокс</h2>
+<p>При использовании свойство <code class="w3-codespan">opacity</code> для добавления прозрачности фона элемента, всех его дочерних элементов 
+наследуют ту же прозрачность. Это может затруднить чтение текста внутри прозрачного элемента:</p>
+<div class="w3-cell-row">
+<div class="w3-cell w3-mobile w3-center">
+<div style="background-color:#4CAF50;opacity:1;padding:50px;color:black"><p>opacity 1</p></div>
+</div>
+<div class="w3-cell w3-mobile w3-center">
+<div style="background-color:#4CAF50;opacity:0.6;padding:50px;color:black"><p>opacity 0.6</p></div>
+</div>
+<div class="w3-cell w3-mobile w3-center">
+<div style="background-color:#4CAF50;opacity:0.3;padding:50px;color:black"><p>opacity 0.3</p></div>
+</div>
+<div class="w3-cell w3-mobile w3-center">
+<div style="background-color:#4CAF50;opacity:0.1;padding:50px;color:black"><p>opacity 0.1</p></div>
+</div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    opacity: 0.3;<br/>    filter: 
+alpha(opacity=30); /* Для IE8 и более ранних версий */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_opacity_box.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Прозрачность с помощью RGBA</h2>
+<p>Если Вы не хотите применять непрозрачность к дочерним элементам, как в нашем примере выше, используйте значение цвета <strong>RGBA</strong>. 
+В следующем примере устанавливается непрозрачность для цвета фона, а не текста:</p>
+<div class="w3-cell-row">
+<div class="w3-cell w3-mobile w3-center">
+<div style="background:rgb(76, 175, 80);padding:50px;color:black"><p>100% opacity</p></div>
+</div>
+<div class="w3-cell w3-mobile w3-center">
+<div style="background:rgba(76, 175, 80,0.6);padding:50px;color:black"><p>60% opacity</p></div>
+</div>
+<div class="w3-cell w3-mobile w3-center">
+<div style="background:rgba(76, 175, 80,0.3);padding:50px;color:black"><p>30% opacity</p></div>
+</div>
+<div class="w3-cell w3-mobile w3-center">
+<div style="background:rgba(76, 175, 80,0.1);padding:50px;color:black"><p>10% opacity</p></div>
+</div>
+</div>
+<p>Вы уже узнали от нашего раздела <a href="css_colors.php">CSS Цвета</a>, что можно использовать RGB в качестве значения цвета.
+Вкачестве дополнения к RGB, можно использовать значение цвета RGB с альфа-каналом (RGBA) - который задает прозрачность цвета.</p>
+<p>Значение цвета RGBA указывается с помощью: <code class="w3-codespan">rgba(red, green, blue, <em>alpha</em>)</code>.
+Параметр <code class="w3-codespan"><em>alpha</em></code> является числом между <code class="w3-codespan">0.0</code>
+(полностью прозрачный) и <code class="w3-codespan">1.0</code> (полностью непрозрачный).</p>
+<p><strong>Совет:</strong> Вы выучите больше о цветах RGB в нашем разделе <a href="css3_colors.php">CSS3 Цвета</a>.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    background: rgba(76, 175, 80, 0.3) /* Зеленый фон с 30% прозрачности */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_opacity_box2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Текст в прозрачном поле</h2>
+<div class="background">
+<div class="transbox">
+<p>Это некоторый текст, который помещается в прозрачное поле.</p>
+</div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;html&gt;<br/>
+&lt;head&gt;<br/>
+&lt;style&gt;<br/>
+div.background {<br/>
+    background: url(klematis.jpg) repeat;<br/>
+    border: 2px solid black;<br/>
+}<br/>
+<br/>
+div.transbox {<br/>
+    margin: 30px;<br/>
+    background-color: #ffffff;<br/>
+    border: 1px solid black;<br/>
+    opacity: 0.6;<br/>
+    filter: alpha(opacity=60); /* Для IE8 и более ранних версий */<br/>
+}<br/>
+<br/>
+div.transbox p {<br/>
+    margin: 5%;<br/>
+    font-weight: bold;<br/>
+    color: #000000;<br/>
+}<br/>
+&lt;/style&gt;<br/>
+&lt;/head&gt;<br/>
+&lt;body&gt;<br/>
+<br/>
+&lt;div class="background"&gt;<br/>
+  &lt;div class="transbox"&gt;<br/>
+    &lt;p&gt;Это некоторый текст, который помещается в прозрачное поле.&lt;/p&gt;<br/>
+  &lt;/div&gt;<br/>
+&lt;/div&gt;<br/>
+<br/>
+&lt;/body&gt;<br/>
+&lt;/html&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_transparency.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Во-первых, мы создаем элемент <code class="w3-codespan">&lt;div&gt;</code> с <code class="w3-codespan">class="background"</code>
+с фоновым изображением и границей.
+Затем мы создаем другой <code class="w3-codespan">&lt;div&gt;</code> <code class="w3-codespan">class="transbox"</code>
+внутри первого <code class="w3-codespan">&lt;div&gt;</code>. 
+Имея цвет фона и границы класс <code class="w3-codespan">class="transbox"</code> -  является прозрачным.
+Внутри прозрачного <code class="w3-codespan">&lt;div&gt;</code>, мы добавляем текст внутри элемента <code class="w3-codespan">&lt;p&gt;</code>.</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_image_transparency1.php" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_image_transparency2.php" target="_blank">Упражнение 2 »</a>
+</div>
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_pseudo_elements.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_navbar.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

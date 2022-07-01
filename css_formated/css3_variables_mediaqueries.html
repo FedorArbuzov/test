@@ -1,0 +1,109 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Использование переменных в медиа-запросах</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_variables_javascript.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_box-sizing.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Использование переменных в медиа-запросах</h2>
+<p>Теперь мы хотим изменить значение переменной внутри медиа-запроса.</p>
+<div class="w3-panel w3-note">
+<p><strong>Совет:</strong> Медиа-запросы - это определение разных правил стиля для разных устройств (экранов, планшетов, мобильных телефонов и т.д.). Вы можете узнать больше о медиа-запросах в главе <a href="css3_mediaqueries.php">Медиа-запросы</a>.</p>
+</div>
+<p>Здесь мы сначала объявляем новую локальную переменную с именем --fontsize для класса <code class="w3-codespan">.container</code>. Мы устанавливаем его значение в 25 пикселей. Затем мы используем его в классе <code class="w3-codespan">.container</code> дальше вниз. Затем мы создаем правило <code class="w3-codespan">@media</code>, которое гласит: "Когда ширина браузера 450px или шире, измените значение переменной --fontsize класса <code class="w3-codespan">.container</code> на 50px".</p>
+<p>Вот полный пример:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* Объявления переменных */ <br/>:root {<br/>  --blue: #1e90ff;<br/>  --white: #ffffff; <br/>
+}<br/><br/>
+.container {<br/>  --fontsize: 25px;<br/>}<br/><br/>/* Стили */<br/>body {<br/>  
+background-color: var(--blue);<br/>}<br/><br/>h2 {<br/>  border-bottom: 2px solid var(--blue);<br/>}<br/><br/>.container 
+{<br/>  color: var(--blue);<br/>  background-color: var(--white);<br/>  
+padding: 15px;<br/>  font-size: var(--fontsize);<br/>}<br/><br/>@media screen and (min-width: 
+450px) {<br/>  
+.container {<br/>    --fontsize: 50px;<br/>  }<br/>}   
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss3_var_mq" target="_blank">Попробуйте сами »</a>
+<br/>
+</div>
+<hr/>
+<div id="midcontentadcontainer">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<p>Вот еще один пример, где также меняем значение переменной --blue в правиле @media:
+
+Here is another example where we also change the value of the --blue variable in the <code class="w3-codespan">@media</code> rule:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* Объявления переменных */ <br/>:root {<br/>  --blue: #1e90ff;<br/>  --white: #ffffff; <br/>
+}<br/><br/>
+.container {<br/>  --fontsize: 25px;<br/>}<br/><br/>/* Стили */<br/>body {<br/>  
+background-color: var(--blue);<br/>}<br/><br/>h2 {<br/>  border-bottom: 2px solid var(--blue);<br/>}<br/><br/>.container 
+{<br/>  color: var(--blue);<br/>  background-color: var(--white);<br/>  
+padding: 15px;<br/>  font-size: var(--fontsize);<br/>}<br/><br/>@media screen and (min-width: 
+450px) {<br/>  
+.container {<br/>    --fontsize: 50px;<br/>  }<br/>   
+:root {<br/>    --blue: lightblue;<br/>  }<br/>}   
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss3_var_mq2" target="_blank">Попробуйте сами »</a>
+<br/>
+</div>
+<hr/>
+<h2>Поддержка браузера</h2>
+<p>Цифры в таблице указывают первую версию браузера, которая полностью поддерживает функцию <code class="w3-codespan">var()</code> function.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+<tr>
+<th style="width:25%;font-size:16px;text-align:left;">Функция</th>
+<th class="bsChrome" style="width:15%;" title="Chrome"></th>
+<th class="bsEdge" style="width:15%;" title="Internet Explorer / Edge"></th>
+<th class="bsFirefox" style="width:15%;" title="Firefox"></th>
+<th class="bsSafari" style="width:15%;" title="Safari"></th>
+<th class="bsOpera" style="width:15%;" title="Opera"></th>
+</tr>
+<tr>
+<td style="text-align:left;">var()</td>
+<td>49.0</td>
+<td>15.0</td>
+<td>31.0</td>
+<td>9.1</td>
+<td>36.0</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>CSS Функция var()</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:28%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="../cssref/func_var.php">var()</a></td>
+<td>Вставляет значение переменной CSS</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_variables_javascript.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_box-sizing.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

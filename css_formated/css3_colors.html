@@ -1,0 +1,126 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Цвета</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_backgrounds.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_gradients.php">Далее ❯</a>
+</div>
+<hr/>
+<p class="intro">CSS поддерживает <a href="css_colors.php">140 + названия цветов, HSL шестнадцатеричные значения, значения RGB</a>,
+значения RGBA, значения HSL, значения HSLA и непрозрачность.</p>
+<hr/>
+<h2>RGBA Цвета</h2>
+<p>RGBA значения цвета являются расширением значений цвета RGB с альфа каналом, который определяет непрозрачность для цвета.</p>
+<p>Значение цвета RGBA указывается с помощью <code class="w3-codespan">rgba (красный, зеленый, синий, альфа)</code>.
+Параметр <code class="w3-codespan">alpha</code> является числом между <code class="w3-codespan">0.0</code> (полностью прозрачный)
+и <code class="w3-codespan">1.0</code> (полностью непрозрачный).</p>
+<div style="background: rgba(255, 0, 0, 0.2);padding:18px">rgba(255, 0, 0, 0.2);</div>
+<div style="background: rgba(255, 0, 0, 0.4);padding:18px">rgba(255, 0, 0, 0.4);</div>
+<div style="background: rgba(255, 0, 0, 0.6);padding:18px">rgba(255, 0, 0, 0.6);</div>
+<div style="background: rgba(255, 0, 0, 0.8);padding:18px">rgba(255, 0, 0, 0.8);</div>
+<p class="w3-margin-top">В следующем примере определяются различные цвета RGBA:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#p1 {background-color: rgba(255, 0, 0, 0.3);}  /* красный с непрозрачностью */<br/>
+#p2 {background-color: rgba(0, 255, 0, 0.3);}  /* зеленый с непрозрачностью */<br/>
+#p3 {background-color: rgba(0, 0, 255, 0.3);}  /* синий с непрозрачностью */
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_color_rgba.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>HSL Цвета</h2>
+<p>HSL означает Оттенок, Насыщенность и Яркости.</p>
+<p>Цвет значения HSL указано: <code class="w3-codespan">0.0</code>hsl(оттенок, насыщенность, яркость).</p>
+<ol>
+<li>Оттенок - это градус на цветовом круге (от 0 до 360):
+<ul>
+<li>0 (или 360) красный</li>
+<li>120 зеленый</li>
+<li>240 синий</li>
+</ul>
+</li>
+<li>Насыщенность - это процентное значение: <code class="w3-codespan">100%</code> - полный цвет.</li>
+<li>Яркость - также в процентах; <code class="w3-codespan">0%</code> - темный (черный) и <code class="w3-codespan">100%</code> - белый.</li>
+</ol>
+<div style="background: hsl(0, 100%, 30%);padding:18px">hsl(0, 100%, 30%);</div>
+<div style="background: hsl(0, 100%, 50%);padding:18px">hsl(0, 100%, 50%);</div>
+<div style="background: hsl(0, 100%, 70%);padding:18px">hsl(0, 100%, 70%);</div>
+<div style="background: hsl(0, 100%, 90%);padding:18px">hsl(0, 100%, 90%);</div>
+<p class="w3-margin-top">В следующем примере определяются различные цвета HSL:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#p1 {background-color: hsl(120, 100%, 50%);}  /* зеленый */<br/>
+#p2 {background-color: hsl(120, 100%, 75%);}  /* светло зеленый */<br/>
+#p3 {background-color: hsl(120, 100%, 25%);}  /* темно зеленый */<br/>
+#p4 {background-color: hsl(120, 60%, 70%);}   /* ярко зеленый */
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_color_hsl.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>HSLA Цвета</h2>
+<p>Значения цвета HSLA являются расширением значений цвета HSL с альфа каналом, который определяет непрозрачность 
+для цвета.</p>
+<p>Значение цвета HSLA указывается с помощью: <code class="w3-codespan">hsla (оттенок, насыщенность, яркость, альфа)</code>, где 
+параметр alpha определяет непрозрачность. Параметр <code class="w3-codespan">alpha</code> - это число от <code class="w3-codespan">0.0</code>
+(полностью прозрачный) до <code class="w3-codespan">1.0 (полностью непрозрачный).</code></p>
+<div style="background: hsla(0, 100%, 30%, 0.3);padding:18px">hsla(0, 100%, 30%, 0.3);</div>
+<div style="background: hsla(0, 100%, 50%, 0.3);padding:18px">hsla(0, 100%, 50%, 0.3);</div>
+<div style="background: hsla(0, 100%, 70%, 0.3);padding:18px">hsla(0, 100%, 70%, 0.3);</div>
+<div style="background: hsla(0, 100%, 90%, 0.3);padding:18px">hsla(0, 100%, 90%, 0.3);</div>
+<p class="w3-margin-top">В следующем примере определяются различные цвета HSLA:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#p1 {background-color: hsla(120, 100%, 50%, 0.3);} /* зеленый с непрозрачностью */<br/>
+#p2 {background-color: hsla(120, 100%, 75%, 0.3);};/* светло зеленый с непрозрачностью */<br/>
+#p3 {background-color: hsla(120, 100%, 25%, 0.3);} /* темный зеленый с непрозрачностью */<br/>
+#p4 {background-color: hsla(120, 60%, 70%, 0.3);}  /* ярко зеленый с непрозрачностью */
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_color_hsla.php" target="_blank">Редактор кода »</a>
+</div>
+<hr/>
+<h2>Непрозрачность</h2>
+<p>Свойство CSS <code class="w3-codespan">opacity</code> задает непрозрачность для 
+всех элементов (как цвет фона и текста, будут матово/прозрачным).</p>
+<p>Свойство значений <code class="w3-codespan">opacity</code> должно быть числом между 
+<code class="w3-codespan">0.0</code> (полностью прозрачный) и <code class="w3-codespan">1.0</code> (полностью непрозрачный).</p>
+<div style="background:rgb(255, 0, 0);opacity:0.2;padding:18px">rgb(255, 0, 0);opacity:0.2;</div>
+<div style="background:rgb(255, 0, 0);opacity:0.4;padding:18px">rgb(255, 0, 0);opacity:0.4;</div>
+<div style="background:rgb(255, 0, 0);opacity:0.6;padding:18px">rgb(255, 0, 0);opacity:0.6;</div>
+<div style="background:rgb(255, 0, 0);opacity:0.8;padding:18px">rgb(255, 0, 0);opacity:0.8;</div>
+<p class="w3-margin-top">Обратите внимание, что текст выше также будет прозрачный / непрозрачный!</p>
+<p>В следующем примере показаны различные элементы с прозрачностью:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#p1 {background-color:rgb(255,0,0);opacity:0.6;}  /* красный с непрозрачностью */<br/>
+#p2 {background-color:rgb(0,255,0);opacity:0.6;}  /* зеленый с непрозрачность */<br/>
+#p3 {background-color:rgb(0,0,255);opacity:0.6;}  /* синий с непрозрачностью */
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_color_opacity.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_colors1.php" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_colors2.php" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_colors3.php" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_colors4.php" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_backgrounds.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_gradients.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

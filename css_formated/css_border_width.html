@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - border-width</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_border.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_border_color.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>CSS border-width</h2>
+<p>Свойство <code class="w3-codespan">border-width</code> задает ширину всех четырех границ.</p>
+<p>Ширина может быть установлена размером в ( px, pt, cm, em, т.п.) или с помощью одного из трех предопределенных значений:thin (тонкий), medium (средний), или thick (толстый).</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Демонстрация различной ширины границ:</p>
+<div class="w3-code notranslate cssHigh">
+p.one
+{<br/>
+ 
+border-style: solid;<br/>
+ 
+border-width: 5px;<br/>
+}<br/><br/>
+p.two
+{<br/>
+ 
+border-style: solid;<br/>
+  border-width: medium;<br/>
+}<br/><br/>p.three
+{<br/>
+ 
+border-style: dotted;<br/>
+  border-width: 2px;<br/>
+}
+<br/><br/>p.four
+{<br/>
+ 
+border-style: dotted;<br/>
+  border-width: thick;<br/>
+}
+</div>
+<p>Результат:</p>
+<div class="w3-white w3-padding notranslate">
+<div style="border:5px solid black;padding:8px;margin-top:8px;margin-bottom:16px">5px border-width</div>
+<div style="border:medium solid black;padding:8px;margin-top:8px;margin-bottom:16px">medium border-width</div>
+<div style="border:2px dotted black;padding:8px;margin-top:8px;margin-bottom:16px">2px border-width</div>
+<div style="border:thick dotted black;padding:8px;margin-top:8px;margin-bottom:8px">thick border-width</div>
+</div>
+<a class="w3-btn w3-margin-bottom w3-margin-top" href="trycss_border-width.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Определенная ширина границы</h2>
+<p>Свойство <code class="w3-codespan">border-width</code> может иметь от одного до четырех значений (для верхней границы, правой границы, нижней границы и левой границы):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p.one {<br/>  border-style: solid;<br/>  border-width: 5px 20px; /* 
+5px сверху и снизу, 20px по бокам */<br/>}<br/><br/>p.two {<br/>  border-style: 
+solid;<br/>  border-width: 20px 5px; /* 20px сверху и снизу, 5px по бокам */<br/>}<br/>
+<br/>p.three {<br/>  border-style: solid;<br/>  border-width: 25px 10px 
+4px 35px; /* 25px сверху, 10px справа, 4px снизу и 35px слева */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_border-width2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_border.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_border_color.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

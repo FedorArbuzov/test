@@ -1,0 +1,153 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Адаптивная таблица</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_table_style.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_display_visibility.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Отзывчивая таблица</h2>
+<p>Адаптивная или адаптивная таблица будет отображать горизонтальную полосу прокрутки, если экран слишком мал для отображения полного содержимого:</p>
+<div class="w3-responsive">
+<table class="w3-table w3-striped w3-bordered"><tr>
+<th>Фамилия</th>
+<th>Имя</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+<th>Очки</th>
+</tr>
+<tr>
+<td>Щипунов</td>
+<td>Андрей</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Щипунова</td>
+<td>Татьяна</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+<td>94</td>
+</tr>
+<tr>
+<td>Щипунова</td>
+<td>Кристина</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+<td>67</td>
+</tr></table>
+</div>
+<p>Добавьте элемент контейнера (например, &lt;div&gt;) с <code class="w3-codespan">overflow-x:auto</code> вокруг элемента &lt;table&gt;, чтобы сделать его отзывчивым:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div style="overflow-x:auto;"&gt;<br/><br/>&lt;table&gt;<br/>
+... table content ...<br/>&lt;/table&gt;<br/>
+<br/>&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_table_responsive" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-note w3-panel">
+<p><strong>Примечание:</strong> В OS X Lion (на Mac) полосы прокрутки по умолчанию скрыты и отображаются только при использовании (даже если установлен параметр переполнения прокрутки "overflow:scroll").</p>
+</div>
+<hr/>
+<h2>Еще примеры</h2>
+<p><a href="tryit.php?filename=trycss_table_fancy" target="_blank">Создание необычной таблицы</a><br/>
+В этом примере показано, как создать необычную таблицу.</p>
+<p><a href="tryit.php?filename=trycss_table_caption-side" target="_blank">Установка положения заголовка таблицы</a><br/>
+В этом примере показано, как расположить заголовок таблицы.</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn" href="exercise.php?filename=exercise_table1" target="_blank">Упражнение 1 »</a>
+<a class="w3-bar-item w3-btn" href="exercise.php?filename=exercise_table2" target="_blank">Упражнение 2 »</a>
+<a class="w3-bar-item w3-btn" href="exercise.php?filename=exercise_table3" target="_blank">Упражнение 3 »</a>
+<a class="w3-bar-item w3-btn" href="exercise.php?filename=exercise_table4" target="_blank">Упражнение 4 »</a>
+<a class="w3-bar-item w3-btn" href="exercise.php?filename=exercise_table5" target="_blank">Упражнение 5 »</a>
+<a class="w3-bar-item w3-btn" href="exercise.php?filename=exercise_table6" target="_blank">Упражнение 6 »</a>
+</div>
+</div>
+<hr/>
+<h2>CSS Свойства таблицы</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="../cssref/pr_border.php">border</a></td>
+<td>Устанавливает все свойства границы в одном объявлении</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_border-collapse.php">border-collapse</a></td>
+<td>Указывает, следует ли сворачивать границы таблицы</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_border-spacing.php">border-spacing</a></td>
+<td>Задает расстояние между границами соседних ячеек</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_tab_caption-side.php">caption-side</a></td>
+<td>Задает размещение заголовка таблицы</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_tab_empty-cells.php">empty-cells</a></td>
+<td>Указывает, следует ли отображать границы и фон на пустых ячейках таблицы</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_tab_table-layout.php">table-layout</a></td>
+<td>Задает алгоритм компоновки таблицы</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_table_style.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_display_visibility.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

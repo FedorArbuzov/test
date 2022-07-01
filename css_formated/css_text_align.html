@@ -1,0 +1,131 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Выравнивание текста</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_text.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_text_decoration.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>CSS Выравнивание текста и направление текста</h2>
+<p>В этой главе вы узнаете о следующих свойствах:</p>
+<ul>
+<li><code class="w3-codespan">text-align</code></li>
+<li><code class="w3-codespan">text-align-last</code></li>
+<li><code class="w3-codespan">direction</code></li>
+<li><code class="w3-codespan">unicode-bidi</code></li>
+<li><code class="w3-codespan">vertical-align</code></li>
+</ul>
+<hr/>
+<h2>Горизонтальное выравнивание текста</h2>
+<p>Свойство <code class="w3-codespan">text-align</code> используется для установки выравнивания текста по горизонтали.</p>
+<p>Текст может быть выровнен по левому или правому краю, по центру или выровнен по ширине.</p>
+<p>В следующем примере показаны 3 выровненных по центру и выровненных по левому и правому краю текста (выравнивание по левому краю по умолчанию, если направление текста слева направо, и выравнивание по правому краю по умолчанию, если направление текста справа налево):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  text-align: center;<br/>}<br/><br/>h2 {<br/>  text-align: left;<br/>}<br/><br/>h3 {<br/>  text-align: right;<br/>
+}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_text-align" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Когда, для свойства <code class="w3-codespan">text-align</code> установлено выравнивание по ширине значение "justify", каждая строка растягивается так, чтобы каждая строка имела одинаковую ширину, а левое и правое поля были прямыми (как в журналах и газетах):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>  text-align: justify;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_text-align_all" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Выравнивание последней строки текста</h2>
+<p>Свойство <code class="w3-codespan">text-align-last</code> указывает, как выровнять последнюю строку текста.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Выровнять последнюю строку текста по трем элементам &lt;p&gt;:</p>
+<div class="w3-code notranslate cssHigh">
+p.a
+{<br/>
+ 
+text-align-last: right;<br/>
+}<br/><br/>p.b
+{<br/>
+ 
+text-align-last: center;<br/>
+}<br/><br/>p.c
+{<br/>
+  text-align-last: justify;<br/>
+}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_text-align-last" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<div id="midcontentadcontainer">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Направление текста</h2>
+<p>Свойства <code class="w3-codespan">direction</code> и <code class="w3-codespan">unicode-bidi</code> можно использовать для изменения направления текста элемента:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p {<br/>  direction: rtl;<br/>  unicode-bidi: bidi-override;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_text_direction" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Вертикальное выравнивание текста</h2>
+<p>Свойство <code class="w3-codespan">vertical-align</code> задает выравнивание элемента по вертикали.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Установите вертикальное выравнивание изображения в тексте:</p>
+<div class="w3-code notranslate cssHigh">
+img.a {<br/>  vertical-align: baseline;<br/>}<br/><br/>img.b {<br/>  
+vertical-align: text-top;<br/>}<br/><br/>img.c {<br/>  vertical-align: 
+text-bottom;<br/>}<br/><br/>img.d {<br/>  vertical-align: sub;<br/>}<br/><br/>
+img.e {<br/>  vertical-align: super;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_vertical-align" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>CSS Свойства выравнивания/направления текста</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:30%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="/cssref/pr_text_direction.php">direction</a></td>
+<td>Задает направление текста/направление записи</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_text_text-align.php">text-align</a></td>
+<td>Задает выравнивание текста по горизонтали</td>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_text-align-last.php">text-align-last</a></td>
+<td>Указывает, как выровнять последнюю строку текста</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_text_unicode-bidi.php">unicode-bidi</a></td>
+<td>Используется вместе со свойством <a href="/cssref/pr_text_direction.php">direction</a> для установки или возврата того, следует ли переопределять текст для поддержки нескольких языков в одном документе</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_pos_vertical-align.php">vertical-align</a></td>
+<td>Задает вертикальное выравнивание элемента</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_text.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_text_decoration.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

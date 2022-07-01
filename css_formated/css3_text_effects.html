@@ -1,0 +1,127 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Эффект Текста</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_shadows.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_fonts.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>CSS3 Текст: <span class="color_h1"> переполнение, перенос слов и разбиение слов</span></h2>
+<p>В этой главе вы узнаете о следующих свойствах:</p>
+<ul>
+<li><code class="w3-codespan">text-overflow</code> - Переполнение текста</li>
+<li><code class="w3-codespan">word-wrap</code> - Перенос слов</li>
+<li><code class="w3-codespan">word-break</code> - Разбитие слов</li>
+</ul>
+<hr/>
+<h2>CSS3 Переполнение текста</h2>
+<p>CSS3 свойство <code class="w3-codespan">text-overflow</code> указывает, как переполняется содержимое, которое не 
+должно быть доведено до пользователя.</p>
+<p>Его можно обрезать:</p>
+<p id="overflow1">Это какой-то длинный текст, который не поместится в рамку</p>
+<p>или его можно представить как многоточие (...):</p>
+<p id="overflow2">Это какой-то длинный текст, который не поместится в рамку</p>
+<p>Код CSS3 выглядит следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p.test1 {<br/>    
+white-space: nowrap; <br/>    width: 200px; <br/>    border: 1px solid #000000;<br/>    
+overflow: hidden;<br/>    
+text-overflow: clip; <br/>}<br/><br/>p.test2 {<br/>    
+white-space: nowrap; <br/>    width: 200px; <br/>    border: 1px solid #000000;<br/>    
+overflow: hidden;<br/>    
+text-overflow: ellipsis; <br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-overflow.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>В следующем примере показано, как отобразить переполненное содержимое при наведении указателя мыши на элемент:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div.test:hover {<br/>    text-overflow: inherit;<br/>    
+overflow: visible;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_text-overflow_hover.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>CSS3 Перенос слов</h2>
+<p>CSS3 свойство <code class="w3-codespan">word-wrap</code> позволяет разбивать длинные слова и переносить их на следующую строку.</p>
+<p>Если слово слишком длинное, чтобы поместиться в пределах области, оно расширяется снаружи:</p>
+<p id="normal">Этот параграф содержит очень длинное слово: этооченььььььььььььььььььььььььььььььььььдлинноеслово.
+Длинное слово будет разбито и перенесено на следующую строку.</p>
+<p>Свойство <code class="w3-codespan">word-wrap</code> позволяет принудительно переносить текст,
+даже если это означает разбиение текста по середине слова:</p>
+<p id="wordwrap">Этот параграф содержит очень длинное слово: этооченььььььььььььььььььььььььььььььььььдлинноеслово.
+Длинное слово будет разбито и перенесено на следующую строку</p>
+<p>Код CSS3 выглядит следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Позвольте длинным словам быть разбитыми и переноситься на следующую строку:</p>
+<div class="w3-code notranslate cssHigh">
+p {<br/>    word-wrap: break-word;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_word-wrap.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>CSS3 Разбиение слов</h2>
+<p>CSS3 свойство <code class="w3-codespan">word-break</code> задает правила разрыва строк.</p>
+<p class="test1">Этот параграф содержит некоторый текст. Эта линия будет-перерыв-на-дефисе.</p>
+<p class="test2">Этот параграф содержит некоторый текст. Линии будут ломаться на любой символ.</p>
+<p>Код CSS3 выглядит следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p.test1 {<br/>    word-break: keep-all;<br/>}<br/><br/>p.test2 {<br/>    word-break: break-all;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_word-break.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_text_effects1.php" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_text_effects2.php" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_text_effects3.php" target="_blank">Упражнение 3 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS3 текстового эффекта</h2>
+<p>В следующей таблице перечислены свойства текстового эффекта CSS3:</p>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:28%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_text-align-last.php">text-align-last</a></td>
+<td>Задает способ выравнивания последней строки текста</td>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_text-justify.php">text-justify</a></td>
+<td>Задает выравнивание и интервал выравнивания текста по ширине</td>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_text-overflow.php">text-overflow</a></td>
+<td>Указывает, как переполненное содержимое, которое не отображается, должно сигнализироваться пользователю</td>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_word-break.php">word-break</a></td>
+<td>Задает правила разрыва строк для сценариев, отличных от CJK</td>
+</tr>
+<tr>
+<td><a href="/cssref/css3_pr_word-wrap.php">word-wrap</a></td>
+<td>Позволяет длинные слова, быть разбитыми и вернуть на следующую строку</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_shadows.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_fonts.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

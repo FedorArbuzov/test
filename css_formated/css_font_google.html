@@ -1,0 +1,163 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Google Fonts</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_font_size.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_font_pairings.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Google Шрифты</h2>
+<p>Если вы не хотите использовать какие-либо стандартные шрифты в HTML, вы можете использовать Google Fonts.</p>
+<p>Шрифты Google бесплатны в использовании и имеют более 1000 шрифтов на выбор.</p>
+<hr/>
+<h2>Как использовать шрифты Google?</h2>
+<p>Просто добавьте специальную ссылку таблицы стилей в разделе &lt;head&gt;, а затем обратитесь к шрифту в CSS.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Здесь мы хотим использовать шрифт с именем "Sofia" из Google Fonts:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/><strong>&lt;link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Sofia"&gt;</strong><br/>&lt;style&gt;<br/>body {<br/>  
+font-family: "Sofia", sans-serif;<br/>}<br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/></div>
+<p>Результат:</p>
+<div class="w3-code notranslate">
+<h1 style="font-family:'Sofia';">Шрифт Sofia</h1>
+<p style="font-family:'Sofia';">Lorem ipsum dolor sit amet.</p>
+<p style="font-family:'Sofia';">123456790</p>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-google_sofia" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Здесь мы хотим использовать шрифт с именем "Trirong" из Google Fonts:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/><strong>&lt;link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Trirong"&gt;</strong><br/>&lt;style&gt;<br/>body {<br/>  
+font-family: "Trirong", serif;<br/>}<br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/></div>
+<p>Результат:</p>
+<div class="w3-code notranslate">
+<h1 style="font-family:'Trirong';">Шрифт Trirong</h1>
+<p style="font-family:'Trirong';">Lorem ipsum dolor sit amet.</p>
+<p style="font-family:'Trirong';">123456790</p>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-google_trirong" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Здесь мы хотим использовать шрифт с именем "Audiowide" из Google Fonts:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/><strong>&lt;link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Audiowide"&gt;</strong><br/>&lt;style&gt;<br/>body {<br/>  
+font-family: "Audiowide", sans-serif;<br/>}<br/>&lt;/style&gt;<br/>&lt;/head&gt;</div>
+<p>Результат:</p>
+<div class="w3-code notranslate">
+<h1 style="font-family:'Audiowide';">Шрифт Audiowide</h1>
+<p style="font-family:'Audiowide';">Lorem ipsum dolor sit amet.</p>
+<p style="font-family:'Audiowide';">123456790</p>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-google_audiowide" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> При указании шрифта в CSS всегда перечисляйте как минимум один запасной шрифт (чтобы избежать неожиданного поведения). Итак, также здесь вы должны добавить общее семейство шрифтов (например, serif или sans-serif) в конец списка.</p>
+</div>
+<p>Список всех доступных шрифтов Google можно найти в <a href="../howto/howto_google_fonts.php">Учебнике Как сделать - Google Fonts.</a>.</p>
+<hr/>
+<h2>Используйте несколько шрифтов Google</h2>
+<p>Чтобы использовать несколько шрифтов Google, просто разделите имена шрифтов символом трубы (<code class="w3-codespan">|</code>), например:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Запрос нескольких шрифтов:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/><strong>&lt;link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"&gt;</strong><br/>&lt;style&gt;<br/>
+h1.a {font-family: "Audiowide", sans-serif;}<br/>h1.b {font-family: "Sofia", 
+sans-serif;}<br/>h1.c {font-family: "Trirong", serif;}<br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/></div>
+<p>Результат:</p>
+<div class="w3-code notranslate">
+<h1 class="a">Шрифт Audiowide</h1>
+<h1 class="b">Шрифт Sofia</h1>
+<h1 class="c">Шрифт Trirong</h1>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-google_multiple" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Запрос нескольких шрифтов может замедлить работу ваших веб-страниц! Так что будьте осторожны.</p>
+</div>
+<hr/>
+<div id="midcontentadcontainer">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Стили шрифтов Google</h2>
+<p>Конечно, вы можете стилизовать шрифты Google так, как вам нравится, с помощью CSS!</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Стиль шрифта "Sofia":</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/><strong>&lt;link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Sofia"&gt;</strong><br/>&lt;style&gt;<br/>body {<br/>  
+font-family: "Sofia", sans-serif;<br/>  font-size: 30px;<br/>  
+text-shadow: 3px 3px 3px #ababab;<br/>}<br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/></div>
+<p>Результат:</p>
+<div class="w3-code notranslate">
+<h1 style="font-family:'Sofia',sans-serif;font-size:50px;text-shadow:3px 3px 3px #ababab;">Шрифт Sofia</h1>
+<p style="font-family:'Sofia',sans-serif;font-size:30px;text-shadow:3px 3px 3px #ababab;">Lorem ipsum dolor sit amet.</p>
+<p style="font-family:'Sofia',sans-serif;font-size:30px;text-shadow:3px 3px 3px #ababab;">123456790</p></div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-google_sofia2" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Включение эффектов шрифтов</h2>
+<p>Google также включил различные эффекты шрифтов, которые вы можете использовать.</p>
+<p>Сначала добавьте <code class="w3-codespan">effect=<em>effectname</em></code> в Google API, затем добавьте специальное имя класса к элементу, который будет использовать специальный эффект. Имя класса всегда начинается <code class="w3-codespan">font-effect-</code> и заканчивается на <code class="w3-codespan"><em>effectname</em></code>.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Добавьте эффект огня в шрифт "Sofia":</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/><strong>&lt;link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Sofia&amp;effect=fire"&gt;</strong><br/>&lt;style&gt;<br/>body {<br/>  
+font-family: "Sofia", sans-serif;<br/>  font-size: 30px;<br/>}<br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/>
+&lt;body&gt;<br/><br/>&lt;h1 class="font-effect-fire"&gt;София в огне&lt;/h1&gt;<br/><br/>&lt;/body&gt;<br/></div>
+<p>Результат:</p>
+<div class="w3-code notranslate">
+<h1 class="font-effect-fire" style="font-family:'Sofia',sans-serif;font-size:50px;">София в огне</h1>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-google_effect" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Чтобы запросить несколько эффектов шрифта, просто разделите имена эффектов символом трубы (<code class="w3-codespan">|</code>), например:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Добавить несколько эффектов к шрифту "Sofia":</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/><strong>&lt;link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Sofia&amp;effect=neon|outline|emboss|shadow-multiple"&gt;</strong><br/>&lt;style&gt;<br/>body {<br/>  
+font-family: "Sofia", sans-serif;<br/>  font-size: 30px;<br/>}<br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/>
+&lt;body&gt;<br/><br/>&lt;h1 class="font-effect-fire"&gt;Неоновый эффект&lt;/h1&gt;<br/>&lt;h1 class="font-effect-outline"&gt;Эффект контура&lt;/h1&gt;<br/>&lt;h1 class="font-effect-emboss"&gt;Эффект тиснения&lt;/h1&gt;<br/>&lt;h1 class="font-effect-shadow-multiple"&gt;Эффект множественной тени&lt;/h1&gt;<br/><br/>&lt;/body&gt;<br/></div>
+<p>Результат:</p>
+<div class="w3-code notranslate">
+<h1 class="font-effect-neon" style="font-family:'Sofia',sans-serif;font-size:50px;">Неоновый эффект</h1>
+<h1 class="font-effect-outline" style="font-family:'Sofia',sans-serif;font-size:50px;">Эффект контура</h1>
+<h1 class="font-effect-emboss" style="font-family:'Sofia',sans-serif;font-size:50px;">Эффект тиснения</h1>
+<h1 class="font-effect-shadow-multiple" style="font-family:'Sofia',sans-serif;font-size:50px;">Эффект множественной тени</h1>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-google_effect2" target="_blank">Попробуйте сами »</a>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_font_size.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_font_pairings.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

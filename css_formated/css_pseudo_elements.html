@@ -1,0 +1,379 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Псевдо-элементы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_pseudo_classes.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_image_transparency.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Что такое псевдо-элементы?</h2>
+<p>Псевдо-элемент используется для оформления указанной части элемента.</p>
+<p>Например, он может быть использовано для:</p>
+<ul>
+<li>Стиля первой буквы или линии элемента</li>
+<li>Вставки содержимого до или после элемента</li>
+</ul>
+<hr/>
+<h2>Синтаксис</h2>
+<p>Синтаксис псевдо-элементов:</p>
+<div class="w3-example">
+<div class="w3-code notranslate cssHigh">
+селектор::псевдо-элемент {<br/>
+   свойство:значение;<br/>}
+</div>
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Обратите внимание на двойное двоеточие - </strong> <code class="w3-codespan">::first-line</code>
+в сравнении с <code class="w3-codespan">:first-line</code><br/><br/>
+Двойное двоеточие заменило одиночное-двоеточие для псевдо-элементов в CSS3. Это была попытка от W3C,
+чтобы различать <strong>псевдо-классы</strong> и <strong>псевдо-элименты</strong>.<br/><br/>
+В одиночное-двоеточие синтаксис используется для псевдо-классов и псевдо-элементов CSS2 и CSS1.<br/><br/>
+Для обеспечения обратной совместимости, в одиночном-двоеточие синтаксис приемлем для спецификации CSS2 и CSS1 псевдо-элементов.</p>
+</div>
+<hr/>
+<h2>Псевдо-элемент - <code class="w3-codespan">::first-line</code></h2>
+<p>Псевдо-элемент <code class="w3-codespan">::first-line</code> используется, чтобы добавить специальный стиль к первой строке текста.</p>
+<p>Следующий пример форматирует первую строку текста во всех элементах <code class="w3-codespan">&lt;p&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p::first-line {<br/>
+   color: #ff0000;<br/>
+   font-variant: small-caps;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_firstline.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p><strong>Примечание:</strong> Псевдо-элемент <code class="w3-codespan">::first-line</code> можно применять только для элементов уровня блока.</p>
+<p>Следующие свойства применяются к псевдо-элементу <code class="w3-codespan">::first-line</code>:</p>
+<ul>
+<li>Свойство <code class="w3-codespan">font</code></li>
+<li>Свойство <code class="w3-codespan">color</code></li>
+<li>Свойство <code class="w3-codespan">background</code></li>
+<li>Свойство <code class="w3-codespan">word-spacing</code></li>
+<li>Свойство <code class="w3-codespan">letter-spacing</code></li>
+<li>Свойство <code class="w3-codespan">text-decoration</code></li>
+<li>Свойство <code class="w3-codespan">vertical-align</code></li>
+<li>Свойство <code class="w3-codespan">text-transform</code></li>
+<li>Свойство <code class="w3-codespan">line-height</code></li>
+<li>Свойство <code class="w3-codespan">clear</code></li>
+</ul>
+<hr/>
+<h2>Псевдо-элемент - <code class="w3-codespan">::first-letter</code></h2>
+<p>Псевдо-элемент <code class="w3-codespan">::first-letter</code> используется, чтобы добавить специальный стиль к первой букве текста.</p>
+<p>Следующий пример форматирует первую букву текста для всех элементов <code class="w3-codespan">&lt;p&gt;</code></p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p::first-letter {<br/>
+   color: #ff0000;<br/>
+   font-size: xx-large;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_firstletter.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p><strong>Примечание:</strong> Псевдо-элемент <code class="w3-codespan">::first-letter</code> можно применять только для элементов уровня блока.</p>
+<p>Следующие свойства применяются к псевдо-элемент <code class="w3-codespan">::first-letter</code>:</p>
+<ul>
+<li>Свойство <code class="w3-codespan">font</code></li>
+<li>Свойство <code class="w3-codespan">color</code></li>
+<li>Свойство <code class="w3-codespan">background</code></li>
+<li>Свойство <code class="w3-codespan">margin</code></li>
+<li>Свойство <code class="w3-codespan">padding</code></li>
+<li>Свойство <code class="w3-codespan">border</code></li>
+<li>Свойство <code class="w3-codespan">text-decoration</code></li>
+<li>Свойство <code class="w3-codespan">vertical-align</code> (только если <code class="w3-codespan">float</code> содержит <code class="w3-codespan">none</code>)</li>
+<li>Свойство <code class="w3-codespan">text-transform</code></li>
+<li>Свойство <code class="w3-codespan">line-height</code></li>
+<li>Свойство <code class="w3-codespan">float</code></li>
+<li>Свойство <code class="w3-codespan">clear</code></li>
+</ul>
+<hr/>
+<h2>Псевдо-элементы и классы</h2>
+<p>Псевдо-элементы может быть в сочетании с классами:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p.intro::first-letter {<br/>
+   color: #ff0000;<br/>
+   font-size:200%;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_pseudo-element.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>В примере выше будут отображаться первые буквы параграфа с <code class="w3-codespan">class="intro"</code>,
+в красном цвете и в большем размере.</p>
+<hr/>
+<h2>Псевдо-элементов несколько</h2>
+<p>Может быть объединено несколько псевдо-элементов.</p>
+<p>В следующем примере первая буква параграфа будет красным и размер шрифта <code class="w3-codespan">xx-large</code>.
+Остальные буквы в первой строке будет синими и <code class="w3-codespan">small-caps</code>.
+Остальные параграфы будут в размер шрифта и цвет по умолчанию:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p::first-letter {<br/>
+   color: #ff0000;<br/>
+   font-size: xx-large;<br/>}<br/><br/>
+p::first-line {<br/>
+   color: #0000ff;<br/>
+   font-variant: small-caps;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_firstline_letter.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Псевдо-элемент - <code class="w3-codespan">::before</code></h2>
+<p>Псевдо-элемент <code class="w3-codespan">::before</code> может использоваться, чтобы вставить содержимое до содержимого элемента.</p>
+<p>Следующий пример вставляет изображение, перед содержания каждого элемента <code class="w3-codespan">&lt;h1&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1::before {<br/>
+   content: url(smiley.gif);<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_before.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Псевдо-элемент - <code class="w3-codespan">::after</code></h2>
+<p>Псевдо-элемент <code class="w3-codespan">::after</code> может использоваться, чтобы вставить содержимое после содержимого элемента.</p>
+<p>Следующий пример вставляет изображение после содержания каждого элемента <code class="w3-codespan">&lt;h1&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1::after {<br/>
+   content: url(smiley.gif);<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_after.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Псевдо-элемент - <code class="w3-codespan">::selection</code></h2>
+<p>Псевдо-элемент <code class="w3-codespan">::selection</code> соответствует части элемента, выбранного пользователем.</p>
+<p>Указанные ниже свойства CSS могут применяться к <code class="w3-codespan">::selection</code>: <code class="w3-codespan">color</code>, 
+<code class="w3-codespan">background</code>, <code class="w3-codespan">cursor</code>, и <code class="w3-codespan">outline</code>.</p>
+<p>Следующий пример делает выделенный текст красным цветом на желтом фоне:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+::selection {<br/>
+   color: red; <br/>
+   background: yellow;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_selection.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_pseudo_elements1.php" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_pseudo_elements2.php" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_pseudo_elements3.php" target="_blank">Упражнение 3 »</a>
+</div>
+</div>
+<hr/>
+<h2>Все CSS псевдо-элементы</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Селектор</th>
+<th style="width:20%">Пример</th>
+<th>Описание примера</th>
+</tr>
+<tr>
+<td><a href="/cssref/sel_after.php">::after</a></td>
+<td class="notranslate">p::after</td>
+<td>Вставить что-то после содержания каждого элемента &lt;p&gt;</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_before.php">::before</a></td>
+<td class="notranslate">p::before</td>
+<td>Вставить что-то перед содержанием каждого элемента &lt;p&gt;</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_firstletter.php">::first-letter</a></td>
+<td class="notranslate">p::first-letter</td>
+<td>Выбирает первую букву каждого элемента &lt;p&gt;</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_firstline.php">::first-line</a></td>
+<td class="notranslate">p::first-line</td>
+<td>Выбирает первую строку каждого элемента &lt;p&gt;</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_selection.php">::selection</a></td>
+<td class="notranslate">p::selection</td>
+<td>Выбирает часть элемента, выбранного пользователем</td>
+</tr>
+</table>
+<h2>Все CSS псевдо-классы</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Селектор</th>
+<th style="width:20%">Пример</th>
+<th>Описание примера</th>
+</tr>
+<tr>
+<td><a href="/cssref/sel_active.php">:active</a></td>
+<td class="notranslate">a:active</td>
+<td>Выбирает активную ссылку</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_checked.php">:checked</a></td>
+<td class="notranslate">input:checked</td>
+<td>Выбирает каждый элемент проверить в &lt;input&gt; </td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_disabled.php">:disabled</a></td>
+<td class="notranslate">input:disabled</td>
+<td>Выбирает каждый элемент отключен в &lt;input&gt; </td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_empty.php">:empty</a></td>
+<td class="notranslate">p:empty</td>
+<td>Выбирает каждый элемент &lt;p&gt;, который не имеет детей</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_enabled.php">:enabled</a></td>
+<td class="notranslate">input:enabled</td>
+<td>Выбирает каждый элемент включен в &lt;input&gt; </td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_firstchild.php">:first-child</a></td>
+<td class="notranslate">p:first-child</td>
+<td>Выбирает каждый элемент &lt;p&gt; что является первым ребенком своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_first-of-type.php">:first-of-type</a></td>
+<td class="notranslate">p:first-of-type</td>
+<td>Выбирает каждый элемент &lt;p&gt;, который является первым элементом &lt;p&gt; своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_focus.php">:focus</a></td>
+<td class="notranslate">input:focus</td>
+<td>Выбирает элемент &lt;input&gt;, который имеет фокус</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_hover.php">:hover</a></td>
+<td class="notranslate">a:hover</td>
+<td>Выбирает ссылку при наведение курсором</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_in-range.php">:in-range</a></td>
+<td class="notranslate">input:in-range</td>
+<td>Выбирает элементы &lt;input&gt; в пределах указанного диапазона значений</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_invalid.php">:invalid</a></td>
+<td class="notranslate">input:invalid</td>
+<td>Выбирает все элементы &lt;input&gt; с недопустимым значением</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_lang.php">:lang(<i>language</i>)</a></td>
+<td class="notranslate">p:lang(it)</td>
+<td>Выбирает каждый элемент &lt;p&gt; со значением атрибута lang, начиная с "it"</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_last-child.php">:last-child</a></td>
+<td class="notranslate">p:last-child</td>
+<td>Выбирает каждый элемент &lt;p&gt; что является последним ребенком своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_last-child.php">:last-child</a></td>
+<td><a href="/cssref/sel_last-of-type.php">:last-of-type</a></td>
+<td>Выбирает каждый элемент &lt;p&gt;, который является последним элементом &lt;p&gt; своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_link.php">:link</a></td>
+<td class="notranslate">a:link</td>
+<td>Выбирает все непосещенные ссылки</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_not.php">:not(selector)</a></td>
+<td class="notranslate">:not(p)</td>
+<td>Выбирает каждый элемент которого нет в элементе &lt;p&gt;</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_nth-child.php">:nth-child(n)</a></td>
+<td class="notranslate">p:nth-child(2)</td>
+<td>Выбирает каждый элемент &lt;p&gt;, что это второй ребенок своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_nth-last-child.php">:nth-last-child(n)</a></td>
+<td class="notranslate">p:nth-last-child(2)</td>
+<td>Выбирает каждый элемент &lt;p&gt;, который является вторым ребенком своего родителя, считая от последнего ребенка</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_nth-last-of-type.php">:nth-last-of-type(n)</a></td>
+<td class="notranslate">p:nth-last-of-type(2)</td>
+<td>Выбирает каждый элемент &lt;p&gt; вторичного элемента &lt;p&gt; своего родителя, считая от последнего ребенка</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_nth-of-type.php">:nth-of-type(n)</a></td>
+<td class="notranslate">p:nth-of-type(2)</td>
+<td>Выбирает каждый элемент &lt;p&gt; вторичного элемента &lt;p&gt; своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_only-of-type.php">:only-of-type</a></td>
+<td class="notranslate">p:only-of-type</td>
+<td>Выбирает каждый элемент &lt;p&gt; , который является единственным элементом &lt;p&gt; своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_only-child.php">:only-child</a></td>
+<td class="notranslate">p:only-child</td>
+<td>Выбирает каждый элемент &lt;p&gt;, который является единственным ребенком своего родителя</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_optional.php">:optional</a></td>
+<td class="notranslate">input:optional</td>
+<td>Выбирает элемент &lt;input&gt; без атрибута "required"</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_out-of-range.php">:out-of-range</a></td>
+<td class="notranslate">input:out-of-range</td>
+<td>Выбирает элемент &lt;input&gt; со значением, выходящим за пределы указанного диапазона</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_read-only.php">:read-only</a></td>
+<td class="notranslate">input:read-only</td>
+<td>Выбирает элемент &lt;input&gt; с определенным атрибутом "readonly"</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_read-write.php">:read-write</a></td>
+<td class="notranslate">input:read-write</td>
+<td>Выбирает элемент &lt;input&gt; без атрибута "readonly"</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_required.php">:required</a></td>
+<td class="notranslate">input:required</td>
+<td>Выбирает элемент &lt;input&gt; с определённым атрибутом "required"</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_root.php">:root</a></td>
+<td class="notranslate">root</td>
+<td>Выбирает корневой элемент документа</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_target.php">:target</a></td>
+<td class="notranslate">#news:target</td>
+<td>Выбирает текущий активный #news элемент (нажали на URL-адрес, содержащий имя якоря)</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_valid.php">:valid</a></td>
+<td class="notranslate">input:valid</td>
+<td>Выбирает все элементы &lt;input&gt; с допустимым значением</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_visited.php">:visited</a></td>
+<td class="notranslate">a:visited</td>
+<td>Выбирает все посещенные ссылки</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_pseudo_classes.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_image_transparency.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

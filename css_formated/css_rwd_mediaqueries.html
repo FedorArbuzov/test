@@ -1,0 +1,217 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS3 Адаптивный веб дизайн - Медиа запросы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_rwd_grid.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_rwd_images.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Что такое медиа запрос?</h2>
+<p>Медиа запрос - это CSS исполнение, представленный в CSS3.</p>
+<p>Используется правило <code class="w3-codespan">@media</code> для включения блока свойств CSS, только если определенно условие true.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Если окно браузера 600 пикселей или меньше, цвет фона будет светло-голубым:</p>
+<div class="w3-code notranslate cssHigh">
+@media only screen and (max-width: 600px) {<br/>    body {<br/>
+        background-color: lightblue;<br/>    }<br/>}<br/>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryresponsive_mediaquery.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Добавление точки прерывания</h2>
+<p>Ранее в этом уроке мы сделали веб страницу со строками и столбцами,
+отзывчивым, но на маленьком экране он выглядел плохо.</p>
+<p>В этом могут помочь медиа запросы. Мы можем добавить точку прерывания, где 
+определенные части дизайна будут вести себя по-разному на каждой сетке
+точки прерывания.</p>
+<div class="w3-row-padding" style="text-align:center;font-weight:bold;font-size:90%;margin:24px -16px -8px -16px">
+<div class="w3-col m6 s12">
+<img src="rwd_desktop.png" style="border:2px solid #dddddd;"/><br/>
+Компьютер
+</div>
+<div class="w3-col m6 s12">
+<img src="rwd_phone.png" style="border:2px solid #dddddd;"/><br/>
+Телефон
+</div>
+</div><br/>
+<p>Использовать медиа-запрос, чтобы добавить точку прерывания на 768 пикселей:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Когда экран (окно браузера) становится меньше, чем 768 пикселей, каждый столбец должен иметь ширину 100 процентов:</p>
+<div class="w3-code notranslate cssHigh">
+/* Для настольных компьютеров: */<br/>.col-1 {width: 8.33%;}<br/>.col-2 {width: 16.66%;}<br/>
+.col-3 {width: 25%;}<br/>.col-4 {width: 33.33%;}<br/>.col-5 {width: 41.66%;}<br/>
+.col-6 {width: 50%;}<br/>.col-7 {width: 58.33%;}<br/>.col-8 {width: 66.66%;}<br/>
+.col-9 {width: 75%;}<br/>.col-10 {width: 83.33%;}<br/>.col-11 {width: 91.66%;}<br/>
+.col-12 {width: 100%;}<br/><br/>@media only screen and (max-width: 768px) {<br/>
+    /* Для мобильных телефонов: */<br/>    [class*="col-"] {<br/>
+        width: 100%;<br/>    }<br/>}<br/>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryresponsive_breakpoints.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Всегда первый мобильный дизайн</h2>
+<p>Мобильный в первую очередь означает дизайн для мобильных устройств до
+настольного компьютера или любых других устройств (это ускорит отображение страницы на небольших устройствах).</p>
+<p>Это означает, что мы должны внести некоторые изменения в CSS.</p>
+<p>Вместо изменения стилей, когда ширина становится <em>меньше</em>, чем 
+768 пикселей, мы должны изменить конструкцию когда ширина получает <em>большле</em> чем 
+768 пикселей. Это сделает наш мобильны дизайн первым:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* Для мобильных телефонов: */<br/>[class*="col-"] {<br/>    width: 100%;<br/>}<br/>
+@media only screen and (min-width: 768px) {<br/>    /* Для настольных компьютеров: */<br/>
+    .col-1 {width: 8.33%;}<br/>    .col-2 {width: 16.66%;}<br/>
+    .col-3 {width: 25%;}<br/>    .col-4 {width: 33.33%;}<br/>
+    .col-5 {width: 41.66%;}<br/>    .col-6 {width: 50%;}<br/>
+    .col-7 {width: 58.33%;}<br/>    .col-8 {width: 66.66%;}<br/>
+    .col-9 {width: 75%;}<br/>    .col-10 {width: 83.33%;}<br/>
+    .col-11 {width: 91.66%;}<br/>    .col-12 {width: 100%;}<br/>}<br/>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryresponsive_mobilefirst.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Еще одна точка прерывания</h2>
+<p>Можно добавить любое количество точек прерывания.</p>
+<p>Мы также вставим точку прерывания между планшетами и мобильными телефонами.</p>
+<div class="w3-row-padding" style="text-align:center;font-weight:bold;font-size:90%;margin:24px -16px -8px -16px">
+<div class="w3-col m6 s12">
+<img src="rwd_desktop.png" style="border:2px solid #dddddd;"/><br/>
+Компьютер
+</div>
+<div class="w3-col m4 s12">
+<img src="rwd_tablet.png" style="border:2px solid #dddddd;"/><br/>
+Планшет
+</div>
+<div class="w3-col m2 s12">
+<img src="rwd_phone.png" style="border:2px solid #dddddd;"/><br/>
+Телефон
+</div>
+</div>
+<br/>
+<p>Мы делаем это, добавляя еще один медиа запрос (600px) и набор новых классов для устройств,
+размер которых превышает 600 пикселей  (но меньше, чем 768 пикселей):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Обратите внимание, что два набора классов почти идентичны, только 
+разница в названии (<code class="w3-codespan">col-</code> и <code class="w3-codespan">col-s-</code>):</p>
+<div class="w3-code notranslate cssHigh">
+/* Для мобильных телефонов: */<br/>[class*="col-"] {<br/>    width: 100%;<br/>}<br/>
+@media only screen and (min-width: 600px) {<br/>    /* Для планшетов: */<br/>
+    .col-s-1 {width: 8.33%;}<br/>    .col-s-2 {width: 16.66%;}<br/>
+    .col-s-3 {width: 25%;}<br/>    .col-s-4 {width: 33.33%;}<br/>
+    .col-s-5 {width: 41.66%;}<br/>    .col-s-6 {width: 50%;}<br/>
+    .col-s-7 {width: 58.33%;}<br/>    .col-s-8 {width: 66.66%;}<br/>
+    .col-s-9 {width: 75%;}<br/>    .col-s-10 {width: 83.33%;}<br/>
+    .col-s-11 {width: 91.66%;}<br/>    .col-s-12 {width: 100%;}<br/>}<br/>
+@media only screen and (min-width: 768px) {<br/>    /* Для настольных компьютеров: */<br/>
+    .col-1 {width: 8.33%;}<br/>    .col-2 {width: 16.66%;}<br/>
+    .col-3 {width: 25%;}<br/>    .col-4 {width: 33.33%;}<br/>
+    .col-5 {width: 41.66%;}<br/>    .col-6 {width: 50%;}<br/>
+    .col-7 {width: 58.33%;}<br/>    .col-8 {width: 66.66%;}<br/>
+    .col-9 {width: 75%;}<br/>    .col-10 {width: 83.33%;}<br/>
+    .col-11 {width: 91.66%;}<br/>    .col-12 {width: 100%;}<br/>}
+</div>
+</div>
+<p>Может показаться странным, что у нас есть два набора одинаковых классов, но это дает нам 
+перспективу в <em>HTML</em>, чтобы решить, что будет происходить со столбцами в каждом точка прерывания:</p>
+<div class="w3-example">
+<h3>Пример HTML</h3>
+<p><strong>Для компьютеров:</strong></p>
+<p>Первый и третий раздел будет охватывать каждые 3 столбца. Средняя часть будет охватывать 6 столбцов.</p>
+<p><strong>Для планшетов:</strong></p>
+<p>Первый раздел будет охватывать 3 столбца, второй - 9,
+и третий раздел будет отображаться ниже первых двух разделов, и он будет охватывать 12 столбцов:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="row"&gt;<br/>
+  &lt;div class="col-3 col-s-3"&gt;...&lt;/div&gt;<br/>
+  &lt;div class="col-6 col-s-9"&gt;...&lt;/div&gt;<br/>
+  &lt;div class="col-3 col-s-12"&gt;...&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryresponsive_col-s.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Типичные устройства точка прерывания</h2>
+<p>Есть много экранов и устройств с разной высотой и шириной, поэтому трудно создать точную точку прерывания для каждого устройства. 
+Для простоты можно ориентироваться на пять групп:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* Очень маленькие устройства (телефоны, 600px и ниже) */<br/>
+@media only screen and (max-width: 600px) {...} <br/><br/>
+/* Маленькие устройства (портретные планшеты и большие телефоны, 600px и выше) 
+*/<br/>@media only screen and (min-width: 600px) {...} <br/><br/>
+/* Средние устройства (альбомные планшеты, 768px и выше) */<br/>
+@media only screen and (min-width: 768px) {...} <br/><br/>
+/* Большие устройства (ноутбуки / настольные компьютеры, 992px и выше) */<br/>
+@media only screen and (min-width: 992px) {...} <br/><br/>
+/* Очень большие устройства (большие ноутбуки и настольные компьютеры, 1200px и выше) */<br/>
+@media only screen and (min-width: 1200px) {...}
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryresponsive_mediaquery_breakpoints.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Ориентация: Книжная/Альбомная</h2>
+<p>Медиа запросы также могут быть использованы для изменения формата страницы в зависимости от ориентация браузера.</p>
+<p>Вы можете иметь набор свойств CSS, которые будут применятся, когда окно браузера шире,
+чем его высота, так называемый "Альбомная" ориентация:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Веб страница будет иметь светло-голубой фон, если ориентация в альбомном режиме:</p>
+<div class="w3-code notranslate cssHigh">
+@media only screen and (orientation: landscape) {<br/>
+    body {<br/>
+       background-color: lightblue;<br/>    }<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryresponsive_mediaquery_orientation.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Скрыть элементы с помощью медиа запросов</h2>
+<p>Другим распространенным использованием медиа запросов является скрытие элементов на экранах разного размера:</p>
+<div class="w3-yellow w3-hide-small w3-padding">Я буду прятаться на маленьких экранах.</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* Если размер экрана 600 пикселей в ширину или меньше, скройте элемент */<br/>
+@media only screen and (max-width: 600px) {<br/>  div.example {<br/>
+    display: none;<br/>  }<br/>}<br/>
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_mediaqueries_hide.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Изменение размера шрифта с помощью медиа запросов</h2>
+<p>Вы также можете использовать медиа запросы для изменения размера шрифта элемента на различных размерах экранов:</p>
+<div class="w3-light-grey w3-padding fntzs">
+<h1>Переменный размер шрифта.</h1></div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* Если размер экрана 601px или кроме того, установите размер шрифта &lt;div&gt; в 80px */<br/>
+@media only screen and (min-width: 601px) {<br/>  div.example {<br/>
+    font-size: 80px;<br/>  }<br/>}<br/><br/>
+/* Если размер экрана 600px или менее, установите размер шрифта &lt;div&gt; в 30px */<br/>
+@media only screen and (max-width: 600px) {<br/>  div.example {<br/>
+    font-size: 30px;<br/>  }<br/>}<br/>
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_mediaqueries_fontsize.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>CSS Справочник @media</h2>
+<p>Для полного обзора всех типов носителей и функций / выражений, пожалуйста, посмотрите 
+<a href="/cssref/css3_pr_mediaquery.php">@media правило в нашем справочнике CSS</a>.</p>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_rwd_grid.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_rwd_images.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

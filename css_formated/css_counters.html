@@ -1,0 +1,108 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Счетчики</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_form.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_website_layout.php">Далее ❯</a>
+</div>
+<hr/>
+<div class="w3-dark-grey">
+<div class="container w3-content w3-green" style="max-width:500px">
+<h3>Пицца</h3>
+<h3>Гамбургер</h3>
+<h3>Хотдог</h3>
+</div>
+</div>
+<p class="intro">CSS счетчики "переменные" поддерживает CSS, значения которого могут 
+увеличить правила CSS (чтобы отслеживать, сколько раз они используются). Счетчики 
+позволяют настроить внешний вид содержимого на основе его размещения в документе.</p>
+<hr/>
+<h2>Автоматическая нумерация счетчиков</h2>
+<p>CSS счетчики "переменные". Значения переменных могут быть увеличены правилами CSS 
+(который будет отслеживать, сколько раз они используются).</p>
+<p>Для работы со счетчиками CSS будем использовать следующие свойства:</p>
+<ul>
+<li><code class="w3-codespan">counter-reset</code> - Создает или сбрасывает счетчик</li>
+<li><code class="w3-codespan">counter-increment</code> - Увеличивает значение счетчика</li>
+<li><code class="w3-codespan">content</code> - Вставка сгенерированного содержимого</li>
+<li><code class="w3-codespan">counter()</code> или функция <code class="w3-codespan">counters()</code> добавляет значение счетчика на элемент</li>
+</ul>
+<p>Чтобы использовать счетчик CSS, его необходимо сначала создать с помощью <code class="w3-codespan">counter-reset</code>.</p>
+<p>В следующем примере создается счетчик для страницы (в селекторе <code class="w3-codespan">body</code>),
+затем увеличивает значение счетчика для каждого элемента <code class="w3-codespan">&lt;h2&gt;</code>
+и добавляем значение "Раздел &lt;<em>счетчик</em>&gt;:"
+к началу каждого элемента <code class="w3-codespan">&lt;h2&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br/>    counter-reset: section;<br/>}<br/><br/>h2::before {<br/>    counter-increment: section;<br/>    
+content: "Раздел" counter(section) ": ";<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_counters1.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Вложенные счетчики</h2>
+<p>В следующем примере создается один счетчик для страницы (Раздела) и один 
+счетчик для каждого элемента <code class="w3-codespan">&lt;h1&gt;</code> (Подраздела).<br/> 
+Счетчик <code class="w3-codespan">"section"</code> для каждого элемента <code class="w3-codespan">&lt;h1&gt;</code>
+в "Раздел &lt;<em>значение счетчик разделов</em>&gt;.", и <code class="w3-codespan">"content"</code>
+счетчик будет подсчитан за каждый элемент <code class="w3-codespan">&lt;h2&gt;</code>
+с "&lt;<em>значение раздел счетчика </em>&gt; " . " &lt;<em>значение подраздел счетчика</em>&gt;":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br/>    counter-reset: section;<br/>}<br/><br/>h1 {<br/>    
+counter-reset: subsection;<br/>}<br/><br/>h1::before {<br/>    counter-increment: 
+section;<br/>    content: "Раздел" counter(section) ". ";<br/>
+}<br/><br/>h2::before {<br/>    
+counter-increment: subsection;<br/>    content: 
+counter(section) "." counter(subsection) " ";<br/>} </div>
+<a class="w3-btn w3-margin-bottom" href="trycss_counters2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Счетчик также может быть полезен для создания 
+экземпляра счетчика автоматически создается в дочерних элементов.
+Здесь мы используем функцию <code class="w3-codespan">counters()</code> для вставки строки
+между различными уровнями вложенности счетчика:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ol {<br/>    counter-reset: section;<br/>    
+list-style-type: none;<br/>}<br/><br/>
+li::before {<br/>    counter-increment: section;<br/>    
+content: counters(section,".") " ";<br/>} </div>
+<a class="w3-btn w3-margin-bottom" href="trycss_counters3.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>CSS Свойства счетчика</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Свойства</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="/cssref/pr_gen_content.php">content</a></td>
+<td>Используется с псевдо-элементами ::before и ::after для вставки сгенерированного содержимого</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_gen_counter-increment.php">counter-increment</a></td>
+<td>Увеличивает одно или несколько значений счетчика</td>
+</tr>
+<tr>
+<td><a href="/cssref/pr_gen_counter-reset.php">counter-reset</a></td>
+<td>Создает или сбрасывает один или несколько счетчиков</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_form.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_website_layout.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

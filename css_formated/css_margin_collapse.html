@@ -1,0 +1,74 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - margin крах</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_margin.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_padding.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Margin коллапс</h2>
+<p>Верхние и нижние поля элементов иногда сворачиваются в одно поле, равное самому большому из двух полей.</p>
+<p>Это не происходит на левом и правом полях! Только верхнее и нижнее поля!</p>
+<p>Рассмотрим следующий пример:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Демонстрация развала полей:</p>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  margin: 0 0 50px 0;<br/>}<br/><br/>h2 {<br/>  margin: 20px 0 0 0;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_margin_collapse.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>В приведенном выше примере, элемент &lt;h1&gt; имеет нижнюю границу 50px и элемент &lt;h2&gt; имеет верхнее поля значение 20px.</p>
+<p>Здравый смысл, казалось бы, предполагает, что вертикальная граница между &lt;h1&gt; и &lt;h2&gt; будет в общей сложности 70px (50px + 20px).
+Но из-за краха маржи фактическая маржа в конечном итоге составляет 50px.</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn" href="exercise_margin1" target="_blank">Упражнение 1 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_margin2" target="_blank">Упражнение 2 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_margin3" target="_blank">Упражнение 3 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_margin4" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<hr/>
+<h2>Все CSS свойства полей</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="../cssref/pr_margin.php">margin</a></td>
+<td>Сокращенное свойство для установки свойств полей в одном объявлении</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_margin-bottom.php">margin-bottom</a></td>
+<td>Задает нижнее поле элемента</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_margin-left.php">margin-left</a></td>
+<td>Задает левое поле элемента</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_margin-right.php">margin-right</a></td>
+<td>Задает правое поле элемента</td>
+</tr>
+<tr>
+<td><a href="../cssref/pr_margin-top.php">margin-top</a></td>
+<td>Задает верхнее поле элемента</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_margin.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_padding.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Линейный блок</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a "="" class="w3-left w3-btn" href="css_float.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_align.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Линейный блок</h2>
+<p>По сравнению со встроенным блоком <code class="w3-codespan">display:inline</code>, основная 
+разница в том, что линейный блок <code class="w3-codespan">display:inline-block</code> позволяет 
+задать ширину и высоту элемента.</p>
+<p>Также, с линейным блоком <code class="w3-codespan">display:inline-block</code>, соблюдаются верхние и нижние поля и отступы, 
+а со встроенным <code class="w3-codespan">display:inline</code> это не так.</p>
+<p>По сравнению с блоком <code class="w3-codespan">display:block</code>, основная 
+разница в том, что линейный блок <code class="w3-codespan">display:inline-block</code> 
+не добавляет разрыв строки после элемента, чтобы элемент могли находиться рядом.</p>
+<p>В следующем примере показано различное поведение встроенного блока <code class="w3-codespan">display:inline</code>,
+линейного блока <code class="w3-codespan">display:inline-block</code> 
+и просто блока <code class="w3-codespan">display:block</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+span.a {<br/>    display: inline; /* по умолчанию в span */<br/>    
+width: 100px;<br/>    height: 100px;<br/>    
+padding: 5px;<br/>    border: 1px solid blue; <br/>    
+background-color: yellow; <br/>}<br/><br/>span.b {<br/>    display: 
+inline-block;<br/>    width: 100px;<br/>    height: 
+100px;<br/>    padding: 5px;<br/>    border: 1px 
+solid blue; <br/>    background-color: yellow; <br/>}<br/><br/>
+span.c {<br/>    display: block;<br/>    width: 
+100px;<br/>    height: 100px;<br/>    padding: 5px;<br/>    
+border: 1px solid blue; <br/>    background-color: yellow; <br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_inline-block_span1.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Использование линейного блока для создания навигации</h2>
+<p>Одна общая польза для линейного <code class="w3-codespan">display:inline-block</code> 
+отображать элементы списка горизонтально, а не вертикально.
+Следующий пример, создание горизонтальных навигационных ссылок:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.nav {<br/>    background-color: yellow; <br/>    list-style-type: none;<br/>    text-align: 
+center; <br/>    padding: 0;<br/>    margin: 0;<br/>}<br/><br/>.nav li {<br/>    
+display: inline-block;<br/>    font-size: 20px;<br/>    padding: 
+20px;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_inline-block_nav.php" target="_blank">Попробуйте сами »</a>
+</div>
+<!--
+<hr>
+<h2>Grid of Boxes</h2>
+<p>It has been possible for a long time to create a grid of boxes that fills the 
+browser width and wraps nicely (when the browser is resized), by using the <code class="w3-codespan">
+float</code> property.</p>
+<p>However, the <code class="w3-codespan">inline-block</code> value of the <code class="w3-codespan">display</code> 
+property can make this easier (but it is not flawless - see more examples 
+below).</p>
+<h3>Примерs</h3>
+<p>Floating boxes - using <code class="w3-codespan">float</code> (notice that we also need to specify a 
+<code class="w3-codespan">clear</code> property for the element after the floating boxes):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.floating-box {<br>&nbsp;&nbsp;&nbsp; float: left;<br>&nbsp;&nbsp;&nbsp; 
+width: 150px;<br>&nbsp;&nbsp;&nbsp; height: 75px;<br>&nbsp;&nbsp;&nbsp; 
+margin: 10px;<br>&nbsp;&nbsp;&nbsp; border: 3px solid #73AD21; <br>}<br><br>
+.after-box {<br>&nbsp;&nbsp;&nbsp; clear: left;<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_inline-block_old" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+</div>
+<p>The same effect can be achieved by using the <code class="w3-codespan">inline-block</code> value 
+of the <code class="w3-codespan">display</code> property (notice that no <code class="w3-codespan">clear</code> is needed):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.floating-box {<br>&nbsp;&nbsp;&nbsp; display: inline-block;<br>&nbsp;&nbsp;&nbsp; 
+width: 150px;<br>&nbsp;&nbsp;&nbsp; height: 75px;<br>&nbsp;&nbsp;&nbsp; 
+margin: 10px;<br>&nbsp;&nbsp;&nbsp; border: 3px solid #73AD21; <br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_inline-block" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+</div>
+-->
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_float.php"> ❮ Назад</a>
+<a class="w3-right w3-btn" href="css_align.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

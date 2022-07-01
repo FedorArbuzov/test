@@ -1,0 +1,214 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Веб Шрифты</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_text_effects.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_2dtransforms.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>CSS Правило <code class="w3-codespan">@font-face</code></h2>
+<p>Веб шрифты позволяют веб дизайнерам использовать шрифты, не установленные на компьютере пользователя.</p>
+<p>Когда вы нашли/купили шрифт, который вы хотите использовать, просто включите шрифт 
+файл на вашем веб сервере, и он будет автоматически загружен пользователю при необходимости.</p>
+<p>Ваши "собственные" шрифты определены в CSS правило <code class="w3-codespan">@font-face</code>.</p>
+<hr/>
+<h2>Различные форматы шрифтов</h2>
+<p><strong>Шрифт TrueType (TTF)</strong></p>
+<p>TrueType - это стандарт шрифтов, разработанный в конце 1980-х годов Apple и Microsoft.
+TrueType является наиболее распространенным форматом шрифта как для Mac OS, так и для Microsoft 
+операционная система Windows.</p>
+<p><strong>Шрифт OpenType (OTF)</strong></p>
+<p>OpenType - формат масштабируемых компьютерных шрифтов. Он был построен на TrueType, 
+и зарегистрированный товарный знак Microsoft. 
+Шрифты OpenType широко используются сегодня на основных компьютерная платформа.</p>
+<p><strong>Web Open Font Format (WOFF)</strong></p>
+<p>WOFF - это формат шрифта для использования на веб-страницах. Он был начат в 2009, и 
+теперь рекомендация W3C. WOFF по существу OpenType или TrueType с 
+сжатие и дополнительные метаданные. Цель - поддержка распространения шрифтов 
+от сервера к клиенту по сети с ограничениями пропускной способности.</p>
+<p><strong>Web Open Font Format (WOFF 2.0)</strong></p>
+<p>TrueType/OpenType шрифт, который обеспечивает лучшее сжатие, чем WOFF 1.0.</p>
+<p><strong>SVG Шрифты/Фигуры</strong></p>
+<p>Шрифты SVG позволяют использовать SVG в качестве глифов при отображении текста. SVG 1.1 
+спецификация определите модуль шрифта, который позволяет создавать шрифты в 
+документ SVG. Можно также применить CSS к документам SVG и правило <code class="w3-codespan">@font-face</code>
+может применяться к тексту в документах SVG.</p>
+<p><strong>Встроенные Шрифты OpenType (EOT)</strong></p>
+<p>EOT шрифты - это компактная форма шрифтов OpenType, разработанная корпорацией Майкрософт для использования 
+как встроенные шрифты на веб страницах.</p>
+<hr/>
+<h2>Поддержка браузером форматов шрифтов</h2>
+<p>Числа в таблице указывают первую версию браузера, которая полностью поддерживает формат шрифта.</p>
+<table class="browserref notranslate">
+<tr>
+<th style="width:15%;font-size:16px;text-align:left;">Формат шрифта</th>
+<th class="bsEdge" style="width:15%;" title="Internet Explorer / Edge"></th>
+<th class="bsChrome" style="width:17%;" title="Chrome"></th>
+<th class="bsFirefox" style="width:18%;" title="Firefox"></th>
+<th class="bsSafari" style="width:18%;" title="Safari"></th>
+<th class="bsOpera" style="width:17%;" title="Opera"></th>
+</tr>
+<tr>
+<td>TTF/OTF</td>
+<td>9.0*</td>
+<td>4.0</td>
+<td>3.5</td>
+<td>3.1</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>WOFF</td>
+<td>9.0</td>
+<td>5.0</td>
+<td>3.6</td>
+<td>5.1</td>
+<td>11.1</td>
+</tr>
+<tr>
+<td>WOFF2</td>
+<td><span class="deprecated">Не поддерживает</span></td>
+<td>36.0</td>
+<td>35.0*</td>
+<td><span class="deprecated">Не поддерживает</span></td>
+<td>26.0</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td><span class="deprecated">Не поддерживает</span></td>
+<td>4.0</td>
+<td><span class="deprecated">Не поддерживает</span></td>
+<td>3.2</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>EOT</td>
+<td>6.0</td>
+<td><span class="deprecated">Не поддерживает</span></td>
+<td><span class="deprecated">Не поддерживает</span></td>
+<td><span class="deprecated">Не поддерживает</span></td>
+<td><span class="deprecated">Не поддерживает</span></td>
+</tr>
+</table>
+<p>*IE: Формат шрифта работает только тогда, когда установлен в "инсталлируемый"</p>
+<p>*Firefox: Не поддерживает по умолчанию, но может быть включен (необходимо установить флаг в 
+"true" к использовать WOFF2).</p>
+<hr/>
+<h2>Использовать шрифт, который вы пожелаете</h2>
+<p>В правле <code class="w3-codespan">@font-face</code>; сначала определите имя шрифта (например, myFirstFont),
+а затем укажите на файл шрифта.</p>
+<div class="w3-panel w3-note">
+<p><strong>Совет:</strong> Всегда используйте строчные буквы для URL шрифта. Заглавные буквы могут дать неожиданные результаты в IE.</p>
+</div>
+<p>Чтобы использовать шрифт для элемента HTML, обратитесь к имени шрифта <code class="w3-codespan">myFirstFont</code>
+через свойства <code class="w3-codespan">font-family</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+@font-face {<br/>
+    font-family: myFirstFont;<br/>
+    src: url(sansation_light.ttf);<br/>}<br/><br/> 
+div {<br/>    font-family: myFirstFont;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_font-face_rule.php" target="_blank">Редактор  кода »</a>
+</div>
+<hr/>
+<h2>Установить полужирный текст</h2>
+<p>Необходимо добавить правило <code class="w3-codespan">@font-face</code> содержащее дескрипторы полужирного текста:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+@font-face {<br/>
+    font-family: myFirstFont;<br/>
+    src: url(sansation_bold.ttf);<br/>
+    font-weight: bold;<br/>}<br/>
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss3_font-face_rule_bold.php" target="_blank">Редактор  кода »</a>
+</div>
+<p>Файл <code class="w3-codespan">sansation_bold.ttf</code> - это другой файл шрифта, содержащий полужирные символы для шрифта Sansation.</p>
+<p>Браузеры будут использовать это всякий раз, когда часть текста с семейством шрифтов <code class="w3-codespan">myFirstFont</code>
+должна отображаться жирным шрифтом.</p>
+<p>Таким образом, вы можете иметь больше правил <code class="w3-codespan">@font-face</code> для одного шрифта.</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_fonts1.php" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="exercise_css3_fonts2.php" target="_blank">Упражнение 2 »</a>
+</div>
+</div>
+<hr/>
+<h2>CSS Дескрипторы шрифтов</h2>
+<p>В следующей таблице перечислены все дескрипторы шрифтов, которые могут быть определены внутри правил <code class="w3-codespan">@font-face</code>:</p>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:17%">Дескриптор</th>
+<th style="width:20%">Значения</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>font-family</td>
+<td><i>name</i></td>
+<td>Требует. Определяет имя для шрифта</td>
+</tr>
+<tr>
+<td>src</td>
+<td><i>URL</i></td>
+<td>Требует. Определяет URL файла шрифта</td>
+</tr>
+<tr>
+<td>font-stretch</td>
+<td>normal<br/>
+condensed<br/>
+ultra-condensed<br/>
+extra-condensed<br/>
+semi-condensed<br/>
+expanded<br/>
+semi-expanded<br/>
+extra-expanded<br/>
+ultra-expanded</td>
+<td>Необязательный. Определяет способ растягивания шрифта. По умолчанию
+"normal"</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>normal<br/>
+italic<br/>
+oblique</td>
+<td>Необязательный. Определяет, каким шрифт должен быть в стиле. По умолчанию 
+"normal"</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>normal<br/>
+bold<br/>
+100<br/>
+200<br/>
+300<br/>
+400<br/>
+500<br/>
+600<br/>
+700<br/>
+800<br/>
+900</td>
+<td>Необязательный. Определяет жирность шрифта. По умолчанию "normal"</td>
+</tr>
+<tr>
+<td>unicode-range</td>
+<td><i>unicode-range</i></td>
+<td>Необязательный. Определяет диапазон символов Юникода, поддерживаемых шрифтом. 
+По умолчанию "U+0-10FFFF"</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_text_effects.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css3_2dtransforms.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

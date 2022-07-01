@@ -1,0 +1,442 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Панель навигации</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_image_transparency.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_dropdowns.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Демонстрация: панелей навигации</h2>
+<div class="w3-row">
+<div class="w3-col m4">
+<p>Вертикальная</p>
+<ul class="vertical ex">
+<li><a class="active" href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+</div>
+<div class="w3-col m8">
+<p>Горизонтальная</p>
+<ul class="horizontal">
+<li><a class="active" href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li class="rightli" style="float:right"><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<br/>
+<ul class="horizontal gray">
+<li><a href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a class="active" href="javascript:void(0)">Контакты</a></li>
+<li class="rightli" style="float:right"><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+</div>
+</div>
+<hr/>
+<h2>Панель навигации</h2>
+<p>Наличие простой в использовании навигации важно для любого веб сайта.</p>
+<p>С помощью CSS вы можете превратить скучные HTML меню в красивые навигационные панели</p>
+<hr/>
+<h2>Панель авигации = список ссылок</h2>
+<p>Панель навигации нуждается в стандартном HTML в качестве основы.</p>
+<p>В наших примерах мы построим панель навигации из стандартного HTML списка.</p>
+<p>Панель навигации - это в основном список ссылок, поэтому использование элементов <code class="w3-codespan">&lt;ul&gt;</code>
+и естественно <code class="w3-codespan">&lt;li&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;ul&gt;<br/>
+ 
+&lt;li&gt;&lt;a href="index.php"&gt;Главная&lt;/a&gt;&lt;/li&gt;<br/>
+ 
+&lt;li&gt;&lt;a href="news.php"&gt;Новости&lt;/a&gt;&lt;/li&gt;<br/>
+ 
+&lt;li&gt;&lt;a href="contact.php"&gt;Контакты&lt;/a&gt;&lt;/li&gt;<br/>
+ 
+&lt;li&gt;&lt;a href="about.php"&gt;О Нас&lt;/a&gt;&lt;/li&gt;<br/>
+&lt;/ul&gt;
+</div><a class="w3-btn w3-margin-bottom" href="trycss_navbar_basic_html.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Теперь давайте удалим маркеры, поля и отступы из списка:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul
+{<br/>
+   
+list-style-type: none;<br/>
+   
+margin: 0;<br/>
+   
+padding: 0;<br/>
+}
+</div><a class="w3-btn w3-margin-bottom" href="trycss_navbar_basic_css.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Пример объяснение:</p>
+<ul>
+<li><code class="w3-codespan">list-style-type: none;</code> - Убирает маркеры. 
+В панели навигации не нужны маркеры для списка</li>
+<li>Установить <code class="w3-codespan">margin: 0;</code> и <code class="w3-codespan">padding: 0;</code> 
+чтобы удалить настройки браузера по умолчанию</li>
+</ul>
+<p>Код в приведенном выше примере - это стандартный код, используется как на вертикальной, так и на горизонтальной панели навигации.</p>
+<hr/>
+<h2>Вертикальная панель навигации</h2>
+<p>Чтобы создать вертикальную панель навигации, нужно задать стиль элемента <code class="w3-codespan">&lt;a&gt;</code> 
+в списке, к дополнению коду выше:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+li a
+{<br/>
+   
+display: block;<br/>
+   
+width: 70px;<br/>
+}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_vertical.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Объяснение примера:</p>
+<ul>
+<li><code class="w3-codespan">display: block;</code> - Отображение ссылок в виде элементов блока составляет 
+область кликабельных ссылок (не только текст), и позволяет указать ширину 
+(и отступы, поля, высота и т. д. какие вы хотите)</li>
+<li><code class="w3-codespan">width: 60px;</code> - Элементы блока занимают всю ширину, доступную по умолчанию. Мы хотим задать ширину 60 пикселей</li>
+</ul>
+<p>Вы также можете установить ширину <code class="w3-codespan">&lt;ul&gt;</code> и удалить ширину <code class="w3-codespan">&lt;a&gt;</code>, 
+поскольку они будут занимать всю ширину, доступную при отображении в виде элементов блока.
+Это приведет к тому же результату, что и в предыдущем примере:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul
+{<br/>
+   
+list-style-type: none;<br/>
+   
+margin: 0;<br/>
+   
+padding: 0;<br/>    width: 70px;<br/>
+}
+<br/><br/>li
+a
+{<br/>
+   
+display: block;<br/>
+}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_vertical2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Пример вертикальной панели навигации</h2>
+<p>Создание базовой вертикальной панели навигации с серым цветом фона и 
+изменение цвета фона ссылок при наведении курсора мыши на них:</p>
+<ul class="vertical">
+<li><a href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    list-style-type: none;<br/>    
+margin: 0;<br/>    padding: 0;<br/>    width: 
+200px;<br/>    background-color: #f1f1f1;<br/>}<br/><br/>li a {<br/>    display: 
+block;<br/>    color: #000;<br/>    padding: 8px 16px;<br/>    text-decoration: none;<br/>}<br/><br/>/* 
+Change the link color on hover */<br/>li a:hover {<br/>    
+background-color: #555;<br/>    color: white;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_vertical_gray.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:35px;">Активная и текущая ссылка навигации</h3>
+<p>Добавьте класс <code class="w3-codespan">.active</code> к текущей ссылке, чтобы пользователь знал, на какой странице он находится:</p>
+<ul class="vertical">
+<li><a class="active" href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.active {<br/>    background-color: #4CAF50;<br/>    
+color: white;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_vertical_active.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:35px;">Центральные ссылки и добавить границы</h3>
+<p>Добавить выравнивание <code class="w3-codespan">text-align:center</code> в <code class="w3-codespan">&lt;li&gt;</code> или
+<code class="w3-codespan">&lt;a&gt;</code>ссылки по центру.</p>
+<p>Добавить свойство <code class="w3-codespan">border</code> в <code class="w3-codespan">&lt;ul&gt;</code>.
+Добавить границы вокруг навигации. Если Вы также хотите установить границы внутри панели,
+нужно добавить <code class="w3-codespan">border-bottom</code> во все элементы <code class="w3-codespan">&lt;li&gt;</code>,
+за исключением последнего:</p>
+<ul class="vertical border">
+<li><a class="active" href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    border: 1px solid #555;<br/>}<br/><br/>li {<br/>    text-align: center;<br/>    
+border-bottom: 1px solid #555;<br/>}<br/><br/>li:last-child {<br/>    
+border-bottom: none;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_vertical_borders.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:35px;">Фиксированная вертикальная навигация</h3>
+<p>Создать в полную в высоту, "фиксированную" боковую панель навигации:</p>
+<iframe src="trycss_navbar_vertical_iframe.htm" style="height:262px;width:100%;border:3px solid #f1f1f1;border-left:none"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    list-style-type: none;<br/>    
+margin: 0;<br/>    padding: 0;<br/>    width: 
+25%;<br/>    background-color: #f1f1f1;<br/>    
+height: 100%; /* Полная высота */<br/>    position: fixed; /* 
+Сделайте его придерживаться, даже на прокрутки */<br/>    
+overflow: auto; /* Включить прокрутку, если sidenav имеет слишком много содержимого */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_vertical_fixed.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-note w3-panel" style="margin-top:0">
+<p><strong>Примечание:</strong> Этот пример может работать неправильно на мобильных устройствах.</p>
+</div>
+<hr/>
+<h2>Горизонтальная панель навигации</h2>
+<p>Существует два способа создания горизонтальной панели навигации. Использование 
+<b>встроенных</b> или <b>плавающих</b> элементов списка.</p>
+<h3>Встроенные элементы списка</h3>
+<p>Одним из способов построения горизонтальной панели навигации является указание элементов <code class="w3-codespan">&lt;li&gt;</code>
+как встроенные, кроме того в "стандартные" в коде выше:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+li
+{<br/>
+   
+display: inline;<br/>
+}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Объяснение примера:</p>
+<ul>
+<li><code class="w3-codespan">display: inline;</code> - По умолчанию, элементы <code class="w3-codespan">&lt;li&gt;</code> - это элементы блока.
+Здесь мы удалим разрывы строк до и после каждого элемента списка, чтобы отобразить их на одной линии</li>
+</ul>
+<h3>Плавающие элементы списка</h3>
+<p>Другой способ создания горизонтальной навигации, плавают элементы <code class="w3-codespan">&lt;li&gt;</code>
+им нужно указать расположение для навигационных ссылок:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+li
+{<br/>
+   
+float: left;<br/>
+}<br/>
+a
+{<br/>
+   
+display: block;<br/>
+    padding: 8px;<br/>    background-color: 
+#dddddd;<br/>
+}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_float.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Объяснение примера:</p>
+<ul>
+<li><code class="w3-codespan">float: left;</code> - Использовать поплавок, чтобы заставить элементы блока плавать рядом друг с другом</li>
+<li><code class="w3-codespan">display: block;</code> - Отображение ссылок в виде элементов блока составляет всю область кликабельных 
+ссылок (не только текст), позволяет нам указывать отступы (и высоту, ширину, поля и т.д. если вы хотите)</li>
+<li><code class="w3-codespan">padding: 8px;</code> - Поскольку элементы блока занимают всю доступную ширину, они 
+не могут плавать рядом друг с другом. Поэтому, укажите некоторые дополнения, чтобы сделать их выглядеть красиво</li>
+<li><code class="w3-codespan">background-color: #dddddd;</code> - Добавить серый фон цвета к каждому элементу</li>
+</ul>
+<p><strong>Совет:</strong> Добавить <code class="w3-codespan">background-color: #dddddd;</code> в
+<code class="w3-codespan">&lt;ul&gt;</code> для каждого элемента <code class="w3-codespan">&lt;a&gt;</code>, чтобы цвет фона был на всю ширину:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>
+    background-color: #dddddd;<br/>
+}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_float2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Примеры горизонтальной панели навигации</h2>
+<p>Создание базовой горизонтальной панели навигации с темным цветом фона и 
+изменение цвета фона ссылок при наведении курсора мыши на них:</p>
+<ul class="horizontal">
+<li><a href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    list-style-type: none;<br/>    
+margin: 0;<br/>    padding: 0;<br/>    overflow: 
+hidden;<br/>    background-color: #333;<br/>}<br/><br/>li {<br/>    
+float: left;<br/>}<br/>
+<br/>li a {<br/>    display: block;<br/>    
+color: white;<br/>    text-align: center;<br/>    
+padding: 14px 16px;<br/>    text-decoration: none;<br/>}<br/>
+<br/>/* Измените цвет ссылки на #111 (черный) при наведении */<br/>li a:hover {<br/>    background-color: 
+#111;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_black.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:35px;">Активная и текущая ссылка навигации</h3>
+<p>Добавьте класс <code class="w3-codespan">.active</code> к текущей ссылке, чтобы пользователь знал, на какой странице он находится:</p>
+<ul class="horizontal">
+<li><a class="active" href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.active {<br/>    background-color: #4CAF50;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_black_active.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:35px;">Выравнивание списка по правому краю</h3>
+<p>Выравнивание ссылок по правому краю путем перемещения элементов списка вправо <code class="w3-codespan">float:right;</code>:</p>
+<ul class="horizontal">
+<li><a href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li style="float:right"><a class="active" href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;ul&gt;<br/>  &lt;li&gt;&lt;a href="#home"&gt;Главная&lt;/a&gt;&lt;/li&gt;<br/>  
+&lt;li&gt;&lt;a href="#news"&gt;Новости&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;a href="#contact"&gt;Контакты&lt;/a&gt;&lt;/li&gt;<br/>
+  &lt;li style="float:right"&gt;&lt;a 
+class="active" href="#about"&gt;О Нас&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_black_right.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:35px;">Разделители границ списка</h3>
+<p>Добавить свойство <code class="w3-codespan">border-right</code> в <code class="w3-codespan">&lt;li&gt;</code> для создания разделителей ссылок:</p>
+<ul class="horizontal divider">
+<li><a class="active" href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li style="float:right"><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* Добавление серой правой границы ко всем элементам списка, кроме последнего 
+(последний ребенок) */<br/>li {<br/>    border-right: 1px solid #bbb;<br/>}<br/><br/>
+li:last-child {<br/>    border-right: none;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_dividers.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:35px;">Фиксированные горизонтальные панели навигации</h3>
+<p>Сделайте так, чтобы панель навигации оставалась вверху или внизу страницы, даже когда пользователь прокручивает страницу:</p>
+<div class="w3-row">
+<div class="w3-half">
+<div class="width94">
+<iframe src="trycss_navbar_horizontal_iframe.htm" style="height:262px;width:100%;border:none;"></iframe>
+<div class="w3-example">
+<h3>Фиксированная навигация сверху</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    position: fixed;<br/>    top: 0;<br/>    
+width: 100%;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_black_fixed.php" target="_blank">Попробуйте сами »</a>
+</div>
+</div>
+</div>
+<div class="w3-half">
+<div class="width94">
+<iframe src="trycss_navbar_horizontal_iframe2.htm" style="height:262px;width:100%;border:none;"></iframe>
+<div class="w3-example">
+<h3>Фиксированная навигация снизу</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    position: fixed;<br/>    bottom: 0;<br/>    
+width: 100%;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_black_fixed2.php" target="_blank">Попробуйте сами »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="w3-note w3-panel" style="margin-top:0">
+<p><strong>Примечание:</strong> Фиксированная позиция может работать неправильно на мобильных устройствах.</p>
+</div>
+<h3 style="margin-top:30px;">Серая горизонтальная панель навигации</h3>
+<p>Пример серой горизонтальной панели навигации, с тонкой серой границей:</p>
+<ul class="horizontal2">
+<li><a class="active" href="javascript:void(0)">Главная</a></li>
+<li><a href="javascript:void(0)">Новости</a></li>
+<li><a href="javascript:void(0)">Контакты</a></li>
+<li><a href="javascript:void(0)">О Нас</a></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    border: 1px solid #e7e7e7;<br/>    
+background-color: #f3f3f3;<br/>}<br/><br/>li a {<br/>    color: 
+#666;<br/>}<br/>
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_horizontal_gray.php" target="_blank">Попробуйте сами »</a>
+</div>
+<h3 style="margin-top:30px;">Липкая панель навигации</h3>
+<p>Использовать <code class="w3-codespan">position: sticky;</code> в <code class="w3-codespan">&lt;li&gt;</code>, чтобы создать липкую навигацию.</p>
+<p>Липкий элемент переключается между относительным и фиксированным в зависимости от положения прокрутки.
+Он позиционируется относительно до тех пор, пока заданное положение смещения не будет выполнено в видимом экране - 
+тогда он "прилипает" на месте (например, <code class="w3-codespan">position:fixed</code>).</p>
+<iframe src="/howto/tryhow_js_navbar_sticky.htm" style="width:100%;border:3px solid #e9e9e9;height:400px;padding:0"></iframe><div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>    position: -webkit-sticky; /* Safari */<br/>    
+position: sticky;<br/>    top: 0;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_navbar_sticky.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-note w3-panel" style="margin-top:0">
+<p><strong>Примечание:</strong> Internet Explorer, Edge 15 и более ранние версии не поддерживают фиксированное позиционирование.
+Safari требует префикс -webkit- (см. пример выше). Необходимо также указать по крайней мере одно из <code class="w3-codespan">top</code>, 
+<code class="w3-codespan">right</code>, <code class="w3-codespan">bottom</code> или <code class="w3-codespan">left</code> для 
+липкое позиционирование работы.</p>
+</div>
+<hr/>
+<h2>Еще примеры</h2>
+<div class="w3-example">
+<h3>Отзывчивая верхняя навигация</h3>
+<p>Как использовать медиа запросы CSS для создания адаптивной верхней навигации.</p>
+<div class="w3-white">
+<img src="navbar_responsive_hor.jpg" style="width:100%"/>
+</div>
+<a class="w3-btn w3-margin-top w3-margin-bottom" href="trycss_navbar_horizontal_responsive.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-example">
+<h3>Отзывчивая боковая навигация</h3>
+<p>Как использовать медиа запросы CSS для создания адаптивной навигации по сайту.</p>
+<div class="w3-white">
+<img src="navbar_responsive_ver.jpg" style="width:100%"/>
+</div>
+<a class="w3-btn w3-margin-top w3-margin-bottom" href="trycss_navbar_vertical_responsive.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-example">
+<h3>Выпадающий список навигации</h3>
+<p>Как добавить выпадающее меню в панели навигации.</p>
+<div class="w3-white">
+<iframe src="trycss_dropdown_navbar.htm" style="width:100%;border:none;height:200px"></iframe>
+</div>
+<a class="w3-btn w3-margin-top w3-margin-bottom" href="trycss_dropdown_navbar.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_image_transparency.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_dropdowns.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

@@ -1,0 +1,201 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Селекторы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_syntax.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_howto.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>CSS Селекторы</h2>
+<p>Селекторы CSS используются для "поиска" (или выбора) HTML элементов, которым вы хотите задать стиль.</p>
+<p>Мы можем разделить CSS селекторы на пять категорий:</p>
+<ul>
+<li>Простые селекторы (выбор элементов на основе Имени, Идентификатора и Класса)</li>
+<li><a href="css_combinators.php">Комбинированные селектора</a> (выбор элементов на основе определенной взаимосвязи между ними)</li>
+<li><a href="css_pseudo_classes.php">Псевдоклассы селекторов</a> (выбор элементов на основе определенного состояния)</li>
+<li><a href="css_pseudo_elements.php">Псевдоэлементы селекторов</a> (выбор и стиль части элемента)</li>
+<li><a href="css_attribute_selectors.php">Атрибуты селекторов</a> (выбор элементов на основе атрибута или значения атрибута)</li>
+</ul>
+<p>На этой странице будут объяснены самые основные CSS селекторы.</p>
+<hr/>
+<h2>CSS Селектор элементов</h2>
+<p>Селектор элементов выбирает HTML элементы на основе имени элемента.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Здесь все элементы &lt;p&gt; на странице будут выровнены по центру, с красным цветом текста:</p>
+<div class="w3-code notranslate cssHigh">
+p
+{<br/>
+  text-align: center;<br/>
+  color: red;<br/>
+}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_syntax_element.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>CSS Селектор идентификаторов</h2>
+<p>Селектор идентификаторов использует атрибут идентификатора HTML элемента для выбора конкретного элемента.</p>
+<p>Идентификатор элемента уникален в пределах страницы, поэтому селектор идентификаторов используется для выбора одного уникального элемента!</p>
+<p>Чтобы выбрать элемент с определенным идентификатором, напишите символ хэша ( # ), за которым следует идентификатор элемента.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Приведенное ниже правило CSS будет применено к HTML элементу id="para1":</p>
+<div class="w3-code notranslate cssHigh">
+#para1
+{<br/>
+  text-align: center;<br/>
+  color: red;<br/>
+}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_syntax_id.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Идентификационное имя не может начинаться с цифры!</p>
+</div>
+<hr/>
+<div id="midcontentadcontainer">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>CSS Селектор классов</h2>
+<p>Селектор классов выбирает HTML элементы с определенным атрибутом класса.</p>
+<p>Чтобы выбрать элементы с определенным классом, напишите символ точки (.), за которым следует имя класса.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>В этом примере все HTML элементы с class="center" будет красным и выровненным по центру:</p>
+<div class="w3-code notranslate cssHigh">
+.center {<br/>  text-align: center;<br/>  color: red;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_syntax_class.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Вы также можете указать, что класс должен влиять только на определенные HTML элементы.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>В этом примере только элементы &lt;p&gt; с class="center" будет выровнен по центру:</p>
+<div class="w3-code notranslate cssHigh">
+p.center {<br/>  text-align: center;<br/>  color: red;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_syntax_element_class.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>HTML элементы также могут ссылаться на несколько классов.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>В этом примере элемент &lt;p&gt; будет задан стиль в соответствии с class="center" и class="large":</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;p class="center large"&gt;Этот параграф относится к двум классам.&lt;/p&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_syntax_element_class2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Имя класса не может начинаться с цифры!</p>
+</div>
+<hr/>
+<h2>CSS Селектор универсальный</h2>
+<p>Универсальный селектор (*) выбирает все HTML элементы на странице.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Приведенное ниже правило CSS повлияет на каждый HTML элемент на странице:</p>
+<div class="w3-code notranslate cssHigh">
+*
+{<br/>
+  text-align: center;<br/>
+  color: blue;<br/>
+}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_syntax_universal.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>CSS Группировка селекторов</h2>
+<p>Группировка селекторов выбирает все HTML элементы с одинаковым определенным стилем.</p>
+<p>Посмотрите на следующий код CSS (элементы h1, h2, и p имеют одинаковые определения стилей):</p>
+<div class="w3-example">
+<div class="w3-code notranslate cssHigh">
+h1
+{<br/>
+  text-align: center;<br/>  color: red;<br/>
+}<br/>
+<br/>h2
+{<br/>
+ 
+text-align: center;<br/>  color: red;<br/>}<br/>
+<br/>p
+{<br/>
+  text-align: center;<br/>  color: red;<br/>
+}</div></div>
+<p>Будет лучше сгруппировать селекторы, чтобы минимизировать код.</p>
+<p>Чтобы сгруппировать селекторы, разделите их запятыми.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>В этом примере мы сгруппировали селекторы из приведенного выше кода:</p>
+<div class="w3-code notranslate cssHigh">
+h1, h2, p
+{<br/>
+ text-align: center;<br/>  color: red;<br/>}
+</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_grouping.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn" href="exercise_selectors1.php" target="_blank">Упражнение 1 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_selectors2.php" target="_blank">Упражнение 2 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_selectors3.php" target="_blank">Упражнение 3 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_selectors4.php" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<hr/>
+<h2>Все простые селекторы CSS</h2>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Селектор</th>
+<th style="width:20%">Пример</th>
+<th>Пример описание</th>
+</tr>
+<tr>
+<td><a href="/cssref/sel_class.php">.<i>class</i></a></td>
+<td class="notranslate">.intro</td>
+<td>Выбирает все элементы с помощью class="intro"</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_id.php">#<i>id</i></a></td>
+<td class="notranslate">#firstname</td>
+<td>Выбирает элемент с помощью id="firstname"</td>
+</tr>
+<tr>
+<td><a href="/cssref/sel_all.php">*</a></td>
+<td class="notranslate">*</td>
+<td>Выбирает все элементы</td>
+</tr>
+<tr>
+<td><i><a href="/cssref/sel_element.php">element</a></i></td>
+<td class="notranslate">p</td>
+<td>Выбирает все элементы &lt;p&gt;</td>
+</tr>
+<tr>
+<td><i><a href="/cssref/sel_element_comma.php">element,element,..</a></i></td>
+<td class="notranslate">div, p</td>
+<td>Выбирает все элементы &lt;div&gt; и &lt;p&gt;</td>
+</tr>
+</table>
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_syntax.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_howto.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

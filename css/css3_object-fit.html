@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<title>Учебник CSS — СSS3 Объект-подгонка</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web,W3CSS,W3C,Python,веб,учебники,веб-разработка,разработка,тестирование,учебное пособие,программирование,обучение,тренировка,учебник,викторина,примеры,занятия,уроки,справочник,образцы,упражнения,исходники,исходный код,цвет,демо,советы"><meta http-equiv="refresh" content="84600"><meta name="Description" content="Хорошо организованные и просты для понимания, бесплатные учебники для самостоятельного веб строительства, с примерами HTML, CSS, JavaScript и т.д."><meta name="Description" content="Свойство CSS3 object-fit используется для указания &lt;img&gt; или &lt;video&gt;,
+которые должены быть изменены, чтобы соответствовать контейнеру."><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/w3css/4/w3.css"><link rel="stylesheet" href="/w3css/4/w3_2.css">
+<script src='/lib/prism2.js'></script><link rel='stylesheet' href='/lib/prism1.css'><!-- Yandex.RTB --><script>window.yaContextCb=window.yaContextCb||[]</script><script src="https://yandex.ru/ads/system/context.js" async></script><!-- //Yandex.RTB -->
+</head><link rel="stylesheet" type="text/css" href="/browserref.css">
+<body><div class='w3-container top'><a class='w3schools-logo notranslate' href='../index.html'>schoolsw3<span class='dotcom'>.com</span></a><div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ</div></div><div style='display:none;position:absolute;z-index:4;right:52px;height:40px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'><div class='gcse-search'></div></div><div style='display:none;position:absolute;z-index:3;right:111px;height:40px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div><div class='w3-card-2 topnav notranslate' id='topnav'><div style="overflow:auto;"><div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:41px"><a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Меню'></a><a href='../index.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Главная'></a><a class="w3-bar-item w3-button" href='../html/index.php' title='HTML Учебник'>HTML</a><a class="w3-bar-item w3-button" href='../css/index.php' title='CSS Учебник'>CSS</a><a class="w3-bar-item w3-button" href='../js/index.php' title='JavaScript Учебник'>JAVASCRIPT</a><a class="w3-bar-item w3-button" href='../sql/index.php' title='SQL Учебник'>SQL</a><a class="w3-bar-item w3-button" href='../python/index.php' title='Python Учебник'>PYTHON</a><a class="w3-bar-item w3-button" href='../php/index.php' title='PHP Учебник'>PHP</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.php' title='Bootstrap Учебник'>BOOTSTRAP</a><a class="w3-bar-item w3-button" href='../howto/index.php' title='Сделать инструкции HTML, CSS и JavaScript'>КАК</a><a class="w3-bar-item w3-button" href='../w3css/index.php' title='W3.CSS Учебник'>W3.CSS</a><a class="w3-bar-item w3-button" href='../jquery/index.php' title='jQuery Учебник'>JQUERY</a><a class="w3-bar-item w3-button" href='../java/index.php' title='Java Учебник'>JAVA</a><a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Учебники для программиста'>ВСЕ <i class='fa fa-caret-down'></i> <i class='fa fa-caret-up' style='display:none'></i></a><a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Поиск на Schoolsw3'>&#xe802;</a><a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Перевод на Schoolsw3'>&#xe801;</a><a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключение темного кода'>&#xe80b;</a><a class="w3-bar-item w3-button w3-right" target="_blank" href='../forum/index.php'>ФОРУМ</a><a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения для программиста'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a><a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники для программиста'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a></div><div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;"><span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:10px;font-weight:bold;">&times;</span><div class='w3-row-padding' style="padding:24px 48px"><div class='w3-col l3 m6'><h3>HTML и CSS</h3><a class="w3-bar-item w3-button" href='../html/index.php'>Учебник HTML</a><a class="w3-bar-item w3-button" href='../css/index.php'>Учебник CSS</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.php'>Учебник Bootstrap</a><a class="w3-bar-item w3-button" href='../w3css/index.php'>Учебник W3.CSS</a><a class="w3-bar-item w3-button" href='../colors/index.php'>Учебник Colors</a><a class="w3-bar-item w3-button" href='../icons/index.php'>Учебник Icons</a><a class="w3-bar-item w3-button" href='../graphics/index.php'>Учебник Graphics</a><a class="w3-bar-item w3-button" href='../graphics/svg_intro.php'>Учебник SVG</a><a class="w3-bar-item w3-button" href='../graphics/canvas_intro.php'>Учебник Canvas</a><a class="w3-bar-item w3-button" href='../howto/index.php'>Учебник Как</a><a class="w3-bar-item w3-button" href='../sass/index.php'>Учебник Sass</a><div class="w3-hide-large w3-hide-small"><h3>XML</h3><a class="w3-bar-item w3-button" href='../xml/index.php'>Учебник XML</a><a class="w3-bar-item w3-button" href='../xml/ajax_intro.php'>Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.php'>Учебник XML DTD</a><a class="w3-bar-item w3-button" href='../xml/schema_intro.php'>Учебник XML Schema</a><a class="w3-bar-item w3-button" href='../xml/xsl_intro.php'>Учебник XSLT</a><a class="w3-bar-item w3-button" href='../xml/xpath_intro.php'>Учебник XPath</a><a class="w3-bar-item w3-button" href='../xml/xquery_intro.php'>Учебник XQuery</a></div></div><div class='w3-col l3 m6'><h3>JavaScript</h3><a class="w3-bar-item w3-button" href='../js/index.php'>Учебник JavaScript</a><a class="w3-bar-item w3-button" href='../jquery/index.php'>Учебник jQuery</a><a class="w3-bar-item w3-button" href='../react/index.php'>Учебник React</a><a class="w3-bar-item w3-button" href='../angular/index.php'>Учебник AngularJS</a><a class="w3-bar-item w3-button" href="../js/js_json_intro.php">Учебник JSON</a><a class="w3-bar-item w3-button" href='../js/js_ajax_intro.php'>Учебник AJAX</a><a class="w3-bar-item w3-button" href="../w3js/index.php">Учебник W3.JS</a><h3>Программирование</h3><a class="w3-bar-item w3-button" href='../python/index.php'>Учебник Python</a><a class="w3-bar-item w3-button" href='../java/index.php'>Учебник Java</a><a class="w3-bar-item w3-button" href='../cpp/index.php'>Учебник C++</a><a class="w3-bar-item w3-button" href='../cs/index.php'>Учебник C#</a><a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.php'>Учебник машинное обучение</a><div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div></div><div class='w3-col l3 m6'><h3>На Сервере</h3><a class="w3-bar-item w3-button" href='../sql/index.php'>Учебник SQL</a><a class="w3-bar-item w3-button" href='../php/index.php'>Учебник PHP</a><a class="w3-bar-item w3-button" href='../asp/index.php'>Учебник ASP</a><a class="w3-bar-item w3-button" href='../nodejs/index.php'>Учебник Node.js</a><a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.php'>Учебник Raspberry Pi</a> <h3>Веб Стоительство</h3><a class="w3-bar-item w3-button" href="../w3css/w3css_templates.php">Веб шаблоны</a><a class="w3-bar-item w3-button" href='../browsers/index.php'>Веб Статистика</a><a class="w3-bar-item w3-button" href='../cert/index.php'>Веб Сертификаты</a><a class="w3-bar-item w3-button" href='../tryit/index.php'>Веб Редактор</a><a class="w3-bar-item w3-button" href="../whatis/index.php">Веб Разработка</a><a class="w3-bar-item w3-button" href="../typingspeed/index.php">Проверьте скорость набора текста</a></div><div class='w3-col l3 m6 w3-hide-medium'><h3>XML</h3><a class="w3-bar-item w3-button" href='../xml/index.php'>Учебник XML</a><a class="w3-bar-item w3-button" href='../xml/ajax_intro.php'>Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.php'>Учебник XML DTD</a><a class="w3-bar-item w3-button" href='../xml/schema_intro.php'>Учебник XML Schema</a><a class="w3-bar-item w3-button" href='../xml/xsl_intro.php'>Учебник XSLT</a><a class="w3-bar-item w3-button" href='../xml/xpath_intro.php'>Учебник XPath</a><a class="w3-bar-item w3-button" href='../xml/xquery_intro.php'>Учебник XQuery</a></div></div><br></div><div id='nav_references' class='w3-bar-block w3-card-2'><span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span><div class='w3-row-padding' style="padding:24px 48px"><div class='w3-col l3 m6'><h3>HTML</h3><a class="w3-bar-item w3-button" href='../tags/index.php'>HTML Справочник тегов</a><a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.php'>HTML Поддержка Браузера</a><a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.php'>HTML Справочник событий</a><a class="w3-bar-item w3-button" href='../colors/index.php'>HTML Справочник цвета</a><a class="w3-bar-item w3-button" href='../tags/ref_attributes.php'>HTML Справочник атрибутов</a><a class="w3-bar-item w3-button" href='../tags/ref_canvas.php'>HTML Справочник Canvas</a><a class="w3-bar-item w3-button" href='../graphics/svg_reference.php'>HTML Справочник SVG</a><a class="w3-bar-item w3-button" href='../charsets/index.php'>HTML Character Sets</a><a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.php'>Google Maps Справочник</a><h3>CSS</h3><a class="w3-bar-item w3-button" href='../cssref/index.php'>CSS Справочник</a><a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.php'>CSS Поддержка Браузера</a><a class="w3-bar-item w3-button" href='../cssref/css_selectors.php'>CSS Справочник селекторов</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.php'>Bootstrap 3 Справочник</a><a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.php'>Bootstrap 4 Справочник</a><a class="w3-bar-item w3-button" href='../w3css/w3css_references.php'>W3.CSS Справочник</a><a class="w3-bar-item w3-button" href='../icons/icons_reference.php'>Icon Справочник</a><a class="w3-bar-item w3-button" href='../sass/sass_functions_string.php'>Sass Справочник</a></div><div class='w3-col l3 m6'><h3>JavaScript</h3><a class="w3-bar-item w3-button" href='../jsref/index.php'>JavaScript Справочник</a><a class="w3-bar-item w3-button" href='../jsref/index.php'>HTML DOM Справочник</a><a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.php'>jQuery Справочник</a><a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.php'>AngularJS Справочник</a><a class="w3-bar-item w3-button" href="../w3js/w3js_references.php">W3.JS Справочник</a><h3>Программмирование</h3><a class="w3-bar-item w3-button" href='../python/python_reference.php'>Python Справочник</a><a class="w3-bar-item w3-button" href='../java/java_ref_keywords.php'>Java Справочник</a></div><div class='w3-col l3 m6'><h3>На сервере</h3><a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.php'>SQL Справочник</a><a class="w3-bar-item w3-button" href='../php/php_ref_overview.php'>PHP Справочник</a><a class="w3-bar-item w3-button" href='../asp/asp_ref_response.php'>ASP Справочник</a><h3>XML</h3><a class="w3-bar-item w3-button" href='../xml/dom_nodetype.php'>XML Справочник</a><a class="w3-bar-item w3-button" href='../xml/dom_http.php'>XML Http Справочник</a><a class="w3-bar-item w3-button" href='../xml/xsl_elementref.php'>XSLT Справочник</a><a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.php'>XML Schema Справочник</a></div><div class='w3-col l3 m6 w3-hide-medium w3-hide-small'><h3>Набор Кодировок</h3><a class="w3-bar-item w3-button" href='../charsets/index.php'>HTML Набор Кодировок</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.php'>HTML ASCII</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.php'>HTML ANSI</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.php'>HTML Windows-1252</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.php'>HTML ISO-8859-1</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.php'>HTML Символы</a><a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.php'>HTML UTF-8</a></div></div><br></div><div id='nav_exercises' class='w3-bar-block w3-card-2'><span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span><div class='w3-row-padding' style="padding:24px 48px"><div class='w3-col l4 m6'><h3>Упражнения</h3><a class="w3-bar-item w3-button" href="../html/html_exercises.php">HTML Упражнения</a><a class="w3-bar-item w3-button" href="../css/css_exercises.php">CSS Упражнения</a><a class="w3-bar-item w3-button" href="../js/js_exercises.php">JavaScript Упражнения</a><a class="w3-bar-item w3-button" href="../sql/sql_exercises.php">SQL Упражнения</a><a class="w3-bar-item w3-button" href="../php/php_exercises.php">PHP Упражнения</a><a class="w3-bar-item w3-button" href="../python/python_exercises.php">Python Упражнения</a><a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.php">jQuery Упражнения</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.php">Bootstrap Упражнения</a><a class="w3-bar-item w3-button" href="../java/java_exercises.php">Java Упражнения</a><a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.php">C++ Упражнения</a><a class="w3-bar-item w3-button" href="../cs/cs_exercises.php">C# Упражнения</a></div><div class='w3-col l4 m6'><h3>Викторины</h3><a class="w3-bar-item w3-button" href='html_quiz.php' target='_top'>HTML Викторина</a><a class="w3-bar-item w3-button" href='../css/css_quiz.php' target='_top'>CSS Викторина</a><a class="w3-bar-item w3-button" href='../js/js_quiz.php' target='_top'>JavaScript Викторина</a><a class="w3-bar-item w3-button" href="../sql/sql_quiz.php" target="_top">SQL Викторина</a><a class="w3-bar-item w3-button" href='../php/php_quiz.php' target='_top'>PHP Викторина</a><a class="w3-bar-item w3-button" href='../python/python_quiz.php' target='_top'>Python Викторина</a><a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.php' target='_top'>jQuery Викторина</a><a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.php' target='_top'>Bootstrap Викторина</a><a class="w3-bar-item w3-button" href='../java/java_quiz.php' target='_top'>Java Викторина</a><a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.php' target='_top'>C++ Викторина</a><a class="w3-bar-item w3-button" href='../cs/cs_quiz.php' target='_top'>C# Викторина</a><a class="w3-bar-item w3-button" href='../xml/xml_quiz.php' target='_top'>XML Викторина</a></div><div class='w3-col l4 m12'><h3>Сертификаты</h3><a class="w3-bar-item w3-button" href="../cert/cert_html.php" target="_top">HTML Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_css.php" target="_top">CSS Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_javascript.php" target="_top">JavaScript Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_sql.php" target="_top">SQL Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_php.php" target="_top">PHP Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_python.php" target="_top">Python Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_jquery.php" target="_top">jQuery Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.php" target="_top">Bootstrap Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_xml.php" target="_top">XML Сертификат</a></div></div><br></div></div></div><div class='w3-sidebar w3-collapse' id='sidenav'>
+<div id='leftmenuinner'>
+<div class='w3-light-grey' id='leftmenuinnerinner'>
+<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>
+<h2 class="left"><span class="left_h2">CSS</span> Учебник</h2>
+<a target="_top" href="index.php">CSS Главная</a>
+<a target="_top" href="css_intro.php">CSS Введение</a>
+<a target="_top" href="css_syntax.php">CSS Синтаксис</a>
+<a target="_top" href="css_selectors.php">CSS Селекторы</a>
+<a target="_top" href="css_howto.php">CSS Подключение</a>
+<a target="_top" href="css_comments.php">CSS Комментарии</a>
+<a target="_top" href="css_colors.php">CSS Цвет</a>
+<div class="tut_overview">
+<a target="_top" href="css_colors.php">Цвет</a>
+<a target="_top" href="css_colors_rgb.php">RGB</a>
+<a target="_top" href="css_colors_hex.php">HEX</a>
+<a target="_top" href="css_colors_hsl.php">HSL</a>
+</div>
+<a target="_top" href="css_background.php">CSS Фон</a>
+<div class="tut_overview">
+<a target="_top" href="css_background.php">Фон цвет</a>
+<a target="_top" href="css_background_image.php">Фон изображение</a>
+<a target="_top" href="css_background_repeat.php">Фон повторение</a>
+<a target="_top" href="css_background_attachment.php">Фон вложеный</a>
+<a target="_top" href="css_background_shorthand.php">Фон стенография</a>
+</div>
+<a target="_top" href="css_border.php">CSS Границы</a>
+<div class="tut_overview">
+<a target="_top" href="css_border.php">Границы</a>
+<a target="_top" href="css_border_width.php">Ширина границ</a>
+<a target="_top" href="css_border_color.php">Цвет границ</a>
+<a target="_top" href="css_border_sides.php">Стороны границ</a>
+<a target="_top" href="css_border_shorthand.php">Сокращение границ</a>
+<a target="_top" href="css_border_rounded.php">Закругленные границы</a>
+</div>
+<a target="_top" href="css_margin.php">CSS Отступ cнаружи</a>
+<div class="tut_overview">
+<a target="_top" href="css_margin.php">Поля</a>
+<a target="_top" href="css_margin_collapse.php">Разрушить поля</a>
+</div>
+<a target="_top" href="css_padding.php">CSS Отступы внутри</a>
+<a target="_top" href="css_dimension.php">CSS Высота и ширина</a>
+<a target="_top" href="css_boxmodel.php">CSS Бокс модель</a>
+<a target="_top" href="css_outline.php">CSS Контур</a>
+<div class="tut_overview">
+<a target="_top" href="css_outline.php">Контур</a>
+<a target="_top" href="css_outline_width.php">Ширина контура</a>
+<a target="_top" href="css_outline_color.php">Цвет контура</a>
+<a target="_top" href="css_outline_shorthand.php">Сокращение контура</a>
+<a target="_top" href="css_outline_offset.php">Смещение контура</a>
+</div>
+<a target="_top" href="css_text.php">CSS Текст</a>
+<div class="tut_overview">
+<a target="_top" href="css_text.php">Цвет</a>
+<a target="_top" href="css_text_align.php">Выравнивание</a>
+<a target="_top" href="css_text_decoration.php">Оформление</a>
+<a target="_top" href="css_text_transformation.php">Преобразование</a>
+<a target="_top" href="css_text_spacing.php">Интервал</a>
+<a target="_top" href="css_text_shadow.php">Тень</a>
+</div>
+<a target="_top" href="css_font.php">CSS Шрифты </a>
+<div class="tut_overview">
+<a target="_top" href="css_font.php">Семейство</a>
+<a target="_top" href="css_font_websafe.php">Веб-Сейф</a>
+<a target="_top" href="css_font_fallbacks.php">Отступление</a>
+<a target="_top" href="css_font_style.php">Стиль</a>
+<a target="_top" href="css_font_size.php">Размер</a>
+<a target="_top" href="css_font_google.php">Гугл</a>
+<a target="_top" href="css_font_pairings.php">Соединение</a>
+<a target="_top" href="css_font_shorthand.php">Стенография</a>
+</div>
+<a target="_top" href="css_icons.php">CSS Иконки</a>
+<a target="_top" href="css_link.php">CSS Ссылки</a>
+<a target="_top" href="css_list.php">CSS Списки</a>
+<a target="_top" href="css_table.php">CSS Таблицы</a>
+<div class="tut_overview">
+<a target="_top" href="css_table.php">Границы таблицы</a>
+<a target="_top" href="css_table_size.php">Размер таблицы</a>
+<a target="_top" href="css_table_align.php">Выравнивание таблицы</a>
+<a target="_top" href="css_table_style.php">Стиль таблицы</a>
+<a target="_top" href="css_table_responsive.php">Отзывчивая таблица</a>
+</div>
+<a target="_top" href="css_display_visibility.php">CSS Дисплей</a>
+<a target="_top" href="css_max-width.php">CSS Макс. ширина</a>
+<a target="_top" href="css_positioning.php">CSS Позиционирование</a>
+<a target="_top" href="css_overflow.php">CSS Переполнение</a>
+<a target="_top" href="css_float.php">CSS Поплавок</a>
+<div class="tut_overview">
+<a target="_top" href="css_float.php">Плавать</a>
+<a target="_top" href="css_float_clear.php">Очистить</a>
+<a target="_top" href="css_float_examples.php">Примеры</a>
+</div>
+<a target="_top" href="css_inline-block.php">CSS Линейный блок</a>
+<a target="_top" href="css_align.php">CSS Выравнивание</a>
+<a target="_top" href="css_combinators.php">CSS Комбинаторы</a>
+<a target="_top" href="css_pseudo_classes.php">CSS Псевдо-классы</a>
+<a target="_top" href="css_pseudo_elements.php">CSS Псевдо-элементы</a>
+<a target="_top" href="css_image_transparency.php">CSS Прозрачность</a>
+<a target="_top" href="css_navbar.php">CSS Панель навигации</a>
+<div class="tut_overview">
+<a target="_top" href="css_navbar.php">Панель навигации</a>
+<a target="_top" href="css_navbar_vertical.php">Вертикальная</a>
+<a target="_top" href="css_navbar_horizontal.php">Горизонтальная</a>
+</div>
+<a target="_top" href="css_dropdowns.php">CSS Выпадающий</a>
+<a target="_top" href="css_image_gallery.php">CSS Галерея</a>
+<a target="_top" href="css_image_sprites.php">CSS Спрайты</a>
+<a target="_top" href="css_attribute_selectors.php">CSS Атрибуты селекторов</a>
+<a target="_top" href="css_form.php">CSS Формы</a>
+<a target="_top" href="css_counters.php">CSS Счетчики</a>
+<a target="_top" href="css_website_layout.php">CSS Макет сайта</a>
+<a target="_top" href="css_units.php">CSS Еденицы измерений</a>
+<a target="_top" href="css_specificity.php">CSS Особенности</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS3 Учебник</span></h2>
+<a target="_top" href="css3_borders.php">CSS3 Закругленные углы</a>
+<a target="_top" href="css3_border_images.php">CSS3 Границы</a>
+<a target="_top" href="css3_backgrounds.php">CSS3 Слои фона</a>
+<a target="_top" href="css3_colors.php">CSS3 Цвета</a>
+<a target="_top" href="css3_gradients.php">CSS3 Градиент</a>
+<div class="tut_overview">
+<a target="_top" href="css3_gradients.php">Линейные градиенты</a>
+<a target="_top" href="css3_gradients_radial.php">Радиальные градиенты</a>
+</div>
+<a target="_top" href="css3_shadows.php">CSS3 Тени</a>
+<div class="tut_overview">
+<a target="_top" href="css3_shadows.php">Теневые эффекты</a>
+<a target="_top" href="css3_shadows_box.php">Тень коробки</a>
+</div>
+<a target="_top" href="css3_text_effects.php">CSS3 Эффект текста</a>
+<a target="_top" href="css3_fonts.php">CSS3 Веб шрифты</a>
+<a target="_top" href="css3_2dtransforms.php">CSS3 2D трансформация</a>
+<a target="_top" href="css3_3dtransforms.php">CSS3 3D трансформация</a>
+<a target="_top" href="css3_transitions.php">CSS3 трансформация</a>
+<a target="_top" href="css3_animations.php">CSS3 Анимация</a>
+<a target="_top" href="css3_tooltip.php">CSS3 Подсказки</a>
+<a target="_top" href="css3_images.php">CSS3 Стиль изображения</a>
+<a target="_top" href="css3_object-fit.php">CSS3 Объект-подгонка</a>
+<a target="_top" href="css3_buttons.php">CSS3 Кнопки</a>
+<a target="_top" href="css3_pagination.php">CSS3 Пагинация</a>
+<a target="_top" href="css3_multiple_columns.php">CSS3 Несколько столбцов</a>
+<a target="_top" href="css3_user_interface.php">CSS3 Интерфейс</a>
+<a target="_top" href="css3_variables.php">CSS Переменные</a>
+<div class="tut_overview">
+<a target="_top" href="css3_variables.php">Функция var()</a>
+<a target="_top" href="css3_variables_overriding.php">Переопределяющие переменные</a>
+<a target="_top" href="css3_variables_javascript.php">Переменные и JavaScript</a>
+<a target="_top" href="css3_variables_mediaqueries.php">Переменные в Медиа-запросах</a>
+</div>
+<a target="_top" href="css3_box-sizing.php">CSS3 Бокс размеры</a>
+<a target="_top" href="css3_mediaqueries.php">CSS3 Медиа запросы</a>
+<a target="_top" href="css3_mediaqueries_ex.php">CSS3 Медиа примеры</a>
+<a target="_top" href="css3_flexbox.php">CSS3 Гибкий бокс</a>
+<div class="tut_overview">
+<a target="_top" href="css3_flexbox.php">CSS Flexbox</a>
+<a target="_top" href="css3_flexbox_container.php">CSS Flex Container</a>
+<a target="_top" href="css3_flexbox_items.php">CSS Flex Items</a>
+<a target="_top" href="css3_flexbox_responsive.php">CSS Flex Responsive</a>
+</div>
+<br>
+<h2 class="left"><span class="left_h2">CSS3</span> Адаптивный дизайн</h2>
+<a target="_top" href="css_rwd_intro.php">Введение</a>
+<a target="_top" href="css_rwd_viewport.php">Область просмотра</a>
+<a target="_top" href="css_rwd_grid.php">Вид сетки</a>
+<a target="_top" href="css_rwd_mediaqueries.php">Медиа запросы</a>
+<a target="_top" href="css_rwd_images.php">Изображения</a>
+<a target="_top" href="css_rwd_videos.php">Видео</a>
+<a target="_top" href="css_rwd_frameworks.php">Фреймворк</a>
+<a target="_top" href="css_rwd_templates.php">Шаблоны</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> Сетка</h2>
+<a target="_top" href="css_grid.php">Сетка Введение</a>
+<a target="_top" href="css_grid_container.php">Сетка Контейнер</a>
+<a target="_top" href="css_grid_item.php">Сетка Пункт</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> Примеры</h2>
+<a target="_top" href="css_templates.php">CSS Макеты</a>
+<a target="_top" href="css_examples.php">CSS Примеры</a>
+<a target="_top" href="css_quiz.php">CSS Викторина</a>
+<a target="_top" href="css_exercises.php">CSS Упражнения</a>
+<a target="_top" href="css_exam.php">CSS Сертификат</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> Справочники</h2>
+<a target="_top" href="/cssref/index.php">CSS Справочник</a>
+<a target="_top" href="/cssref/css_selectors.php">CSS Селекторы</a>
+<a target="_top" href="/cssref/css_functions.php">CSS Функции</a>
+<a target="_top" href="/cssref/css_ref_aural.php">CSS Звук</a>
+<a target="_top" href="/cssref/css_websafe_fonts.php">CSS Веб Шрифты</a>
+<a target="_top" href="/cssref/css_animatable.php">CSS Анимации</a>
+<a target="_top" href="/cssref/css_units.php">CSS Длины</a>
+<a target="_top" href="/cssref/css_pxtoemconversion.php">CSS PX-EM Конвертер</a>
+<a target="_top" href="/cssref/css_colors.php">CSS Цвета</a>
+<a target="_top" href="/cssref/css_colors_legal.php">CSS Значение Цвета</a>
+<a target="_top" href="/cssref/css_default_values.php">CSS по Умолчанию</a>
+<a target="_top" href="/cssref/css_entities.php">CSS Символы</a>
+<a target="_top" href="/cssref/css3_browsersupport.php">CSS Поддержка</a>
+<br><br>
+</div>
+</div>
+</div>
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+<div class='w3-row w3-white'><!-- Main-->
+<div class='w3-col l10 m12' id='main'><div id='mainLeaderboard' style='overflow:hidden;'><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Объект-подгонка</h1>
+<hr>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_images.php">&#10094; Назад</a>
+<a class="w3-right w3-btn" href="css3_buttons.php">Далее &#10095;</a>
+</div>
+<hr>
+<p class="intro">Свойство CSS3 <code class="w3-codespan">object-fit</code> используется для указания
+<code class="w3-codespan">&lt;img&gt;</code> или <code class="w3-codespan">&lt;video&gt;</code>,
+которые должены быть изменены, чтобы соответствовать контейнеру.</p>
+<hr>
+<h2>Поддержка браузеров</h2>
+<p>Числа в таблице указывают первую версию браузера, которая полностью поддерживает свойство.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+<tr>
+<th style="width:25%;font-size:16px;text-align:left;">Свойство</th>
+<th style="width:15%;" class="bsChrome" title="Chrome"></th>
+<th style="width:15%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+<th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+<th style="width:15%;" class="bsSafari" title="Safari"></th>
+<th style="width:15%;" class="bsOpera" title="Opera"></th>                
+</tr>
+<tr>
+<td style="text-align:left;">object-fit</td>
+<td>31.0</td>
+<td>16.0</td>
+<td>36.0</td>
+<td>7.1</td>
+<td>19.0</td>
+</tr>
+</table>
+</div>
+<hr>
+<h2>CSS3 Свойство <code class="w3-codespan">object-fit</code></h2>
+<p>CSS свойство <code class="w3-codespan">object-fit</code> используется для указания того,
+как <code class="w3-codespan">&lt;img&gt;</code> или <code class="w3-codespan">&lt;video&gt;</code>
+размер должен соответствовать размеру контейнера.</p>
+<p>Это свойство указывает содержимому заполнять контейнер различными способами, например 
+&quot;сохранить это соотношение сторон&quot; или &quot;растянуть и занимают столько места, сколько можно&quot;.</p>
+<p>Посмотрите на следующие изображения Париж, который 400x300 точек:</p>
+<img src="paris.jpg" alt="Париж" style="width:400px;height:300px">
+<p>Тем не менее, если стиль изображения выше, чем 200x400 пикселей, он будет выглядеть следующим образом:</p>
+<img src="paris.jpg" alt="Париж" style="width:200px;height:400px">
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+img {<br>&nbsp;&nbsp;&nbsp; width: 200px;<br>&nbsp;&nbsp;&nbsp; height: 400px;<br>}
+</div>
+<a target="_blank" href="trycss3_object-fit_without.php" class="w3-btn w3-margin-bottom">Редактор кода &raquo;</a>
+</div>
+<p>Мы видим, что изображение сжалось и приспособилось контейнеру 200 x 400 пикселей, а свое
+исходное соотношение сторон уничтожено.</p>
+<p>Если использовать <code class="w3-codespan">object-fit: cover;</code> тогда, будут отрезаны стороны изображения,
+сохраненных пропорций, а также заполнены пространства, как это:</p>
+<img src="paris.jpg" alt="Париж" style="width:200px;height:400px;object-fit:cover;">
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+img {<br>&nbsp;&nbsp;&nbsp; width: 200px;<br>&nbsp;&nbsp;&nbsp; height: 400px;<br>&nbsp;&nbsp;&nbsp; object-fit: cover;<br>}
+</div>
+<a target="_blank" href="trycss3_object-fit.php" class="w3-btn w3-margin-bottom">Редактор кода &raquo;</a>
+</div>
+<hr>
+<h2>Другой пример</h2>
+<p>Здесь у нас есть два изображения, и мы хотим, чтобы они заполняли ширину 50 пикселей окна браузера и 100 пикселей высоты.</p>
+<p>В следующем примере мы не используем <code class="w3-codespan">object-fit</code>,
+поэтому при изменении размера окна браузера соотношение сторон изображений будет уничтожены:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div>
+<div style="width:100%;height:300px;">
+<img src="rock600x400.jpg" alt="Норвегия" style="float:left;width:50%;height:100%;">
+<img src="paris.jpg" alt="Париж" style="float:left;width:50%;height:100%;">
+</div>
+<br>
+</div>
+<a target="_blank" href="trycss3_object-fit2_without.php" class="w3-btn w3-margin-bottom">Редактор кода &raquo;</a>
+</div>
+<p>В следующем примере, мы используем <code class="w3-codespan">object-fit: cover;</code>,
+поэтому, когда мы изменяем размер окна браузера, соотношение сторон изображений сохраняется:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div>
+<div style="width:100%;height:300px;">
+<img src="rock600x400.jpg" alt="Норвегия" style="float:left;width:50%;height:100%;object-fit:cover;">
+<img src="paris.jpg" alt="Париж" style="float:left;width:50%;height:100%;object-fit:cover;">
+</div>
+<br>
+</div>
+<a target="_blank" href="trycss3_object-fit2.php" class="w3-btn w3-margin-bottom">Редактор кода &raquo;</a>
+</div>
+<hr>
+<h2>Все значения CSS3 cвойства <code class="w3-codespan">object-fit: cover;</code></h2>
+<p>Свойство <code class="w3-codespan">object-fit</code> может иметь следующая значение:</p>
+<ul>
+<li><code class="w3-codespan">fill</code> - Это по умолчанию. Замененный 
+размер содержимого определяется для заполнения поля содержимого элемента. При необходимости объект 
+будет растягиваться или хлюпать, чтобы соответствовать</li>
+<li><code class="w3-codespan">contain</code> - Замененное содержимое масштабируется 
+для сохранения соотношения сторон при установке в поле содержимого элемента</li>
+<li><code class="w3-codespan">cover</code> - Замененный контент имеет размер, чтобы сохранить его соотношение сторон, в то время как 
+заполнение всего поля содержимого элемента. Объект будет обрезан</li>
+<li><code class="w3-codespan">none</code> - Замененный контент не изменяется</li>
+<li><code class="w3-codespan">scale-down</code> - Содержание размера, если нет или содержать указанные 
+(приведет к меньшему размеру конкретного объекта)</li>
+</ul>
+<p>В следующем примере показаны все возможные значения свойства <code class="w3-codespan">object-fit</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.fill {object-fit: fill;}<br>
+.contain {object-fit: contain;}<br>
+.cover {object-fit: cover;}<br>
+.scale-down {object-fit: scale-down;}<br>
+.none {object-fit: none;}</div>
+<a target="_blank" href="trycss3_object-fit_all.php" class="w3-btn w3-margin-bottom">Редактор кода &raquo;</a>
+</div>
+<br>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css3_images.php">&#10094; Назад</a>
+<a class="w3-right w3-btn" href="css3_buttons.php">Далее &#10095;</a>
+</div>
+</div>
+<!-- /Main-->
+<div class="w3-col l2 m12" id="right"><!--<div class="sidesection"><h4><a href="">ВАКАНСИИ НА SCHOOLSW3</a></h4></div>-->
+<div class="sidesection"><div id="skyscraper">
+
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+
+</div>
+</div>
+
+<!--<div class="sidesection"><h4><a href="../colors/colors_picker.php">ПОДБОР ЦВЕТА</a></h4><a href="../colors/colors_picker.php"><img src="https://www.schoolsw3.com/images/colorpicker.gif" alt="colorpicker"></a></div>--><div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Упражнения</h4></div><div><div class="w3-light-grey"><a target="_blank" href="/html/exercise.php" style="padding-top:8px">HTML</a><a target="_blank" href="/css/exercise.php" style="padding-top:8px">CSS</a><a target="_blank" href="/js/exercise_js.php" style="padding-top:8px">JavaScript</a><a target="_blank" href="/sql/exercise.php" style="padding-top:8px">SQL</a><a target="_blank" href="/php/exercise.php" style="padding-top:8px">PHP</a><a target="_blank" href="/python/exercise.php" style="padding-top:8px">Python</a><!--<a target="_blank" href="/bootstrap/exercise_bs3.php">Bootstrap</a><a target="_blank" href="/jquery/exercise_jq.php" style="padding-bottom:8px">jQuery</a>--></div></div></div><div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Тесты</h4></div><div><div class="w3-light-grey"><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_HTML.php" style="padding-top:8px">HTML</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_CSS.php" style="padding-top:8px">CSS</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_JS.php" style="padding-top:8px">JavaScript</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_SQL.php" style="padding-top:8px">SQL</a><a target="_blank" href="https://www.schoolsw3.com/quiztest/quiztest_PYTHON.php" style="padding-top:8px">PYTHON</a></div></div></div><div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px"><div class="w3-container w3-dark-grey"><h4><a href="../howto/index.php" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4></div><div class="w3-container w3-left-align w3-padding-16"><a href="../howto/howto_js_tabs.php">Теги</a><br><a href="../howto/howto_css_dropdown.php">Выпадающий</a><br><a href="../howto/howto_js_accordion.php">Аккардионы</a><br><a href="../howto/howto_js_sidenav.php">Боковой Навигатор</a><br><a href="../howto/howto_js_topnav.php">Верхний Навигатор</a><br><a href="../howto/howto_css_modals.php">Модель Бокс</a><br><a href="../howto/howto_js_progressbar.php">Индикатор Полоса</a><br><a href="../howto/howto_css_parallax.php">Паралакс</a><br><a href="../howto/howto_css_login_form.php">Логин Форма</a><br><a href="../howto/howto_html_include.php">HTML Подключение</a><br><a href="../howto/howto_google_maps.php">Гугл Карта</a><br><a href="../howto/howto_js_rangeslider.php">Ползунки Диапазон</a><br><a href="../howto/howto_css_tooltip.php">Подсказки</a><br><a href="../howto/howto_js_slideshow.php">Слайд-шоу</a><br><a href="../howto/howto_js_filter_lists.php">Фильтр Списка</a><br><a href="../howto/howto_js_sort_list.php">Сортировка Списка</a><br></div></div>
+<div class="sidesection">
+<h4>ПОДЕЛИТЬСЯ</h4>
+<div class="w3-text-grey sharethis">
+<script><!--try{loc=location.pathname;if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"index.php";txt='<a href="http://www.facebook.com/sharer.php?u=https://schoolsw3.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';txt=txt+'<a href="https://twitter.com/home?status=Currently reading https://schoolsw3.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';document.write(txt);} catch(e) {}//--></script>
+<br><br><a href="javascript:void(0);" onclick="clickFBLike()" title="Клик SchoolsW3 на Facebook"><span class="fa fa-thumbs-o-up fa-2x"></span></a>
+<div id="fblikeframe" class="w3-modal"><div class="w3-modal-content w3-padding-64 w3-animate-zoom" id="popupDIV"></div></div>
+</div>
+</div>
+<div class="sidesection"><h4><a target="_blank" href="../cert/index.php">СЕРТИФИКАТЫ</a></h4><p><a href="../cert/cert_html.php">HTML</a><br><a href="../cert/cert_css.php">CSS</a><br><a href="../cert/cert_javascript.php">JavaScript</a><br><a href="../cert/cert_sql.php">SQL</a><br><a href="../cert/cert_python.php">Python</a><br><a href="../cert/cert_php.php">PHP</a><br><a href="../cert/cert_jquery.php">jQuery</a><br><a href="../cert/cert_bootstrap.php">Bootstrap</a><br><a href="../cert/cert_xml.php">XML</a></p><a href="../cert/index.php" class="w3-button w3-dark-grey" style="text-decoration:none">Читать далее &raquo;</a>
+</div>
+<div class="sidesection">
+<!--<form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" style="padding:0; margin:1px"><input type="hidden" name="receiver" value="410011618810988"> <input type="hidden" name="formcomment" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="short-dest" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="label" value="$order_id"><input type="hidden" name="quickpay-form" value="donate"> <input type="hidden" name="targets" value="транзакция {order_id}"> <input type="hidden" name="sum" value=" " data-type="number"> <input type="hidden" name="comment" value="САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ."><input type="hidden" name="need-fio" value="true"> <input type="hidden" name="need-email" value="true"> <input type="hidden" name="need-phone" value="false"> <input type="hidden" name="need-address" value="false"> <input type="submit" class="" value="Пожертвовать"><input type="hidden" name="sum" value="199" data-type="number" size="4"> <br>Yoomoney<br>410011618810988</form>--><!--<iframe src="https://yoomoney.ru/quickpay/button-widget?targets=schoolsw3&default-sum=199&button-text=14&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=410011618810988&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>-->
+<form class="form i-bem" data-bem='{"form":{}}' method="POST" target="_blank" action="https://yoomoney.ru/quickpay/confirm.xml"><input class="native-input native-input_type_hidden" name="quickpay-form" value="small" type="hidden"><input class="native-input native-input_type_hidden" name="is-inner-form" value="true" type="hidden"><input class="native-input native-input_type_hidden" name="paymentType" value="PC" type="hidden"><input class="native-input native-input_type_hidden" name="receiver" value="410011618810988" type="hidden"><input class="native-input native-input_type_hidden" name="targets" value="schoolsw3" type="hidden"><input class="native-input native-input_type_hidden" name="sum" value="100" type="hidden"><input class="native-input native-input_type_hidden" name="successURL" value="" type="hidden"><input class="native-input native-input_type_hidden" name="label" value="" type="hidden"><input class="native-input native-input_type_hidden" name="referer" value="" type="hidden"><div class="widget-small__button"><button data-bem='{"button":{}}' role="button" type="submit"><span class="button__text">Пожертвовать</span></button><br>Yoomoney<br>410011618810988</div></form></div>
+
+<div class="sidesection">
+
+<div id="skyscraper">
+
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+
+</div>
+
+</div>
+
+
+<!--
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+<div id="stickyadcontainer"><div style="position:relative;margin:auto;"> 
+<div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>
+</div>
+</div>
+</div>
+-->
+</div>
+</div>
+
+
+<div id="footer" class="footer w3-container w3-white"><hr>
+<div style="overflow:auto">
+<div class="bottomad">
+<!-- Yandex.RTB R-A-1358578-3 --><div id="yandex_rtb_R-A-1358578-3"></div><script>window.yaContextCb.push(()=>{ Ya.Context.AdvManager.render({ renderTo: 'yandex_rtb_R-A-1358578-3', blockId: 'R-A-1358578-3' })})</script><!-- // Yandex.RTB R-A-1358578-3 --></div>
+</div><hr>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px"><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ОШИБКУ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../forum/index.php" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ФОРУМ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../about/index.php" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">О НАС</a></div></div><hr><div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative"><span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span><h2>Сообщить об ошибке</h2><p>Если вы хотите сообщить об ошибке или сделать предложение, не стесняйтесь, присылайте нам электронное письмо:</p><p>and-shhipunov@mail.ru</p><br><h2>Ваше предложение:</h2><form><div class="w3-section"> <label for="err_email">Ваш E-mail:</label><input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email"></div><div class="w3-section"> <label for="err_email">Адрес страницы:</label><input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled"></div><div class="w3-section"><label for="err_email">Описание:</label><textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea></div><div class="form-group"> <button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button></div><br></form></div><div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative"><span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span> <h2>Спасибо, за вашу помощь!</h2><p>Ваше сообщение было отправлено в SchoolsW3.</p></div><div class="w3-row w3-center w3-small"><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Учебники </h4><a href="../html/index.php">HTML Учебник</a><br><a href="../css/index.php">CSS Учебник</a><br><a href="../js/index.php">JavaScript Учебник</a><br><a href="../howto/index.php">КАК Учебник</a><br><a href="../sql/index.php">SQL Учебник</a><br><a href="../python/index.php">Python Учебник</a><br><a href="../w3css/index.php">W3.CSS Учебник</a><br><a href="../bootstrap/bootstrap_ver.php">Bootstrap Учебник</a><br><a href="../php/index.php">PHP Учебник</a><br><a href="../jquery/index.php">jQuery Учебник</a><br><a href="../java/index.php">Java Учебник</a><br><a href="../cpp/index.php">C++ Учебник</a><br></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Справочники</h4><a href="../tags/index.php">HTML Справочник</a><br><a href="../cssref/index.php">CSS Справочник</a><br><a href="../jsref/index.php">JavaScript Справочник</a><br><a href="../sql/sql_ref_keywords.php">SQL Справочник</a><br><a href="../python/python_reference.php">Python Справочник</a><br><a href="../w3css/w3css_references.php">W3.CSS Справочник</a><br><a href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap Справочник</a><br><a href="../php/php_ref_overview.php">PHP Справочник</a><br><a href="../colors/colors_names.php">HTML Цвета</a><br><a href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><br><a href="../java/java_ref_keywords.php">Java Справочник</a><br><a href="../angular/angular_ref_directives.php">Angular Справочник</a><br></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Примеры</h4><a href="html_examples.php">HTML Примеры</a><br><a href="../css/css_examples.php">CSS Примеры</a><br><a href="../js/js_examples.php">JavaScript Примеры</a><br><a href="../howto/index.php">How To Примеры</a><br><a href="../sql/sql_examples.php">SQL Примеры</a><br><a href="../python/python_examples.php">Python Примеры</a><br><a href="../w3css/w3css_examples.php">W3.CSS Примеры</a><br><a href="../bootstrap/bootstrap_examples.php">Bootstrap Примеры</a><br><a href="../php/php_examples.php">PHP Примеры</a><br><a href="../jquery/jquery_examples.php">jQuery Примеры</a><br><a href="../java/java_examples.php">Java Примеры</a><br><a href="../xml/xml_examples.php">XML Примеры</a><br></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Веб Сертификаты</h4><a href="../cert/index.php">HTML Сертификат</a><br><a href="../cert/index.php">CSS Сертификат</a><br><a href="../cert/index.php">JavaScript Сертификат</a><br><a href="../cert/index.php">SQL Сертификат</a><br><a href="../cert/index.php">Python Сертификат</a><br><a href="../cert/index.php">jQuery Сертификат</a><br><a href="../cert/index.php">PHP Сертификат</a><br><a href="../cert/index.php">Bootstrap Сертификат</a><br><a href="../cert/index.php">XML Сертификат</a><br><a href="../cert/index.php" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">Получить Сертификат &raquo;</a></div></div> </div> <hr><div class="w3-center w3-small">SchoolsW3 оптимизирован для обучения, тестирования и тренировки. Примеры упрощают и улучшают чтение и базовое понимание.Учебники, справочники, примеры постоянно пересматриваются, для того, чтобы избежать ошибки, невозможно гарантировать правильность всего содержимого.Используя данный сайт, вы соглашаетесь прочитать и принять <a href="../about/about_copyright.php">условия использования</a>,<a href="../about/about_privacy.php">cookie и Политика конфиденциальности</a>.<a href="../about/about_copyright.php">Авторское право 1999 - 2022</a> Все права защищены.<br><a href="../w3css/index.php">Работает на W3.CSS</a>.<br><br><a href="../index.html"><img style="width:150px;height:28px;border:0" src="https://www.schoolsw3.com/images/w3schoolscom_gray.gif" alt="SchoolsW3.com"></a></div><br><br></div></div><script src="../lib/schools_footer.js"></script><script src="https://cse.google.com/cse.js?cx=009251009105284944376:hm8um3ylyzo"></script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-106562886-1');</script><!-- Yandex.Metrika counter --><script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45941085, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true });</script><!-- /Yandex.Metrika counter --><script>var stickyadstatus = "";function fix_stickyad() {document.getElementById("stickypos").style.position = "sticky";var elem = document.getElementById("stickyadcontainer");if (!elem) {return false;}if (document.getElementById("skyscraper")) {var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", "")); }else {var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", "")); }elem.style.width = skyWidth + "px";if (window.innerWidth <= 992) {elem.style.position = "";elem.style.top = stickypos + "px";return false;}var stickypos = document.getElementById("stickypos").offsetTop;var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));if (stickyadstatus == "") {if ((stickypos - docTop) < 60) {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}} else {if ((docTop + 60) - stickypos < 0) { elem.style.position = "";elem.style.top = stickypos + "px";stickyadstatus = "";document.getElementById("stickypos").style.position = "static";}}if (stickyadstatus == "sticky") {if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {elem.style.position = "absolute";elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";document.getElementById("stickypos").style.position = "static";} else {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}}}function w3_getStyleValue(elmnt,style) {if (window.getComputedStyle) {return window.getComputedStyle(elmnt,null).getPropertyValue(style);} else {return elmnt.currentStyle[style];}}</script></body></html>

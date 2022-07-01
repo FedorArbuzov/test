@@ -1,0 +1,137 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Цвет HEX</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_colors_rgb.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_colors_hsl.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Цвет HEX</h2>
+<p>В CSS цвет может быть задан с помощью HEX шестнадцатеричного значения в виде:</p>
+<p style="font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">#<em>rrggbb</em></p>
+<p>Где rr (red), gg (green) и bb (blue) - шестнадцатеричные значения между 00 и ff (такие же, как десятичные 0-255).</p>
+<p>Например, #ff0000 отображается красным цветом, поскольку красный цвет имеет самое высокое значение (ff), а остальные самое низкое значение (00).</p>
+<p>Поэкспериментируйте, смешивая шестнадцатеричные значения ниже:</p>
+<div class="w3-container xw3-light-grey">
+<div class="w3-row w3-container">
+<div class="w3-col m2 w3-container w3-center">
+</div>
+<div class="w3-col m8 w3-container w3-center">
+<div id="hexresult" style="line-height:80px;">
+<p id="hexresulttext" style="font-size:120%;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace;"></p></div>
+</div>
+<div class="w3-col m2 w3-container w3-center">
+</div>
+</div>
+<div class="w3-row w3-container">
+<div class="w3-col m4 w3-container w3-center">
+<p>RED</p>
+<input id="slideRedHex" max="255" min="0" name="slideRedHex" onchange="changeHex()" oninput="changeHex()" type="range" value="255"/>
+<div id="valRed2Hex" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">ff</div>
+</div>
+<div class="w3-col m4 w3-container w3-center">
+<p>GREEN</p>
+<input id="slideGreenHex" max="255" min="0" name="slideGreenHex" onchange="changeHex()" oninput="changeHex()" type="range" value="99"/>
+<div id="valGreen2Hex" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">0</div>
+</div>
+<div class="w3-col m4 w3-container w3-center">
+<p>BLUE</p>
+<input id="slideBlueHex" max="255" min="0" name="slideBlueHex" onchange="changeHex()" oninput="changeHex()" type="range" value="71"/>
+<div id="valBlue2Hex" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">0</div>
+</div>
+</div>
+</div>
+<div class="w3-example">
+<h3>Привет</h3>
+<div class="notranslate w3-white w3-container">
+<div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#ff0000;">#ff0000</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#0000ff;">#0000ff</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#3cb371;">#3cb371</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#ee82ee;">#ee82ee</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#ffa500;">#ffa500</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#6a5acd;">#6a5acd</div>
+</div>
+</div>
+</div>
+<br/>
+<a class="w3-btn w3-margin-bottom" href="trycss_color_hex2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Оттенки серого часто определяются с использованием равных значений для всех 3 источников света:</p>
+<div class="w3-example">
+<h3>Привет</h3>
+<div class="notranslate w3-white w3-container">
+<div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#000000;">#000000</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#3c3c3c;">#3c3c3c</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#787878;">#787878</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#b4b4b4;">#b4b4b4</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#f0f0f0;color:#555555">#f0f0f0</div>
+</div>
+<div class="w3-col m6 w3-padding">
+<div style="background-color:#ffffff;color:#555555">#ffffff</div>
+</div>
+</div>
+</div>
+<br/>
+<a class="w3-btn w3-margin-bottom" href="trycss_color_hex_gray.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<script>
+//changeRed(255)
+//changeGreen(0)
+//changeBlue(0)
+
+changeHex("r");
+function changeHex(x) {
+var col, r, g, b;
+r = document.getElementById("slideRedHex").value;
+g = document.getElementById("slideGreenHex").value;
+b = document.getElementById("slideBlueHex").value;
+col = w3color("rgb(" + r + "," + g + "," + b + ")");
+document.getElementById('valRed2Hex').innerHTML = col.toHexString().substr(1,2);
+document.getElementById('valGreen2Hex').innerHTML = col.toHexString().substr(3,2);
+document.getElementById('valBlue2Hex').innerHTML = col.toHexString().substr(5,2);
+document.getElementById('hexresult').style.backgroundColor = col.toRgbString();
+document.getElementById('hexresulttext').innerHTML = col.toHexString();
+if (col.isDark(150)) {
+document.getElementById('hexresulttext').style.color = "#ffffff";
+} else {
+document.getElementById('hexresulttext').style.color = "#1f2d3d";
+}
+}
+</script>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_colors_rgb.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_colors_hsl.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>

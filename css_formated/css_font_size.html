@@ -1,0 +1,100 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Размер шрифта</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_font_style.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_font_google.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>Font Size</h2>
+<p>Свойство <code class="w3-codespan">font-size</code> задает размер текста.
+<p>Возможность управлять размером текста, что важно в веб-дизайне. Однако вы не должны использовать настройки размера шрифта, чтобы параграфы выглядели как заголовки или заголовки выглядели как параграфы.</p>
+<p>Всегда используйте правильные HTML-теги, такие как &lt;h1&gt; - &lt;h6&gt; для заголовков и &lt;p&gt; для параграфа.</p>
+<p>Значение размера шрифта может быть абсолютным или относительным размером.</p>
+<p>Абсолютный размер:</p>
+<ul>
+<li>Задает текст заданного размера</li>
+<li>Не позволяет пользователю изменять размер текста во всех браузерах (плохо по соображениям доступности)</li>
+<li>Абсолютный размер полезен, когда известен физический размер вывода</li>
+</ul>
+<p>Относительный размер:</p>
+<ul>
+<li>Задает размер относительно окружающих элементов</li>
+<li>Позволяет пользователю изменять размер текста в браузерах</li>
+</ul>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Если вы не указываете размер шрифта, размер по умолчанию для обычного текста, например параграф, равен 16px( 16px = 1em).</p>
+</div>
+<hr/>
+<h2>Установить размер шрифта в пикселях</h2>
+<p>Установка размера текста с пикселями дает вам полный контроль над размером текста:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  font-size: 40px;<br/>}<br/>
+<br/>h2 {<br/>  font-size: 30px;<br/>}<br/>
+<br/>p {<br/>  font-size: 14px;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-size_px" target="_blank">Попробуйте сами »</a>
+</div>
+<p><strong>Совет:</strong> Если вы используете пиксели, вы все равно можете использовать инструмент масштабирования для изменения размера всей страницы.</p>
+<hr/>
+<h2>Установить размер шрифта в Em</h2>
+<p>Чтобы пользователи могли изменять размер текста (в меню браузера), многие разработчики используют em вместо пикселей.</p>
+<p>1em равен текущему размеру шрифта. Размер текста по умолчанию в браузерах равен 16px. Таким образом, размер 1em по умолчанию равен 16px.</p>
+<p>Размер можно рассчитать от пикселей до em по следующей формуле: <i>pixels</i>/16=<i>em</i></p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  font-size: 2.5em; /* 40px/16=2.5em */<br/>}<br/>
+<br/>h2 {<br/>  font-size: 1.875em; /* 30px/16=1.875em */<br/>
+}<br/>
+<br/>p {<br/>  font-size: 0.875em; /* 14px/16=0.875em */<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-size_em" target="_blank">Попробуйте сами »</a>
+</div>
+<p>В приведенном выше примере размер текста в em такой же, как и в предыдущем примере в пикселях. Однако с размером em можно настроить размер текста во всех браузерах.</p>
+<p>К сожалению, все еще существует проблема со старыми версиями Internet Explorer. При увеличении текст становится больше, чем должен быть, и меньше, чем должен быть при уменьшении.</p>
+<hr/>
+<h2>Используйте комбинацию процентов и Em</h2>
+<p>Решение, которое работает во всех браузерах, состоит в том, чтобы установить размер шрифта по умолчанию в процентах для элемента &lt;body&gt;:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br/>  font-size: 100%;<br/>}<br/>
+<br/>h1 {<br/>  font-size: 2.5em;<br/>}<br/>
+<br/>h2 {<br/>  font-size: 1.875em;<br/>}<br/>
+<br/>p {<br/>  font-size: 0.875em;<br/>}</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font-size_percent_em" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Наш код теперь отлично работает! Он показывает одинаковый размер текста во всех браузерах и позволяет всем браузерам масштабировать или изменять размер текста!</p>
+<hr/>
+<h2>Адаптивный размер шрифта</h2>
+<p>Размер текста можно задать с помощью <code class="w3-codespan">vw</code> единицы измерения, что означает ""viewport width" - ширина видового экрана".</p>
+<p>Таким образом, размер текста будет соответствовать размеру окна браузера:</p>
+<div class="w3-light-grey w3-padding w3-round">
+<h1 style="font-size:8vw;">Привет Мир</h1>
+<p style="font-size:2vw;">Измените размер окна браузера, чтобы увидеть, как масштабируется размер шрифта.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;h1 style="<strong>font-size:10vw</strong>"&gt;Привет Мир&lt;/h1&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.php?filename=trycss_font_responsive" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-note w3-panel">
+<p>Viewport - это размер окна браузера. 1vw= 1% от ширины окна просмотра. Если окно просмотра имеет ширину 50см, 1vw равен 0,5см.</p>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_font_style.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_font_google.php">Далее ❯</a>
+</div>
+</p></div>
+    </body>
+</html>

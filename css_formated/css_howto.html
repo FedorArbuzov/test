@@ -1,0 +1,158 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Подключить</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_selectors.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_comments.php">Далее ❯</a>
+</div>
+<hr/>
+<div class="w3-panel w3-info intro">
+<p class="intro">Когда браузер читает таблицу стилей, он форматирует HTML документ в соответствии с информацией в таблице стилей.</p>
+</div>
+<h2>Как подключить стиль CSS?</h2>
+<p>Существует три способа усновки каскадной таблицы стилей CSS:</p>
+<ul>
+<li>Внешний CSS</li>
+<li>Внутренний CSS</li>
+<li>Встроенный CSS</li>
+</ul>
+<hr/>
+<h2>Внешний CSS</h2>
+<p>С помощью внешней таблицы стилей вы можете изменить внешний вид всего веб сайта, изменив только один файл!</p>
+<p>Каждая HTML страница должна содержать ссылку на внешний файл таблицы стилей внутри элемента &lt;link&gt; в разделе &lt;head&gt;.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Внешние стили определяются в элементе &lt;link&gt;, внутри раздела &lt;head&gt; HTML страницы:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>
+&lt;link rel="stylesheet" href="mystyle.css"&gt;<br/>&lt;/head&gt;<br/>
+&lt;body&gt;<br/><br/>&lt;h1&gt;Это заголовок&lt;/h1&gt;<br/>
+&lt;p&gt;Это параграф.&lt;/p&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_howto_external.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Внешняя таблица стилей может быть написана в любом текстовом редакторе и должна быть сохранена с расширением .css.</p>
+<p>Внешний файл .css не должен содержать никаких HTML тегов.</p>
+<p>Вот этот файл "mystyle.css" и выглядит он, вот так:</p>
+<div class="w3-example">
+<h3>"mystyle.css"</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br/>  background-color: lightblue;<br/>}<br/><br/>h1 {<br/>  color: navy;<br/>  margin-left: 20px;<br/>}
+</div>
+</div>
+<div class="w3-panel w3-warning">
+<p><strong>Примечание:</strong> Не добавляйте пробел между значением свойства и единицей измерения (например,
+<code class="w3-codespan">margin-left: 20 px;</code>).
+Правильно будет так: <code class="w3-codespan">margin-left: 20px;</code></p>
+</div>
+<hr/>
+<div id="midcontentadcontainer">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Внутренний CSS</h2>
+<p>Внутренняя таблица стилей может использоваться, если одна HTML страница имеет уникальный стиль.</p>
+<p>Внутренний стиль определяется внутри элемента &lt;style&gt;, внутри секции &lt;head&gt;.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Внутренние стили определяются в элементе &lt;style&gt;, внутри раздела &lt;head&gt; HTML страницы:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/>&lt;head&gt;<br/>&lt;style&gt;<br/>body {<br/>  
+background-color: linen;<br/>}<br/><br/>h1 {<br/>  color: maroon;<br/>  
+margin-left: 40px;<br/>} <br/>&lt;/style&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/><br/>
+&lt;h1&gt;Это заголовок&lt;/h1&gt;<br/>&lt;p&gt;Это параграф.&lt;/p&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_howto_internal.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Встроенный CSS</h2>
+<p>Встроенный стиль может быть использован для применения уникального стиля для одного элемента.</p>
+<p>Чтобы использовать встроенные стили, добавьте атрибут "style" к соответствующему элементу, атрибут стиля может содержать любое свойство CSS.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Встроенные стили определяются в атрибуте "style" соответствующего элемента:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;!DOCTYPE html&gt;<br/>&lt;html&gt;<br/>&lt;body&gt;<br/><br/>
+&lt;h1 style="color:blue;text-align:center;"&gt;Это заголовок&lt;/h1&gt;<br/>
+&lt;p style="color:red;"&gt;Это параграф.&lt;/p&gt;<br/><br/>
+&lt;/body&gt;<br/>&lt;/html&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_howto_inline.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Совет:</strong> Встроенный стиль теряет многие преимущества таблицы стилей (смешивая контент с презентацией). Использовать этот метод экономно.</p>
+</div>
+<hr/>
+<h2>Несколько стилей CSS</h2>
+<p>Если некоторые свойства были определены для одного и того же селектора (элемента) в разных таблицах стилей,
+то будет использовано значение из последней прочитанной таблицы стилей.</p>
+<div class="w3-example">
+<p>Предположим, что <strong>внешняя таблица стилей</strong> имеет следующий стиль для элемента &lt;h1&gt;:</p>
+<div class="w3-code notranslate cssHigh">
+h1
+{<br/>
+  color: navy;<br/>
+}</div></div>
+<div class="w3-example">
+<p>Затем предположим, что <strong>внутренняя таблица стилей</strong> также имеет следующий стиль для элемента &lt;h1&gt;:</p>
+<div class="w3-code notranslate cssHigh">
+h1
+{<br/>
+  color: orange;   
+<br/>}</div></div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Если внутренний стиль определен <strong>после</strong> ссылки на внешнюю таблицу стилей, элементы &lt;h1&gt; будут "orange":</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;head&gt;<br/>&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br/>
+&lt;style&gt;<br/>h1 {<br/>  color: orange;<br/>}<br/>&lt;/style&gt;<br/>&lt;/head&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_howto_multiple.php" target="_blank">Попробуйте сами »</a>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Однако, если внутренний стиль определен <strong>перед</strong> ссылкой на внешнюю таблицу стилей, элементы &lt;h1&gt; будут иметь "navy":</p>
+<div class="w3-code notranslate htmlHigh htmlHigh">
+&lt;head&gt;<br/>&lt;style&gt;<br/>h1 {<br/>  color: orange;<br/>}<br/>&lt;/style&gt;<br/>
+&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br/>
+&lt;/head&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="trycss_howto_multiple2.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Порядок каскадного стиля</h2>
+<p>Какой стиль будет использоваться, если для HTML элемента задано более одного стиля?</p>
+<p>Все стили на странице будут "каскадировать" в новую "виртуальную" таблицу стилей по следующим правилам,
+где номер один имеет наивысший приоритет:</p>
+<ol>
+<li>Встроенный стиль (внутри HTML элемента)</li>
+<li>Внешние и внутренние таблицы стилей (в разделе head)</li>
+<li>Браузер по умолчанию</li>
+</ol>
+<p>Таким образом, встроенный стиль имеет наивысший приоритет и будет переопределять внешние и внутренние стили и настройки браузера по умолчанию.</p>
+<p><a class="w3-btn" href="trycss_howto_cascade.php" target="_blank">Попробуйте сами »</a></p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn" href="exercise_howto1.php" target="_blank">Упражнение 1 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_howto2.php" target="_blank">Упражнение 2 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_howto3.php" target="_blank">Упражнение 3 »</a>
+<a class="w3-bar-item w3-btn" href="exercise_howto4.php" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="css_selectors.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="css_comments.php">Далее ❯</a>
+</div>
+</div>
+    </body>
+</html>
