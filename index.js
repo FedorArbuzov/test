@@ -7,7 +7,7 @@ const path = require('path');
 const { onboarding } = require('./send_messages/onboarding');
 const { status, Last7Days } = require('./send_messages/satus');
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 
 let configDict = require('./config');
 const { text } = require('express');
