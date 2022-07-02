@@ -15,7 +15,7 @@ exports.onboarding = (chat_id, db) => {
     .then(async (res) => {
         await db.collection('users').doc(chat_id.toString()).set({}, {merge: true});
         await db.collection('traction').doc(chat_id.toString()).set({}, {merge: true});
-        await db.collection('user-achivments').doc(chat_id.toString()).set({}, {merge: true});
+        await db.collection('user-achivments').doc(chat_id.toString()).set({'achivments': []}, {merge: true});
         console.log(res)
         let messageId = res.data.result.message_id
         let chatId = res.data.result.chat.id
