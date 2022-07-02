@@ -13,7 +13,6 @@ exports.onboarding = (chat_id, db) => {
          parse_mode: 'HTML'
     })
     .then(async (res) => {
-        chat_id = 132
         await db.collection('users').doc(chat_id.toString()).set({}, {merge: true});
         await db.collection('traction').doc(chat_id.toString()).set({}, {merge: true});
         await db.collection('user-achivments').doc(chat_id.toString()).set({}, {merge: true});

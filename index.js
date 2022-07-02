@@ -38,38 +38,6 @@ app.post('/', async function(request, response){
     onboarding(chat_id, db);
   }
   response.status(200).send({});
-  // try {
-  // let update_id = request.body['update_id'].toString()
-  // const msg = db.collection('messages').doc(update_id);
-  // const res = await msg.set(request.body, { merge: true })
-  // } catch(err){
-  //   console.log(err)
-  // }
-  // response.status(200).send({});
-
-  // const doc = await cityRef.get();
-  // if (message === '/start' && !doc.exists) {
-  //   console.log('onboard user logic');
-  //   // onboard user logic
-  // } else if (message === '/start') {
-  //   console.log('Document data:', doc.data());
-  //   // restart progress
-  // }
-  // else {
-  //   // save user question and send to mentor
-  // }
-  // chat_id = request.body.message.chat.id;
-  // console.log(chat_id);
-  // axios.post(`${url}${apiToken}/sendMessage`,
-  // {
-  //      chat_id: chat_id,
-  //      text: '123'
-  // })
-  // .then((res) => {
-  //     response.status(200).send(res);
-  // }).catch((error) => {
-  //     response.send(error);
-  // });
 });
 
 app.get('/success-submit/:task/:userID', async function(request, response){
