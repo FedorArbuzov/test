@@ -35,7 +35,7 @@ app.post('/', async function(request, response){
   const chat_id = request.body.message.chat.id;
   const text = request.body.message.text;
   if (text === '/start'){
-    onboarding(chat_id);
+    onboarding(chat_id, db);
   }
   response.status(200).send({});
   // try {
