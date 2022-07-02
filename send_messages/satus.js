@@ -22,9 +22,13 @@ function checkSolveToday(data, n=1) {
     return true
 }
 
+function formatTask(item){
+    return  `Занимался задачей ${item[0]} \n Запусков: ${item[1]['runs']} \n Попыток сдать ${item[1]['submits']}`
+}
+
 function formatMessage(data, daysInRow) {
     if (data){
-        return `<b>Привет!</b>\n\n Вот твой отчет за день, за сегодня ты:`
+        return `<b>Привет!</b>\n\nВот твой отчет за день, за сегодня ты:\n${Object.entries(data).map(formatTask).join('\n')}`
     }
     else {
         return `<b>Привет!</b>\n\n Сегодня ты не решал задачи`
@@ -49,10 +53,11 @@ exports.status = (chat_id, data, last7Days, db) => {
             [`${last7Days[0]}.success_row`]: true
         })
     }
+    const resultMessage = formatMessage(data[last7Days[0]], daysInRow)
     axios.post(`${url}${apiToken}/sendMessage`,
     {
          chat_id: chat_id,
-         text: formatMessage(data[daysInRow[0]], daysInRow),
+         text: resultMessage,
          parse_mode: 'HTML'
     })
     .then((res) => {
