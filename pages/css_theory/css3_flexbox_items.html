@@ -1,0 +1,212 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Элементы Flexbox</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>Дочерние элементы (элементов)</h2>
+<p>Прямые дочерние элементы гибкого контейнера автоматически становятся гибкими (flex) элементами.</p>
+<div class="flex-container3">
+<div class="flex-item3"><h1>1</h1></div>
+<div class="flex-item3"><h1>2</h1></div>
+<div class="flex-item3"><h1>3</h1></div>
+<div class="flex-item3"><h1>4</h1></div>
+</div>
+<p>Элемент выше представляет четыре синих гибких элемента внутри серого гибкого контейнера.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div&gt;1&lt;/div&gt;<br/>  
+&lt;div&gt;2&lt;/div&gt;<br/>  &lt;div&gt;3&lt;/div&gt; <br/>  
+&lt;div&gt;4&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<p>Свойства элемента flex:</p>
+<ul style="font-size:16px;font-family:consolas,'Courier New', Courier, monospace">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство order</h2>
+<p>Свойство <code class="w3-codespan">order</code> задает порядок элементов flex.</p>
+<div class="flex-container3">
+<div class="flex-item3" style="order:3"><h1>1</h1></div>
+<div class="flex-item3" style="order:2"><h1>2</h1></div>
+<div class="flex-item3" style="order:4"><h1>3</h1></div>
+<div class="flex-item3" style="order:1"><h1>4</h1></div>
+</div>
+<p>Первый элемент flex в коде не обязательно должен отображаться как первый элемент в макете.</p>
+<p>Значение order должно быть числом, значение по умолчанию равно 0.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Свойство <em>order</em> может изменять порядок элементов flex:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div style="order: 3"&gt;1&lt;/div&gt;<br/>  
+&lt;div style="order: 2"&gt;2&lt;/div&gt;<br/>  &lt;div style="order: 4"&gt;3&lt;/div&gt; <br/>  
+&lt;div style="order: 1"&gt;4&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство flex-grow</h2>
+<p>Свойство <code class="w3-codespan">flex-grow</code> указывает, насколько гибкий элемент будет расти относительно остальных гибких элементов.</p>
+<div class="flex-container3">
+<div class="flex-item3" style="flex-grow:1"><h1>1</h1></div>
+<div class="flex-item3" style="flex-grow:1"><h1>2</h1></div>
+<div class="flex-item3" style="flex-grow:8"><h1>3</h1></div>
+</div>
+<p>Значение должно быть числом, значение по умолчанию - 0.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Сделайте так, чтобы третий гибкий элемент рос в восемь раз быстрее, чем другие гибкие элементы:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div style="flex-grow: 1"&gt;1&lt;/div&gt;<br/>  
+&lt;div style="flex-grow: 1"&gt;2&lt;/div&gt;<br/>  &lt;div style="flex-grow: 
+8"&gt;3&lt;/div&gt; <br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство flex-shrink</h2>
+<p>Свойство <code class="w3-codespan">flex-shrink</code> определяет, насколько гибкий элемент будет сжиматься по сравнению с остальными гибкими элементами.</p>
+<div class="flex-container3" style="max-width:800px;">
+<div class="flex-item3" style="flex-shrink:1"><h1>1</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>2</h1></div>
+<div class="flex-item3" style="flex-shrink:0"><h1>3</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>4</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>5</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>6</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>7</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>8</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>9</h1></div>
+<div class="flex-item3" style="flex-shrink:1"><h1>10</h1></div>
+</div>
+<p>Значение должно быть числом, значение по умолчанию равно 1.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Не позволяйте третьему гибкому элементу сжиматься так же сильно, как и другим гибким элементам:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div&gt;1&lt;/div&gt;<br/>  &lt;div&gt;2&lt;/div&gt;<br/>  &lt;div style="flex-shrink: 
+0"&gt;3&lt;/div&gt;<br/>
+  &lt;div&gt;4&lt;/div&gt;<br/>  &lt;div&gt;5&lt;/div&gt;<br/>  &lt;div&gt;6&lt;/div&gt;<br/>  
+&lt;div&gt;7&lt;/div&gt;<br/>  &lt;div&gt;8&lt;/div&gt;<br/>  &lt;div&gt;9&lt;/div&gt;<br/>  
+&lt;div&gt;10&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство flex-basis</h2>
+<p>Свойство <code class="w3-codespan">flex-basis</code> задает начальную длину гибкого элемента.</p>
+<div class="flex-container3">
+<div class="flex-item3"><h1>1</h1></div>
+<div class="flex-item3"><h1>2</h1></div>
+<div class="flex-item3" style="flex-basis: 200px;"><h1>3</h1></div>
+<div class="flex-item3"><h1>4</h1></div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Установите начальную длину третьего гибкого элемента равной 200 пикселям:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div&gt;1&lt;/div&gt;<br/>  &lt;div&gt;2&lt;/div&gt;<br/>  &lt;div style="flex-basis: 200px"&gt;3&lt;/div&gt;<br/>
+  &lt;div&gt;4&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство flex</h2>
+<p>Свойство <code class="w3-codespan">flex</code> является сокращенным свойством для свойств <code class="w3-codespan">flex-grow</code>, <code class="w3-codespan">flex-shrink</code> и <code class="w3-codespan">flex-basis</code>.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Сделайте третий гибкий элемент не растущим (0), не сжимающимся (0) и с начальной длиной 200 пикселей:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div&gt;1&lt;/div&gt;<br/>  &lt;div&gt;2&lt;/div&gt;<br/>  &lt;div style="flex: 
+0 0 200px"&gt;3&lt;/div&gt;<br/>
+  &lt;div&gt;4&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство align-self</h2>
+<p>Свойство <code class="w3-codespan">align-self</code> задает выравнивание для выбранного элемента внутри гибкого контейнера.</p>
+<p>Свойство <code class="w3-codespan">align-self</code> переопределяет выравнивание по умолчанию, установленное свойством контейнера<code class="w3-codespan">align-items</code>.</p>
+<div class="flex-container3" style="height:200px;">
+<div class="flex-item3"><h1>1</h1></div>
+<div class="flex-item3"><h1>2</h1></div>
+<div class="flex-item3" style="align-self:center;"><h1>3</h1></div>
+<div class="flex-item3"><h1>4</h1></div>
+</div>
+<p>В этих примерах мы используем контейнер высотой 200 пикселей, чтобы лучше продемонстрировать это свойство <code class="w3-codespan">align-self</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Выровняйте третий гибкий элемент по середине контейнера:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div&gt;1&lt;/div&gt;<br/>  &lt;div&gt;2&lt;/div&gt;<br/>  &lt;div style="align-self: 
+center"&gt;3&lt;/div&gt;<br/>
+  &lt;div&gt;4&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Выровняйте второй гибкий элемент в верхней части контейнера, а третий гибкий элемент в нижней части контейнера:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="flex-container"&gt;<br/>  &lt;div&gt;1&lt;/div&gt;<br/>  &lt;div style="align-self: 
+flex-start"&gt;2&lt;/div&gt;<br/>
+  &lt;div style="align-self: 
+flex-end"&gt;3&lt;/div&gt;<br/>
+  &lt;div&gt;4&lt;/div&gt;<br/>&lt;/div&gt;
+</div>
+<p>
+
+</p>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

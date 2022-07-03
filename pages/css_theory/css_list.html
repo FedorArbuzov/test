@@ -1,0 +1,210 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Списки</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<ol id="ex1">
+<li>Кофе</li>
+<li>Чай</li>
+<li>Кока Кола</li>
+</ol>
+<ul id="ex2">
+<li>Кофе</li>
+<li>Чай</li>
+<li>Кока Кола</li>
+</ul>
+<hr/>
+<h2>Список HTML и свойства CSS</h2>
+<p>В HTML существуют два основных вида списков:</p>
+<ul>
+<li>ненумерованные списки <code class="w3-codespan">&lt;ul&gt;</code></li> - элементы списка обозначаются кружками
+<li>упорядоченные списки <code class="w3-codespan">&lt;ol&gt;</code></li> - элементы списка обозначаются цифрами или буквами
+</ul>
+<p>Свойства списка CSS позволит Вам:</p>
+<ul>
+<li>Установить множество разных маркеров списка для упорядоченных списков</li>
+<li>Установить множество элементов списка маркеров для маркированных списков</li>
+<li>Установить изображение в качестве элемента списка маркера</li>
+<li>Установить цвет фона для списков и элемента списка</li>
+</ul>
+<hr/>
+<h2>Различие маркеров списка</h2>
+<p>Свойство <code class="w3-codespan">list-style-type</code> указывает тип элемента маркера списка.</p>
+<p>Следующий пример показывает некоторые из доступных маркеров списка:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul.a {<br/>
+   list-style-type: circle;<br/>}<br/><br/>
+ul.b {<br/>
+   list-style-type: square;<br/>}<br/><br/>
+ol.c {<br/>
+   list-style-type: upper-roman;<br/>}<br/><br/>
+ol.d {<br/>
+   list-style-type: lower-alpha;<br/>}
+</div>
+
+</div>
+<p>Примечание: Несколько из значений для неупорядоченных списков, и несколько для упорядоченных списков.</p>
+<hr/>
+<h2>Изображение как маркер списка</h2>
+<p>Свойство <code class="w3-codespan">list-style-image</code> определяет изображение как элемент маркер, списка:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>
+   list-style-image: url('sqpurple.gif');<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Расположение маркера списка</h2>
+<p>Свойство <code class="w3-codespan">list-style-position</code> определяет, будет ли элемент списка маркер находиться внутри или снаружи содержимого:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>
+   list-style-position: inside;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Удалить настройки по умолчанию</h2>
+<p>Свойство <code class="w3-codespan">list-style-type:none</code> также может быть использован для удаления маркеров/кружков. 
+Обратите внимание, что в списке также есть поля и отступы по умолчанию. 
+Чтобы удалить или добавить <code class="w3-codespan">margin:0</code> или <code class="w3-codespan">padding:0</code>
+в <code class="w3-codespan">&lt;ul&gt;</code> или <code class="w3-codespan">&lt;ol&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>
+   list-style-type: none;<br/>
+   margin: 0;<br/>
+   padding: 0;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Список - сокращение свойств</h2>
+<p>Свойство <code class="w3-codespan">list-style</code> свойство сокращений. Свойство используется, для установки всех свойств списка в одном объявлении</p>
+<div class="w3-example">
+<h3>Примечание</h3>
+<div class="w3-code notranslate cssHigh">
+ul{<br/>
+   list-style: square inside url("sqpurple.gif");<br/>}
+</div>
+
+</div>
+<p>При использовании сокращения свойства, порядок значения свойств:</p>
+<ul>
+<li><code class="w3-codespan">list-style-type</code> ( если задано свойство <code class="w3-codespan">list-style-image</code>,
+то значение его будет отображено, если изображение по каким-то причинам не может быть отображены )</li>
+<li><code class="w3-codespan">list-style-position</code> (определяет, будет ли маркер элемент списка находиться внутри или снаружи содержимого)</li>
+<li><code class="w3-codespan">list-style-image</code> (определяет изображение в качестве маркера элемента списка)</li>
+</ul>
+<p>Если одно из значений свойств отсутствует, значение будет по умолчанию.</p>
+<hr/>
+<h2>Стиль цвета списка</h2>
+<p>Также можно установить стиль списков цветными, сделать их немного интересными.</p>
+<p>Все, что добавляется к тегам <code class="w3-codespan">&lt;ol&gt;</code> или <code class="w3-codespan">&lt;ul&gt;</code>,
+влияет на весь список, а в то время как свойства добавленны в тег <code class="w3-codespan">&lt;li&gt;</code> будет влиять на отдельные элементы списка:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ol {<br/>
+   background: #ff9999;<br/>
+   padding: 20px;<br/>}<br/><br/>
+ul {<br/>
+   background: #3399ff;<br/>
+   padding: 20px;<br/>}<br/><br/>
+ol li {<br/>
+   background: #ffe5e5;<br/>
+   padding: 5px;<br/>
+   margin-left: 35px;<br/>}<br/><br/>
+ul li {<br/>
+   background: #cce5ff;<br/>
+   margin: 5px;<br/>}
+</div>
+<p>Результат:</p>
+<div class="w3-padding w3-white notranslate">
+<ol id="ex4">
+<li>Кофе</li>
+<li>Чай</li>
+<li>Кока Кола</li>
+</ol>
+<ul id="ex5">
+<li>Кофе</li>
+<li>Чай</li>
+<li>Кока Кола</li>
+</ul>
+</div>
+
+</div>
+<hr/>
+<h2>Еще примеры</h2>
+<p><br/>
+Пример демонстрирует, как создать список с красной левой границей.</p>
+<p><br/>
+Пример демонстрирует, как создать границы списка без кружков.</p>
+<p><br/>
+Пример демонстрирует разные элементы списка маркеров в CSS.</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_list1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_list2" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_list3" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_list4" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<hr/>
+<h2>Все CSS свойства списка</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает все свойства списка в одном объявлении</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает изображение в качестве элемента списка, маркер</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет, что элемента списка маркер должны находиться внутри или снаружи содержимого</td>
+</tr>
+<tr>
+<td></td>
+<td>Указывает тип элемента списка, маркер</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

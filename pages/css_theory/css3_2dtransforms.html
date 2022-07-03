@@ -1,0 +1,324 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 2D Трансформация</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>CSS3 Трансформация</h2>
+<p>CSS3 трансформация позволяет преобразовывать, поворачивать, масштабировать и наклонять элементы.</p>
+<p>Трансформация - это эффект, который позволяет элементу изменять форму, размер и положение.</p>
+<p>CSS3 поддерживает 2D и 3D преобразования.</p>
+<p>Наведите мышь над элементами, чтобы увидеть разницу между 2D и 3D трансформации:</p>
+<div style="height:80px;">
+<div id="rotate2D" onmouseover="rotateDIV()">2D вращать</div>
+<div id="rotate3D" onmouseover="rotateYDIV()">3D вращать</div>
+</div>
+<hr/>
+<h2>Поддержка браузера для 2D трансформации</h2>
+<p>Числа в таблице указывают первую версию браузера, которая полностью поддерживает свойство.</p>
+<p>Номер, за которыми следуют <code class="w3-codespan">-webkit-</code>,<code class="w3-codespan">-moz-</code>,
+или <code class="w3-codespan">-o-</code> указывает первую версию, которая работает с префиксом.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+<tr>
+<th style="width:25%;font-size:16px;text-align:left;">Свойство</th>
+<th class="bsChrome" style="width:15%;" title="Chrome"></th>
+<th class="bsEdge" style="width:15%;" title="Internet Explorer / Edge"></th>
+<th class="bsFirefox" style="width:15%;" title="Firefox"></th>
+<th class="bsSafari" style="width:15%;" title="Safari"></th>
+<th class="bsOpera" style="width:15%;" title="Opera"></th>
+</tr>
+<tr>
+<td style="text-align:left;">transform</td>
+<td>36.0<br/>4.0 -webkit-</td>
+<td>10.0<br/>9.0 -ms-</td>
+<td>16.0<br/>3.5 -moz-</td>
+<td>9.0<br/>3.2 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-<br/>12.1<br/>10.5 -o-</td>
+</tr>
+<tr>
+<td style="text-align:left;">transform-origin<br/>(two-value syntax)</td>
+<td>36.0<br/>4.0 -webkit-</td>
+<td>10.0<br/>9.0 -ms-</td>
+<td>16.0<br/>3.5 -moz-</td>
+<td>9.0<br/>3.2 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-<br/>12.1<br/>10.5 -o-</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>CSS 2D Трансформация</h2>
+<p>В этой главе вы узнаете о следующих методах 2D трансформации:</p>
+<ul>
+<li><code class="w3-codespan">translate()</code></li>
+<li><code class="w3-codespan">rotate()</code></li>
+<li><code class="w3-codespan">scale()</code></li>
+<li><code class="w3-codespan">skewX()</code></li>
+<li><code class="w3-codespan">skewY()</code></li>
+<li><code class="w3-codespan">matrix()</code></li>
+</ul>
+<div class="w3-panel w3-note">
+<p><strong>Совет:</strong> Вы узнаете о 3D трансформации в следующей главе.</p>
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">translate()</code></h2>
+<img alt="Транслировать" src="transform_translate.gif"/><br/><br/>
+<p>Метод <code class="w3-codespan">translate()</code> перемещает элемент из текущего положения (в соответствии 
+к параметрам, заданным для оси X и Y).</p>
+<p>В следующем примере элемент <code class="w3-codespan">&lt;div&gt;</code> перемещается на 50 пикселей вправо, 
+и 100 пикселов вниз от текущей позиции:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: translate(50px, 100px); /* IE 9 */<br/>
+    -webkit-transform: translate(50px, 100px); /* Safari */<br/>
+    transform: translate(50px, 100px);<br/>
+}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">rotate()</code></h2>
+<img alt="Вращать" src="transform_rotate.gif"/>
+<p>Метод <code class="w3-codespan">rotate()</code> поворачивает элемент по часовой стрелке или против часовой стрелки в соответствии с заданной степенью.</p>
+<p>Метод в следующем примере, элемент <code class="w3-codespan">&lt;div&gt;</code> вращается по часовой стрелке на 20 градусов:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: rotate(20deg); /* IE 9 */<br/>
+    -webkit-transform: rotate(20deg); /* Safari */<br/>
+    transform: rotate(20deg);<br/> }
+</div>
+
+</div>
+<p>Использование отрицательных значений повернет элемент против часовой стрелки.</p>
+<p>Метод следующий пример вращает элемент <code class="w3-codespan">&lt;div&gt;</code> против часовой стрелки на 20 градусов:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: rotate(-20deg); /* IE 9 */<br/>
+    -webkit-transform: rotate(-20deg); /* Safari */<br/>
+    transform: rotate(-20deg);<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">scale()</code></h2>
+<img alt="Масштаб" src="transform_scale.gif"/><br/><br/>
+<p>Метод <code class="w3-codespan">scale()</code> увеличивает или уменьшает размер элемента (в соответствии с параметрами, заданными для ширины и высоты).</p>
+<p>Метод в следующем примере элемент <code class="w3-codespan">&lt;div&gt;</code> увеличивается в два раза по сравнению с исходной шириной
+и в три раза по сравнению с исходной высотой:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: scale(2, 3); /* IE 9 */<br/>
+    -webkit-transform: scale(2, 3); /* Safari */<br/>
+    transform: scale(2, 3);<br/>}
+</div>
+
+</div>
+<p>Метод в следующем примере элемент <code class="w3-codespan">&lt;div&gt;</code> уменьшается вдвое по сравнению с исходной шириной и высотой:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: scale(0.5, 0.5); /* IE 9 */<br/>
+    -webkit-transform: scale(0.5, 0.5); /* Safari */<br/>
+    transform: scale(0.5, 0.5);<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">skewX()</code></h2>
+<!--
+<div id="skewx">
+This div element is skewed 20 degrees along the X-axis.
+</div>
+-->
+<p>Метод <code class="w3-codespan">skewX()</code> наклоняет элемент вдоль оси X на заданный угол.</p>
+<p>Метод следующий пример наклоняет элемент <code class="w3-codespan">&lt;div&gt;</code> на 20 градусов вдоль оси X:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: skewX(20deg); /* IE 9 */<br/>
+    -webkit-transform: skewX(20deg); /* Safari */<br/>
+    transform: skewX(20deg);<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">skewX()</code></h2>
+<!--
+<div id="skewy">
+This div element is skewed 20 degrees along the X-axis.
+</div>
+-->
+<p>Метод <code class="w3-codespan">skewY()</code> наклоняет элемент вдоль оси Y на заданный угол.</p>
+<p>Метод в следующем примере элемент <code class="w3-codespan">&lt;div&gt;</code> наклоняется на 20 градусов вдоль оси Y:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: skewY(20deg); /* IE 9 */<br/>
+    -webkit-transform: skewY(20deg); /* Safari */<br/>
+    transform: skewY(20deg);<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">skewY()</code></h2>
+<!--
+<div id="skewy">
+This div element is skewed 20 degrees along the X-axis.
+</div>
+-->
+<p>Метод <code class="w3-codespan">skew()</code> наклоняет элемент вдоль осей X и Y на заданные углы.</p>
+<p>Метод в следующем примере элемент <code class="w3-codespan">&lt;div&gt;</code> наклоняется на 20 градусов вдоль оси X и на 10 градусов вдоль оси Y:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: skew(20deg, 10deg); /* IE 9 */<br/>
+    -webkit-transform: skew(20deg, 10deg); /* Safari */<br/>
+    transform: skew(20deg, 10deg);<br/>}
+</div>
+
+</div>
+<p>Если второй параметр не указан, он имеет нулевое значение.
+В следующем примере элемент <code class="w3-codespan">&lt;div&gt;</code> наклоняется на 20 градусов вдоль оси X:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    -ms-transform: skew(20deg); /* IE 9 */<br/>
+    -webkit-transform: skew(20deg); /* Safari */<br/>
+    transform: skew(20deg);<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">matrix()</code></h2>
+<img alt="Rotate" src="transform_rotate.gif"/>
+<p>Метод <code class="w3-codespan">matrix()</code> объединяет все 2D методы преобразования в один.</p>
+<p>Метод <code class="w3-codespan">matrix()</code> принимает шесть параметров, содержащих математические функции, 
+что позволяет вращать, масштабировать, перемещать (переводить) и наклонять элементы.</p>
+<p>Метод параметров: <code class="w3-codespan">matrix(scaleX()</code>, <code class="w3-codespan">skewY()</code>, <code class="w3-codespan">skewX()</code>,
+<code class="w3-codespan">scaleY()</code>, <code class="w3-codespan">translateX()</code>, <code class="w3-codespan">translateY())</code></p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div
+{<br/>
+    -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */<br/>    
+-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */<br/>    
+transform: matrix(1, -0.3, 0, 1, 0, 0);<br/>}
+</div>
+
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_2dtransforms1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_2dtransforms2" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_2dtransforms3" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_2dtransforms4" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS3 трансформации</h2>
+<p>Метод в следующей таблице перечислены все свойства преобразования 2D:</p>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:23%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Применяется 2D или 3D-трансформации к элементу</td>
+</tr>
+<tr>
+<td></td>
+<td>Позволяет изменять положение трансформации элементов</td>
+</tr>
+</table>
+<h2>2D Метод Трансформации</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:23%">Функция</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>matrix(<i>n,n,n,n,n,n</i>)</td>
+<td>Определяет 2D-трансформации с использованием matrix из шести значений</td>
+</tr>
+<tr>
+<td>translate(<i>x,y</i>)</td>
+<td>Определяет 2D-трансформации, перемещение элемента по осям X и Y</td>
+</tr>
+<tr>
+<td>translateX(<i>n</i>)</td>
+<td>Определяет 2D-трансформации, перемещение элемента по оси X</td>
+</tr>
+<tr>
+<td>translateY(<i>n</i>)</td>
+<td>Определяет 2D-трансформации, перемещение элемента по оси Y</td>
+</tr>
+<tr>
+<td>scale(<i>x,y</i>)</td>
+<td>Определяет 2D масштаб трансформации, изменение ширины и высоты элементов</td>
+</tr>
+<tr>
+<td>scaleX(<i>n</i>)</td>
+<td>Определяет D масштаб трансформации, изменение ширины элемента </td>
+</tr>
+<tr>
+<td>scaleY(<i>n</i>)</td>
+<td>Определяет D масштаб трансформации, изменение высоты элемента </td>
+</tr>
+<tr>
+<td>rotate(<i>angle</i>)</td>
+<td>Определяет 2D вращение, угол указывается в параметре</td>
+</tr>
+<tr>
+<td>skew(<i>x-angle,y-angle</i>)</td>
+<td>Определяет 2D-трансформация наклона вдоль оси X и Y</td>
+</tr>
+<tr>
+<td>skewX(<i>angle</i>)</td>
+<td>Определяет 2D-трансформация наклона вдоль оси X</td>
+</tr>
+<tr>
+<td>skewY(<i>angle</i>)</td>
+<td>Определяет 2D-трансформация наклона вдоль оси Y</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

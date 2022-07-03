@@ -1,0 +1,144 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Вертикальная панель навигации</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>Вертикальная панель навигации</h2>
+<ul class="vertical ex">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>Чтобы создать вертикальную панель навигации, вы можете стилизовать элементы &lt;a&gt; внутри списка в дополнение к коду с предыдущей страницы:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+li a
+{<br/>
+ 
+display: block;<br/>
+ 
+width: 60px;<br/>
+}</div>
+
+</div>
+<p>Объяснение примера:</p>
+<ul>
+<li><code class="w3-codespan">display: block;</code> - Отображение ссылок в виде блочных элементов делает кликабельной всю область ссылок (а не только текст), а также позволяет указать ширину (а также отступы, поля, высоту и т.д. если хотите)</li>
+<li><code class="w3-codespan">width: 60px;</code> - Элементы блока занимают всю ширину, доступную по умолчанию. Мы хотим указать ширину 60 пикселей</li>
+</ul>
+<p>Вы также можете установить ширину &lt;ul&gt; и удалить ширину &lt;a&gt;, так как они будут занимать всю ширину, доступную при отображении в виде блочных элементов. Это даст тот же результат, что и наш предыдущий пример:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul
+{<br/>
+ 
+list-style-type: none;<br/>
+ 
+margin: 0;<br/>
+ 
+padding: 0;<br/>  width: 60px;<br/>
+}
+<br/><br/>li
+a
+{<br/>
+ 
+display: block;<br/>
+}</div>
+
+</div>
+<hr/>
+<h2>Примеры вертикальной панели навигации</h2>
+<p>Создайте базовую вертикальную панель навигации с серым цветом фона и измените цвет фона ссылок при наведении на них курсора мыши:</p>
+<ul class="vertical">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>  list-style-type: none;<br/>  
+margin: 0;<br/>  padding: 0;<br/>  width: 
+200px;<br/>  background-color: #f1f1f1;<br/>}<br/><br/>li a {<br/>  display: 
+block;<br/>  color: #000;<br/>  padding: 8px 16px;<br/>  text-decoration: none;<br/>}<br/><br/>
+/* Изменить цвет ссылки при наведении курсора */<br/>li a:hover {<br/>  
+background-color: #555;<br/>  color: white;<br/>}</div>
+
+</div>
+<h3 style="margin-top:35px;">Активная / текущая навигационная ссылка</h3>
+<p>Добавьте класс "active" к текущей ссылке, чтобы пользователь знал, на какой странице он находится:</p>
+<ul class="vertical">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.active {<br/>  background-color: #4CAF50;<br/>  
+color: white;<br/>}</div>
+
+</div>
+<h3 style="margin-top:35px;">Центрировать ссылки и добавлять границы</h3>
+<p>Добавьте <code class="w3-codespan">text-align:center</code> в &lt;li&gt; или &lt;a&gt;, чтобы центрировать ссылки.</p>
+<p>Добавьте свойство <code class="w3-codespan">border</code> в &lt;ul&gt; добавьте границу вокруг навигационной панели. Если вам также нужны границы внутри навигационной панели, добавьте <code class="w3-codespan">border-bottom</code> ко всем элементам &lt;li&gt;, кроме последнего:</p>
+<ul class="vertical border">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>  border: 1px solid #555;<br/>}<br/><br/>li {<br/>  text-align: center;<br/>
+  
+border-bottom: 1px solid #555;<br/>}<br/><br/>li:last-child {<br/>  
+border-bottom: none;<br/>}</div>
+
+</div>
+<h3 style="margin-top:35px;">Фиксированная вертикальная навигационная панель во всю высоту</h3>
+<p>Создайте полноразмерную, "sticky" боковую навигацию</p>
+<iframe src="trycss_navbar_vertical_iframe.htm" style="height:262px;width:100%;border:3px solid #f1f1f1;border-left:none"></iframe>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+ul {<br/>  list-style-type: none;<br/>  
+margin: 0;<br/>  padding: 0;<br/>  width: 
+25%;<br/>  background-color: #f1f1f1;<br/>  height: 100%; /* Во всю высоту */<br/>
+  position: fixed; /* Сделайте так, чтобы он прилепал даже к прокрутке */<br/>  
+overflow: auto; /* Включить прокрутку, если sidenav имеет слишком много содержимого */<br/>}</div>
+
+</div>
+<p><strong>Примечание:</strong> Этот пример может неправильно работать на мобильных устройствах.</p>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

@@ -1,0 +1,237 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - padding</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<div class="w3-theme-border" style="width:100%;padding:70px;border-width:1px;border-style:solid;">
+Этот элемент имеет отступы внутри со всех сторон 70 пикселей <code class="w3-codespan">padding: 70px</code> .
+</div>
+<br/>
+
+<hr/>
+<h2>CSS overflow</h2>
+<p>CSS свойство <code class="w3-codespan">padding</code> используются для создания пространства вокруг 
+содержимое элемента внутри определенных границ.</p>
+<p>С помощью CSS у вас есть полный контроль над отступами. Есть свойства 
+для установки отступа для каждой стороны элемента по часовой стрелке: <code class="w3-codespan">top</code> сверху,
+<code class="w3-codespan">right</code> справа, <code class="w3-codespan">bottom</code> сверху и <code class="w3-codespan">left</code> слева.</p>
+<hr/>
+<h2>Отступы - все стороны</h2>
+<p>CSS имеет свойства для указания заполнения для каждого сторона элемента:</p>
+<ul>
+<li><code class="w3-codespan">padding-top</code> отступ сверху</li>
+<li><code class="w3-codespan">padding-right</code> отступ справа</li>
+<li><code class="w3-codespan">padding-bottom</code> отступ снизу</li>
+<li><code class="w3-codespan">padding-left</code> отступ слева</li>
+</ul>
+<p>Все свойства <code class="w3-codespan">padding</code> могут иметь следующие значения:</p>
+<ul>
+<li><em>размер</em> - задает отступ в px, pt, cm, и т.д.</li>
+<li><em>%</em> - устанавливает отступы в процентах от ширины содержащего элемента</li>
+<li>inherit - задает, что отступ должен быть унаследован от родительского элемента</li>
+</ul>
+<p><b>Внимание:</b> Отрицательные значения не допускаются.</p>
+<p>В следующем примере задаются различные отступы для всех четырех сторон элемента <code class="w3-codespan">&lt;div&gt;</code></p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>   
+padding-top: 50px;<br/>
+   
+padding-right: 30px;<br/>
+   
+padding-bottom: 50px;<br/>
+   
+padding-left: 80px;<br/>}</div>
+
+</div>
+<hr/>
+<h2>Отступ - сокращенное свойство</h2>
+<p>Чтобы сократить код, можно указать все свойства отступов в одном свойстве.</p>
+<p>Свойство <code class="w3-codespan">padding</code> является сокращенным свойством для следующих свойств отступа:</p>
+<ul>
+<li><code class="w3-codespan">padding-top</code></li>
+<li><code class="w3-codespan">padding-right</code></li>
+<li><code class="w3-codespan">padding-bottom</code></li>
+<li><code class="w3-codespan">padding-left</code></li>
+</ul>
+<p>Итак, вот как это работает:</p>
+<p>Если, свойство <code class="w3-codespan">padding</code> имеет четыре значения:</p>
+<ul>
+<li><b>padding: 25px 50px 75px 100px; </b>
+<ul><li>Отступ сверху 25px</li>
+<li>Отступ справа 50px</li>
+<li>Отступ снизу 75px</li>
+<li>Отступ слева 100px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>   
+padding: 25px 50px 75px 100px;<br/>}</div>
+
+</div>
+<p>Если, свойство <code class="w3-codespan">padding</code> имеет три значения:</p>
+<ul>
+<li><b>padding: 25px 50px 75px;</b><ul>
+<li>Отступ сверху 25px</li>
+<li>Отступы справа и слева 50px</li>
+<li>Отступ снизу 75px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>   
+padding: 25px 50px 75px;<br/>}</div>
+
+</div>
+<p>Если, свойство <code class="w3-codespan">padding</code> имеет два значения:</p>
+<ul>
+<li><b>padding: 25px 50px;</b>
+<ul>
+<li>Отступы сверху и снизу 25px</li>
+<li>Отступы справа и слева 50px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>   
+padding: 25px 50px;<br/>}</div>
+
+</div>
+<p>Если, свойство <code class="w3-codespan">padding</code> имеет одно значение:</p>
+<ul>
+<li><b>padding: 25px;</b>
+<ul>
+<li>Все отступы 25px</li>
+</ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>   
+padding: 25px;<br/>}</div>
+
+</div>
+<hr/>
+<h2>Отступ и ширина</h2>
+<p>CSS свойство <code class="w3-codespan">width</code> определяет ширину области содержимого элемента.
+Область содержимого, это часть находится внутри элементов <code class="w3-codespan">padding</code>,
+<code class="w3-codespan">border</code> и <code class="w3-codespan">margin</code> ().</p>
+<p>Таким образом, если элемент имеет заданную ширину, отступ будет 
+добавляться к общей ширине элемента. Это нежелательный результат.</p>
+<p>В следующем примере элементу <code class="w3-codespan">&lt;div&gt;</code> присваивается ширина <code class="w3-codespan">300px</code>.
+Однако фактическая отображаемая ширина элемента <code class="w3-codespan">&lt;div&gt;</code> будет равна
+<code class="w3-codespan">350px (300px + 25px</code> левого отступа <code class="w3-codespan">+ 25px</code> правой отступа):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    width: 300px;<br/>    padding: 25px;<br/>}</div>
+
+</div>
+<p>Для того чтобы ширина была 300 пикселей, независимо от количества отступов,
+вы можете использовать свойство <code class="w3-codespan">box-sizing</code>.
+Этот элемент заставляет сохранять свою ширину; если 
+вы увеличиваете отступ, доступное пространство содержимого будет уменьшаться. Вот 
+пример:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    width: 300px;<br/>
+    padding: 25px;<br/>
+    box-sizing: border-box;<br/>}</div>
+
+</div>
+<hr/>
+<h2>Еще примеры</h2>
+<p><br/>
+В этом примере показано, как задать отступ слева для элемента <code class="w3-codespan">&lt;p&gt;</code>.</p>
+<p><br/>
+В этом примере показано, как задать отступ справа для элемента <code class="w3-codespan">&lt;p&gt;</code>.</p>
+<p><br/>
+В этом примере показано, как задать отступ сверху для элемента <code class="w3-codespan">&lt;p&gt;</code>.</p>
+<p><br/>
+В этом примере показано, как задать отступ снизу для элемента <code class="w3-codespan">&lt;p&gt;</code>.</p>
+<hr/>
+<form action="exercise.php?filename=exercise_padding1" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<div class="exercisewindow">
+<h2>Упражнение:</h2>
+<p>Установить верхний отступ элемента &lt;h1&gt; равным 30 пикселям.</p>
+<div class="exerciseprecontainer">
+<pre>
+&lt;style&gt;
+h1 {
+  <input maxlength="11" name="ex1" style="width: 116px;"/>: 30px;
+}
+&lt;/style&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;Это заголовок&lt;/h1&gt;
+  &lt;p&gt;Это параграф&lt;/p&gt;
+  &lt;p&gt;Это еще один параграф&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+</div>
+<br/>
+<button class="w3-btn w3-margin-bottom" type="submit">Отправить »</button>
+</div>
+</form>
+<hr/>
+<h2>Все CSS свойства отступов</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:30%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Сокращенное свойство для установки всех свойств отступа в одном объявлении</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает нижний отступ элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает левый отступ элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает правый отступ элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает верхний отступ элемента</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

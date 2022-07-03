@@ -1,0 +1,238 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Свойство margin</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<div class="w3-theme-border" style="border-width:1px;border-style:solid;padding:10px;margin:70px;">
+<p>Этот элемент имеет поля снаружи со всех сторон 70 пикселей <code class="w3-codespan">margin:70px;</code>.</p>
+</div>
+<hr/>
+<h2>CSS Margin</h2>
+<p>CSS свойство <code class="w3-codespan">margin</code> используется для создания очищение пространства вокруг <strong>элемента</strong>.</p>
+<p>Свойство <code class="w3-codespan">margin</code> устанавливает размер поля (вокруг элемента).</p>
+<p>В CSS с помощью свойства <code class="w3-codespan">margin</code>, Вы имеете полный контроль над полями.
+В CSS есть свойства для установки полей с каждой стороны элемента по часовой стрелке: <code class="w3-codespan">top</code> сверху,
+<code class="w3-codespan">right</code> справа, <code class="w3-codespan">bottom</code> сверху и <code class="w3-codespan">left</code> слева.</p>
+<hr/>
+<h2>Margin - все стороны</h2>
+<p>В CSS есть свойства для указания разных сторон полей элемента и вокруг элемента отдельно:</p>
+<ul>
+<li><code class="w3-codespan">margin-top</code> поле сверху</li>
+<li><code class="w3-codespan">margin-right</code> поле справа</li>
+<li><code class="w3-codespan">margin-bottom</code> поле снизу</li>
+<li><code class="w3-codespan">margin-left</code> поле слева</li>
+</ul>
+<p>Все свойства <code class="w3-codespan">margin</code> могут иметь следующие значения:</p>
+<ul>
+<li>auto - браузер вычисляет поля</li>
+<li><em>размер</em> - полей измеряется в px, pt, cm и т.п.</li>
+<li><em>%</em> - устанавливает маржу в процентах от ширины содержащего элемента</li>
+<li>inherit - устанавливает, что поля должно быть унаследовано от родительского элемента</li>
+</ul>
+<p><b>Совет:</b> Допускаются отрицательные значения.</p>
+<p>Следующий пример устанавливает разные поля со всех четырех сторон элемента <code class="w3-codespan">&lt;p&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p {<br/>
+   margin-top: 100px;<br/>
+   margin-bottom: 100px;<br/>
+   margin-right: 150px;<br/>
+   margin-left: 80px;<br/>}
+</div>
+
+</div>
+<hr/>
+<div id="midcontentadcontainer">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Поля - сокращенное свойство</h2>
+<p>Чтобы сократить код, можно указать все свойства полей в одном свойстве.</p>
+<p>Свойство <code class="w3-codespan">margin</code> сокращенное свойство для следующих индивидуальных свойств полей:</p>
+<ul>
+<li><code class="w3-codespan">margin-top</code> поле сверху</li>
+<li><code class="w3-codespan">margin-right</code> поле справа</li>
+<li><code class="w3-codespan">margin-bottom</code> поле снизу</li>
+<li><code class="w3-codespan">margin-left</code> поле слева</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+p {<br/>
+   margin: 100px 150px 100px 80px;<br/>}
+</div>
+
+</div>
+<p>Вот как это работает:</p>
+<p>Если, свойство <code class="w3-codespan">margin</code> имеет четыре значения:</p>
+<ul>
+<li><b>margin: 25px 50px 75px 100px;</b>
+<ul>
+<li>поле сверху 25px</li>
+<li>поле справа 50px</li>
+<li>поле снизу 75px</li>
+<li>поле слева 100px</li>
+</ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Использовать сокращенное свойство margin с четырьмя значениями:</p>
+<div class="w3-code notranslate cssHigh">
+p {<br/>  margin: 25px 50px 75px 100px;<br/>}</div>
+
+</div>
+<p>Если, свойство <code class="w3-codespan">margin</code> имеет три значения:</p>
+<ul>
+<li><b>margin: 25px 50px 75px;</b>
+<ul><li>поле сверху 25px</li>
+<li>поле справа и слева 50px</li>
+<li>поле снизу 75px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Использовать сокращенное свойство margin с тремя значениями:</p>
+<div class="w3-code notranslate cssHigh">
+p {<br/> 
+margin: 25px 50px 75px;<br/>}</div>
+
+</div>
+<p>Если, свойство <code class="w3-codespan">margin</code> имеет два значения:</p>
+<ul>
+<li><b>margin: 25px 50px;</b>
+<ul><li>поле сверху и снизу 25px</li>
+<li>поле справа и слева 50px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Использовать сокращенное свойство margin с двумя значениями:</p>
+<div class="w3-code notranslate cssHigh">
+p {<br/> 
+margin: 25px 50px;<br/>}</div>
+
+</div>
+<p>Если, свойство <code class="w3-codespan">margin</code> имеет одно значения:</p>
+<ul>
+<li><b>margin: 25px;</b>
+<ul><li>поля со все четырех сторон 25px</li></ul>
+</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Использовать сокращенное свойство margin с одним значением:</p>
+<div class="w3-code notranslate cssHigh">
+p {<br/>  margin: 25px;<br/>}</div>
+
+</div>
+<hr/>
+<h2>Значение авто</h2>
+<p>Вы можете установить для свойства <code class="w3-codespan">margin</code> значение <code class="w3-codespan">auto</code>
+элемент будет находится в центре внутри контейнера по горизонтали.</p>
+<p>Элемент примет положение указанной ширины, а остальное поле будет разделена поровну, между левым и правым полями:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+   width: 300px;<br/>
+   margin: auto;<br/>
+   border: 1px solid red;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Значение наследовать</h2>
+<p>Пример ниже позволяет полю слева, быть унаследованным от родительского элемента:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div.container {<br/>
+   border: 1px solid red;<br/>
+   margin-left: 100px;<br/>}<br/><br/>
+p.one {<br/>
+   margin-left: inherit;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Поля - разрушить</h2>
+<p>Верхнее и нижнее поле элемента, иногда бывают разрушены в единое поле, равной по величине из двух полей.</p>
+<p>Что не произойдет с левым и правым полями! Только с верхним и нижним полями!</p>
+<p>Посмотрите следующий пример:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h2 {<br/>
+   margin: 0 0 50px 0;<br/>}<br/><br/>
+h3 {<br/>
+   margin: 20px 0 0 0;<br/>}
+</div>
+
+</div>
+<p>В примере выше, элемент <code class="w3-codespan">&lt;h2&gt;</code> имеет поле снизу <code class="w3-codespan">50px</code>.
+Элемент <code class="w3-codespan">&lt;h3&gt;</code> имеет поле сверху <code class="w3-codespan">20px</code>.</p>
+<p>Здравый смысл предполагает, что вертикальное поле между элементами <code class="w3-codespan">&lt;h2&gt;</code>
+и <code class="w3-codespan">&lt;h3&gt;</code> может быть в общей сложности <code class="w3-codespan">70px (50px + 20px)</code>.
+Но в связи с разрушением поля по факту, поле будет в размере <code class="w3-codespan">50px</code></p>
+<hr/>
+<h2>Все CSS свойства полей</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Свойства</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Сокращенное свойство для установки свойств полей в одной декларации</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает нижние поле элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает левое поле элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает правое поле элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает верхнее поле элемента</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

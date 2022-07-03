@@ -1,0 +1,105 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Бокс Размеры</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>CSS3 свойство <code class="w3-codespan">box-sizing</code></h2>
+<p>CSS3 свойство <code class="w3-codespan">box-sizing</code> позволяет включать отступ и границу в общую ширину и высоту элементов.</p>
+<hr/>
+<h2>Без CSS3 свойства <code class="w3-codespan">box-sizing</code></h2>
+<p>По умолчанию ширина и высота элемента вычисляется так:</p>
+<p>ширина + отступ + граница = фактическая ширина элемента<br/>
+высота + отступ + граница = фактическая высота элемента</p>
+<p>Это означает: когда вы устанавливаете ширину/высоту элемента, элемент будет 
+больше, чем вы установили (потому что граница элемента и заполнение добавляются в указанной ширине/высоте элемента).</p>
+<p>На следующем рисунке показаны два элемента <code class="w3-codespan">&lt;div&gt;</code> с одинаковыми 
+указанными шириной и высотой:</p>
+<div id="div1">div меньше (ширина 300px и высота 100px).</div>
+<br/>
+<div id="div2">div больше (ширина также 300px и высота 100px).</div>
+<br/>
+<p>Два элемента <code class="w3-codespan">&lt;div&gt;</code> выше, в результате заканчиваются с разными размерами 
+(потому что в <code class="w3-codespan">&lt;div2&gt;</code> указан отступ ):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.div1 {<br/>    width: 300px;<br/>    height: 100px;<br/>
+    border: 1px solid blue; <br/>}<br/><br/>.div2 {<br/>
+    width: 300px;<br/>    height: 100px;<br/>
+    padding: 50px;<br/>    border: 1px solid red;<br/>}
+</div>
+
+</div>
+<p>Свойство <code class="w3-codespan">box-sizing</code> решает эту проблема.</p>
+<hr/>
+<h2>С CSS3 свойством <code class="w3-codespan">box-sizing</code></h2>
+<p>Свойство <code class="w3-codespan">box-sizing</code> позволяет включать отступ и границу в общую ширину и высоту элементов.</p>
+<p>Если вы установили элемент <code class="w3-codespan">box-sizing: border-box;</code> включите отступ и границу, ширину и высоту:</p>
+<div id="div3">Оба дива теперь одинакового размера!</div>
+<br/>
+<div id="div4">Ура!!</div>
+<br/>
+<p>Вот тот же пример, что выше, с <code class="w3-codespan">box-sizing: border-box;</code>
+добавлено к обоим элементам <code class="w3-codespan">&lt;div&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.div1 {<br/>    width: 300px;<br/>    height: 100px;<br/>
+    border: 1px solid blue;<br/>    box-sizing: border-box;<br/>}<br/><br/>
+.div2 {<br/>    width: 300px;<br/>    height: 100px;<br/>
+    padding: 50px;<br/>    border: 1px solid red;<br/>
+    box-sizing: border-box;<br/>}
+</div>
+
+</div>
+<p>Так как результат использования <code class="w3-codespan">box-sizing: border-box;</code> намного лучше,
+разработчики включают эти элементы на своих страницах, чтобы они работали таким образом.</p>
+<p>Приведенный ниже код гарантирует, что все элементы имеют более интуитивный размер.
+Многие браузеры уже используют <code class="w3-codespan">box-sizing: border-box;</code> для 
+многих элементов формы (но не все - поэтому входы и текст выглядят одинакого по ширине: 100 пикселей;).</p>
+<p>Применение этого ко всем элементам безопасно и мудро:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+* {<br/>    box-sizing: border-box;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Свойство CSS3 размеры бокса</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:28%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Определяет, как вычисляется ширина и высота элемента: 
+они включают в себя отступы и границы, или нет</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

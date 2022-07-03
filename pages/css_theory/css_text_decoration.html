@@ -1,0 +1,170 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Оформление текста</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>CSS Свойство text-decoration</h2>
+<p>В этой главе вы узнаете о следующих свойствах:</p>
+<ul>
+<li><code class="w3-codespan">text-decoration-line</code></li>
+<li><code class="w3-codespan">text-decoration-color</code></li>
+<li><code class="w3-codespan">text-decoration-style</code></li>
+<li><code class="w3-codespan">text-decoration-thickness</code></li>
+<li><code class="w3-codespan">text-decoration</code></li>
+</ul>
+<hr/>
+<h2>Добавить декоративную строку к тексту</h2>
+<p>Свойство <code class="w3-codespan">text-decoration-line</code> используется для добавления декоративной строки к тексту.</p>
+<p><strong>Совет:</strong> Вы можете комбинировать более одного значения, например, надпись и подчеркивание, чтобы отображать строки как над текстом, так и под ним.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  text-decoration-line: overline;<br/>}<br/>
+<br/>h2 {<br/>  text-decoration-line: line-through;<br/>}<br/>
+<br/>h3 {<br/>  text-decoration-line: underline;<br/>}<br/><br/>p {<br/>  text-decoration-line: 
+overline underline;<br/>}</div>
+
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Не рекомендуется подчеркивать текст, который не является ссылкой, так как это часто сбивает читателя с толку.</p>
+</div>
+<hr/>
+<h2>Указать цвет для декоративной линии</h2>
+<p>Свойство <code class="w3-codespan">text-decoration-color</code> используется для установки цвета линии оформления.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  text-decoration-line: overline;<br/>  text-decoration-color: 
+red;<br/>}<br/>
+<br/>h2 {<br/>  text-decoration-line: line-through;<br/>  text-decoration-color: 
+blue;<br/>}<br/>
+<br/>h3 {<br/>  text-decoration-line: underline;<br/>  text-decoration-color: 
+green;<br/>}<br/><br/>p {<br/>  text-decoration-line: 
+overline underline;<br/>  text-decoration-color: purple;<br/>}</div>
+
+</div>
+<hr/>
+<div id="midcontentadcontainer">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Указать стиль для линии оформления</h2>
+<p>Свойство <code class="w3-codespan">text-decoration-style</code> используется для установки стиля линии оформления.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  text-decoration-line: underline;<br/>  text-decoration-style: 
+solid;<br/>}<br/>
+<br/>h2 {<br/>  text-decoration-line: underline;<br/>  
+text-decoration-style: double;<br/>}<br/>
+<br/>h3 {<br/>  text-decoration-line: underline;<br/>  
+text-decoration-style: dotted; <br/>}<br/><br/>p.ex1 {<br/>  text-decoration-line: underline;<br/>  
+text-decoration-style: dashed; <br/>}<br/><br/>p.ex2 {<br/>  text-decoration-line: underline;<br/>  
+text-decoration-style: wavy; <br/>}<br/><br/>p.ex3 {<br/>  text-decoration-line: 
+underline;<br/>  text-decoration-color: red; <br/>  
+text-decoration-style: wavy; <br/>}</div>
+
+</div>
+<hr/>
+<h2>Указать толщину для декоративной линии</h2>
+<p>Свойство <code class="w3-codespan">text-decoration-thickness</code> используется для установки толщины декоративной линии.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  text-decoration-line: underline;<br/>  
+text-decoration-thickness: auto;<br/>}<br/><br/>h2 {<br/>  text-decoration-line: 
+underline;<br/>  text-decoration-thickness: 5px;<br/>}<br/><br/>h3 {<br/>  
+text-decoration-line: underline;<br/>  text-decoration-thickness: 25%;<br/>
+}<br/><br/>p {<br/>  
+text-decoration-line: underline;<br/>  text-decoration-color: red; <br/>  
+text-decoration-style: double;<br/>  text-decoration-thickness: 5px; <br/>}</div>
+
+</div>
+<hr/>
+<h2>Сокращенное свойство</h2>
+<p>Свойство <code class="w3-codespan">text-decoration</code> - это сокращенное свойство для:</p>
+<ul>
+<li><code class="w3-codespan">text-decoration-line</code> (требуемый)</li>
+<li><code class="w3-codespan">text-decoration-color</code> (необязательный)</li>
+<li><code class="w3-codespan">text-decoration-style</code> (необязательный)</li>
+<li><code class="w3-codespan">text-decoration-thickness</code> (необязательный)</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br/>  text-decoration: underline;<br/>}<br/><br/>h2 {<br/>  
+text-decoration: underline red;<br/>}<br/><br/>h3 {<br/>  text-decoration: underline 
+red double;<br/>}<br/><br/>p {<br/>  
+text-decoration: underline red double 5px;<br/>}</div>
+
+</div>
+<hr/>
+<h2>Небольшой совет</h2>
+<p>Все ссылки в HTML по умолчанию подчеркнуты. Иногда вы видите, что ссылки оформлены без подчеркивания. Свойство <code class="w3-codespan">text-decoration: none;</code> используется для удаления подчеркивания из ссылок, например:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+a {<br/>  text-decoration: none;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Все свойства CSS оформления текста</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:30%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Задает все свойства оформления текста в одном объявлении</td>
+</tr>
+<tr>
+<td></td>
+<td>Задает цвет текстового оформления</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет тип используемого оформления текста (подчеркивание, верхняя строка и т.д.)</td>
+</tr>
+<tr>
+<td></td>
+<td>Задает стиль оформления текста (сплошной, пунктирный и т.д.)</td>
+</tr>
+<tr>
+<td></td>
+<td>Задает толщину линии оформления текста</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

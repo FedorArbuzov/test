@@ -1,0 +1,83 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Изменение переменных JavaScript</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>Изменение переменных с помощью JavaScript</h2>
+<p>Переменные CSS имеют доступ к DOM, что означает, что вы можете изменить их с помощью JavaScript.</p>
+<p>Вот пример того, как вы можете создать скрипт для отображения и изменения переменной --blue из примера, использованного на предыдущих страницах. Не волнуйтесь, если вы не знакомы с JavaScript. Вы можете узнать больше о JavaScript в :</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;script&gt;<br/>// Получить корневой элемент<br/>var r = document.querySelector(':root');<br/>
+<br/>// Создать функцию для получения значения переменной<br/>function 
+myFunction_get() {<br/>  // Получить стили (свойства и значения) для root<br/>
+  var rs = getComputedStyle(r);<br/>  // Alert значение переменной --blue<br/>
+  alert("Значение переменной--blue: " + 
+rs.getСвойствоValue('--blue'));<br/>}<br/><br/>// Создать функцию для установки значения переменной<br/>
+function myFunction_set() {<br/>  // Установить значение переменной --blue в другое значение (в данном случае "lightblue")<br/>  r.style.setProperty('--blue', 'lightblue');<br/>}<br/>&lt;/script&gt;   
+</div>
+
+<br/>
+</div>
+<hr/>
+<h2>Поддержка браузера</h2>
+<p>Цифры в таблице указывают первую версию браузера, которая полностью поддерживает функцию <code class="w3-codespan">var()</code>.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+<tr>
+<th style="width:25%;font-size:16px;text-align:left;">Функция</th>
+<th class="bsChrome" style="width:15%;" title="Chrome"></th>
+<th class="bsEdge" style="width:15%;" title="Internet Explorer / Edge"></th>
+<th class="bsFirefox" style="width:15%;" title="Firefox"></th>
+<th class="bsSafari" style="width:15%;" title="Safari"></th>
+<th class="bsOpera" style="width:15%;" title="Opera"></th>
+</tr>
+<tr>
+<td style="text-align:left;">var()</td>
+<td>49.0</td>
+<td>15.0</td>
+<td>31.0</td>
+<td>9.1</td>
+<td>36.0</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>CSS Функция var()</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:28%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Вставляет значение переменной CSS</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

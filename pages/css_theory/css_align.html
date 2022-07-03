@@ -1,0 +1,262 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Выравнивание</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<div class="w3-dark-grey w3-padding-48 w3-display-container">
+<span class="w3-display-topmiddle w3-hide-small" style="margin-top:16px">▲</span>
+<span class="w3-display-bottommiddle w3-hide-small" style="margin-bottom:16px">▼</span>
+<div class="w3-center w3-display-container" style="background-color:#1abc9c;color:white; max-width:400px; margin:auto;padding: 15px">
+<span class="w3-display-left w3-hide-small" style="left:-30px">◀</span>
+<span class="w3-display-right w3-hide-small" style="right:-30px">►</span>
+<h2>Центральный элемент<br/> горизонтально и вертикально</h2>
+</div>
+</div>
+<hr/>
+<h2>Выравнить блок по центру</h2>
+<p>Выравнить блок <code class="w3-codespan">&lt;div&gt;</code> по горизонтали по центру,
+нужно установить поле автоматически <code class="w3-codespan">margin: auto;</code></p>
+<p>Что бы предотвратить его от растягивания по краям, нужно установить ширину 50 пикселей <code class="w3-codespan">width: 50%;</code>.</p>
+<p>Элемент примет позицую до указанной ширины, а остальное пространство будет разделено отступами по 10 пикселей со всех сторон
+<code class="w3-codespan">padding: 10px;</code>:</p>
+<div style="margin:0 auto;width:50%;border:3px solid green;padding:10px;">
+<p>Блок по центру.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.center {<br/>
+   margin: auto;<br/>
+   width: 50%;<br/>
+   border: 3px solid green;<br/>
+   padding: 10px;<br/>
+}</div>
+
+</div>
+<p><b>Примечание:</b> Выравнивание по центру не будет имеет никакого эффекта,
+если свойство <code class="w3-codespan">width</code> не установлено (или установлено на 100 писелей).</p>
+<hr/>
+<h2>Выравнить текст по центру</h2>
+<p>Простое выравнивание текста по центру внутри элемента,
+используется свойство со значением<code class="w3-codespan">text-align: center;</code></p>
+<div style="text-align:center;border:3px solid green">
+<p>Текст по центру.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.center {<br/>
+   text-align: center;<br/>
+   border: 3px solid green;<br/>}
+</div>
+
+</div>
+<p><strong>Совет:</strong> Дополнительные примеры о том, как выровнять текст, см. главу .</p>
+<hr/>
+<h2>Выравнить изображение по центру</h2>
+<p>Установить изображение по центру, нужно использовать автоматические поля <code class="w3-codespan">margin: auto;</code>
+и установить видимость блока <code class="w3-codespan">display: block;</code>:</p>
+<img alt="Paris" src="paris.jpg" style="width:45%;display:block;margin:0 auto"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+img {<br/>
+   display: block;<br/>
+   margin: auto;<br/>
+   width: 40%;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Выравнить - используя позицию</h2>
+<p>Один из способов для выравнивания элементов является использование абсолютной позиции <code class="w3-codespan">position: absolute;</code>:</p>
+<div style="position:relative;margin-bottom:180px">
+<div style="position: absolute;right: 0px;width: 300px;border: 3px solid #73AD21;padding: 10px;">
+<p>В мои молодые годы, мой отец дал мне совет, который раз, до сих пор, прокручивается в моей голове.</p>
+</div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.right {<br/>
+   position: absolute;<br/>
+   right: 0px;<br/>
+   width: 300px;<br/>
+   border: 3px solid #73AD21;<br/>
+   padding: 10px;<br/>}
+</div>
+
+</div>
+<p><b>Примечание:</b> Абсолютно позиционированные элементы удаляются из нормального потока, и они могут перекрываться другими элементами.</p>
+<p><strong>Совет:</strong> При выравнивании элементов с помощью позиции <code class="w3-codespan">position</code>, всегда определяйте поле
+<code class="w3-codespan">margin</code> и отступ <code class="w3-codespan">padding</code> для элемента <code class="w3-codespan">&lt;body&gt;</code>,
+что позволяет избегать визуального различия в других браузерах.</p>
+<p>Существует также проблема с IE8 и ранних версий, при использовании позиции <code class="w3-codespan">position</code>.<br/>
+Если элемент в контейнере (в нашем случае <code class="w3-codespan">&lt;div class="container"&gt;</code>)
+имеет заданную ширину и отсутствует декларация <code class="w3-codespan">!DOCTYPE</code>.<br/>
+IE8 и более ранние версии, добавят поле 17 пикселей с правой стороны, в месте которое предназначенно для прокрутки.<br/>
+Всегда устанавливайте декларацию <code class="w3-codespan">!DOCTYPE</code> при использовании <code class="w3-codespan">position</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br/>
+   margin: 0;<br/>
+   padding: 0;<br/>}<br/><br/>
+.container{<br/>
+   position: relative;<br/>
+   width: 100%;<br/>}<br/><br/>
+.right{<br/>
+   position: absolute;<br/>
+   right: 0px;<br/>
+   width: 300px;<br/>
+   background-color: #b0e0e6;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Выравнивание - используя поплавок</h2>
+<p>Другой метод для выравнивания элементов заключается с использованием свойства <code class="w3-codespan">float</code> :</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.right{<br/>
+   float: right;<br/>
+   width: 300px;<br/>
+   border: 3px solid #73AD21;<br/>
+   padding: 10px;<br/>}
+</div>
+
+</div>
+<p><strong>Совет:</strong> При выравнивании поплавка <code class="w3-codespan">float</code>,
+всегда определяйте поля <code class="w3-codespan">margin</code> и отступы <code class="w3-codespan">padding</code>
+для тела документа <code class="w3-codespan">&lt;body&gt;</code>. Что позволит избежать визуального различия в разных браузерах.</p>
+<p>Существует также проблема с IE8 и ранних версиях, при использовании поплавка <code class="w3-codespan">float</code>.
+Если отсутствует декларация <code class="w3-codespan">!DOCTYPE</code>,
+IE8 и более ранних версиях добавят поле 17 пикселей cправой стороны, в месте предназначенном для прокрутки.<br/>
+Всегда устанавливайте декларацию <code class="w3-codespan">!DOCTYPE</code> при использовании поплавка <code class="w3-codespan">float</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+body{<br/>
+   margin: 0;<br/>
+   padding: 0;<br/>}<br/><br/>
+.right{<br/>
+   float: right;<br/>
+   width: 300px;<br/>
+   background-color: #b0e0e6;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Выравнивание по центру - используя отступы</h2>
+<p>Есть много способов в CSS, чтобы установить элемент по центру по вертикали.
+Простое решение состоит в использовании верхнего и нижнего отступов с помощью свойства <code class="w3-codespan">padding</code>:</p>
+<div style="border:3px solid green;padding:70px 2px;">
+<p>Вертикальное выравнивание по центру.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.center {<br/>
+   padding: 70px 0;<br/>
+   border: 3px solid green;<br/>}
+</div>
+
+</div>
+<p>Что бы выровнить по центру, как по вертикали, так и по горизонтали,
+нужно использовать свойство отступ <code class="w3-codespan">padding</code>
+и свойство со значением выравнивание по центру <code class="w3-codespan">text-align: center</code>:</p>
+<div style="border:3px solid green;padding:70px 2px;text-align:center;">
+<p>Вертикально и горизонтально по центру.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.center {<br/>
+   padding: 70px 0;<br/>
+   border: 3px solid green;<br/>
+   text-align: center;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Выравнивание по центру - используя высоту строк</h2>
+<p>Есть еще одна хитрость, заключается в использовании свойства высоты строк <code class="w3-codespan">line-height</code>
+со значением <code class="w3-codespan">height</code>.</p>
+<div style="line-height:200px; height:200px;border:3px solid green;text-align:center;">
+<p style=" line-height:1.2; display:inline-block; vertical-align:middle;">Вертикально и горизонтально по центру.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.center {<br/>
+   line-height: 200px;<br/>
+   height: 200px;<br/>
+   border: 3px solid green;<br/>
+   text-align: center;<br/>}<br/><br/>
+/* Если текст содержит несколько строк, добавьте следующие: */<br/>
+.center p {<br/>
+   line-height: 1.5;<br/>
+   display: inline-block;<br/>
+   vertical-align: middle;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Выравнивание по центру - используя трансформацию</h2>
+<p>Если свойства <code class="w3-codespan">padding</code> и <code class="w3-codespan">line-height</code> не вариант,
+третьим решением является использование выравнивания, свойство трансформация <code class="w3-codespan">transform</code>:</p>
+<div style="line-height:200px; height:200px;border:3px solid green;text-align:center;">
+<p style=" line-height:1.2; display:inline-block; vertical-align:middle;">Вертикально и горизонтально по центру.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.center { <br/>
+   height: 200px;<br/>
+   position: relative;<br/>
+   border: 3px solid green; <br/>}<br/><br/>
+.center p {<br/>
+   margin: 0;<br/>
+   position: absolute;<br/>
+   top: 50%;<br/>
+   left: 50%;<br/>
+   transform: translate(-50%, -50%);<br/>}
+</div>
+
+</div>
+<p><strong>Совет:</strong> Вы узнаете больше о трансформации собственности в нашей .</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_align1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_align2" target="_blank">Упражнение 2 »</a>
+</div>
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

@@ -1,0 +1,287 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - формы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<p class="intro">Внешний вид HTML формы можно значительно улучшить с помощью CSS:</p>
+<div style="border-radius:5px;background-color:#f2f2f2;padding:40px;">
+<form action="/action_page.php" class="test">
+<label for="fname">Имя</label>
+<input id="fname" name="firstname" placeholder="Ваше имя.." type="text"/>
+<label for="lname">Фамилия</label>
+<input id="lname" name="lastname" placeholder="Ваша фамилия.." type="text"/>
+<label for="country">Страна</label>
+<select id="country" name="country">
+<option value="usa">Австралия</option>
+<option value="usa">Канада</option>
+<option value="usa">США</option>
+</select>
+
+</form>
+</div>
+<hr/>
+<h2>Стили полей ввода</h2>
+<p>Использовать свойство <code class="w3-codespan">width</code> для определения ширины поля ввода:</p>
+<label for="fname2">Фамилия</label>
+<input id="fname2" name="firstname" style="width:100%;" type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input
+{<br/>
+    width: 100%;<br/>
+}</div>
+
+</div>
+<p>Пример относится ко всем элементам <code class="w3-codespan">&lt;input&gt;</code>. Если вы хотите только
+установить стиль определенного типа ввода, можно использовать селекторы атрибутов:</p>
+<ul>
+<li><code class="w3-codespan">input[type=text]</code> - будут выбраны только текстовые поля</li>
+<li><code class="w3-codespan">input[type=password]</code> - будет выбирано только поля пароля</li>
+<li><code class="w3-codespan">input[type=number]</code> - будут выбраны только числовые поля</li>
+<li>и т.д...</li>
+</ul>
+<hr/>
+<h2>Дополнительные вводы</h2>
+<p>Использовать свойство <code class="w3-codespan">padding</code> для добавления пространства внутри текстового поля.</p>
+<p><strong>Совет:</strong> Если у вас есть много вводов друг за другом, Вы можете 
+также добавить <code class="w3-codespan">margin</code>, чтобы было больше места за пределами:</p>
+<label for="fname3">Имя</label>
+<input class="input1" id="fname3" name="firstname" type="text"/>
+<label for="lname3">Фамилия</label>
+<input class="input1" id="lname3" name="lastname" type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text]
+{<br/>
+    width: 100%;<br/>    padding: 12px 20px;<br/>    margin: 8px 0;<br/>    
+box-sizing: border-box;<br/>
+}</div>
+
+</div>
+<div class="w3-panel w3-note">
+<p>Обратите внимание, что мы установили свойство <code class="w3-codespan">box-sizing</code> к 
+<code class="w3-codespan">border-box</code>. Это гарантирует, что заполнение в конечном итоге границы включены в 
+общюю ширину и высоту элементов.<br/>
+Подробнее о свойстве <code class="w3-codespan">box-sizing</code> в главе .</p>
+</div>
+<hr/>
+<h2>Границы ввода</h2>
+<p>Использовать свойство <code class="w3-codespan">border</code> для изменения размера и цвета границы, и 
+свойство <code class="w3-codespan">border-radius</code> для добавления закругленных углов:</p>
+<label for="fname4">Имя</label>
+<input class="inputborder" id="fname4" name="firstname" type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text]
+{<br/>    border: 2px solid red;<br/>    
+border-radius: 4px;<br/>
+}</div>
+
+</div>
+<p>Если вам нужна только нижняя граница, используйте свойство <code class="w3-codespan">border-bottom</code>:</p>
+<label for="fname7">Имя</label>
+<input class="inputborder2" id="fname7" name="firstname" type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text]
+{<br/>    border: none;<br/>    
+border-bottom: 2px solid red;<br/>
+}</div>
+
+</div>
+<hr/>
+<h2>Цвет ввода</h2>
+<p>Использовать свойство <code class="w3-codespan">background-color</code> цвета фона ввода, 
+свойство <code class="w3-codespan">color</code> для добавления изменение цвета текста:</p>
+<input class="inputcolor" name="firstname" type="text" value="Андрей"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text]
+{<br/>    
+background-color: #3CBC8D;<br/>    color: white;<br/>
+}</div>
+
+</div>
+<hr/>
+<h2>Фокус ввода</h2>
+<p>По умолчанию некоторые браузеры добавляют синий контур вокруг ввода, когда он получает 
+фокус (щелчок мышью). Это поведение можно удалить, добавив <code class="w3-codespan">outline: none;</code> в <code class="w3-codespan">input</code>.</p>
+<p>Использовать селектор <code class="w3-codespan">:focus</code>, чтобы поле ввода, получил фокус:</p>
+<div class="w3-row-padding" style="margin-left:-16px;margin-right:-16px;">
+<div class="w3-half">
+<input class="focus1" name="firstname" type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text]:focus
+{<br/>
+    background-color: lightblue;<br/>
+}</div>
+
+</div>
+</div>
+<div class="w3-half">
+<input class="focus2" name="firstname" type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text]:focus
+{<br/>
+    border: 3px solid #555;<br/>
+}</div>
+
+</div>
+</div>
+</div>
+<hr/>
+<h2>Ввод иконка и изображение</h2>
+<p>Если вы хотите установить иконку внутри ввода, используйте свойство <code class="w3-codespan">background-image</code> и 
+расположите его в свойстве <code class="w3-codespan">background-position</code>. Также обратите внимание, что мы добавили
+большую левую прокладку для резервирования места иконки:</p>
+<input class="icon" name="search" placeholder="Поиск.." type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text]
+{<br/>    background-color: white;<br/>    background-image: url('searchicon.png');<br/>    
+background-position: 10px 10px; <br/>    background-repeat: 
+no-repeat;<br/>    
+padding-left: 40px;<br/>
+}</div>
+
+</div>
+<hr/>
+<h2>Трансформация поиска ввода</h2>
+<p>В данном примере мы используем CSS свойство <code class="w3-codespan">transition</code> оживить 
+ширину поискового ввода, когда он получает фокус. Вы узнаете больше о свойствах <code class="w3-codespan">
+transition</code> позже, в нашей главе .</p>
+<input id="myInp" name="search" placeholder="Поиск.." type="text"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=text] {<br/>    -webkit-transition: width 0.4s 
+ease-in-out;<br/>    transition: width 0.4s ease-in-out;<br/>}<br/><br/>input[type=text]:focus {<br/>    
+width: 100%;<br/>}</div>
+
+</div>
+<hr/>
+<h2>Стили текстовой области</h2>
+<p><strong>Совет:</strong> Использовать свойство <code class="w3-codespan">resize</code> 
+чтобы предотвратить изменение размера текстовой области (отключите "захват" в правом нижнем углу):</p>
+<textarea name="firstname" style="background-color:#f8f8f8;width:100%; padding:12px 20px;resize:none;
+height:150px;box-sizing:border-box;border:2px solid #ccc;border-radius:4px;">
+Некоторый текст..
+</textarea>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+textarea {<br/>    width: 100%;<br/>    height: 150px;<br/>    padding: 12px 20px;<br/>    
+box-sizing: border-box;<br/>    border: 2px solid #ccc;<br/>    
+border-radius: 4px;<br/>    background-color: #f8f8f8;<br/>    resize: none;<br/>
+}</div>
+
+</div>
+<hr/>
+<h2>Стили меню выбора</h2>
+<form class="test">
+<select id="country" name="country" style="background-color:#f1f1f1;border:none;">
+<option value="usa">Австралия</option>
+<option value="usa">Канада</option>
+<option value="usa">США</option>
+</select>
+</form>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+select
+{<br/>    width: 100%;<br/>    padding: 16px 20px;<br/>    
+border: none;<br/>    border-radius: 4px;<br/>    
+background-color: #f1f1f1;<br/>
+}</div>
+
+</div>
+<hr/>
+<h2>Стили кнопок ввода</h2>
+<input class="button" type="button" value="Кнопка"/>
+<input class="button" style="width:100%;" type="button" value="Кнопка"/>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+input[type=button], input[type=submit], input[type=reset]
+{<br/>    background-color: #4CAF50;<br/>    border: 
+none;<br/>    color: white;<br/>    padding: 
+16px 32px;<br/>    text-decoration: none;<br/>    
+margin: 4px 2px;<br/>    cursor: pointer;<br/>
+}<br/><br/>/* Совет: использовать <strong>width: 100%</strong> для кнопок полной ширины */</div>
+
+</div>
+<p>Для получения дополнительной информации о том, как стилизовать кнопки с помощью CSS, прочитайте наш .</p>
+<hr/>
+<h2>Отзывчивая форма</h2>
+<p>Измените размер окна браузера, чтобы увидеть эффект. Когда экран меньше чем 600 пикселей в ширину, 
+сделайте два столбца стек друг к другом, а не друг на друга</p>
+<div class="w3-note w3-panel">
+<p><strong>Продвинутый:</strong> В следующем примере  создать отзывчивую форму.
+Вы узнаете больше об этом в следующей главе.</p>
+</div>
+<iframe class="myfr" src="trycss_form_responsive_ifr.htm" style="margin-left:-8px;border:none;width:100%;"></iframe>
+
+<br/>
+<!--
+<hr>
+<h2>Aligned Form</h2>
+<p>An example of how to style labels together with inputs to create a horizontal aligned form:</p>
+<div>
+<label for="fname10" class="label">Имя</label>
+<input type="text" id="fname10" name="firstname" style="width:250px;padding:8px 20px; margin:8px 0">
+</div>
+<div>
+<label for="mname" class="label">Middle Name</label>
+<input type="text" id="mname" name="lastname" style="width:250px;padding:8px 20px; margin:8px 0">
+</div>
+<div>
+<label for="lname10" class="label">Last Name</label>
+<input type="text" id="lname10" name="lastname" style="width:250px;padding:8px 20px; margin:8px 0">
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+select
+{<br>&nbsp;&nbsp;&nbsp; color: green;<br>&nbsp;&nbsp;&nbsp; display: 
+inline-block;<br>&nbsp;&nbsp;&nbsp; width: 130px;<br>&nbsp;&nbsp;&nbsp; 
+text-align: right;<br>&nbsp;&nbsp;&nbsp; padding-right: 15px; <br>
+}</div>
+<a target="_blank" href="trycss_form_aligned.php" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+</div>
+-->
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

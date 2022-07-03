@@ -1,0 +1,150 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Ссылки</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<p class="intro">С помощью CSS, стили cсылок могут быть разные.</p>
+
+
+
+
+<hr/>
+<h2>Стили ссылок</h2>
+<p>Ссылки могут быть оформлены в любом свойстве CSS, например:( <code class="w3-codespan">color</code>,
+<code class="w3-codespan">font-family</code>, <code class="w3-codespan">background</code> и т.п.).</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+a {<br/>
+   color: hotpink;<br/>}
+</div>
+
+</div>
+<p>Кроме того, ссылки могут быть стилизованы по-разному в зависимости от того, в каком <strong>состоянии</strong> они находятся.</p>
+<p>Четыре соcтояния ссылок: </p>
+<ul>
+<li><code class="w3-codespan">a:link</code> - по умолчанию, непосещенная ссылка</li>
+<li><code class="w3-codespan">a:visited</code> - пользователь посетил, посещенная ссылка</li>
+<li><code class="w3-codespan">a:hover</code> - курсор мыши, при наведении на ссылку</li>
+<li><code class="w3-codespan">a:active</code> - на данный момент, нажатая ссылка</li>
+</ul>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+/* непросмотренная ссылка */<br/>
+a:link {<br/>
+   color: red;<br/>}<br/><br/>
+/* просмотренная ссылка */<br/>
+a:visited {<br/>
+   color: green;<br/>}<br/><br/>
+/* наведение мыши на ссылку */<br/>
+a:hover {<br/>
+   color: hotpink;<br/>}<br/><br/>
+/* активная ссылка */<br/>
+a:active {<br/>
+   color: blue;<br/>}
+</div>
+
+</div>
+<p>При определении стиля для нескольких состояний ссылок, есть некоторые правила порядка:</p>
+<ul>
+<li><code class="w3-codespan">a:hover</code> Должно происходить после <code class="w3-codespan">a:link</code> и <code class="w3-codespan">a:visited</code></li>
+<li><code class="w3-codespan">a:active</code> Должно происходить после <code class="w3-codespan">a:hover</code></li>
+</ul>
+<hr/>
+<h2>Оформление текста ссылки</h2>
+<p>Своиство <code class="w3-codespan">text-decoration</code> в основном используется, чтобы удалить подчеркивание ссылок:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+a:link {<br/>
+   text-decoration: none;<br/>}<br/><br/>
+a:visited {<br/>
+   text-decoration: none;<br/>}<br/><br/>
+a:hover {<br/>
+   text-decoration: underline;<br/>}<br/><br/>
+a:active {<br/>
+   text-decoration: underline;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Цвет фона ссылки</h2>
+<p>Свойство <code class="w3-codespan">background-color</code> может использоваться, чтобы указать цвет фона для ссылки:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+a:link {<br/>
+   background-color: yellow;<br/>}<br/><br/>
+a:visited {<br/>
+   background-color: cyan;<br/>}<br/><br/>
+a:hover {<br/>
+   background-color: lightgreen;<br/>}<br/><br/>
+a:active {<br/>
+   background-color: hotpink;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Дополнительно - кнопка ссылки</h2>
+<p>Этот пример демонстрирует более сложный пример, где сочетается несколько свойств CSS для отображения ссылки в виде блока/кнопок:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+a:link, a:visited {<br/>
+   background-color: #f44336;<br/>
+   color: white;<br/>
+   padding: 14px 25px;<br/>
+   text-align: center; <br/>
+   text-decoration: none;<br/>
+   display: inline-block;<br/>}<br/><br/>
+a:hover, a:active {<br/>
+   background-color: red;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Еще примеры</h2>
+<p><br/>
+Пример демонстрирует, как добавить стили для гиперссылок.</p>
+<p><br/>
+Пример, как создать, блок/кнопки.</p>
+<p><br/>
+Свойство курсор определяет вид курсора на дисплее.<br/>
+Пример демонстрирует различные типы курсоров (может быть полезно для ссылки).</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_link1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_link2" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_link3" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_link4" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

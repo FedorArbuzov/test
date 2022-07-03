@@ -1,0 +1,190 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - display</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<p class="intro">Свойство <code class="w3-codespan">display</code> наиболее важное свойство CSS для управления макетом.</p>
+<hr/>
+<h2>Свойство дисплей</h2>
+<p>Свойство <code class="w3-codespan">display</code> указывается, если/как элемент.</p>
+<p>Каждый элемент HTML имеет значение по умолчанию в зависимости от типа элемента. Значение по умолчанию для большинства элементов
+<code class="w3-codespan">display</code> устанавливается<code class="w3-codespan">block</code> или <code class="w3-codespan">inline</code></p>
+<p class="flip" onclick="myShowFunction()">Нажмите чтобы показать панель</p>
+<div id="panel">
+<p>Панель содержит элемент &lt;div&gt;, который по умолчанию скрыт (<code class="w3-codespan">display: none</code>).</p>
+<p>Стиль CSS с использованием JavaScript, показывает изменение элемента в (<code class="w3-codespan">display: block</code>).</p>
+</div>
+<hr/>
+<h2>Блочные элементы</h2>
+<p>Блочный элемент всегда начинается с новой строки и занимает всю ширину доступного (простирается влево и вправо насколько это возможно).</p>
+<div class="w3-theme-border" style="border-width:3px;border-style:solid;">
+Элемент <code class="w3-codespan">&lt;div&gt;</code> является элементом уровня блока.</div>
+<p>Примеры блочных элементов:</p>
+<ul>
+<li><code class="w3-codespan">&lt;div&gt;</code></li>
+<li><code class="w3-codespan">&lt;h1&gt;</code> - <code class="w3-codespan">&lt;h6&gt;</code></li>
+<li><code class="w3-codespan">&lt;p&gt;</code></li>
+<li><code class="w3-codespan">&lt;form&gt;</code></li>
+<li><code class="w3-codespan">&lt;header&gt;</code></li>
+<li><code class="w3-codespan">&lt;footer&gt;</code></li>
+<li><code class="w3-codespan">&lt;section&gt;</code></li>
+</ul>
+<hr/>
+<h2>Встроенные элементы</h2>
+<p>Встроенный элемент не начинается с новой строки и занимает столько ширина, сколько необходимо.</p>
+<p>Элемент <span class="w3-theme-border" style="border-width:3px;border-style:solid;">&lt;span&gt; встроенный элемент внутри</span> параграфа.</p>
+<p>Примеры встроенных элементов:</p>
+<ul>
+<li><code class="w3-codespan">&lt;span&gt;</code></li>
+<li><code class="w3-codespan">&lt;a&gt;</code></li>
+<li><code class="w3-codespan">&lt;img&gt;</code></li>
+</ul>
+<hr/>
+<h2>Скрыть и показать</h2>
+<p><code class="w3-codespan">display: none;</code> обычно используется с помощью JavaScript, чтобы скрыть и показать элементы без удаления и воссоздания их.
+Взгляните на наш последний пример на этой странице, если вы хотите знать, как этого можно достичь.</p>
+<p>Элемент <code class="w3-codespan">&lt;script&gt;</code> использует <code class="w3-codespan">display: none;</code> по умолчанию.</p>
+<hr/>
+<h2>Переопределить значение по умолчанию</h2>
+<p>Как уже говорилось, каждый элемент имеет значение по умолчанию. Однако, Вы можете переопределить его.</p>
+<p>Изменение встроенного элемента в блочный элемент, или наоборот, полезно для создания страницы выглядеть определенным образом,
+и по-прежнему следовать веб-стандартам.</p>
+<p>Типичным примером является изготовление встроенных элементов <code class="w3-codespan">&lt;li&gt;</code> для горизонтального меню:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+li {<br/>
+   display: inline;<br/>}
+</div>
+
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Установка свойства отображения элемента изменяется только тогда , <strong>когда отображается элемент</strong>
+или нет ни какого элемента. Так, встроенный элемент с <code class="w3-codespan">display: block;</code> и другие блочные элементы не разрешаются внутри него.</p>
+</div>
+<p>В следующем примере отображается элемент <code class="w3-codespan">&lt;span&gt;</code> как элемент блока:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+span {<br/>
+   display: block;<br/>}
+</div>
+
+</div>
+<p>В следующем примере отображается элемент <code class="w3-codespan">&lt;a&gt;</code> как элемент блока:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+a {<br/>
+   display: block;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Как скрыть элемент?</h2>
+<div class="w3-content test" style="max-width:800px">
+<div class="w3-row-padding w3-center" style="margin:0 -16px">
+<div class="w3-col w3-border" id="imgbox1" style="width:30%;"><p style="word-wrap: break-word;"><code class="w3-codespan" style="wrap">display:none</code></p>
+<img alt="Изображение" src="img_fjords.jpg" style="width:100%"/>
+<p><button class="w3-button w3-block w3-green" onclick="removeElement()">Удалить</button></p>
+</div>
+<div class="w3-col w3-border" id="imgbox2" style="width:30%;"><p style="word-wrap: break-word;"><code class="w3-codespan">visibility:hidden</code></p>
+<img alt="Изображение" src="img_forest.jpg" style="width:100%"/>
+<p><button class="w3-button w3-block w3-green" onclick="changeVisibility()">Скрыть</button></p>
+</div>
+<div class="w3-col w3-border" style="width:30%;"><p>Сброс</p>
+<img alt="Изображение" src="img_lights.jpg" style="width:100%"/>
+<p><button class="w3-button w3-block w3-green" onclick="resetElement()">Сбросить Все</button></p>
+</div>
+</div>
+</div>
+<script>
+function removeElement() {
+document.getElementById("imgbox1").style.display = "none";
+}
+function changeVisibility() {
+document.getElementById("imgbox2").style.visibility = "hidden";
+}
+function resetElement() {
+document.getElementById("imgbox1").style.display = "block";
+document.getElementById("imgbox2").style.visibility = "visible";
+}
+</script>
+<p>Скрытие элемента может быть сделано путем установки свойство <code class="w3-codespan">display</code> с <code class="w3-codespan">none</code>.
+Элемент будет скрыт и страница будет отображаться как будто элемент не существует:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1.hidden {<br/>
+   display: none;<br/>}
+</div>
+
+</div>
+<p><code class="w3-codespan">visibility:hidden;</code> также скрывает элемент.</p>
+<p>Однако элемент все равно занимает столько же места, сколько и раньше. Элемент будет скрыт, но влияет на макет:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+h1.hidden {<br/>
+   visibility: hidden;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Еще Примеры</h2>
+<p><br/>
+Пример демонстрирует display: none; и версию visibility: hidden;</p>
+<p><br/>
+Пример показывает, как использовать CSS и JavaScript, чтобы показать элемент по клику.</p>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_display_visibility1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_display_visibility2" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_display_visibility3" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_display_visibility4" target="_blank">Упражнение 4 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS дисплей/видимость</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:28%">Свойства</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Определяет, как элемент должен быть показан</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет, должен ли элемент быть виден</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

@@ -1,0 +1,142 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS2 Медиа Запросы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>CSS2 Введенные медиа типы</h2>
+<p>Правило <code class="w3-codespan">@media</code>  введенное в CSS2, позволило определить различные правила стиля для различных типов носителей.</p>
+<p>Примеры: Вы можете иметь один набор правил для компьютерных экранов, для 
+принтеров, для портативных приборов, для типа телевизионных приборов, и так далее.</p>
+<p>К сожалению, эти типы носителей не получали хорошей поддержки от устройств, других, чем печатного медиа типа.</p>
+<hr/>
+<h2>CSS3 Введенные медиа запросы</h2>
+<p>Медиа запросы в CSS3 расширили идею типов носителей CSS2: вместо поиска типа устройства, они смотрят на возможности устройства.</p>
+<p>Медиа запросы могут использоваться для проверки многих вещей, таких как:</p>
+<ul>
+<li>ширина и высота окна просмотра</li>
+<li>ширина и высота устройства</li>
+<li>ориентация (планшет/телефон находится в альбомном или портретном режиме?)</li>
+<li>разрешение</li>
+</ul>
+<p>Использование медиа запросов - популярный метод доставки индивидуального стиля 
+страниц для настольных компьютеров, ноутбуков, планшетов и мобильных телефонов (например, iPhone и Android телефонов).</p>
+<hr/>
+<h2>Поддержка браузеров</h2>
+<p>Числа в таблице указывают первую версию браузера, которая полностью поддерживает правило <code class="w3-codespan">@media</code>.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+<tr>
+<th style="width:25%;font-size:16px;text-align:left;">Свойство</th>
+<th class="bsChrome" style="width:15%;" title="Chrome"></th>
+<th class="bsEdge" style="width:15%;" title="Internet Explorer / Edge"></th>
+<th class="bsFirefox" style="width:15%;" title="Firefox"></th>
+<th class="bsSafari" style="width:15%;" title="Safari"></th>
+<th class="bsOpera" style="width:15%;" title="Opera"></th>
+</tr>
+<tr>
+<td style="text-align:left;">@media</td>
+<td>21.0</td>
+<td>9.0</td>
+<td>3.5</td>
+<td>4.0</td>
+<td>9.0</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Синтаксис медиа запросов</h2>
+<p>Медиа запрос носителя состоит из типа носителя и может содержать один или несколько 
+выражения, которые разрешаются в true или false.</p>
+<div class="w3-code w3-border notranslate cssHigh">
+@media не|только <i>тип носителя</i> и (<i>форма самовыражения</i>) {<i><br/>
+    CSS-Код;<br/></i>}</div>
+<p>Результатом запроса является true, если указанный тип носителя совпадает с типом устройства
+документ отображается и все выражения в запросе media - true.
+Если медиа запрос имеет значение true, соответствующие таблицы стилей или правила стиля 
+применяется в соответствии с обычными правилами каскада стилей.</p>
+<p>Если не используются операторы not или only, тип носителя является необязательным и
+<code class="w3-codespan">all</code> типы будут подразумеваться.</p>
+<p>Вы также можете иметь различные таблицы стилей для различных носителей:</p>
+<div class="w3-code w3-border notranslate htmlHigh">
+&lt;link rel="stylesheet" media="<em>mediatype</em> and|not|only (<em>expressions</em>)" 
+href="<em>print.css</em>"&gt;</div>
+<hr/>
+<h2>CSS3 медиа типы</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:25%">Значение</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>all</td>
+<td>Используется для всех устройств медиа</td>
+</tr>
+<tr>
+<td>print</td>
+<td>Используется для принтеров</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>Используется для экранов компьютеров, планшетов, смартфонов и т. д.</td>
+</tr>
+<tr>
+<td>speech</td>
+<td>Используется для чтения с экрана, который "читает" страницу вслух</td>
+</tr>
+</table>
+<hr/>
+<h2>Медиа запросы простые примеры</h2>
+<p>Один из способов использовать медиа запросы - иметь альтернативный раздел CSS прямо в вашей таблице стилей.</p>
+<p>В следующем примере цвет фона изменяется на светло-зеленый, если видимый экран имеет ширину 480 пикселей или
+шире (если видимый экран меньше 480 пикселей, цвет фона будет розовым):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+@media screen and (min-width: 480px) {<br/>
+    body {<br/>
+       background-color: lightgreen;<br/>
+    }<br/>}<br/>
+</div>
+
+</div>
+<p>В следующем примере показано меню, которое будет перемещаться слева от страницы, если 
+видимый экран имеет ширину 480 пикселей или шире (если видимый экран меньше 
+480 пикселей, меню будет поверх содержимого):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+@media screen and (min-width: 480px) {<br/>
+    #leftsidebar {width: 200px; float: left;}<br/>
+    #main {margin-left: 216px;}<br/>}<br/>
+</div>
+
+</div>
+<hr/>
+<h2>CSS3 справочник @media</h2>
+<p>Для полного обзора всех типов носителей и функций/выражений, пожалуйста, зайдите на
+.</p>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

@@ -1,0 +1,193 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Выпадающие списки</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<p class="intro">Создание CSS выпадающего списка при наведении</p>
+<hr/>
+<h2>Демонстрация: Примеров выпадающих списков</h2>
+<p>Наведите курсор на примеры ниже:</p>
+<div class="w3-row" style="margin-top:35px;margin-bottom:35px;">
+<div class="w3-third">
+<div class="dropdown dropdown2" style="position:relative;top:15px;">
+<span class="dropspan">Выпадающий Текст</span>
+<div class="dropdown-content" style="padding:8px 16px;min-width:150px;text-align:center">
+<p>Привет Мир!</p>
+</div>
+</div>
+</div>
+<div class="w3-third">
+<div class="dropdown dropdown2">
+<button class="dropbtn">Выпадающее Меню</button>
+<div class="dropdown-content">
+
+
+
+</div>
+</div>
+</div>
+<div class="w3-third">
+<div class="dropdown dropdown2">
+<span style="position:relative;bottom:15px;">Другое: </span><img alt="Пять земли" class="dropimg" height="50" src="img_5terre.jpg" width="100"/>
+<div class="dropdown-content right">
+<div class="img">
+<img alt="Пять земли" height="200" src="img_5terre.jpg" width="300"/>
+<div style="padding:15px;text-align:center;">Пять земли</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p style="clear:both"></p>
+<hr/>
+<h2>Основы выпадающего списка</h2>
+<p>Создание выпадающего списка, когда при наведении появляется элемент.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+&lt;style&gt;<br/>.dropdown {<br/>    position: relative;<br/>    
+display: inline-block;<br/>}<br/><br/>.dropdown-content {<br/>    display: 
+none;<br/>    position: absolute;<br/>    
+background-color: #f9f9f9;<br/>    min-width: 160px;<br/>    
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);<br/>    padding: 
+12px 16px;<br/>    z-index: 1;<br/>}<br/><br/>.dropdown:hover 
+.dropdown-content {<br/>    display: block;<br/>}<br/>&lt;/style&gt;<br/><br/><span class="htmlHigh">&lt;div class="dropdown"&gt;<br/>
+  &lt;span&gt;<span style="color:black;">Наведите курсор на меня</span>&lt;/span&gt;<br/>  
+&lt;div class="dropdown-content"&gt;<br/>    &lt;p&gt;<span style="color:black;">Привет Мир!</span>&lt;/p&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;</span></div>
+
+</div>
+<h3>Объяснение примера</h3>
+<p><strong>HTML)</strong> Использовать любой элемент для открытия выпадающего списка,
+например: элемент a <code class="w3-codespan">&lt;span&gt;</code>, или a <code class="w3-codespan">&lt;button&gt;</code>.</p>
+<p>Использовать элемент контейнера (например: <code class="w3-codespan">&lt;div&gt;</code>) для создания выпадающего списка и всего,
+того, что угодно вы хотите добавить внутри его.</p>
+<p>Оберните элемент <code class="w3-codespan">&lt;div&gt;</code> вокруг элементов, чтобы правильно расположить выпадающие содержимое с помощью CSS.</p>
+<p><strong>CSS)</strong> Класс <code class="w3-codespan">.dropdown</code> использует <code class="w3-codespan">position:relative</code>, 
+которая необходима, чтобы выпадающее содержимое находилось прямо под выпадающем кнопкой (с помощью <code class="w3-codespan">position:absolute</code>).</p>
+<p>Класс <code class="w3-codespan">.dropdown-content</code> содержит фактическое содержимое выпадающего списка. 
+Он скрыт по умолчанию, и будет отображаться при наведении (см. ниже).</p>
+<p><strong>Примечание:</strong> <code class="w3-codespan">min-width</code> имеет значение 160 пикселей. Не бойтесь изменить его.</p>
+<p><strong>Совет:</strong> Если вы хотите, чтобы ширина выпадающего контента была,
+как выпадающая кнопку , установите <code class="w3-codespan">width</code> в 100 процентов (и <code class="w3-codespan">overflow:auto</code> 
+включить прокрутку на маленьких экранах).</p>
+<p>Вместо использования границы мы использовали CSS свойство <code class="w3-codespan">box-shadow</code> для того, чтобы сделать 
+выпадающее меню как "карточку".</p>
+<p>Селектор <code class="w3-codespan">:hover</code> используется для отображения выпадающего меню, при перемещении 
+наведите указатель мыши на кнопку раскрывающегося списка.</p>
+<hr/>
+<h2>Выпадающее меню</h2>
+<p>Создание выпадающего меню, позволяющего пользователю выбрать параметр из списка:</p>
+<div class="dropdown dropdown2">
+<button class="dropbtn dropbtn2">Выпадающее Меню</button>
+<div class="dropdown-content">
+
+
+
+</div>
+</div>
+<p>Этот пример похож на предыдущий, за исключением того, что мы добавляем ссылки в выпадающем окне и стиль под кнопки в выпадающем стиле:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+&lt;style&gt;<br/>/* Стиль Выпадающей Кнопки */<br/>.dropbtn {<br/>    
+background-color: #4CAF50;<br/>    color: white;<br/>    
+padding: 16px;<br/>    font-size: 16px;<br/>    
+border: none;<br/>    cursor: pointer;<br/>}<br/><br/>
+/* контейнер &lt;div&gt; - необходим для размещения выпадающего содержимого */<br/>
+.dropdown {<br/>    position: relative;<br/>    display: 
+inline-block;<br/>}<br/><br/>/* Выпадающей контент (по умолчанию скрыт) */<br/>
+.dropdown-content {<br/>    display: none;<br/>    position: 
+absolute;<br/>    background-color: #f9f9f9;<br/>    
+min-width: 160px;<br/>    box-shadow: 
+0px 8px 16px 0px rgba(0,0,0,0.2);<br/>    z-index: 1;<br/>}<br/><br/>/* Ссылки внутри выпадающего списка */<br/>
+.dropdown-content a {<br/>    color: black;<br/>    
+padding: 12px 16px;<br/>    text-decoration: none;<br/>    
+display: block;<br/>}<br/><br/>/* Изменить цвет выпадающих ссылок при наведении */<br/>
+.dropdown-content a:hover {background-color: #f1f1f1}<br/><br/>/* Показать 
+выпадающее меню при наведении */<br/>.dropdown:hover .dropdown-content {<br/>    
+display: block;<br/>}<br/><br/>/* Изменить цвет фона выпадающего 
+кнопка при отображении выпадающего списка */<br/>.dropdown:hover .dropbtn {<br/>    
+background-color: #3e8e41;<br/>}<br/>&lt;/style&gt;<br/><br/><span class="htmlHigh">&lt;div class="dropdown"&gt;<br/>  &lt;button class="dropbtn"&gt;<span style="color:black;">Dropdown</span>&lt;/button&gt;<br/>  
+&lt;div class="dropdown-content"&gt;<br/>    &lt;a href="#"&gt;<span style="color:black;">Ссылка 
+1</span>&lt;/a&gt;<br/>    
+&lt;a href="#"&gt;<span style="color:black;">Ссылка 2</span>&lt;/a&gt;<br/>    &lt;a href="#"&gt;<span style="color:black;">Ссылка 3</span>&lt;/a&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;</span></div>
+
+</div>
+<hr/>
+<h2>Выпадающие спикси по правому краю</h2>
+<div class="dropdown dropdown2" style="float:left;">
+<button class="dropbtn dropbtn2">Слева</button>
+<div class="dropdown-content" style="min-width:160px;">
+
+
+
+</div>
+</div>
+<div class="dropdown dropdown2" style="float:right;">
+<button class="dropbtn dropbtn2">Справа</button>
+<div class="dropdown-content" style="min-width:160px;right:0;">
+
+
+
+</div>
+</div>
+<p style="clear:both;"></p>
+<p style="margin-top:30px;">Если вы хотите, чтобы выпадающее меню было справа налево, а не слева направо,
+добавьте <code class="w3-codespan">right: 0;</code></p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.dropdown-content {<br/>    right: 0;<br/>}<br/></div>
+
+</div>
+<hr/>
+<h2>Еще примеры</h2>
+<div class="w3-example">
+<h3>Выпадающее изображение</h3>
+<p>Как добавить изображение и другое содержимое внутри выпадающего блока.</p>
+<div class="w3-white w3-padding">
+<p>Наведите курсор на изображение:</p>
+<div class="dropdownimg" style="padding-bottom:15px;">
+<img alt="Пять земли" height="50" src="img_5terre.jpg" width="100"/>
+<div class="dropdown-contentimg">
+<img alt="Пять земли" height="200" src="img_5terre.jpg" width="300"/>
+<div class="descimg">Пять земли</div>
+</div><br/>
+</div><br/>
+</div>
+
+</div>
+<div class="w3-example">
+<h3>Выпадающая навигация</h3>
+<p>Как добавить выпадающее меню в панели навигации.</p>
+<div class="w3-white">
+<iframe src="trycss_dropdown_navbar.htm" style="width:100%;border:none;height:200px"></iframe>
+</div>
+
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

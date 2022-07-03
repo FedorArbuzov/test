@@ -1,0 +1,164 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - height и width</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<div class="w3-theme-border" style="width:100%;border-width:1px;border-style:solid;padding:10px;">
+<p>Этот элемент имеет ширину на все 100 процентов <code class="w3-codespan">width:100%</code>.</p>
+</div>
+<br/>
+
+<hr/>
+<h2>Установка высоты и ширины</h2>
+<p>Свойства <code class="w3-codespan">height</code> и <code class="w3-codespan">width</code> используются, чтобы установить высоту и ширину элемента.</p>
+<p>Свойства <code class="w3-codespan">height</code> и <code class="w3-codespan">width</code>
+могут быть установлены автоматически <code class="w3-codespan">auto</code> по умолчанию.
+Означает, что браузер вычисляет высоту и ширину, значение <em>размера</em> указано в px, cm и т.п., или в процентах (%) содержащего блока.</p>
+<div class="w3-theme-border" style="width:50%;height:200px;padding:10px;background-color:powderblue">
+Этот элемент имеет высоту 200 пикселей ширину 50 процентов
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+   height: 200px;<br/>
+   width: 50%;<br/>
+   background-color: powderblue;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-theme-border" style="height:100px;width:290px;padding:10px;background-color:powderblue">
+Этот элемент имеет высоту 100 пикселей и шириной 290 пикселей.
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+   height: 100px;<br/>
+   width: 290px;<br/>
+   background-color: powderblue;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<p><strong>Примечание:</strong> Свойства <code class="w3-codespan">height</code> и <code class="w3-codespan">width</code>
+не содержат отступы, границы и поля; они устанавливают высоту и ширину площадки внутри отступов, границ и полей для элемента!</p>
+<hr/>
+<h2>Установка максимальной ширины</h2>
+<p>Свойство <code class="w3-codespan">max-width</code> используется, чтобы установить максимальную ширину элемента.</p>
+<p>Свойство <code class="w3-codespan">max-width</code> может быть указано значение <em>размера</em> в px, cm, т.п., или в процентах (%)
+из содержащего их блока, или значение <code class="w3-codespan">none</code> по умолчанию - значит, что нет максимальной ширины.</p>
+<p>Проблема с элементом <code class="w3-codespan">&lt;div&gt;</code> выше происходит, когда окно браузера меньше ширины элемента 500 пикселей.
+После чего, браузер добавляет горизонтальную полосу прокрутки на странице.</p>
+<p>Вместо этого используйте свойство <code class="w3-codespan">max-width</code>, в данной ситуации улучшает управляемость браузера маленьких окон.</p>
+<p><strong>Совет:</strong> Изменить окно браузера меньше, чем 500 пикселей в ширину, чтобы увидеть разницу между двумя контейнерами!</p>
+<div class="w3-theme-border" style="padding:10px;background-color:powderblue;height:100px; max-width:500px;">
+Этот элемент имеет высоту 100 пикселей и максимальной шириной 500 пикселей.
+</div>
+<p><strong>Примечание:</strong> Значение <code class="w3-codespan">max-width</code> переопределяет свойство <code class="w3-codespan">width</code>.</p>
+<p>В следующем примере показан элемент <code class="w3-codespan">&lt;div&gt;</code> высота 100 пикселей и максимальная ширина 500 пикселей:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+   max-width: 500px;<br/>
+   height: 100px;<br/>
+   background-color: powderblue;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<h2>Попробуйте сами - Примеры</h2>
+<p><br/>
+В этом примере показано, как задать высоту и ширину различных элементов.</p>
+<p><br/>
+В этом примере показано, как задать высоту и ширину изображения, используя процентное значение.</p>
+<p><br/>
+В этом примере показано, как задать минимальную ширину и максимальную ширину элемента, используя пиксельное значение.</p>
+<p><br/>
+В этом примере показано, как задать минимальную высоту и максимальную высоту элемента, используя пиксельное значение.</p>
+<hr/>
+<form action="exercise.php?filename=exercise_dimension1" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<div class="exercisewindow">
+<h2>Упражнение:</h2>
+<p>Установить высоту элемента &lt;h1&gt; равным "100 пикселей".</p>
+<div class="exerciseprecontainer">
+<pre>
+&lt;style&gt;
+h1 {
+<input maxlength="6" name="ex1" style="width: 66px;"/>: 100px;
+}
+&lt;/style&gt;
+&lt;body&gt;
+&lt;h1&gt;Это заголовок&lt;/h1&gt;
+&lt;p&gt;Это параграф&lt;/p&gt;
+&lt;p&gt;Это еще один параграф&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+</div>
+<br/>
+<button class="w3-btn w3-margin-bottom" type="submit">Отправить »</button>
+</div>
+</form>
+<hr/>
+<h2>Все CSS свойства размеров</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает высоту элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает максимальную высоту элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает максимальную ширину элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает минимальную высоту элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает минимальную ширину элемента</td>
+</tr>
+<tr>
+<td></td>
+<td>Устанавливает ширину элемента</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

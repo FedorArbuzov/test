@@ -1,0 +1,82 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Макет - четкий и понятный.</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>Свойство clear</h2>
+<p>Свойство <code class="w3-codespan">clear</code> указывает ,какие элементы могут плавать рядом с очищенным элементом и с какой стороны.</p>
+<p>Свойство <code class="w3-codespan">clear</code> может иметь одно из следующих значений:</p>
+<ul>
+<li>none - разрешает плавающие элементы с обеих сторон. Это значение по умолчанию</li>
+<li>left - слева не допускаются плавающие элементы</li>
+<li>right- с правой стороны не допускаются плавающие элементы</li>
+<li>both - плавающие элементы не допускаются ни с левой, ни с правой стороны</li>
+<li>inherit - элемент наследует чистое значение своего родителя</li>
+</ul>
+<p>Наиболее распространенным способом использования свойства <code class="w3-codespan">clear</code> является использование свойства <code class="w3-codespan">float</code> для элемента.</p>
+<p>При очистке поплавков вы должны сопоставить clear с float: если элемент перемещается влево, то вы должны очистить слева. Ваш плавающий элемент будет продолжать плавать, но очищенный элемент появится под ним на веб-странице.</p>
+<p>Следующий пример очищает поплавок слева. Означает, что плавающие элементы не допускаются в левой части div:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>  clear: left;<br/>}</div>
+
+</div>
+<hr/>
+<h2>Хак clearfix</h2>
+<p>Если элемент выше элемента, содержащего его, и он плавает, он будет "переполняться" за пределами своего контейнера:</p>
+<div class="w3-border w3-padding">
+<div class="w3-row-padding" style="margin:0 -16px 32px">
+<div class="w3-half">
+<h3>Без Clearfix</h3>
+<img class="w3-image" src="../howto/clearfix_prob.jpg" style="width:100%;"/>
+</div>
+<div class="w3-half">
+<h3>С Clearfix</h3>
+<img class="w3-image" src="../howto/clearfix_solution.jpg" style="width:100%;"/>
+</div></div>
+</div>
+<p>Затем мы можем добавить <code class="w3-codespan">overflow: auto;</code> в содержащий элемент, чтобы исправить эту проблему:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.clearfix {<br/>  overflow: auto;<br/>}</div>
+
+</div>
+<p>Свойство <code class="w3-codespan">overflow: auto</code> clearfix работает хорошо, пока вы можете контролировать свои поля и отступы (иначе вы можете увидеть полосы прокрутки). Однако <strong>новый современный хак clearfix</strong> безопаснее в использовании, и следующий код используется для большинства веб-страниц:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.clearfix::after {<br/>  content: "";<br/>  clear: both;<br/>  display: table;<br/>}</div>
+
+</div>
+<div class="w3-note w3-panel">
+<p>Вы узнаете больше о псевдоэлементе <code class="w3-codespan">::after</code> в следующей главе.</p>
+</div>
+<hr/>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

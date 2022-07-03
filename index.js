@@ -79,6 +79,11 @@ app.get('/css-task/', function(req, res) {
   res.sendFile(path.join(__dirname, `/pages/css_tasks/${page}.html`));
 })
 
+app.get('/css-theory/', function(req, res) {
+  let page = req.query.page;
+  res.sendFile(path.join(__dirname, `/pages/css_theory/${page}.html`));
+})
+
 app.get('/editor-interface-js/', function(req, res) {
   res.sendFile(path.join(__dirname, '/pages/js-editor.html'));
 })

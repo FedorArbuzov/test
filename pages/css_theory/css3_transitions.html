@@ -1,0 +1,246 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Трансформация</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>CSS3 трансформация</h2>
+<p>CSS3 трансформация позволяет плавно изменять значения свойств (от одного значения к другому) в течение заданного времени.</p>
+<p><strong>Пример:</strong> Наведите курсор на элемент ниже, чтобы увидеть эффект перехода CSS:</p>
+<div style="height:90px;">
+<div class="animated_div">CSS3</div>
+</div>
+<hr/>
+<h2>Поддержка браузера трансформации</h2>
+<p>Числа в таблице указывают первую версию браузера, которая полностью поддерживает свойство.</p>
+<p>Номер, за которыми следуют <code class="w3-codespan">-webkit-</code>,<code class="w3-codespan">-moz-</code>,
+или <code class="w3-codespan">-o-</code> указывает первую версию, которая работает с префиксом.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+<tr>
+<th style="width:25%;font-size:16px;text-align:left;">Свойство</th>
+<th class="bsChrome" style="width:15%;" title="Chrome"></th>
+<th class="bsEdge" style="width:15%;" title="Internet Explorer / Edge"></th>
+<th class="bsFirefox" style="width:15%;" title="Firefox"></th>
+<th class="bsSafari" style="width:15%;" title="Safari"></th>
+<th class="bsOpera" style="width:15%;" title="Opera"></th>
+</tr>
+<tr>
+<td style="text-align:left;">transition</td>
+<td>26.0<br/>4.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>4.0 -moz-</td>
+<td>6.1<br/>3.1 -webkit-</td>
+<td>12.1<br/>10.5 -o-</td>
+</tr>
+<tr>
+<td style="text-align:left;">transition-delay</td>
+<td>26.0<br/>4.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>4.0 -moz-</td>
+<td>6.1<br/>3.1 -webkit-</td>
+<td>12.1<br/>10.5 -o-</td>
+</tr>
+<tr>
+<td style="text-align:left;">transition-duration</td>
+<td>26.0<br/>4.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>4.0 -moz-</td>
+<td>6.1<br/>3.1 -webkit-</td>
+<td>12.1<br/>10.5 -o-</td>
+</tr>
+<tr>
+<td style="text-align:left;">transition-property</td>
+<td>26.0<br/>4.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>4.0 -moz-</td>
+<td>6.1<br/>3.1 -webkit-</td>
+<td>12.1<br/>10.5 -o-</td>
+</tr>
+<tr>
+<td style="text-align:left;">transition-timing-function</td>
+<td>26.0<br/>4.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>4.0 -moz-</td>
+<td>6.1<br/>3.1 -webkit-</td>
+<td>12.1<br/>10.5 -o-</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Как использовать CSS3 трансформацию?</h2>
+<p>Чтобы создать эффект трансформации, необходимо указать две вещи:</p>
+<ul>
+<li>в свойство CSS3 добавить эффект</li>
+<li>длительность эффекта</li>
+</ul>
+<p><b>Примечание:</b> Если длительность не указана, переход не будет иметь эффекта, так как значение по умолчанию равно 0.</p>
+<p>В следующем примере показан элемент <code class="w3-codespan">100px * 100px red &lt;div&gt;</code>.
+Для элемента <code class="w3-codespan">&lt;div&gt;</code> также задан эффект перехода для свойства <code class="w3-codespan">width</code> с длительностью 2 секунды:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    width: 100px;<br/>
+    height: 100px;<br/>
+    background: red;<br/>
+    -webkit-transition: width 2s; /* Safari */<br/>
+    transition: width 2s;<br/>}
+</div>
+</div>
+<p>Эффект трансформации начнется, когда указанное CSS свойство <code class="w3-codespan">width</code> изменит значение.</p>
+<p>Теперь давайте зададим новое значение для свойства <code class="w3-codespan">width</code>,
+когда пользователь наведет курсор мыши на элемент <code class="w3-codespan">&lt;div&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div:hover {<br/>
+    width: 300px;<br/>}
+</div>
+
+</div>
+<p>Обратите внимание, что при наведении курсора мыши на элемент он постепенно возвращается к исходному стилю.</p>
+<hr/>
+<h2>Изменить несколько значений свойств</h2>
+<p>В следующем примере добавляется эффект перехода для свойства <code class="w3-codespan">width</code>
+и <code class="w3-codespan">height</code> с длительностью 2 секунд для ширины и 4 секунд для высоты:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>     -webkit-transition: width 2s, height 4s; /* Safari */<br/>
+    transition: width 2s, height 4s;<br/> }
+</div>
+
+</div>
+<hr/>
+<h2>Указать кривую скорости перехода</h2>
+<p>Свойство <code class="w3-codespan">transition-timing-function</code> определяет кривую скорости эффекта перехода.</p>
+<p>Свойство <code class="w3-codespan">transition-timing-function</code> может иметь следующие значения:</p>
+<ul>
+<li><code class="w3-codespan">ease</code> - задает эффект перехода с медленным запуском, затем быстрее, затем медленным завершением (по умолчанию)</li>
+<li><code class="w3-codespan">linear</code> - определяет эффект перехода с одинаковой скоростью от начала до конца</li>
+<li><code class="w3-codespan">ease-in</code> - задает эффект перехода с медленным запуском</li>
+<li><code class="w3-codespan">ease-out</code> - определяет эффект перехода с медленным концом</li>
+<li><code class="w3-codespan">ease-in-out</code> - задает эффект перехода с медленным началом и концом</li>
+<li><code class="w3-codespan">cubic-bezier(n,n,n,n)</code> - позволяет определить собственные значения в функции <code class="w3-codespan">cubic-bezier</code></li>
+</ul>
+<p>В следующем примере показаны некоторые из различных линии скорости, которые можно использовать:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#div1 {transition-timing-function: linear;}<br/>
+#div2 {transition-timing-function: ease;}<br/>
+#div3 {transition-timing-function: ease-in;}<br/>
+#div4 {transition-timing-function: ease-out;}<br/>
+#div5 {transition-timing-function: ease-in-out;}
+</div>
+
+</div>
+<hr/>
+<h2>Задержка эффекта перехода</h2>
+<p>Свойство <code class="w3-codespan">transition-delay</code> определяет задержку (в секундах) для эффекта перехода.</p>
+<p>В следующем примере задержка перед запуском составляет 1 секунду:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    -webkit-transition-delay: 1s; /* Safari */<br/>
+    transition-delay: 1s;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Переход + преобразование</h2>
+<p>В следующем примере также добавляется преобразование к эффекту перехода:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */<br/>
+    transition: width 2s, height 2s, transform 2s;<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Еще примеры перехода</h2>
+<p>Свойства перехода CSS3 можно задать по одному, например:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>    transition-property: width;<br/>
+    transition-duration: 2s;<br/>
+    transition-timing-function: linear;<br/>
+    transition-delay: 1s;<br/>}
+</div>
+
+</div>
+<p>или с помощью сокращенного свойства <code class="w3-codespan">transition</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+div {<br/>
+    transition: width 2s linear 1s;<br/>}
+</div>
+
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_transitions1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_transitions2" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_transitions3" target="_blank">Упражнение 3 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_transitions4" target="_blank">Упражнение 4 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_transitions5" target="_blank">Упражнение 5 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS3 перехода</h2>
+<p>В следующей таблице перечислены все свойства transition CSS:</p>
+<table class="w3-table-all notranslate">
+<tr>
+<th>Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Сокращенное свойство для установки четырех свойств перехода в одно свойство</td>
+</tr>
+<tr>
+<td></td>
+<td>Задает задержку (в секундах) для эффекта перехода</td>
+</tr>
+<tr>
+<td></td>
+<td>Указывает, сколько секунд или миллисекунд требуется для завершения эффекта перехода</td>
+</tr>
+<tr>
+<td></td>
+<td>Задает имя свойства CSS эффект перехода для</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет линию скорости эффекта перехода</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

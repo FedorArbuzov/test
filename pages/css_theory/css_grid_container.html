@@ -1,0 +1,212 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Сетка - контейнер</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<div class="grid-container">
+<div class="grid-item item1"><h1>1</h1></div>
+<div class="grid-item item2"><h1>2</h1></div>
+<div class="grid-item item3"><h1>3</h1></div>
+<div class="grid-item item4"><h1>4</h1></div>
+<div class="grid-item item5"><h1>5</h1></div>
+<div class="grid-item item6"><h1>6</h1></div>
+<div class="grid-item item7"><h1>7</h1></div>
+<div class="grid-item item8"><h1>8</h1></div>
+</div>
+<p>
+
+</p>
+<hr/>
+<h2>Контейнер сетки</h2>
+<p>Чтобы HTML элемент вел себя как контейнер сетки, необходимо задать для свойства <code class="w3-codespan">display</code>
+значение <code class="w3-codespan"><em>grid</em></code> или <code class="w3-codespan"><em>inline-grid</em></code>.</p>
+<p>Контейнеры сетки состоят из элементов сетки, расположенных внутри столбцов и строк.</p>
+<hr/>
+<h2>Свойство <code class="w3-codespan">grid-template-columns</code></h2>
+<p>Свойство <code class="w3-codespan">grid-template-columns</code> определяет 
+количество столбцов в макете сетки, и это может определить ширину каждого столбца.</p>
+<p>Значение представляет собой список, разделенный пробелами, где каждое значение определяет длину соответствующей колонки.</p>
+<p>Если вы хотите, чтобы макет сетки содержал 4 столбца, укажите ширину 4 столбцов или <code class="w3-codespan">"auto"</code>,
+если все столбцы должны иметь одинаковую ширину.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Сделать сетку с 4 столбцами:</p>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  grid-template-columns: auto auto auto auto;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-panel w3-note">
+<p><b>Примечание:</b> Если в сетке из 4 пунктов содержится более 4 столбцов, сетка будет автоматически 
+добавлять новую строку для размещения элементов.</p>
+</div>
+<p>Свойство <code class="w3-codespan">grid-template-columns</code> также можно использовать для указания размера (ширины) столбцов.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Задать размер из 4 колонок:</p>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  grid-template-columns: 80px 200px auto 40px;<br/>}
+</div>
+<p></p>
+</div>
+<hr/>
+<h2>Свойство <code class="w3-codespan">grid-template-rows</code></h2>
+<p>Свойство <code class="w3-codespan">grid-template-rows</code> определяет высоту каждой строки.</p>
+<div class="grid-container2" style="grid-template-columns:auto auto auto auto;grid-template-rows:80px 200px;">
+<div><h1>1</h1></div>
+<div><h1>2</h1></div>
+<div><h1>3</h1></div>
+<div><h1>4</h1></div>
+<div><h1>5</h1></div>
+<div><h1>6</h1></div>
+<div><h1>7</h1></div>
+<div><h1>8</h1></div>
+</div>
+<p>Значение <code class="w3-codespan">space-separated-list</code>, в котором каждое значение определяет высоту соответствующей строки:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  grid-template-rows: 80px 200px;<br/>}
+</div>
+<p></p>
+</div>
+<hr/>
+<h2>Свойство <code class="w3-codespan">justify-content</code></h2>
+<p>Свойство <code class="w3-codespan">justify-content</code> используется для выравнивания всей сетки внутри контейнера.</p>
+<div class="grid-container2" style="grid-template-columns:50px 50px 50px;justify-content: space-evenly;">
+<div><h1>1</h1></div>
+<div><h1>2</h1></div>
+<div><h1>3</h1></div>
+<div><h1>4</h1></div>
+<div><h1>5</h1></div>
+<div><h1>6</h1></div>
+</div>
+<div class="w3-panel w3-note">
+<p><b>Примечание:</b> Общая ширина сетки должна быть меньше ширины контейнера,
+чтобы свойство <code class="w3-codespan">justify-content</code> имело какой-либо эффект.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  justify-content: space-evenly;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  justify-content: space-around;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  justify-content: space-between;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">.grid-container {<br/>  display: grid;<br/>  justify-content: center;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  justify-content: start;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  justify-content: end;<br/>}
+</div>
+<p></p>
+</div>
+<hr/>
+<h2>Свойство <code class="w3-codespan">align-content</code></h2>
+<p>Свойство <code class="w3-codespan">align-content</code> используется для <em>вертикального</em> выровнивания всей сетки внутри контейнера.</p>
+<div class="w3-white notranslate w3-padding">
+<div class="grid-container2" style="height:400px;grid-template-columns:auto auto auto;align-content: center;">
+<div><h1>1</h1></div>
+<div><h1>2</h1></div>
+<div><h1>3</h1></div>
+<div><h1>4</h1></div>
+<div><h1>5</h1></div>
+<div><h1>6</h1></div>
+</div>
+</div>
+<div class="w3-panel w3-note">
+<p><b>Примечание:</b> Общая высота сетки должна быть меньше высоты контейнера,
+чтобы свойство <code class="w3-codespan">align-content</code> имело какой-либо эффект.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">.grid-container {<br/>  display: grid;<br/>  height: 400px;<br/>  align-content: center;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  height: 400px;<br/>  align-content: space-evenly;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  height: 400px;<br/>  align-content: space-around;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  height: 400px;<br/>  align-content: space-between;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  height: 400px;<br/>  align-content: start;<br/>}
+</div>
+<p></p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.grid-container {<br/>  display: grid;<br/>  height: 400px;<br/>  align-content: end;<br/>}
+</div>
+<p></p>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

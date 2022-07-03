@@ -1,0 +1,133 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Спрайты</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>Спрайты изображений</h2>
+<p>Спрайт изображения - это набор изображений, помещенных в одно изображение.</p>
+<p>Веб страница с большим количеством изображений может долго загружаться и генерироваться 
+несколько запросов к серверу.</p>
+<p>Использование спрайтов уменьшит количество запросов к серверу и сохранит 
+пропускная способность.</p>
+<hr/>
+<h2>Спрайты изображений - простой пример</h2>
+<p>Вместо трех отдельных изображений мы используем одно изображение ("img_navsprites.gif"):</p>
+<p><img alt="изображения навигации" src="img_navsprites.gif"/></p>
+<p>С помощью CSS мы можем показать только ту часть изображения, которая нам нужна.</p>
+<p>В следующем примере CSS указывает, какое изображение "img_navsprites.gif", части спрайтов нужно показать:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#home
+{<br/>
+   
+width: 46px;<br/>
+   
+height: 44px;<br/>
+   
+background: url(img_navsprites.gif) 0 0;<br/>
+}</div>
+
+</div>
+<p><b>Объяснение примера:</b></p>
+<ul>
+<li><code class="w3-codespan">&lt;img id="home" src="img_trans.gif"&gt;</code> - Определяет только небольшое прозрачное изображение 
+потому что атрибут src не может быть пустым. Отображаемое изображение будет фоновым изображением, которое мы указываем в CSS</li>
+<li><code class="w3-codespan">width: 46px; height: 44px;</code> - Определяет ту часть изображения, которую мы хотим использовать</li>
+<li><code class="w3-codespan">background: url(img_navsprites.gif) 0 0;</code> -
+Определяет фоновое изображение и его расположение (слева 0 пикселей, сверху 0 пикселей)</li>
+</ul>
+<p>Это самый простой способ использовать спрайты изображений, теперь мы хотим расширить его 
+использование ссылок и эффектов наведения.</p>
+<hr/>
+<h2>Спрайты изображений - создание списка навигации</h2>
+<p>Мы хотим использовать спрайтовое изображение ("img_navsprites.gif") создание списка навигации.</p>
+<p>Мы будем использовать список HTML, потому что это может быть ссылка, а также поддерживает фоновое изображение:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#navlist {<br/>    position: relative;<br/>}<br/>
+<br/>#navlist li {<br/>    margin: 0;<br/>    padding: 0;<br/>    list-style: none;<br/>
+    position: absolute;<br/>    top: 0;<br/>}<br/><br/>
+#navlist li, #navlist a {<br/>    height: 44px;<br/>    display: block;<br/>}<br/>
+<br/>#home {<br/>    left: 0px;<br/>    width: 46px;<br/>    background: url('img_navsprites.gif') 
+0 0;<br/>}<br/><br/>#prev {<br/>    left: 63px;<br/>    width: 43px;<br/>
+    background: url('img_navsprites.gif') -47px 0;<br/>}<br/>
+<br/>#next {<br/>    left: 129px;<br/>    width: 43px;<br/>    background: url('img_navsprites.gif') 
+-91px 0;<br/>}
+</div>
+
+</div>
+<p><b>Объяснение примера:</b></p>
+<ul>
+<li><code class="w3-codespan">#navlist {position:relative;}</code> - положение установлено по отношению абсолютного расположени внутри его</li>
+<li><code class="w3-codespan">#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;}</code> - 
+для полей и отступов задано значение 0, стиль списка удаляется, а все элементы списка располагаются в абсолютном порядке</li>
+<li><code class="w3-codespan">#navlist li, #navlist a {height:44px;display:block;}</code> - высота всех изображений 44px</li>
+</ul>
+<p>Теперь зададим позицию и стиль для каждой конкретной части:</p>
+<ul>
+<li><code class="w3-codespan">#home {left:0px;width:46px;}</code> - Расположен полностью влево, а ширина изображения 46 пикселей</li>
+<li><code class="w3-codespan">#home {background:url(img_navsprites.gif) 0 0;}</code> -
+Определяет фоновое изображение и его положение (слева 0 пикселей, сверху 0 пикселей)</li>
+<li><code class="w3-codespan">#prev {left:63px;width:43px;}</code> -
+Расположенный вправо 63px (#home ширина 46px + некоторое дополнительное пространство между элементами), а ширина 43 пикселей.</li>
+<li><code class="w3-codespan">#prev {background:url('img_navsprites.gif') -47px 0;}</code> -
+Определяет фоновое изображение справа 47px (#home ширина 46px + 1px делитель линии)</li>
+<li><code class="w3-codespan">#next {left:129px;width:43px;}</code> -
+Расположенный справа 129px (сначало: #prev 63px + #prev ширина 43px + дополнительное место), а ширина 43 пикселей.</li>
+<li><code class="w3-codespan">#next {background:url('img_navsprites.gif') -91px 0;}</code> -
+Определяет фоновое изображение справа 91 пикселей (#home ширина 4 пикселей + 1 пикселей делитель линии + #prev ширина 43 пикселей + 1 пикселей делитель линии)</li>
+</ul>
+<hr/>
+<h2>Спрайты изображений - эффект наведения</h2>
+<p>Теперь мы хотим добавить эффект наведения в наш список навигации.</p>
+<div class="w3-panel w3-note">
+<p><strong>Совет:</strong> Селектор <code class="w3-codespan">:hover</code> можно использовать для всех элементов, а не только для ссылок.</p>
+</div>
+<p>Новое изображение ("img_navsprites_hover.gif") содержит три изображения навигации 
+и три изображения для использования эффектов наведения:</p>
+<p><img alt="навигационные изображения" src="img_navsprites_hover.gif"/></p>
+<p>Поскольку это один единственный образ, а не шесть отдельных файлов, не будет <b>задержки загрузки</b> 
+при наведении указателя мыши на изображение.</p>
+<p>Добавляем только три строки кода, чтобы добавить эффект наведения:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#home a:hover {<br/>    background: url('img_navsprites_hover.gif') 0 -45px;<br/>}<br/>
+<br/>#prev a:hover {<br/>    background: url('img_navsprites_hover.gif') -47px 
+-45px;<br/>}<br/><br/>#next a:hover {<br/>    background: url('img_navsprites_hover.gif') -91px 
+-45px;<br/>}</div>
+
+</div>
+<p><b>Объяснение примера:</b></p>
+<ul>
+<li><code class="w3-codespan">#home a:hover {background: transparent url('img_navsprites_hover.gif') 0 -45px;}</code>
+- Для всех трех изображений при наведении указываем одну и ту же позицию фона, только 45px дальше внизу</li>
+</ul>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

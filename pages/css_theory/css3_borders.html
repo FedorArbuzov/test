@@ -1,0 +1,153 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 Закругленные Уголы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<div class="w3-theme-border" style="border-width:3px;border-style:solid;margin-top:20px;font-size:15px;padding:25px;border-radius:25px;">
+<h2>CSS3 Закругленные уголы границ</h2>
+<p>CSS3 свойству <code class="w3-codespan">border-radius</code>, можно придать любой элемент "закругленных углов".</p>
+</div>
+<hr/>
+<h2>CSS3 Свойство <code class="w3-codespan">border-radius</code></h2>
+<p>CSS3 свойство <code class="w3-codespan">border-radius</code> определяет радиус угла элемента.</p>
+<p><strong>Совет:</strong> Это свойство позволяет добавлять закругленные границы к элементам!</p>
+<p>Вот три примера:</p>
+<p>1. Закругленные углы для элемента с заданным цветом фона:</p>
+<p class="w3-theme" id="rcorners1">Закругленные уголы!</p>
+<p>2. Закругленные углы для элемента с границей:</p>
+<p class="w3-theme-border" id="rcorners2">Закругленные уголы!</p>
+<p>3. Закругленные углы для элемента с фоновым изображением:</p>
+<p id="rcorners3">Закругленные уголы!</p>
+<p>Вот код:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#rcorners1 {<br/>    border-radius: 25px;<br/>    
+background: #73AD21;<br/>    padding: 20px; <br/>    
+width: 200px;<br/>    height: 150px; <br/>}<br/><br/>#rcorners2 {<br/>    
+border-radius: 25px;<br/>    border: 2px solid #73AD21;<br/>    
+padding: 20px; <br/>    width: 200px;<br/>    
+height: 150px; <br/>}<br/><br/>#rcorners3 {<br/>    
+border-radius: 25px;<br/>    background: url(paper.gif);<br/>    
+background-position: left top;<br/>    background-repeat: 
+repeat;<br/>    padding: 20px; <br/>    width: 
+200px;<br/>    height: 150px; <br/>} </div>
+
+</div>
+<div class="w3-panel w3-note">
+<p><b>Совет:</b> свойство <code class="w3-codespan">border-radius</code> сокращенное свойство для свойств
+<code class="w3-codespan">border-top-left-radius</code>, <code class="w3-codespan">border-top-right-radius</code>,
+<code class="w3-codespan">border-bottom-right-radius</code> и <code class="w3-codespan">border-bottom-left-radius</code>.</p>
+</div>
+<hr/>
+<h2>CSS3 закругленные границы - каждый угол</h2>
+<p>Свойство <code class="w3-codespan">border-radius</code> может иметь от одного до четырех значений.</p>
+<p>Вот правила: <strong>Четыре свойства</strong> - <code class="w3-codespan">border-radius: 15px 50px 30px 5px;</code>
+(первое значение применяется к верхнему левому углу, второе значение применяется к верхнему правому углу, 
+третье значение применяется к нижнему правому углу, а четвертое - к нижниму левому уголу):</p>
+<p class="w3-theme" id="rcorners4"></p>
+<p><strong>Три свойства</strong> - <code class="w3-codespan">border-radius: 15px 50px 30px;</code>
+(первое значение применяется к верхнему левому углу, второе значение применяется к верхнему правому и нижнему левому углы,
+и третье значение применяется к нижнему правому углу):</p>
+<p class="w3-theme" id="rcorners5"></p>
+<p><strong>Два свойства</strong> - <code class="w3-codespan">border-radius: 15px 50px;</code>
+(первое значение применяется для верхнего левого и нижнего правого углов,
+а второе значение применяется к верхнему правому и нижниму левому углы):</p>
+<p class="w3-theme" id="rcorners6"></p>
+<p><strong>Одно свойство</strong> - <code class="w3-codespan">border-radius: 15px;</code>
+(значение применяется ко всем четырем углам, которые будут закруглены одинаково:</p>
+<p class="w3-theme" id="rcorners7"></p>
+<p>Вот код:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#rcorners1 {<br/>    border-radius: 15px 50px 30px 5px;<br/>    
+background: #73AD21;<br/>    padding: 20px; <br/>    
+width: 200px;<br/>    height: 150px; <br/>}<br/><br/>#rcorners2 {<br/>    
+border-radius: 15px 50px 30px;<br/>    background: #73AD21;<br/>    
+padding: 20px; <br/>    width: 200px;<br/>    
+height: 150px; <br/>}<br/><br/>#rcorners3 {<br/>    
+border-radius: 15px 50px;<br/>    background: #73AD21;<br/>    
+padding: 20px; <br/>    width: 200px;<br/>    
+height: 150px; <br/>}<br/><br/>#rcorners4 {<br/>    
+border-radius: 15px;<br/>    background: #73AD21;<br/>    
+padding: 20px; <br/>    width: 200px;<br/>    
+height: 150px; <br/>} </div>
+
+</div>
+<p>Можно также, создать эллиптические углы:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#rcorners1 {<br/>    border-radius: 50px / 15px;<br/>    
+background: #73AD21;<br/>    padding: 20px; <br/>    
+width: 200px;<br/>    height: 150px; <br/>}<br/><br/>#rcorners2 {<br/>    
+border-radius: 15px / 50px;<br/>    background: #73AD21;<br/>    
+padding: 20px; <br/>    width: 200px;<br/>    
+height: 150px; <br/>}<br/><br/>#rcorners3 {<br/>    
+border-radius: 50%;<br/>    background: #73AD21;<br/>    
+padding: 20px; <br/>    width: 200px;<br/>    
+height: 150px;<br/>} </div>
+
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_borders1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_borders2" target="_blank">Упражнение 2 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS3 закругленных углов</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:30%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Сокращенное свойство для установки всех четырех свойств border-*-*-radius</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет форму границы верхнего левого угла</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет форму границы верхнего правого угла</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет форму границы нижнего правого угла</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет форму границы нижнего левого угла</td>
+</tr>
+</table>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

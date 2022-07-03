@@ -1,0 +1,254 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main"><div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - СSS3 3D Трансформация</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>CSS3 трансформация</h2>
+<p>CSS3 позволяет форматировать элементы с помощью 3D-трансформации.</p>
+<p>Наведите мышь на элементы, чтобы увидеть разницу между 2D и 3D-трансформации:</p>
+<div style="height:80px;">
+<div id="rotate2D" onmouseover="rotateDIV()">2D вращать</div>
+<div id="rotate3D" onmouseover="rotateYDIV()">3D вращать</div>
+</div>
+<hr/>
+<h2>Поддержка 3D-трансформации в браузере</h2>
+<p>Числа в таблице указывают первую версию браузера, которая полностью поддерживает свойство.</p>
+<p>Номер, за которыми следуют <code class="w3-codespan">-webkit-</code>,<code class="w3-codespan">-moz-</code>,
+или <code class="w3-codespan">-o-</code> указывает первую версию, которая работает с префиксом.</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+<tr>
+<th style="width:25%;font-size:16px;text-align:left;">Свойство</th>
+<th class="bsChrome" style="width:15%;" title="Chrome"></th>
+<th class="bsEdge" style="width:15%;" title="Internet Explorer / Edge"></th>
+<th class="bsFirefox" style="width:15%;" title="Firefox"></th>
+<th class="bsSafari" style="width:15%;" title="Safari"></th>
+<th class="bsOpera" style="width:15%;" title="Opera"></th>
+</tr>
+<tr>
+<td style="text-align:left;">transform</td>
+<td>36.0<br/>12.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>10.0 -moz-</td>
+<td>9.0<br/>4.0 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-</td>
+</tr>
+<tr>
+<td style="text-align:left;">transform-origin<br/>(three-value syntax)</td>
+<td>36.0<br/>12.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>10.0 -moz-</td>
+<td>9.0<br/>4.0 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-</td>
+</tr>
+<tr>
+<td style="text-align:left;">transform-style</td>
+<td>36.0<br/>12.0 -webkit-</td>
+<td>11.0</td>
+<td>16.0<br/>10.0 -moz-</td>
+<td>9.0<br/>4.0 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-</td>
+</tr>
+<tr>
+<td style="text-align:left;">perspective</td>
+<td>36.0<br/>12.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>10.0 -moz-</td>
+<td>9.0<br/>4.0 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-</td>
+</tr>
+<tr>
+<td style="text-align:left;">perspective-origin</td>
+<td>36.0<br/>12.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>10.0 -moz-</td>
+<td>9.0<br/>4.0 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-</td>
+</tr>
+<tr>
+<td style="text-align:left;">backface-visibility</td>
+<td>36.0<br/>12.0 -webkit-</td>
+<td>10.0</td>
+<td>16.0<br/>10.0 -moz-</td>
+<td>9.0<br/>4.0 -webkit-</td>
+<td>23.0<br/>15.0 -webkit-</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>CSS3 3D трансформация</h2>
+<p>В этой главе вы узнаете о следующих методах 3D трансформации:</p>
+<ul>
+<li><code class="w3-codespan">rotateX()</code></li>
+<li><code class="w3-codespan">rotateY()</code></li>
+<li><code class="w3-codespan">rotateZ()</code></li>
+</ul>
+<hr/>
+<h2>Метод <code class="w3-codespan">rotateX()</code></h2>
+<img alt="Вращать X" src="transform_rotatex.gif"/><br/><br/>
+<p>Метод <code class="w3-codespan">rotateX()</code> вращает элемент вокруг своей оси X в заданной степени:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#myDiv {<br/>
+    -webkit-transform: rotateX(150deg); /* Safari */<br/>
+    transform: rotateX(150deg);<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">rotateY()</code></h2>
+<img alt="Вращать Y" src="transform_rotatey.gif"/><br/><br/>
+<p>Метод <code class="w3-codespan">rotateY()</code> вращает элемент вокруг своей оси Y в заданной степени:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#myDiv {<br/>
+    -webkit-transform: rotateY(130deg); /* Safari */<br/>
+    transform: rotateY(130deg);<br/>}
+</div>
+
+</div>
+<hr/>
+<h2>Метод <code class="w3-codespan">rotateZ()</code></h2>
+<p>Метод <code class="w3-codespan">rotateZ()</code> вращает элемент вокруг своей оси Z в заданной степени:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+#myDiv {<br/>
+    -webkit-transform: rotateZ(90deg); /* Safari */<br/>
+    transform: rotateZ(90deg);<br/>}
+</div>
+
+</div>
+<hr/>
+<div class="w3-container w3-dark-grey w3-padding">
+<h2>Проверьте себя с помощью упражнений!</h2>
+<div class="w3-bar w3-margin-bottom">
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_3dtransforms1" target="_blank">Упражнение 1 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_3dtransforms2" target="_blank">Упражнение 2 »</a> 
+<a class="w3-bar-item w3-btn w3-hover-light-grey" href="/css-task?page=exercise_css3_3dtransforms3" target="_blank">Упражнение 3 »</a>
+</div>
+</div>
+<hr/>
+<h2>Свойства CSS3 трансформации</h2>
+<p>Метод в следующей таблице перечислены все свойства 3D трансформации:</p>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:22%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td></td>
+<td>Применяется 2D или 3D-трансформация к элементу</td>
+</tr>
+<tr>
+<td></td>
+<td>Позволяет изменять положение трансформации элементов</td>
+</tr>
+<tr>
+<td></td>
+<td>Задает способ отображения вложенных элементов в 3D-трансформации</td>
+</tr>
+<tr>
+<td></td>
+<td>Задает представление о том, как 3D-элементы трансформируются</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет нижнее положение элементов 3D</td>
+</tr>
+<tr>
+<td></td>
+<td>Определяет, должен ли элемент быть видимым, когда он не обращен к экрану</td>
+</tr>
+</table>
+<h2>3D Методы Трансформации</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:22%">Функция</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>matrix3d<br/>
+(<i>n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n</i>)</td>
+<td>Определяет 3D трансформацию, использование matrix 4x4 из 16 значений</td>
+</tr>
+<tr>
+<td>translate3d(<i>x,y,z</i>)</td>
+<td>Определяет 3D трансформацию</td>
+</tr>
+<tr>
+<td>translateX(<i>x</i>)</td>
+<td>Определяет 3D трансформацию, используя только значение для оси X</td>
+</tr>
+<tr>
+<td>translateY(<i>y</i>)</td>
+<td>Определяет 3D трансформацию, используя только значения для оси Y</td>
+</tr>
+<tr>
+<td>translateZ(<i>z</i>)</td>
+<td>Определяет 3D трансформацию, используя только значения оси Z</td>
+</tr>
+<tr>
+<td>scale3d(<i>x,y,z</i>)</td>
+<td>Определяет масштаб 3D трансформации </td>предоставляя
+</tr>
+<tr>
+<td>scaleX(<i>x</i>)</td>
+<td>Определяет масштаб 3D трансформации используя значение для оси X</td>
+</tr>
+<tr>
+<td>scaleY(<i>y</i>)</td>
+<td>Определяет масштаб 3D трансформации  используя значение для оси Y</td>
+</tr>
+<tr>
+<td>scaleZ(<i>z</i>)</td>
+<td>Определяет масштаб 3D трансформации используя значение для оси Z</td>
+</tr>
+<tr>
+<td>rotate3d(<i>x,y,z,angle</i>)</td>
+<td>Определяет 3D вращение</td>
+</tr>
+<tr>
+<td>rotateX(<i>angle</i>)</td>
+<td>Определяет 3D вращение вдоль оси X</td>
+</tr>
+<tr>
+<td>rotateY(<i>angle</i>)</td>
+<td>Определяет 3D вращение вдоль оси Y</td>
+</tr>
+<tr>
+<td>rotateZ(<i>angle</i>)</td>
+<td>Определяет 3D вращение вдоль оси Z</td>
+</tr>
+<tr>
+<td>perspective(<i>n</i>)</td>
+<td>Определяет перспективный вид для элемента 3D трансформации</td>
+</tr>
+</table>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

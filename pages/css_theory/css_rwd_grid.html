@@ -1,0 +1,187 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS3 Адаптивный веб дизайн - Вид сетки</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>Что такое вид-сетка?</h2>
+<p>Многие веб страницы основаны на "вид сетки", означает, что страница разделена на столбцы:</p>
+<div class="gridcontainer">
+<div class="gridwrapper">
+<div class="gridcontent" style="border-left:1px solid grey;"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+<div class="gridcontent"></div>
+</div>
+</div>
+<br/>
+<p>Использование табличного представления очень полезно при проектировании веб страниц. Это упрощает размещение элементов на странице.</p>
+<div style="position:relative">
+<div style="position:absolute;opacity:0.9;width:auto;left:0;right:0;">
+<div class="gridcontainer">
+<div class="gridwrapper" style="height:90px;">
+<div class="gridcontent" style="width:100%;background:#9933cc;border-right-color:transparent;">
+</div>
+</div>
+<div class="gridwrapper" style="height:230px;">
+<div class="gridcontent" style="background-color:#ffffff;border:none;width:25%;padding-top:15px;">
+<div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;"></div>
+<div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;"></div>
+<div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;"></div>
+<div style="background-color:#33b5e5;border:none;width:100%;height:15%;"></div>
+</div>
+<div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border:none;width:25%;padding-top:15px;">
+<div style="background-color:#33b5e5;border:none;width:100%;height:92%;"></div>
+</div>
+</div>
+<div class="gridwrapper" style="height:50px;">
+<div class="gridcontent" style="width:100%;background:#0099cc;border-right-color:transparent;">
+</div>
+</div>
+</div>
+</div>
+<div class="gridcontainer" style="opacity:0.1;">
+<div class="gridwrapper" style="height:370px;">
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;border-left:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+<div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+</div>
+</div>
+</div>
+<br/>
+<p>Отзывчивый вид сетки имеет 12 столбцов, общая ширина 100 пикселей, и она будет сокращаться и расширяться по мере изменения размера окна браузера.</p>
+<p></p>
+<hr/>
+<h2>Построение адаптивного вида сетки</h2>
+<p>Давайте начнем строить отзывчивый вид сетки.</p>
+<p>Сначала убедитесь, что все HTML-элементы имеют свойство <code class="w3-codespan">box-sizing</code> установлено значение 
+<code class="w3-codespan">border-box</code>.
+Это гарантирует, что отступы и границы включены в общую ширину и высоту элементов.</p>
+<p>Добавьте следующий код в CSS:</p>
+<div class="w3-code w3-border notranslate cssHigh">
+* {<br/>    box-sizing: border-box;<br/>}
+</div>
+<p>Подробнее о свойствах <code class="w3-codespan">box-sizing</code> в нашей  главе .</p>
+<p>В следующем примере показана простая адаптивная веб страница с двумя столбцами:</p>
+<div class="w3-row-padding" style="margin:0 -9px">
+<div class="w3-col s3 w3-light-grey w3-border w3-display-container" style="height:70px"><div class="w3-display-middle">25%</div></div>
+<div class="w3-col s9 w3-light-grey w3-border w3-display-container" style="height:70px"><div class="w3-display-middle">75%</div></div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.menu {<br/>    width: 25%;<br/>    float: left;<br/>}<br/>
+.main {<br/>    width: 75%;<br/>    float: left;<br/>}<br/></div>
+
+</div>
+<p>Приведенный выше пример подходит, если веб страница содержит только два столбца.</p>
+<p>Тем не менее, мы хотим использовать отзывчивый вид сетки с 12 столбцами, чтобы иметь больше 
+контроля над веб страницей.</p>
+<p>Сначала мы должны вычислить процент для одного столбца: 100 процентов / 12 столбцов = 8.33 процентов.</p>
+<p>Тогда мы сделаем отдельный класс для каждого из 12 столбцов, <code class="w3-codespan">class="col-"</code> и номер 
+определит количество столбцов в разделе:</p>
+<div class="w3-example">
+<h3>CSS:</h3>
+<div class="w3-code notranslate cssHigh">
+.col-1 {width: 8.33%;}<br/>.col-2 {width: 16.66%;}<br/>.col-3 {width: 25%;}<br/>
+.col-4 {width: 33.33%;}<br/>.col-5 {width: 41.66%;}<br/>.col-6 {width: 50%;}<br/>
+.col-7 {width: 58.33%;}<br/>.col-8 {width: 66.66%;}<br/>.col-9 {width: 75%;}<br/>
+.col-10 {width: 83.33%;}<br/>.col-11 {width: 91.66%;}<br/>.col-12 {width: 
+100%;}</div>
+
+</div>
+<p>Все эти столбцы должны плавать влево и иметь отступ 15 пикслей:</p>
+<div class="w3-example">
+<h3>CSS:</h3>
+<div class="w3-code notranslate cssHigh">
+[class*="col-"] {<br/>    float: left;<br/>
+    padding: 15px;<br/>    border: 1px solid red;<br/>}
+</div>
+</div>
+<p>Каждая строка должна быть обернута в <code class="w3-codespan">&lt;div&gt;</code>.
+Количество колонок внутри строки всегда должна быть до 12:</p>
+<div class="w3-example">
+<h3>HTML:</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="row"&gt;<br/>
+  &lt;div class="col-3"&gt;...&lt;/div&gt; &lt;!-- 25% --&gt;<br/>
+  &lt;div class="col-9"&gt;...&lt;/div&gt; &lt;!-- 75% --&gt;<br/>&lt;/div&gt;
+</div>
+</div>
+<p>Столбцы внутри строки все плавают влево, и поэтому 
+вынимаются из потока страницы, а остальные элементы размещаются так,
+как будто столбцов не существует. Чтобы предотвратить это, мы 
+добавили стиль, который очищает поток:</p>
+<div class="w3-example">
+<h3>CSS:</h3>
+<div class="w3-code notranslate cssHigh">
+.row::after {<br/>    content: "";<br/>
+    clear: both;<br/>    display: table;<br/>}
+</div>
+</div>
+<p>Мы также хотим добавить некоторые стили и цвета, чтобы сделать его лучше:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+html {<br/>    font-family: "Lucida Sans", sans-serif;<br/>}<br/>
+.header {<br/>    background-color: #9933cc;<br/>
+    color: #ffffff;<br/>    padding: 15px;<br/>}<br/>.menu ul {<br/>
+    list-style-type: none;<br/>    margin: 0;<br/>
+    padding: 0;<br/>}<br/>.menu li {<br/>    padding: 8px;<br/>
+    margin-bottom: 7px;<br/>    background-color :#33b5e5;<br/>
+    color: #ffffff;<br/>    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);<br/>}<br/>
+.menu li:hover {<br/>    background-color: #0099cc;<br/>}
+</div>
+
+</div>
+<div class="w3-panel w3-note">
+<p><strong>Внимание</strong>, при изменении размера окна браузера до очень малой ширины, веб страница в примере выглядит не очень хорошо.</p>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>

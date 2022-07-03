@@ -1,0 +1,455 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        
+<html>
+<head>
+<link href="w3.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>CSS - Контейнер Flexbox</h1>
+<hr/>
+<div class="w3-clear nextprev">
+
+
+</div>
+<hr/>
+<h2>Родительский элемент (контейнер)</h2>
+<p>Как мы указывали в предыдущей главе, это гибкий <strong>контейнер</strong> (синяя область) с тремя гибкими <strong>элементами</strong>:</p>
+<div class="flex-container2">
+<div class="flex-item2"><h1>1</h1></div>
+<div class="flex-item2"><h1>2</h1></div>
+<div class="flex-item2"><h1>3</h1></div>
+</div>
+<p>Гибкий контейнер становится гибким, если задать свойству <code class="w3-codespan">display</code> значение <em>flex</em>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>}</div>
+<p>
+</p>
+
+</div>
+<p>Свойства контейнера flex:</p>
+<ul style="font-size:16px;font-family:consolas,'Courier New', Courier, monospace">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство flex-direction</h2>
+<p>Свойство <code class="w3-codespan">flex-direction</code> определяет, в каком направлении контейнер хочет складывать гибкие элементы.</p>
+<div class="flex-container2" style="flex-direction:column">
+<div class="flex-item2"><h1>1</h1></div>
+<div class="flex-item2"><h1>2</h1></div>
+<div class="flex-item2"><h1>3</h1></div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>column</em> складывает элементы flex вертикально (сверху вниз):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-direction: column;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>column-reverse</em> складывает элементы flex вертикально (но снизу вверх):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-direction: column-reverse;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>row</em> складывает гибкие элементы горизонтально (слева направо):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-direction: row;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>row-reverse</em> складывает элементы flex горизонтально (но справа налево):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-direction: row-reverse;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство flex-wrap</h2>
+<p>Свойство <code class="w3-codespan">flex-wrap</code> указывает, должны ли элементы flex переноситься или нет.</p>
+<p>В приведенных ниже примерах есть 12 гибких элементов, чтобы лучше продемонстрировать <code class="w3-codespan">flex-wrap</code> это свойство.</p>
+<div class="flex-container2" style="flex-wrap:wrap">
+<div class="flex-item2"><h1>1</h1></div>
+<div class="flex-item2"><h1>2</h1></div>
+<div class="flex-item2"><h1>3</h1></div>
+<div class="flex-item2"><h1>4</h1></div>
+<div class="flex-item2"><h1>5</h1></div>
+<div class="flex-item2"><h1>6</h1></div>
+<div class="flex-item2"><h1>7</h1></div>
+<div class="flex-item2"><h1>8</h1></div>
+<div class="flex-item2"><h1>9</h1></div>
+<div class="flex-item2"><h1>10</h1></div>
+<div class="flex-item2"><h1>11</h1></div>
+<div class="flex-item2"><h1>12</h1></div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>wrap</em> указывает, что элементы flex будут переноситься при необходимости:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-wrap: wrap;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>nowrap</em> указывает, что элементы flex не будут переноситься (это по умолчанию):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-wrap: nowrap;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>wrap-reverse</em> указывает, что гибкие элементы будут переноситься при необходимости в обратном порядке:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-wrap: wrap-reverse;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство flex-flow</h2>
+<p>Свойство <code class="w3-codespan">flex-flow</code> является сокращенным свойством для установки свойств <code class="w3-codespan">flex-direction</code> и <code class="w3-codespan">flex-wrap</code>.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+flex-flow: row wrap;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство justify-content</h2>
+<p>Свойство <code class="w3-codespan">justify-content</code> используется для выравнивания элементов flex:</p>
+<div class="flex-container2" style="justify-content:center">
+<div class="flex-item2"><h1>1</h1></div>
+<div class="flex-item2"><h1>2</h1></div>
+<div class="flex-item2"><h1>3</h1></div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>center</em> выравнивает элементы flex по центру контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+justify-content: center;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>flex-start</em> выравнивает элементы flex в начале контейнера (по умолчанию):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+justify-content: flex-start;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>flex-end</em> выравнивает элементы flex в конце контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+justify-content: flex-end;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>space-around</em> отображает элементы flex с пробелами до, между и после строк:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+justify-content: space-around;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>space-between</em>  отображает элементы flex с пробелом между строками:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  
+justify-content: space-between;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство align-items</h2>
+<p>Свойство <code class="w3-codespan">align-items</code> используется для выравнивания элементов flex.</p>
+<div class="flex-container2" style="align-items:center;height:200px;">
+<div class="flex-item2"><h1>1</h1></div>
+<div class="flex-item2"><h1>2</h1></div>
+<div class="flex-item2"><h1>3</h1></div>
+</div>
+<p>В этих примерах мы используем контейнер высотой 200 пикселей, чтобы лучше продемонстрировать свойство <code class="w3-codespan">
+align-items</code>.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>center</em> выравнивает элементы flex в середине контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 200px;<br/>  
+align-items: center;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>flex-start</em> выравнивает элементы flex в верхней части контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 200px;<br/>  
+align-items: flex-start;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>flex-end</em> выравнивает гибкие элементы в нижней части контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 200px;<br/>  
+align-items: flex-end;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>stretch</em> растягивает гибкие элементы, чтобы заполнить контейнер (это по умолчанию):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 200px;<br/>  
+align-items: stretch;<br/>}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>baseline</em> выравнивает элементы flex так же, как выравниваются их базовые линии:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 200px;<br/>  
+align-items: baseline;<br/>}
+</div>
+<p><strong>Примечание:</strong> в примере используется другой размер шрифта, чтобы продемонстрировать, что элементы выравниваются по базовой линии текста:</p>
+<div class="w3-white notranslate w3-padding">
+<div style="position:relative;">
+<hr style="position:absolute;color:red;background-color:red;border-color:red;top:42px;width:100%"/>
+</div>
+<div class="flex-container2" style="align-items:baseline;height:100px;">
+<div class="flex-item2"><h1>1</h1></div>
+<div class="flex-item2"><h6>2</h6></div>
+<div class="flex-item2"><h3>3</h3></div>
+<div class="flex-item2"><small>4</small></div>
+</div>
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<div class="anchor-container"></div>
+<h2>Свойство align-content</h2>
+<p>Свойство <code class="w3-codespan">align-content</code> используется для выравнивания гибких линий.</p>
+<div class="flex-container2" style="flex-wrap:wrap;align-content:space-between;height:300px;">
+<div class="flex-item2"><h1>1</h1></div>
+<div class="flex-item2"><h1>2</h1></div>
+<div class="flex-item2"><h1>3</h1></div>
+<div class="flex-item2"><h1>4</h1></div>
+<div class="flex-item2"><h1>5</h1></div>
+<div class="flex-item2"><h1>6</h1></div>
+<div class="flex-item2"><h1>7</h1></div>
+<div class="flex-item2"><h1>8</h1></div>
+<div class="flex-item2"><h1>9</h1></div>
+<div class="flex-item2"><h1>10</h1></div>
+<div class="flex-item2"><h1>11</h1></div>
+<div class="flex-item2"><h1>12</h1></div>
+</div>
+<p>В этих примерах мы используем контейнер высотой 600 пикселей со свойством flex-wrap, установленным для <em>wrap</em>, чтобы лучше продемонстрировать <code class="w3-codespan">align-content</code> это свойство.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>space-between</em> отображает гибкие линии с равным расстоянием между ними:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 600px;<br/>  
+flex-wrap: wrap;<br/>  
+align-content: space-between;<br/>
+}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>space-around</em> отображает гибкие линии с пробелами до, между и после них:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 600px;<br/>  
+flex-wrap: wrap;<br/>  
+align-content: space-around;<br/>
+}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>stretch</em> растягивает гибкие линии, чтобы занять оставшееся пространство (это значение по умолчанию):</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 600px;<br/>  
+flex-wrap: wrap;<br/>  
+align-content: stretch;<br/>
+}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>center</em> значением отображаются гибкие линии в середине контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 600px;<br/>  
+flex-wrap: wrap;<br/>  
+align-content: center;<br/>
+}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>flex-start</em> отображает гибкие линии в начале контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 600px;<br/>  
+flex-wrap: wrap;<br/>  
+align-content: flex-start;<br/>
+}
+</div>
+<p>
+
+</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Значение <em>flex-end</em> отображает гибкие линии в конце контейнера:</p>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  
+display: flex;<br/>  height: 600px;<br/>  
+flex-wrap: wrap;<br/>  
+align-content: flex-end;<br/>
+}
+</div>
+<p>
+
+</p>
+</div>
+<hr/>
+<h2>Идеальное центрирование</h2>
+<p>В следующем примере мы решим очень распространенную проблему стиля: идеальное центрирование.</p>
+<div class="flex-container2" style="justify-content:center;align-items:center;height:300px;">
+<div class="flex-item2" style="height:100px;width:100px;"></div>
+</div>
+<p><strong>SOLUTION:</strong> Установите оба свойства <code class="w3-codespan">justify-content</code> и <code class="w3-codespan">align-items</code> в <em>центр</em>, и элемент flex будет идеально центрирован:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate cssHigh">
+.flex-container {<br/>  display: flex;<br/>  height: 300px;<br/><strong>  justify-content: 
+center;<br/>  align-items: center;<br/></strong>}<br/> </div>
+<p>
+
+</p>
+</div>
+<br/>
+<div class="w3-clear nextprev">
+
+
+</div>
+</div>
+</body>
+</html>
+
+    </body>
+</html>
