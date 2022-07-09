@@ -15,11 +15,25 @@ var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutationRecord) {
       console.log(mutationRecord.target);
       console.log(mutationRecord.target.style.display);
-      if (mutationRecord.target.style.display === 'block'){
+      if (mutationRecord.target.style.display === 'block' && targetStyleDisplayInitial !== 'block'){
+        targetStyleDisplayInitial = 'block';
         // процедура зачисления баллов и тд
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+          get: (searchParams, prop) => searchParams.get(prop),
+        });
+        // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+        let page = params.page; // "some_value"
+        fetch(`/success-submit/${page}/${localStorage.getItem('telegramID')}`).then(function(response) {
+          return response.json();
+        }).then(function(data) {
+          console.log(data);
+        }).catch(function() {
+          console.log("Booo");
+        });
       }
     });    
 });
 
 var target = document.getElementById('codeCheckCorrect');
+var targetStyleDisplayInitial = target.style.display;
 observer.observe(target, { attributes : true, attributeFilter : ['style'] });
