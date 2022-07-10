@@ -29,7 +29,7 @@ def format_css_try(body):
     src_ya.decompose()
     for script_tag in soup.find_all('script'):
         script_tag_contents = script_tag.get_text()
-        if "https://mc.yandex.ru/metrika/tag.js" in script_tag_contents:
+        if "https://mc.yandex.ru/metrika/tag.js" in script_tag_contents or "https://www.google-analytics.com/analytics.js" in script_tag_contents:
             script_tag.decompose()
     return str(soup)    
 
