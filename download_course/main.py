@@ -5,9 +5,11 @@ from bs4 import BeautifulSoup
 def format_css_try(body):
     soup = BeautifulSoup(body, 'html.parser')
     try:
-        src_ya = soup.find('img', {"src": "https://mc.yandex.ru/watch/45941085"})
-        src_ya.decompose()
-        src_ya = soup.find('script', {"src": "https://yandex.ru/ads/system/context.js"})
+        #src_ya = soup.find('script', {"async src": "https://mc.yandex.ru/metrika/tag.js"})
+        #src_ya.decompose()
+        #src_ya = soup.find('script', {"src": "https://www.google-analytics.com/analytics.js"})
+        #src_ya.decompose()
+        src_ya = soup.find('script', {"src": "https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"})
         src_ya.decompose()
         tag = soup.find('td', {"id": 'topTD'})
         tag['style'] = "padding-left: 20px;"
@@ -26,13 +28,13 @@ def format_css_try(body):
         print('mc error', e)
     for script_tag in soup.find_all('script'):
         script_tag_contents = script_tag.get_text()
-        if "https://mc.yandex.ru/metrika/tag.js" in script_tag_contents or "https://www.google-analytics.com/analytics.js" in script_tag_contents:
+        if "https://mc.yandex.ru/metrika/tag.js" in script_tag_contents or "https://www.google-analytics.com/analytics.js" in script_tag_contents or "yandex_rtb_R-A-1418359-1" in script_tag_contents:
             script_tag.decompose()
     return str(soup)   
 
-theme = 'js_tasks'
+theme = 'sql_tasks'
 
-url = f'https://schoolsw3.com/js/exercise_js.php?filename=exercise_js_variables1'
+url = f'https://schoolsw3.com/sql/exercise_select1.php'
 
 r = requests.get(url)
 with open('index.html', 'w') as file:
@@ -42,7 +44,7 @@ soup = BeautifulSoup(r.text, 'html.parser')
 header = soup.find('div', {"class": "exercisemenuinner"})
 res = header.select('a[class="exbtn"]')
 
-url = f'https://schoolsw3.com/js/'
+url = f'https://schoolsw3.com/sql/'
 for idx, i in enumerate(res):
     link = i['href']
     name = link.split('.')[0]

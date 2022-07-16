@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+<head>
+<title>Учебник HTML — Формы</title>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web,W3CSS,W3C,Python,веб,учебники,веб-разработка,разработка,тестирование,учебное пособие,программирование,обучение,тренировка,учебник,викторина,примеры,занятия,уроки,справочник,образцы,упражнения,исходники,исходный код,цвет,демо,советы" name="Keywords"/><meta content="84600" http-equiv="refresh"/><meta content="Хорошо организованные и просты для понимания, бесплатные учебники для самостоятельного веб строительства, с примерами HTML, CSS, JavaScript и т.д." name="Description"/><meta content="Для сбора пользовательских данных используется HTML форма." name="Description"/><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/w3css/4/w3.css" rel="stylesheet"/><link href="/w3css/4/w3_2.css" rel="stylesheet"/>
+<script src="/lib/prism2.js"></script><link href="/lib/prism1.css" rel="stylesheet"/><!-- Yandex.RTB --><script>window.yaContextCb=window.yaContextCb||[]</script><script async="" src="https://yandex.ru/ads/system/context.js"></script><!-- //Yandex.RTB -->
+</head><body><div class="w3-container top"><a class="w3schools-logo notranslate" href="../index.html">schoolsw3<span class="dotcom">.com</span></a><div class="w3-right w3-hide-small w3-wide toptext" style="font-family:'Segoe UI',Arial,sans-serif">САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ</div></div><div id="googleSearch" style="display:none;position:absolute;z-index:4;right:52px;height:40px;background-color:#5f5f5f;letter-spacing:normal;"><div class="gcse-search"></div></div><div id="google_translate_element" style="display:none;position:absolute;z-index:3;right:111px;height:40px;background-color:#5f5f5f;text-align:right;padding-top:9px;"></div><div class="w3-card-2 topnav notranslate" id="topnav"><div style="overflow:auto;"><div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:41px"><a class="topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button" href="javascript:void(0);" onclick="open_menu()" title="Меню"></a><a class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" href="../index.html" title="Главная"></a><a class="w3-bar-item w3-button" href="../html/index.php" title="HTML Учебник">HTML</a><a class="w3-bar-item w3-button" href="../css/index.php" title="CSS Учебник">CSS</a><a class="w3-bar-item w3-button" href="../js/index.php" title="JavaScript Учебник">JAVASCRIPT</a><a class="w3-bar-item w3-button" href="../sql/index.php" title="SQL Учебник">SQL</a><a class="w3-bar-item w3-button" href="../python/index.php" title="Python Учебник">PYTHON</a><a class="w3-bar-item w3-button" href="../php/index.php" title="PHP Учебник">PHP</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ver.php" title="Bootstrap Учебник">BOOTSTRAP</a><a class="w3-bar-item w3-button" href="../howto/index.php" title="Сделать инструкции HTML, CSS и JavaScript">КАК</a><a class="w3-bar-item w3-button" href="../w3css/index.php" title="W3.CSS Учебник">W3.CSS</a><a class="w3-bar-item w3-button" href="../jquery/index.php" title="jQuery Учебник">JQUERY</a><a class="w3-bar-item w3-button" href="../java/index.php" title="Java Учебник">JAVA</a><a class="w3-bar-item w3-button" href="javascript:void(0);" id="topnavbtn_tutorials" onclick='w3_open_nav("tutorials")' title="Учебники для программиста">ВСЕ <i class="fa fa-caret-down"></i> <i class="fa fa-caret-up" style="display:none"></i></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="open_search(this)" title="Поиск на Schoolsw3"></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="open_translate(this)" title="Перевод на Schoolsw3"></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="changecodetheme(this)" title="Переключение темного кода"></a><a class="w3-bar-item w3-button w3-right" href="../forum/index.php" target="_blank">ФОРУМ</a><a class="w3-bar-item w3-button w3-right" href="javascript:void(0);" id="topnavbtn_exercises" onclick='w3_open_nav("exercises")' title="Упражнения для программиста">УПРАЖНЕНИЯ <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a><a class="w3-bar-item w3-button w3-right" href="javascript:void(0);" id="topnavbtn_references" onclick='w3_open_nav("references")' title="Справочники для программиста">СПРАВОЧНИКИ <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a></div><div class="w3-bar-block w3-card-2" id="nav_tutorials" style="display:none;"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("tutorials")' style="position:absolute;right:10px;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l3 m6"><h3>HTML и CSS</h3><a class="w3-bar-item w3-button" href="../html/index.php">Учебник HTML</a><a class="w3-bar-item w3-button" href="../css/index.php">Учебник CSS</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ver.php">Учебник Bootstrap</a><a class="w3-bar-item w3-button" href="../w3css/index.php">Учебник W3.CSS</a><a class="w3-bar-item w3-button" href="../colors/index.php">Учебник Colors</a><a class="w3-bar-item w3-button" href="../icons/index.php">Учебник Icons</a><a class="w3-bar-item w3-button" href="../graphics/index.php">Учебник Graphics</a><a class="w3-bar-item w3-button" href="../graphics/svg_intro.php">Учебник SVG</a><a class="w3-bar-item w3-button" href="../graphics/canvas_intro.php">Учебник Canvas</a><a class="w3-bar-item w3-button" href="../howto/index.php">Учебник Как</a><a class="w3-bar-item w3-button" href="../sass/index.php">Учебник Sass</a><div class="w3-hide-large w3-hide-small"><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/index.php">Учебник XML</a><a class="w3-bar-item w3-button" href="../xml/ajax_intro.php">Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href="../xml/xml_dtd_intro.php">Учебник XML DTD</a><a class="w3-bar-item w3-button" href="../xml/schema_intro.php">Учебник XML Schema</a><a class="w3-bar-item w3-button" href="../xml/xsl_intro.php">Учебник XSLT</a><a class="w3-bar-item w3-button" href="../xml/xpath_intro.php">Учебник XPath</a><a class="w3-bar-item w3-button" href="../xml/xquery_intro.php">Учебник XQuery</a></div></div><div class="w3-col l3 m6"><h3>JavaScript</h3><a class="w3-bar-item w3-button" href="../js/index.php">Учебник JavaScript</a><a class="w3-bar-item w3-button" href="../jquery/index.php">Учебник jQuery</a><a class="w3-bar-item w3-button" href="../react/index.php">Учебник React</a><a class="w3-bar-item w3-button" href="../angular/index.php">Учебник AngularJS</a><a class="w3-bar-item w3-button" href="../js/js_json_intro.php">Учебник JSON</a><a class="w3-bar-item w3-button" href="../js/js_ajax_intro.php">Учебник AJAX</a><a class="w3-bar-item w3-button" href="../w3js/index.php">Учебник W3.JS</a><h3>Программирование</h3><a class="w3-bar-item w3-button" href="../python/index.php">Учебник Python</a><a class="w3-bar-item w3-button" href="../java/index.php">Учебник Java</a><a class="w3-bar-item w3-button" href="../cpp/index.php">Учебник C++</a><a class="w3-bar-item w3-button" href="../cs/index.php">Учебник C#</a><a class="w3-bar-item w3-button" href="../python/python_ml_getting_started.php">Учебник машинное обучение</a><div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"/><br class="w3-hide-medium w3_hide-small"/></div></div><div class="w3-col l3 m6"><h3>На Сервере</h3><a class="w3-bar-item w3-button" href="../sql/index.php">Учебник SQL</a><a class="w3-bar-item w3-button" href="../php/index.php">Учебник PHP</a><a class="w3-bar-item w3-button" href="../asp/index.php">Учебник ASP</a><a class="w3-bar-item w3-button" href="../nodejs/index.php">Учебник Node.js</a><a class="w3-bar-item w3-button" href="../nodejs/nodejs_raspberrypi.php">Учебник Raspberry Pi</a> <h3>Веб Стоительство</h3><a class="w3-bar-item w3-button" href="../w3css/w3css_templates.php">Веб шаблоны</a><a class="w3-bar-item w3-button" href="../browsers/index.php">Веб Статистика</a><a class="w3-bar-item w3-button" href="../cert/index.php">Веб Сертификаты</a><a class="w3-bar-item w3-button" href="../tryit/index.php">Веб Редактор</a><a class="w3-bar-item w3-button" href="../whatis/index.php">Веб Разработка</a><a class="w3-bar-item w3-button" href="../typingspeed/index.php">Проверьте скорость набора текста</a></div><div class="w3-col l3 m6 w3-hide-medium"><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/index.php">Учебник XML</a><a class="w3-bar-item w3-button" href="../xml/ajax_intro.php">Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href="../xml/xml_dtd_intro.php">Учебник XML DTD</a><a class="w3-bar-item w3-button" href="../xml/schema_intro.php">Учебник XML Schema</a><a class="w3-bar-item w3-button" href="../xml/xsl_intro.php">Учебник XSLT</a><a class="w3-bar-item w3-button" href="../xml/xpath_intro.php">Учебник XPath</a><a class="w3-bar-item w3-button" href="../xml/xquery_intro.php">Учебник XQuery</a></div></div><br/></div><div class="w3-bar-block w3-card-2" id="nav_references"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("references")' style="position:absolute;right:0;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l3 m6"><h3>HTML</h3><a class="w3-bar-item w3-button" href="../tags/index.php">HTML Справочник тегов</a><a class="w3-bar-item w3-button" href="../tags/ref_html_browsersupport.php">HTML Поддержка Браузера</a><a class="w3-bar-item w3-button" href="../tags/ref_eventattributes.php">HTML Справочник событий</a><a class="w3-bar-item w3-button" href="../colors/index.php">HTML Справочник цвета</a><a class="w3-bar-item w3-button" href="../tags/ref_attributes.php">HTML Справочник атрибутов</a><a class="w3-bar-item w3-button" href="../tags/ref_canvas.php">HTML Справочник Canvas</a><a class="w3-bar-item w3-button" href="../graphics/svg_reference.php">HTML Справочник SVG</a><a class="w3-bar-item w3-button" href="../charsets/index.php">HTML Character Sets</a><a class="w3-bar-item w3-button" href="../graphics/google_maps_reference.php">Google Maps Справочник</a><h3>CSS</h3><a class="w3-bar-item w3-button" href="../cssref/index.php">CSS Справочник</a><a class="w3-bar-item w3-button" href="../cssref/css3_browsersupport.php">CSS Поддержка Браузера</a><a class="w3-bar-item w3-button" href="../cssref/css_selectors.php">CSS Справочник селекторов</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap 3 Справочник</a><a class="w3-bar-item w3-button" href="../bootstrap4/bootstrap_ref_all_classes.php">Bootstrap 4 Справочник</a><a class="w3-bar-item w3-button" href="../w3css/w3css_references.php">W3.CSS Справочник</a><a class="w3-bar-item w3-button" href="../icons/icons_reference.php">Icon Справочник</a><a class="w3-bar-item w3-button" href="../sass/sass_functions_string.php">Sass Справочник</a></div><div class="w3-col l3 m6"><h3>JavaScript</h3><a class="w3-bar-item w3-button" href="../jsref/index.php">JavaScript Справочник</a><a class="w3-bar-item w3-button" href="../jsref/index.php">HTML DOM Справочник</a><a class="w3-bar-item w3-button" href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><a class="w3-bar-item w3-button" href="../angular/angular_ref_directives.php">AngularJS Справочник</a><a class="w3-bar-item w3-button" href="../w3js/w3js_references.php">W3.JS Справочник</a><h3>Программмирование</h3><a class="w3-bar-item w3-button" href="../python/python_reference.php">Python Справочник</a><a class="w3-bar-item w3-button" href="../java/java_ref_keywords.php">Java Справочник</a></div><div class="w3-col l3 m6"><h3>На сервере</h3><a class="w3-bar-item w3-button" href="../sql/sql_ref_keywords.php">SQL Справочник</a><a class="w3-bar-item w3-button" href="../php/php_ref_overview.php">PHP Справочник</a><a class="w3-bar-item w3-button" href="../asp/asp_ref_response.php">ASP Справочник</a><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/dom_nodetype.php">XML Справочник</a><a class="w3-bar-item w3-button" href="../xml/dom_http.php">XML Http Справочник</a><a class="w3-bar-item w3-button" href="../xml/xsl_elementref.php">XSLT Справочник</a><a class="w3-bar-item w3-button" href="../xml/schema_elements_ref.php">XML Schema Справочник</a></div><div class="w3-col l3 m6 w3-hide-medium w3-hide-small"><h3>Набор Кодировок</h3><a class="w3-bar-item w3-button" href="../charsets/index.php">HTML Набор Кодировок</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ascii.php">HTML ASCII</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ansi.php">HTML ANSI</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ansi.php">HTML Windows-1252</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_8859.php">HTML ISO-8859-1</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_symbols.php">HTML Символы</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_utf8.php">HTML UTF-8</a></div></div><br/></div><div class="w3-bar-block w3-card-2" id="nav_exercises"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("exercises")' style="position:absolute;right:0;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l4 m6"><h3>Упражнения</h3><a class="w3-bar-item w3-button" href="../html/html_exercises.php">HTML Упражнения</a><a class="w3-bar-item w3-button" href="../css/css_exercises.php">CSS Упражнения</a><a class="w3-bar-item w3-button" href="../js/js_exercises.php">JavaScript Упражнения</a><a class="w3-bar-item w3-button" href="../sql/sql_exercises.php">SQL Упражнения</a><a class="w3-bar-item w3-button" href="../php/php_exercises.php">PHP Упражнения</a><a class="w3-bar-item w3-button" href="../python/python_exercises.php">Python Упражнения</a><a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.php">jQuery Упражнения</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.php">Bootstrap Упражнения</a><a class="w3-bar-item w3-button" href="../java/java_exercises.php">Java Упражнения</a><a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.php">C++ Упражнения</a><a class="w3-bar-item w3-button" href="../cs/cs_exercises.php">C# Упражнения</a></div><div class="w3-col l4 m6"><h3>Викторины</h3><a class="w3-bar-item w3-button" href="html_quiz.php" target="_top">HTML Викторина</a><a class="w3-bar-item w3-button" href="../css/css_quiz.php" target="_top">CSS Викторина</a><a class="w3-bar-item w3-button" href="../js/js_quiz.php" target="_top">JavaScript Викторина</a><a class="w3-bar-item w3-button" href="../sql/sql_quiz.php" target="_top">SQL Викторина</a><a class="w3-bar-item w3-button" href="../php/php_quiz.php" target="_top">PHP Викторина</a><a class="w3-bar-item w3-button" href="../python/python_quiz.php" target="_top">Python Викторина</a><a class="w3-bar-item w3-button" href="../jquery/jquery_quiz.php" target="_top">jQuery Викторина</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_quiz.php" target="_top">Bootstrap Викторина</a><a class="w3-bar-item w3-button" href="../java/java_quiz.php" target="_top">Java Викторина</a><a class="w3-bar-item w3-button" href="../cpp/cpp_quiz.php" target="_top">C++ Викторина</a><a class="w3-bar-item w3-button" href="../cs/cs_quiz.php" target="_top">C# Викторина</a><a class="w3-bar-item w3-button" href="../xml/xml_quiz.php" target="_top">XML Викторина</a></div><div class="w3-col l4 m12"><h3>Сертификаты</h3><a class="w3-bar-item w3-button" href="../cert/cert_html.php" target="_top">HTML Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_css.php" target="_top">CSS Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_javascript.php" target="_top">JavaScript Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_sql.php" target="_top">SQL Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_php.php" target="_top">PHP Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_python.php" target="_top">Python Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_jquery.php" target="_top">jQuery Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.php" target="_top">Bootstrap Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_xml.php" target="_top">XML Сертификат</a></div></div><br/></div></div></div><div class="w3-sidebar w3-collapse" id="sidenav"><div id="leftmenuinner"><div class="w3-light-grey" id="leftmenuinnerinner"><a class="w3-button w3-hide-large w3-large w3-display-topright" href="javascript:void(0)" onclick="close_menu()" style="right:16px;padding:3px 12px;font-weight:bold;">×</a><h2 class="left"><span class="left_h2">HTML</span> Учебник</h2><a href="index.php" target="_top">HTML Главная</a><a href="html_intro.php" target="_top">HTML Введение</a><a href="html_editors.php" target="_top">HTML Редактор</a><a href="html_basic.php" target="_top">HTML Основные</a><a href="html_elements.php" target="_top">HTML Элементы</a><a href="html_attributes.php" target="_top">HTML Атрибуты</a><a href="html_headings.php" target="_top">HTML Заголовки</a><a href="html_paragraphs.php" target="_top">HTML Параграфы</a><a href="html_styles.php" target="_top">HTML Стили</a><a href="html_formatting.php" target="_top">HTML Форматирование</a><a href="html_quotation_elements.php" target="_top">HTML Цитирование</a><a href="html_comments.php" target="_top">HTML Комментарии</a><a href="html_colors.php" target="_top">HTML Цвет</a><div class="tut_overview"><a href="html_colors.php" target="_top">Цвет</a><a href="html_colors_rgb.php" target="_top">RGB</a><a href="html_colors_hex.php" target="_top">HEX</a><a href="html_colors_hsl.php" target="_top">HSL</a></div><a href="html_css.php" target="_top">HTML с CSS</a><a href="html_links.php" target="_top">HTML Ссылки</a><div class="tut_overview"><a href="html_links.php" target="_top">Ссылки</a><a href="html_links_colors.php" target="_top">Ссылки цветные</a><a href="html_links_bookmarks.php" target="_top">Ссылки закладки</a></div><a href="html_images.php" target="_top">HTML Изображение</a><div class="tut_overview"><a href="html_images.php" target="_top">Изображение</a><a href="html_images_imagemap.php" target="_top">Изображение карта</a><a href="html_images_background.php" target="_top">Изображение фон</a><a href="html_images_picture.php" target="_top">Элемент картинки</a></div><a href="html_tables.php" target="_top">HTML Таблицы</a><a href="html_lists.php" target="_top">HTML Списки</a><div class="tut_overview"><a href="html_lists.php" target="_top">Списки</a><a href="html_lists_unordered.php" target="_top">Неупорядоченный список</a><a href="html_lists_ordered.php" target="_top">Упорядоченный список</a><a href="html_lists_other.php" target="_top">Другие списки</a></div><a href="html_blocks.php" target="_top">HTML Блоки</a><a href="html_classes.php" target="_top">HTML Классы</a><a href="html_id.php" target="_top">HTML Идентификаторы</a><a href="html_iframe.php" target="_top">HTML Фреймы</a><a href="html_scripts.php" target="_top">HTML с JavaScript</a><a href="html_filepaths.php" target="_top">HTML Путь к файлу</a><a href="html_head.php" target="_top">HTML Мета теги</a><a href="html_layout.php" target="_top">HTML Методы верстки</a><a href="html_responsive.php" target="_top">HTML Адаптивный дизайн</a><a href="html_computercode_elements.php" target="_top">HTML Компьютерный код</a><a href="html5_semantic_elements.php" target="_top">HTML5 Семантика</a><a href="html5_syntax.php" target="_top">HTML5 Синтаксис</a><a href="html_entities.php" target="_top">HTML Сущность</a><a href="html_symbols.php" target="_top">HTML Символы</a><a href="html_emojis.php" target="_top">HTML Эмодзи</a><a href="html_charset.php" target="_top">HTML Кодировка</a><a href="html_urlencode.php" target="_top">HTML URL Кодировка</a><a href="html_xhtml.php" target="_top">HTML в XHTML</a><br/><h2 class="left"><span class="left_h2">HTML</span> Формы</h2><a href="html_forms.php" target="_top">HTML Формы</a><!--<a target="_top" href="html_forms_attributes.php">HTML Атрибуты форм</a>--><a href="html_form_elements.php" target="_top">HTML Элементы ввода</a><a href="html_form_input_types.php" target="_top">HTML Типы ввода</a><a href="html_form_attributes.php" target="_top">HTML Атрибуты ввода</a><a href="html_form_attributes_form.php" target="_top">HTML Атрибуты форм ввода</a><br/><h2 class="left"><span class="left_h2">HTML</span> Графика</h2><a href="html5_canvas.php" target="_top">HTML5 Canvas</a><a href="html5_svg.php" target="_top">HTML5 SVG</a><br/><h2 class="left"><span class="left_h2">HTML</span> Медиа</h2><a href="html_media.php" target="_top">HTML Медиа формат</a><a href="html5_video.php" target="_top">HTML5 Видео</a><a href="html5_audio.php" target="_top">HTML5 Аудио</a><a href="html_object.php" target="_top">HTML Плагины</a><a href="html_youtube.php" target="_top">HTML YouTube</a><br/><h2 class="left"><span class="left_h2">HTML</span> API</h2><a href="html5_geolocation.php" target="_top">HTML5 Геолокация</a><a href="html5_draganddrop.php" target="_top">HTML5 Перетаскивание</a><a href="html5_webstorage.php" target="_top">HTML5 Веб хранилище</a><a href="html5_webworkers.php" target="_top">HTML5 Веб работник</a><a href="html5_serversentevents.php" target="_top">HTML5 SSE</a><br/><h2 class="left"><span class="left_h2">HTML</span> Примеры</h2><a href="html_examples.php" target="_top">HTML Примеры</a><a href="html_quiz.php" target="_top">HTML Тестирование</a><a href="html_exercises.php" target="_top">HTML Упражнения</a><a href="html_exam.php" target="_top">HTML Сертификат</a><a href="html_summary.php" target="_top">HTML Заключение</a><a href="html_accessibility.php" target="_top">HTML Возможности</a><br/><h2 class="left"><span class="left_h2">HTML</span> Справочники</h2><a href="../tags/index.php" target="_top">HTML Список тегов</a><a href="../tags/ref_attributes.php" target="_top">HTML Атрибуты</a><a href="../tags/att_global_dropzone.php" target="_top">HTML Глобальные атрибуты</a><a href="../tags/ref_html_browsersupport.php" target="_top">HTML Поддержка браузера</a><a href="../tags/ref_eventattributes.php" target="_top">HTML События</a><a href="../tags/ref_colornames.php" target="_top">HTML Цвета</a><a href="../tags/ref_canvas.php" target="_top">HTML Холст</a><a href="../tags/ref_av_dom.php" target="_top">HTML Аудио/Видео</a><a href="../tags/ref_html_dtd.php" target="_top">HTML Типы документов</a><a href="../tags/ref_charactersets.php" target="_top">HTML Кодировка символов</a><a href="../tags/ref_urlencode.php" target="_top">HTML URL Кодировка</a><a href="../tags/ref_language_codes.php" target="_top">HTML Коды языка</a><a href="../tags/ref_httpmessages.php" target="_top">HTTP Сообщения</a><a href="../tags/ref_httpmethods.php" target="_top">HTTP Методы</a><a href="../tags/ref_pxtoemconversion.php" target="_top">PX в EM конвертер</a><a href="../tags/ref_keyboardshortcuts.php" target="_top">Клавишные комбинации</a><br/><br/></div></div></div><div class="w3-main w3-light-grey" id="belowtopnav" style="margin-left:220px;"><div class="w3-row w3-white"><!-- Main-->
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>HTML - Формы</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="html_xhtml.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="html_form_elements.php">Далее ❯</a>
+</div>
+<hr/>
+<div class="w3-panel w3-info intro">
+<p class="intro">Для сбора пользовательских данных используется HTML форма.
+Затем вводимые пользователем данные могут быть отправлены на сервер для обработки.</p>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-white w3-padding notranslate">
+<form action="../action_page.php" target="_blank">
+<label for="fname">Имя:</label><br/>
+<input id="fname" name="fname" type="text" value="Андрей"/><br/>
+<label for="lname">Фамилия:</label><br/>
+<input id="lname" name="lname" type="text" value="Щипунов"/><br/><br/>
+<input type="submit" value="Отправить"/>
+</form>
+</div>
+<a class="w3-btn w3-margin-top w3-margin-bottom" href="tryhtml_form_submit.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Элемент &lt;form&gt;</h2>
+<p>HTML элемент <code class="w3-codespan">&lt;form&gt;</code> определяет форму, которая используется для сбора пользовательских данных:</p>
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+&lt;form&gt;<br/>
+.<br/>
+<i>элементы формы</i><br/>
+.<br/>
+&lt;/form&gt;<br/>
+</div></div>
+<p>HTML форма содержит <strong>элементы формы</strong>.</p>
+<p>Элементы формы - это различные типы элементов ввода, такие как текстовые поля, флажки, переключатели, кнопки отправки и многое другое.</p>
+<hr/>
+<h2>Элемент &lt;input&gt;</h2>
+<p>Элемент <code class="w3-codespan">&lt;input&gt;</code> - самый важный элемент формы.</p>
+<p>Элемент <code class="w3-codespan">&lt;input&gt;</code> отображается несколькими способами, в зависимости от атрибута <strong>type</strong>.</p>
+<p>Вот несколько примеров:</p>
+<table class="w3-table-all">
+<tr>
+<th>Type</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>&lt;input type="text"&gt;</td>
+<td>Определяет однострочное поле ввода текста</td>
+</tr>
+<tr>
+<td>&lt;input type="radio"&gt;</td>
+<td>Определяет переключатель (для выбора одного из многих вариантов)</td>
+</tr>
+<tr>
+<td>&lt;input type="submit"&gt;</td>
+<td>Определяет кнопку отправки (для отправки формы)</td>
+</tr>
+</table>
+<div class="w3-panel w3-note">
+<p>Вы узнаете гораздо больше о типах ввода позже в этом уроке.</p>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Текстовое поля</h2>
+<p><code class="w3-codespan">&lt;input type="text"&gt;</code> определяет однострочное поле ввода для <strong>ввода текста</strong>.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Форма с двумя полями ввода текста:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;form&gt;<br/>
+  &lt;label for="fname"&gt;Имя:&lt;/label&gt;&lt;br&gt;<br/>  &lt;input 
+type="text" id="fname" name="fname"&gt;&lt;br&gt;<br/>
+  &lt;label for="lname"&gt;Фамилия:&lt;/label&gt;&lt;br&gt;<br/>
+  &lt;input type="text" id="lname" name="lname"&gt;<br/>&lt;/form&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryhtml_form_text.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Вот как это будет выглядеть в браузере:</p>
+<form>
+Имя:<br/>
+<input name="fname" type="text"/><br/>
+Фамилия:<br/>
+<input name="lname" type="text"/>
+</form>
+<div class="w3-panel w3-note">
+<p><b>Примечание:</b> Сама форма не видна. Также обратите внимание, что ширина поля ввода по умолчанию составляет 20 символов.</p>
+</div>
+<hr/>
+<h2>Элемент &lt;label&gt;</h2>
+<p>Обратите внимание на использование элемента <code class="w3-codespan">&lt;label&gt;</code> в приведенном выше примере.</p>
+<p>Тег <code class="w3-codespan">&lt;label&gt;</code> определяет метку для многих элементов формы.</p>
+<p>Элемент <code class="w3-codespan">&lt;label&gt;</code> полезен для пользователей программы чтения с экрана,
+потому что чтения с экрана будет читать вслух надпись, когда пользователь сосредоточен на входном элементе.</p>
+<p>Элемент <code class="w3-codespan">&lt;label&gt;</code> также помогает пользователям,
+которые испытывают трудности при нажатии на очень маленькие области (например, переключатели или флажки) 
+- потому что, когда пользователь щелкает текст внутри элемента <code class="w3-codespan">&lt;label&gt;</code>, он переключает переключатель/флажок.</p>
+<p>Атрибут <code class="w3-codespan">for</code> тега <code class="w3-codespan">&lt;label&gt;</code> должен быть равен атрибуту <code class="w3-codespan">id</code>
+элемента <code class="w3-codespan">&lt;input type="radio"&gt;</code>, чтобы связать их вместе.</p>
+<hr/>
+<h2>Кнопки radio</h2>
+<p><code class="w3-codespan">&lt;input type="radio"&gt;</code> определяет <strong>радиокнопки</strong>.</p>
+<p>Переключатели позволяют пользователю выбрать один из ограниченного числа вариантов.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Форма с переключателями:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;form&gt;<br/>  &lt;input type="radio" id="male" name="gender" 
+value="male"&gt;<br/>  &lt;label for="male"&gt;Мужчина&lt;/label&gt;&lt;br&gt;<br/>  &lt;input 
+type="radio" id="female" name="gender" value="female"&gt;<br/>  &lt;label 
+for="female"&gt;Женщина&lt;/label&gt;&lt;br&gt;<br/>  &lt;input type="radio" id="other" 
+name="gender" value="other"&gt;<br/>  &lt;label for="other"&gt;другое&lt;/label&gt;<br/>&lt;/form&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryhtml_form_radio.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Именно так приведенный выше HTML код будет отображаться в браузере:</p>
+<input id="male" name="gender" type="radio" value="male"/>
+<label for="male">Мужчина</label><br/>
+<input id="female" name="gender" type="radio" value="female"/>
+<label for="female">Женщина</label><br/>
+<input id="other" name="gender" type="radio" value="other"/>
+<label for="other">другое</label>
+<hr/>
+<h2>Кнопка submit</h2>
+<p><code class="w3-codespan">&lt;input type="submit"&gt;</code> определяет кнопку для
+<strong>представления</strong> в виде данных для <strong>обработчика форм</strong>.</p>
+<p>Обработчик форм обычно представляет собой страницу на сервере со скриптом для обработки входных данных.</p>
+<p>Обработчик форм задается в окне формы атрибутом <strong>action</strong>.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Форма с кнопкой отправки:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;form action="/action_page.php"&gt;<br/>  &lt;label for="fname"&gt;Имя:&lt;/label&gt;&lt;br&gt;<br/>
+  &lt;input type="text" id="fname" name="fname" value="Андрей"&gt;&lt;br&gt;<br/>
+  &lt;label for="lname"&gt;Фамилия:&lt;/label&gt;&lt;br&gt;<br/>
+  &lt;input type="text" id="lname" name="lname" value="Щипунов"&gt;&lt;br&gt;&lt;br&gt;<br/>  
+&lt;input type="submit" value="Отправить"&gt;<br/>&lt;/form&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryhtml_form_submit.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Именно так приведенный выше HTML код будет отображаться в браузере:</p>
+<form action="../action_page.php" target="_blank">
+Имя:<br/>
+<input name="firstname" type="text" value="Андрей"/><br/>
+Фамилия:<br/>
+<input name="lastname" type="text" value="Щипунов"/><br/><br/>
+<input type="submit" value="Отправить"/>
+</form>
+<hr/>
+<h2>Атрибут action</h2>
+<p>Атрибут <code class="w3-codespan">action</code> определяет действие, которое должно быть выполнено при отправке формы.</p>
+<p>Обычно данные формы отправляются на страницу сервер, когда пользователь нажимает на кнопку "Отправить".</p>
+<p>В приведенном выше примере данные формы отправляются на страницу на сервере под названием "/action_page.php". 
+Эта страница содержит серверный скрипт, который обрабатывает данные формы:</p>
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+&lt;form <strong>action="/action_page.php</strong>"&gt;<br/>
+</div></div>
+<p>Если атрибут <code class="w3-codespan">action</code> опущен, действие устанавливается на текущую страницу.</p>
+<hr/>
+<h2>Атрибут target</h2>
+<p>Атрибут <code class="w3-codespan">target</code> указывает, будет ли представленный результат открыт в новой вкладке браузера, фрейме или в текущем окне.</p>
+<p>По умолчанию значение "<code class="w3-codespan">_self</code>" означает, что форма будет отправлена в текущем окне.</p>
+<p>Чтобы сделать результат формы открытым в новой вкладке браузера, используйте значение "<code class="w3-codespan">_blank</code>".</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Здесь представленный результат откроется в новой вкладке браузера:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;form action="/action_page.php.php" target="_blank"&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="tryhtml_form_target.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Другими значения "<code class="w3-codespan">_parent</code>", "<code class="w3-codespan">_top</code>", или name, представляющее имя iframe.</p>
+<hr/>
+<h2>Атрибут method</h2>
+<p>Атрибут <code class="w3-codespan">method</code> атрибут определяет метод HTTP(<strong>GET </strong> или
+<strong>POST</strong>) для использования при отправке данных формы.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Используйте метод GET при отправке формы:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;form action="/action_page.php" method="get"&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="tryhtml_form_get.php" target="_blank">Попробуйте сами »</a>
+</div>
+<p>или:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Используйте метод POST при отправке формы:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;form action="/action_page.php" method="post"&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="tryhtml_form_post.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Когда использовать GET?</h2>
+<p>Метод HTTP по умолчанию при отправке данных формы GET.</p>
+<p>Однако при использовании GET данные формы будут <strong>видны в поле адреса страницы</strong>:</p>
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+/action_page.php?firstname=Андрей&amp;lastname=Щипунов</div></div>
+<p><b>Заметка о GET:</b> </p>
+<ul>
+<li>Добавляет данные формы в URL адрес в паре имя/значение</li>
+<li>Длина URL адреса ограничена (2048 символов)</li>
+<li>Никогда не используйте GET для отправки конфиденциальных данных! (будет виден в URL адресе)</li>
+<li>Эффективно для отправки форм, когда пользователь хочет добавить результат в закладки</li>
+<li>GET лучше подходит для незащищенных данных, таких как строки запросов в Google</li>
+</ul>
+<hr/>
+<h2>Когда использовать POST?</h2>
+<p>Всегда используйте POST, если данные формы содержат конфиденциальную или личную информацию. 
+Метод POST не отображает данные формы в поле адреса страницы.</p>
+<p><b>Заметка о POST:</b> </p>
+<ul>
+<li>POST не имеет ограничений по размеру и может использоваться для отправки больших объемов данных.</li>
+<li>Отправленные формы с сообщением не могут быть закладками</li>
+</ul>
+<hr/>
+<h2>Атрибут name</h2>
+<p>Каждое поле ввода должно иметь атрибут <code class="w3-codespan">name</code> для отправки.</p>
+<p>Если атрибут <code class="w3-codespan">name</code> опущен, данные этого поля ввода вообще не будут отправлены.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>В этом примере не будут представленны значения "name" в поле ввода:</p>
+<div class="w3-code notranslate htmlHigh">
+&lt;form action="/action_page.php"&gt;<br/>  &lt;label for="fname"&gt;Имя:&lt;/label&gt;&lt;br&gt;<br/>
+  &lt;input type="text" id="fname" value="Щипунов"&gt;&lt;br&gt;&lt;br&gt;<br/>  
+&lt;input type="submit" value="Отправить"&gt;<br/>&lt;/form&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryhtml_form_submit_id.php" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>HTML Упражнения</h2>
+<form action="exercise_html_forms1.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<div class="exercisewindow">
+<h2>Упражнение:</h2>
+<p>В приведенной ниже форме добавьте поле ввода с типом "button" и значением "ОК".</p>
+<div class="exerciseprecontainer">
+&lt;form&gt;
+<br/>
+&lt;<input maxlength="30" name="ex1" spellcheck="false" style="width: 304px;"/>&gt;
+<br/>
+&lt;/form&gt;
+</div>
+<br/>
+<button class="w3-btn w3-margin-bottom" type="submit">Отправить ответ »</button>
+<p><a href="exercise_html_forms1.php" target="_blank">Начните упражнение</a></p>
+</div>
+</form>
+<hr/>
+<p>Вот список всех атрибутов <code class="w3-codespan">&lt;form&gt;</code>:</p>
+<table class="w3-table-all">
+<tr>
+<th>Атрибут</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>accept-charset</td>
+<td>Указывает кодировку, используемую в представленной форме (по умолчанию: кодировка страницы).</td>
+</tr>
+<tr>
+<td>action</td>
+<td>Указывает адрес (url), по которому следует отправить форму (по умолчанию: страница отправки).</td>
+</tr>
+<tr>
+<td>autocomplete</td>
+<td>Указывает, должен ли браузер автоматически заполнять форму (по умолчанию: on).</td>
+</tr>
+<tr>
+<td>enctype</td>
+<td>Указывает кодировку отправляемых данных (по умолчанию: кодируется url адрес).</td>
+</tr>
+<tr>
+<td>method</td>
+<td>Указывает метод HTTP, используемый при отправке формы (по умолчанию: GET).</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Указывает имя, используемое для идентификации формы (для использования DOM: document.forms.name).</td>
+</tr>
+<tr>
+<td>novalidate</td>
+<td>Указывает, что браузер не должен проверять форму.</td>
+</tr>
+<tr>
+<td>target</td>
+<td>Указывает целевой адрес в атрибуте действия (по умолчанию: _self).</td>
+</tr>
+</table>
+<div class="w3-panel w3-note">
+<p>Подробнее об атрибутах формы вы узнаете в следующих главах.
+</p>
+</div>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="html_xhtml.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="html_form_elements.php">Далее ❯</a>
+</div>
+</div>
+<!-- /Main-->
+<div class="w3-col l2 m12" id="right"><!--<div class="sidesection"><h4><a href="">ВАКАНСИИ НА SCHOOLSW3</a></h4></div>-->
+<div class="sidesection"><div id="skyscraper">
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+</div>
+</div>
+<!--<div class="sidesection"><h4><a href="../colors/colors_picker.php">ПОДБОР ЦВЕТА</a></h4><a href="../colors/colors_picker.php"><img src="https://www.schoolsw3.com/images/colorpicker.gif" alt="colorpicker"></a></div>--><div class="sidesection" id="sidesection_exercise" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Упражнения</h4></div><div><div class="w3-light-grey"><a href="/html/exercise.php" style="padding-top:8px" target="_blank">HTML</a><a href="/css/exercise.php" style="padding-top:8px" target="_blank">CSS</a><a href="/js/exercise_js.php" style="padding-top:8px" target="_blank">JavaScript</a><a href="/sql/exercise.php" style="padding-top:8px" target="_blank">SQL</a><a href="/php/exercise.php" style="padding-top:8px" target="_blank">PHP</a><a href="/python/exercise.php" style="padding-top:8px" target="_blank">Python</a><!--<a target="_blank" href="/bootstrap/exercise_bs3.php">Bootstrap</a><a target="_blank" href="/jquery/exercise_jq.php" style="padding-bottom:8px">jQuery</a>--></div></div></div><div class="sidesection" id="sidesection_exercise" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Тесты</h4></div><div><div class="w3-light-grey"><a href="https://www.schoolsw3.com/quiztest/quiztest_HTML.php" style="padding-top:8px" target="_blank">HTML</a><a href="https://www.schoolsw3.com/quiztest/quiztest_CSS.php" style="padding-top:8px" target="_blank">CSS</a><a href="https://www.schoolsw3.com/quiztest/quiztest_JS.php" style="padding-top:8px" target="_blank">JavaScript</a><a href="https://www.schoolsw3.com/quiztest/quiztest_SQL.php" style="padding-top:8px" target="_blank">SQL</a><a href="https://www.schoolsw3.com/quiztest/quiztest_PYTHON.php" style="padding-top:8px" target="_blank">PYTHON</a></div></div></div><div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px"><div class="w3-container w3-dark-grey"><h4><a class="w3-hover-text-white" href="../howto/index.php">КАК СДЕЛАТЬ</a></h4></div><div class="w3-container w3-left-align w3-padding-16"><a href="../howto/howto_js_tabs.php">Теги</a><br/><a href="../howto/howto_css_dropdown.php">Выпадающий</a><br/><a href="../howto/howto_js_accordion.php">Аккардионы</a><br/><a href="../howto/howto_js_sidenav.php">Боковой Навигатор</a><br/><a href="../howto/howto_js_topnav.php">Верхний Навигатор</a><br/><a href="../howto/howto_css_modals.php">Модель Бокс</a><br/><a href="../howto/howto_js_progressbar.php">Индикатор Полоса</a><br/><a href="../howto/howto_css_parallax.php">Паралакс</a><br/><a href="../howto/howto_css_login_form.php">Логин Форма</a><br/><a href="../howto/howto_html_include.php">HTML Подключение</a><br/><a href="../howto/howto_google_maps.php">Гугл Карта</a><br/><a href="../howto/howto_js_rangeslider.php">Ползунки Диапазон</a><br/><a href="../howto/howto_css_tooltip.php">Подсказки</a><br/><a href="../howto/howto_js_slideshow.php">Слайд-шоу</a><br/><a href="../howto/howto_js_filter_lists.php">Фильтр Списка</a><br/><a href="../howto/howto_js_sort_list.php">Сортировка Списка</a><br/></div></div>
+<div class="sidesection">
+<h4>ПОДЕЛИТЬСЯ</h4>
+<div class="w3-text-grey sharethis">
+<script><!--try{loc=location.pathname;if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"index.php";txt='<a href="http://www.facebook.com/sharer.php?u=https://schoolsw3.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';txt=txt+'<a href="https://twitter.com/home?status=Currently reading https://schoolsw3.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';document.write(txt);} catch(e) {}//--></script>
+<br/><br/><a href="javascript:void(0);" onclick="clickFBLike()" title="Клик SchoolsW3 на Facebook"><span class="fa fa-thumbs-o-up fa-2x"></span></a>
+<div class="w3-modal" id="fblikeframe"><div class="w3-modal-content w3-padding-64 w3-animate-zoom" id="popupDIV"></div></div>
+</div>
+</div>
+<div class="sidesection"><h4><a href="../cert/index.php" target="_blank">СЕРТИФИКАТЫ</a></h4><p><a href="../cert/cert_html.php">HTML</a><br/><a href="../cert/cert_css.php">CSS</a><br/><a href="../cert/cert_javascript.php">JavaScript</a><br/><a href="../cert/cert_sql.php">SQL</a><br/><a href="../cert/cert_python.php">Python</a><br/><a href="../cert/cert_php.php">PHP</a><br/><a href="../cert/cert_jquery.php">jQuery</a><br/><a href="../cert/cert_bootstrap.php">Bootstrap</a><br/><a href="../cert/cert_xml.php">XML</a></p><a class="w3-button w3-dark-grey" href="../cert/index.php" style="text-decoration:none">Читать далее »</a>
+</div>
+<div class="sidesection">
+<!--<form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" style="padding:0; margin:1px"><input type="hidden" name="receiver" value="410011618810988"> <input type="hidden" name="formcomment" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="short-dest" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="label" value="$order_id"><input type="hidden" name="quickpay-form" value="donate"> <input type="hidden" name="targets" value="транзакция {order_id}"> <input type="hidden" name="sum" value=" " data-type="number"> <input type="hidden" name="comment" value="САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ."><input type="hidden" name="need-fio" value="true"> <input type="hidden" name="need-email" value="true"> <input type="hidden" name="need-phone" value="false"> <input type="hidden" name="need-address" value="false"> <input type="submit" class="" value="Пожертвовать"><input type="hidden" name="sum" value="199" data-type="number" size="4"> <br>Yoomoney<br>410011618810988</form>--><!--<iframe src="https://yoomoney.ru/quickpay/button-widget?targets=schoolsw3&default-sum=199&button-text=14&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=410011618810988&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>-->
+<form action="https://yoomoney.ru/quickpay/confirm.xml" class="form i-bem" data-bem='{"form":{}}' method="POST" target="_blank"><input class="native-input native-input_type_hidden" name="quickpay-form" type="hidden" value="small"/><input class="native-input native-input_type_hidden" name="is-inner-form" type="hidden" value="true"/><input class="native-input native-input_type_hidden" name="paymentType" type="hidden" value="PC"/><input class="native-input native-input_type_hidden" name="receiver" type="hidden" value="410011618810988"/><input class="native-input native-input_type_hidden" name="targets" type="hidden" value="schoolsw3"/><input class="native-input native-input_type_hidden" name="sum" type="hidden" value="100"/><input class="native-input native-input_type_hidden" name="successURL" type="hidden" value=""/><input class="native-input native-input_type_hidden" name="label" type="hidden" value=""/><input class="native-input native-input_type_hidden" name="referer" type="hidden" value=""/><div class="widget-small__button"><button data-bem='{"button":{}}' role="button" type="submit"><span class="button__text">Пожертвовать</span></button><br/>Yoomoney<br/>410011618810988</div></form></div>
+<div class="sidesection">
+<div id="skyscraper">
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+</div>
+</div>
+<!--
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+<div id="stickyadcontainer"><div style="position:relative;margin:auto;"> 
+<div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>
+</div>
+</div>
+</div>
+-->
+</div>
+</div>
+<div class="footer w3-container w3-white" id="footer"><hr/>
+<div style="overflow:auto">
+<div class="bottomad">
+<!-- Yandex.RTB R-A-1358578-3 --><div id="yandex_rtb_R-A-1358578-3"></div><script>window.yaContextCb.push(()=>{ Ya.Context.AdvManager.render({ renderTo: 'yandex_rtb_R-A-1358578-3', blockId: 'R-A-1358578-3' })})</script><!-- // Yandex.RTB R-A-1358578-3 --></div>
+</div><hr/>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px"><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ОШИБКУ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_blank">ПЕЧАТЬ СТРАНИЦЫ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../forum/index.php" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_blank">ФОРУМ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../about/index.php" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_top">О НАС</a></div></div><hr/><div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative"><span class="w3-button w3-display-topright w3-large" onclick="this.parentElement.style.display='none'">×</span><h2>Сообщить об ошибке</h2><p>Если вы хотите сообщить об ошибке или сделать предложение, не стесняйтесь, присылайте нам электронное письмо:</p><p>and-shhipunov@mail.ru</p><br/><h2>Ваше предложение:</h2><form><div class="w3-section"> <label for="err_email">Ваш E-mail:</label><input class="w3-input w3-border" id="err_email" name="err_email" style="margin-top:5px;width:100%" type="text"/></div><div class="w3-section"> <label for="err_email">Адрес страницы:</label><input class="w3-input w3-border" disabled="disabled" id="err_url" name="err_url" style="width:100%;margin-top:5px" type="text"/></div><div class="w3-section"><label for="err_email">Описание:</label><textarea class="w3-input w3-border" id="err_desc" name="err_desc" rows="10" style="width:100%;margin-top:5px;resize:vertical;"></textarea></div><div class="form-group"> <button class="w3-button w3-dark-grey" onclick="sendErr()" type="button">Отправить</button></div><br/></form></div><div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative"><span class="w3-button w3-display-topright" onclick="this.parentElement.style.display='none'">×</span> <h2>Спасибо, за вашу помощь!</h2><p>Ваше сообщение было отправлено в SchoolsW3.</p></div><div class="w3-row w3-center w3-small"><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Учебники </h4><a href="../html/index.php">HTML Учебник</a><br/><a href="../css/index.php">CSS Учебник</a><br/><a href="../js/index.php">JavaScript Учебник</a><br/><a href="../howto/index.php">КАК Учебник</a><br/><a href="../sql/index.php">SQL Учебник</a><br/><a href="../python/index.php">Python Учебник</a><br/><a href="../w3css/index.php">W3.CSS Учебник</a><br/><a href="../bootstrap/bootstrap_ver.php">Bootstrap Учебник</a><br/><a href="../php/index.php">PHP Учебник</a><br/><a href="../jquery/index.php">jQuery Учебник</a><br/><a href="../java/index.php">Java Учебник</a><br/><a href="../cpp/index.php">C++ Учебник</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Справочники</h4><a href="../tags/index.php">HTML Справочник</a><br/><a href="../cssref/index.php">CSS Справочник</a><br/><a href="../jsref/index.php">JavaScript Справочник</a><br/><a href="../sql/sql_ref_keywords.php">SQL Справочник</a><br/><a href="../python/python_reference.php">Python Справочник</a><br/><a href="../w3css/w3css_references.php">W3.CSS Справочник</a><br/><a href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap Справочник</a><br/><a href="../php/php_ref_overview.php">PHP Справочник</a><br/><a href="../colors/colors_names.php">HTML Цвета</a><br/><a href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><br/><a href="../java/java_ref_keywords.php">Java Справочник</a><br/><a href="../angular/angular_ref_directives.php">Angular Справочник</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Примеры</h4><a href="html_examples.php">HTML Примеры</a><br/><a href="../css/css_examples.php">CSS Примеры</a><br/><a href="../js/js_examples.php">JavaScript Примеры</a><br/><a href="../howto/index.php">How To Примеры</a><br/><a href="../sql/sql_examples.php">SQL Примеры</a><br/><a href="../python/python_examples.php">Python Примеры</a><br/><a href="../w3css/w3css_examples.php">W3.CSS Примеры</a><br/><a href="../bootstrap/bootstrap_examples.php">Bootstrap Примеры</a><br/><a href="../php/php_examples.php">PHP Примеры</a><br/><a href="../jquery/jquery_examples.php">jQuery Примеры</a><br/><a href="../java/java_examples.php">Java Примеры</a><br/><a href="../xml/xml_examples.php">XML Примеры</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Веб Сертификаты</h4><a href="../cert/index.php">HTML Сертификат</a><br/><a href="../cert/index.php">CSS Сертификат</a><br/><a href="../cert/index.php">JavaScript Сертификат</a><br/><a href="../cert/index.php">SQL Сертификат</a><br/><a href="../cert/index.php">Python Сертификат</a><br/><a href="../cert/index.php">jQuery Сертификат</a><br/><a href="../cert/index.php">PHP Сертификат</a><br/><a href="../cert/index.php">Bootstrap Сертификат</a><br/><a href="../cert/index.php">XML Сертификат</a><br/><a class="w3-button w3-margin-top w3-dark-grey" href="../cert/index.php" style="text-decoration:none">Получить Сертификат »</a></div></div> </div> <hr/><div class="w3-center w3-small">SchoolsW3 оптимизирован для обучения, тестирования и тренировки. Примеры упрощают и улучшают чтение и базовое понимание.Учебники, справочники, примеры постоянно пересматриваются, для того, чтобы избежать ошибки, невозможно гарантировать правильность всего содержимого.Используя данный сайт, вы соглашаетесь прочитать и принять <a href="../about/about_copyright.php">условия использования</a>,<a href="../about/about_privacy.php">cookie и Политика конфиденциальности</a>.<a href="../about/about_copyright.php">Авторское право 1999 - 2022</a> Все права защищены.<br/><a href="../w3css/index.php">Работает на W3.CSS</a>.<br/><br/><a href="../index.html"><img alt="SchoolsW3.com" src="https://www.schoolsw3.com/images/w3schoolscom_gray.gif" style="width:150px;height:28px;border:0"/></a></div><br/><br/></div></div><script src="../lib/schools_footer.js"></script><script src="https://cse.google.com/cse.js?cx=009251009105284944376:hm8um3ylyzo"></script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-106562886-1');</script><!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter --><script>var stickyadstatus = "";function fix_stickyad() {document.getElementById("stickypos").style.position = "sticky";var elem = document.getElementById("stickyadcontainer");if (!elem) {return false;}if (document.getElementById("skyscraper")) {var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", "")); }else {var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", "")); }elem.style.width = skyWidth + "px";if (window.innerWidth <= 992) {elem.style.position = "";elem.style.top = stickypos + "px";return false;}var stickypos = document.getElementById("stickypos").offsetTop;var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));if (stickyadstatus == "") {if ((stickypos - docTop) < 60) {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}} else {if ((docTop + 60) - stickypos < 0) { elem.style.position = "";elem.style.top = stickypos + "px";stickyadstatus = "";document.getElementById("stickypos").style.position = "static";}}if (stickyadstatus == "sticky") {if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {elem.style.position = "absolute";elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";document.getElementById("stickypos").style.position = "static";} else {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}}}function w3_getStyleValue(elmnt,style) {if (window.getComputedStyle) {return window.getComputedStyle(elmnt,null).getPropertyValue(style);} else {return elmnt.currentStyle[style];}}</script></body></html>

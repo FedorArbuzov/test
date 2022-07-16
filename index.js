@@ -89,6 +89,16 @@ app.get('/js-task/', function(req, res) {
   res.sendFile(path.join(__dirname, `/pages/js_tasks/${page}.html`));
 })
 
+app.get('/html-task/', function(req, res) {
+  let page = req.query.page;
+  res.sendFile(path.join(__dirname, `/pages/html_tasks/${page}.html`));
+})
+
+app.get('/sql-task/', function(req, res) {
+  let page = req.query.page;
+  res.sendFile(path.join(__dirname, `/pages/sql_tasks/${page}.html`));
+})
+
 app.get('/editor-interface-js/', function(req, res) {
   res.sendFile(path.join(__dirname, '/pages/js-editor.html'));
 })

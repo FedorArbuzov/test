@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="ru-RU">
 <head>
 <title>Практические упражнения — SQL</title>
-<meta name="description" content="На сайте scoolsw3.com, вы можете бесплатно проверить свои знания с помощью упражнений SQL и подготовиться к сертификации SQL" />
-<meta name="keywords" content="Упражнение,SQL,код" />
-<meta name="author" content="Щипунов Андрей Леонидович" />
-<meta name="viewport" content="width=device-width">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/w3css/3/w3.css">
-<link rel="stylesheet" href="/lib/codemirror.css">
+<meta content="На сайте scoolsw3.com, вы можете бесплатно проверить свои знания с помощью упражнений SQL и подготовиться к сертификации SQL" name="description"/>
+<meta content="Упражнение,SQL,код" name="keywords"/>
+<meta content="Щипунов Андрей Леонидович" name="author"/>
+<meta content="width=device-width" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/w3css/3/w3.css" rel="stylesheet"/>
+<link href="/lib/codemirror.css" rel="stylesheet"/>
 <script src="/lib/codemirror.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"></script>
+
 <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-106562886-1');</script>
-<!-- Yandex.Metrika counter --><script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45941085, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true });</script><!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 <script>
 var exsection = "SQL";
 var blueprint = "";
@@ -1112,26 +1113,7 @@ border:1px solid #d3d3d3;
 #textareaCode, #iframeResult, #textareaCode2, #iframeResult2 {height:400px;}
 td {vertical-align:top;}
 </style>
-<![endif]--><script>
-var exnames = [], excounts = [], exheadings = [];
-exnames[0] = 'select';excounts[0] = '3';exheadings[0] = 'Выбрать';
-exActiveNo = 0;
-exnames[1] = 'where';excounts[1] = '5';exheadings[1] = 'Где';
-exnames[2] = 'orderby';excounts[2] = '3';exheadings[2] = 'Заказ';
-exnames[3] = 'insert';excounts[3] = '1';exheadings[3] = 'Вставить';
-exnames[4] = 'null';excounts[4] = '2';exheadings[4] = 'Null';
-exnames[5] = 'update';excounts[5] = '3';exheadings[5] = 'Обновление';
-exnames[6] = 'delete';excounts[6] = '2';exheadings[6] = 'Удалить';
-exnames[7] = 'functions';excounts[7] = '5';exheadings[7] = 'Функции';
-exnames[8] = 'like';excounts[8] = '5';exheadings[8] = 'Нравится';
-exnames[9] = 'wildcards';excounts[9] = '4';exheadings[9] = 'Подстановочный знак';
-exnames[10] = 'in';excounts[10] = '2';exheadings[10] = 'В';
-exnames[11] = 'between';excounts[11] = '3';exheadings[11] = 'Между';
-exnames[12] = 'alias';excounts[12] = '2';exheadings[12] = 'Псевдоним';
-exnames[13] = 'join';excounts[13] = '3';exheadings[13] = 'Присоединить';
-exnames[14] = 'groupby';excounts[14] = '2';exheadings[14] = 'Группа';
-exnames[15] = 'database';excounts[15] = '7';exheadings[15] = 'База данных';
-</script>
+<![endif]--><script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'select';excounts[0] = '3';exheadings[0] = 'Выбрать';exnames[1] = 'where';excounts[1] = '5';exheadings[1] = 'Где';exnames[2] = 'orderby';excounts[2] = '3';exheadings[2] = 'Заказ';exnames[3] = 'insert';excounts[3] = '1';exheadings[3] = 'Вставить';exnames[4] = 'null';excounts[4] = '2';exheadings[4] = 'Null';exnames[5] = 'update';excounts[5] = '3';exheadings[5] = 'Обновление';exnames[6] = 'delete';excounts[6] = '2';exheadings[6] = 'Удалить';exnames[7] = 'functions';excounts[7] = '5';exheadings[7] = 'Функции';exnames[8] = 'like';excounts[8] = '5';exheadings[8] = 'Нравится';exnames[9] = 'wildcards';excounts[9] = '4';exheadings[9] = 'Подстановочный знак';exActiveNo = 9;exnames[10] = 'in';excounts[10] = '2';exheadings[10] = 'В';exnames[11] = 'between';excounts[11] = '3';exheadings[11] = 'Между';exnames[12] = 'alias';excounts[12] = '2';exheadings[12] = 'Псевдоним';exnames[13] = 'join';excounts[13] = '3';exheadings[13] = 'Присоединить';exnames[14] = 'groupby';excounts[14] = '2';exheadings[14] = 'Группа';exnames[15] = 'database';excounts[15] = '7';exheadings[15] = 'База данных';</script>
 <script>
 var x, exNo, answers = [];
 if (window.addEventListener) {              
@@ -1139,6 +1121,7 @@ window.addEventListener("load", w3LoadExercise);
 } else if (window.attachEvent) {                 
 window.attachEvent("onload", w3LoadExercise);
 }
+
 function w3LoadExercise() {
 var hint, i, j, l, x, aa;
 hint = document.getElementById("hint");
@@ -1168,7 +1151,7 @@ localStorage.setItem("w3exerciseanswers_" + storageBlip + exnames[i], aa);
 for (i = 0; i < exnames.length; i++) {
 answers[i] = localStorage.getItem("w3exerciseanswers_" + storageBlip + exnames[i]).split(",");
 if (i == exActiveNo) {
-exNo = "exercise_select1".replace("exercise_",""); // Ссылка на следующую страницу
+exNo = "exercise_wildcards3".replace("exercise_","");                                                                              // Ссылка на следующую страницу
 exNo = exNo.replace(exnames[i],"");
 exNo = Number(exNo);
 }
@@ -1241,11 +1224,10 @@ document.getElementById("hint").style.visibility = "visible";
 }
 
 </script>
-
-<meta property="og:url"           content="https://schoolsw3.com/sql/exercise.php" />
-<meta property="og:type"          content="Веб Сайт" />
-<meta property="og:title"         content="Schoolsw3 SQL Упражнения" />
-<meta property="og:description"   content="Я завершил все упражнения SQL на schoolsw3.com" />
+<meta content="https://schoolsw3.com/sql/exercise.php" property="og:url">
+<meta content="Веб Сайт" property="og:type">
+<meta content="Schoolsw3 SQL Упражнения" property="og:title"/>
+<meta content="Я завершил все упражнения SQL на schoolsw3.com" property="og:description"/>
 <style>
 #assignmentNotCorrect, #assignmentCorrect {
 display:none;
@@ -1352,8 +1334,8 @@ font-family:'Source Code Pro',Menlo,Consolas,"Courier New", Courier, monospace;
 }
 </style>
 <script>window.yaContextCb=window.yaContextCb||[]</script>
-<script src="https://yandex.ru/ads/system/context.js" async></script>
-</head>
+<script async="" src="https://yandex.ru/ads/system/context.js"></script>
+</meta></meta></head>
 <body>
 <!-- Load Facebook SDK for JavaScript 
 <div id="fb-root"></div>
@@ -1366,66 +1348,59 @@ fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>-->
 <table style="width:100%;height:100%;background-color:#f1f1f1;position:absolute;overflow:auto;min-height:650px;">
 <tr>
-<td id="topTD">
-<div id="menubtn"  class="fa fa-bars" onclick="open_menu()" onmouseover="showtooltip(0)" onmouseout="hidetooltip(0);"></div>
+<td id="topTD" style="padding-left: 20px;">
+<div class="fa fa-bars" id="menubtn" onclick="open_menu()" onmouseout="hidetooltip(0);" onmouseover="showtooltip(0)" style="display: none;"></div>
 <div class="tooltip" style="top:65px;">Меню</div>
-<div id='tryitLeaderboard' style="text-align:center;background-color:#ffffff">
+<div id="tryitLeaderboard" style="text-align:center;background-color:#ffffff">
 <!-- Yandex.RTB R-A-1418359-1 -->
 <div id="yandex_rtb_R-A-1418359-1"></div>
-<script>window.yaContextCb.push(()=>{
-  Ya.Context.AdvManager.render({
-    renderTo: 'yandex_rtb_R-A-1418359-1',
-    blockId: 'R-A-1418359-1'
-  })
-})</script>
+
 </div>
 <div>
 <div id="codeCheckWarning">
-<div id="closeCodeCheckWarning" onclick="codeCheckWarningClose()">&times;</div>
-<div id="codeCheckWarningText" class="checkText"></div>
+<div id="closeCodeCheckWarning" onclick="codeCheckWarningClose()">×</div>
+<div class="checkText" id="codeCheckWarningText"></div>
 </div>
 <div id="codeCheckCorrect">
-<div id="closeCodeCheckCorrect" onclick="codeCheckCorrectClose()">&times;</div>
+<div id="closeCodeCheckCorrect" onclick="codeCheckCorrectClose()">×</div>
 <div class="checkText">Правильно!</div>
 </div>
-<h1>Упражнение 1:</h1>
-<div id="assignmenttext" style='display:none'>
-<p>Вставьте заявление о миссии, чтобы получить все столбцы из таблицы <code class="w3-codespan">Customers</code>.</p>
-
+<h1>Упражнение 3:</h1>
+<div id="assignmenttext" style="display:none">
+<p>Выберите все записи, где первая буква <code class="w3-codespan">City</code> начинается с любой буквы от "a" до "f".</p>
 <div id="assignmentcode">
-@(6) * <br class="phonebr">FROM Customers;
+SELECT * FROM Customers
+WHERE City LIKE '@(5)%';
 </div>
-
 <div id="correctcode">
-SELECT * <br class="phonebr">FROM Customers;
+SELECT * FROM Customers
+WHERE City LIKE '[a-f]%';
 </div>
-
 </div>
 <div id="blueprint"></div>
-
 <div style="position:relative;width:100%;">
 <div id="assignmentNotCorrect" onclick="closeNotCorrect(event)">
 <h2>Не правильно</h2>
-<p>Нажмите <u>здесь</u>, чтобы снова попробовать.</p>   
+<p>Нажмите <u>здесь</u>, чтобы снова попробовать.</p>
 </div>
 <div id="assignmentCorrect" onclick="nextexercise()">
 <h2>Правильно!</h2>
-<span style="cursor:pointer" id="correctnextbtn">Вперед &#10095;</span>
+<span id="correctnextbtn" style="display: none;">Вперед ❯</span>
 </div>
 <pre id="assignmentcontainer" style="overflow:auto"></pre>
 <pre id="showcorrectanswercontainer" style="overflow:auto"></pre>
-<button class="w3-btn showanswerbutton hide-from-small" type="button" onclick="showanswer();">Показать ответ</button>
-<button class="w3-btn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();">Скрыть ответ</button>
+<button class="w3-btn showanswerbutton hide-from-small" onclick="showanswer();" style="display: none;" type="button">Показать ответ</button>
+<button class="w3-btn hideanswerbutton hide-from-small" onclick="hideanswer();" style="display:none;" type="button">Скрыть ответ</button>
 </div>
-<br>
+<br/>
 <div id="answerbuttoncontainer">
-<button id="answerbutton" class="w3-btn" style="padding:20px;" type="button" onclick="checkassignmentcode();">Отправить ответ &#10095;</button>
-<button class="w3-btn showanswerbutton hide-from-large" type="button" onclick="showanswer();">Показать ответ</button>
-<button class="w3-btn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();">Скрыть ответ</button>
+<button class="w3-btn" id="answerbutton" onclick="checkassignmentcode();" style="padding:20px;" type="button">Отправить ответ ❯</button>
+<button class="w3-btn showanswerbutton hide-from-large" onclick="showanswer();" type="button">Показать ответ</button>
+<button class="w3-btn hideanswerbutton hide-from-large" onclick="hideanswer();" style="display:none;" type="button">Скрыть ответ</button>
 </div>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 <script>
 var formanswers = [];
 var editable = false
@@ -1535,7 +1510,7 @@ answers[exActiveNo].splice((exNo-1), 1, 1);
 localStorage.setItem("w3exerciseanswers_" + storageBlip + exnames[exActiveNo], answers[exActiveNo].toString());
 checkCompletedExercises();
 document.getElementById("assignmentCorrect").style.display = "block";
-if (exNo >= 3 && 1 == 16) {
+if (exNo >= 4 && 10 == 16) {                                                                                               // упражнений 5 вариант 9 всего 16
 document.getElementById("answerbutton").style.display = "none";
 document.getElementById("correctnextbtn").style.display = "none";
 document.getElementById("assignmentCorrect").onclick = "";
@@ -1661,8 +1636,8 @@ document.getElementById("answerbutton").style.visibility = "visible";
 }
 
 function nextexercise() {
-if (exNo >= 3) {
-location = "exercise_" + exnames[exActiveNo + 1] + "1" + ".php"; // Ссылка отправки
+if (exNo >= 4) {                                                                                                                    // количество упражнений
+location = "exercise_" + exnames[exActiveNo + 1] + "1" + ".php";                                                                    // Ссылка отправки
 } else {
 location = "exercise_" + exnames[exActiveNo] + (exNo + 1 + ".php")
 }
@@ -1701,32 +1676,31 @@ window.attachEvent("onload", giveFocus);
 </td>
 </tr>
 </table>
-
-<div id="exercisemenu" class="exercisemenu">
+<div class="exercisemenu" id="exercisemenu" style="display: none;">
 <div style="width:260px;background-color:#f1f1f1;border-right:1px solid #dddddd;overflow:auto;padding:10px 5px;">
 <div style="float:left;width:75px">
-<a href="https://schoolsw3.com" target="_blank"><span class="menubtn fa fa-home" onmouseover="showtooltip(1)" onmouseout="hidetooltip(1);"></span></a>
+<a href="https://schoolsw3.com" target="_blank"><span class="menubtn fa fa-home" onmouseout="hidetooltip(1);" onmouseover="showtooltip(1)"></span></a>
 <div class="tooltip">Перейти schoolsw3.com</div>
 </div>
 <div style="float:left;width:100px;text-align:center;">
-<span onclick="modalReset()" class="menubtn fa fa fa-trash" onmouseover="showtooltip(2)" onmouseout="hidetooltip(2);"></span>
+<span class="menubtn fa fa fa-trash" onclick="modalReset()" onmouseout="hidetooltip(2);" onmouseover="showtooltip(2)"></span>
 <div class="tooltip" style="left:80px;">Сбросить Счет</div>
 </div>
 <div style="float:left; width:74px;text-align:right;">
-<span onclick="close_menu()" class="menubtn fa fa-close" onmouseover="showtooltip(3)" onmouseout="hidetooltip(3);"></span>
+<span class="menubtn fa fa-close" onclick="close_menu()" onmouseout="hidetooltip(3);" onmouseover="showtooltip(3)"></span>
 <div class="tooltip" style="right:10px;">Закрыть Меню</div>
 </div>
 </div>
 <div style="padding-left:28px;background-color:#888888;">
-<p id="completedExercisesNo">&nbsp;</p>
+<p id="completedExercisesNo"> </p>
 </div>
 <div class="exercisemenuinner">
-<div><div onclick='openmenuitems(0)' class='exmenuitemheader '><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Выбрать </div><div class='exmenulinks '><a class='exbtn' href='exercise_select1.php'><i class='fa fa-check '></i> Упражнение 1</a><a class='exbtn' href='exercise_select2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_select3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='sql_select.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Выбрать Tutorial</a></div></div><div><div onclick='openmenuitems(1)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Где </div><div class='exmenulinks'><a class='exbtn' href='exercise_where1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_where2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_where3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_where4.php'><i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_where5.php'><i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='sql_where.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Где Tutorial</a></div></div><div><div onclick='openmenuitems(2)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Заказ </div><div class='exmenulinks'><a class='exbtn' href='exercise_orderby1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_orderby2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_orderby3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='sql_orderby.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Заказ Tutorial</a></div></div><div><div onclick='openmenuitems(3)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Вставить </div><div class='exmenulinks'><a class='exbtn' href='exercise_insert1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='sql_insert.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Вставить Tutorial</a></div></div><div><div onclick='openmenuitems(4)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Null </div><div class='exmenulinks'><a class='exbtn' href='exercise_null1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_null2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='sql_null_values.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Null Tutorial</a></div></div><div><div onclick='openmenuitems(5)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Обновление </div><div class='exmenulinks'><a class='exbtn' href='exercise_update1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_update2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_update3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='sql_update.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Обновление Tutorial</a></div></div><div><div onclick='openmenuitems(6)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Удалить </div><div class='exmenulinks'><a class='exbtn' href='exercise_delete1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_delete2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='sql_delete.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Удалить Tutorial</a></div></div><div><div onclick='openmenuitems(7)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Функции </div><div class='exmenulinks'><a class='exbtn' href='exercise_functions1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_functions2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_functions3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_functions4.php'><i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_functions5.php'><i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='sql_min_max.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Функции Tutorial</a></div></div><div><div onclick='openmenuitems(8)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Нравится </div><div class='exmenulinks'><a class='exbtn' href='exercise_like1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_like2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_like3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_like4.php'><i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_like5.php'><i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='sql_like.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Нравится Tutorial</a></div></div><div><div onclick='openmenuitems(9)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Подстановочный знак </div><div class='exmenulinks'><a class='exbtn' href='exercise_wildcards1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_wildcards2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_wildcards3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_wildcards4.php'><i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='sql_wildcards.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Подстановочный знак Tutorial</a></div></div><div><div onclick='openmenuitems(10)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL В </div><div class='exmenulinks'><a class='exbtn' href='exercise_in1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_in2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='sql_in.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL В Tutorial</a></div></div><div><div onclick='openmenuitems(11)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Между </div><div class='exmenulinks'><a class='exbtn' href='exercise_between1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_between2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_between3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='sql_between.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Между Tutorial</a></div></div><div><div onclick='openmenuitems(12)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Псевдоним </div><div class='exmenulinks'><a class='exbtn' href='exercise_alias1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_alias2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='sql_alias.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Псевдоним Tutorial</a></div></div><div><div onclick='openmenuitems(13)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Присоединить </div><div class='exmenulinks'><a class='exbtn' href='exercise_join1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_join2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_join3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='sql_join.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Присоединить Tutorial</a></div></div><div><div onclick='openmenuitems(14)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL Группа </div><div class='exmenulinks'><a class='exbtn' href='exercise_groupby1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_groupby2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='sql_groupby.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL Группа Tutorial</a></div></div><div><div onclick='openmenuitems(15)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>SQL База данных </div><div class='exmenulinks'><a class='exbtn' href='exercise_database1.php'><i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_database2.php'><i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_database3.php'><i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_database4.php'><i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_database5.php'><i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='exercise_database6.php'><i class='fa fa-check'></i> Упражнение 6</a><a class='exbtn' href='exercise_database7.php'><i class='fa fa-check'></i> Упражнение 7</a><a class='exbtn' href='sql_create_db.php' target='_blank' style='font-size:80%;text-decoration:underline;'>Go to SQL База данных Tutorial</a></div></div>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div><div class="exmenuitemheader" onclick="openmenuitems(0)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Выбрать </div><div class="exmenulinks"><a class="exbtn" href="exercise_select1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_select2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_select3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="sql_select.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Выбрать Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(1)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Где </div><div class="exmenulinks"><a class="exbtn" href="exercise_where1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_where2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_where3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="exercise_where4.php"><i class="fa fa-check"></i> Упражнение 4</a><a class="exbtn" href="exercise_where5.php"><i class="fa fa-check"></i> Упражнение 5</a><a class="exbtn" href="sql_where.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Где Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(2)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Заказ </div><div class="exmenulinks"><a class="exbtn" href="exercise_orderby1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_orderby2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_orderby3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="sql_orderby.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Заказ Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(3)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Вставить </div><div class="exmenulinks"><a class="exbtn" href="exercise_insert1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="sql_insert.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Вставить Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(4)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Null </div><div class="exmenulinks"><a class="exbtn" href="exercise_null1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_null2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="sql_null_values.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Null Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(5)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Обновление </div><div class="exmenulinks"><a class="exbtn" href="exercise_update1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_update2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_update3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="sql_update.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Обновление Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(6)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Удалить </div><div class="exmenulinks"><a class="exbtn" href="exercise_delete1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_delete2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="sql_delete.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Удалить Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(7)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Функции </div><div class="exmenulinks"><a class="exbtn" href="exercise_functions1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_functions2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_functions3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="exercise_functions4.php"><i class="fa fa-check"></i> Упражнение 4</a><a class="exbtn" href="exercise_functions5.php"><i class="fa fa-check"></i> Упражнение 5</a><a class="exbtn" href="sql_min_max.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Функции Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(8)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Нравится </div><div class="exmenulinks"><a class="exbtn" href="exercise_like1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_like2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_like3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="exercise_like4.php"><i class="fa fa-check"></i> Упражнение 4</a><a class="exbtn" href="exercise_like5.php"><i class="fa fa-check"></i> Упражнение 5</a><a class="exbtn" href="sql_like.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Нравится Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(9)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Подстановочный знак </div><div class="exmenulinks"><a class="exbtn" href="exercise_wildcards1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_wildcards2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_wildcards3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="exercise_wildcards4.php"><i class="fa fa-check"></i> Упражнение 4</a><a class="exbtn" href="sql_wildcards.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Подстановочный знак Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(10)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL В </div><div class="exmenulinks"><a class="exbtn" href="exercise_in1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_in2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="sql_in.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL В Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(11)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Между </div><div class="exmenulinks"><a class="exbtn" href="exercise_between1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_between2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_between3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="sql_between.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Между Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(12)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Псевдоним </div><div class="exmenulinks"><a class="exbtn" href="exercise_alias1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_alias2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="sql_alias.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Псевдоним Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(13)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Присоединить </div><div class="exmenulinks"><a class="exbtn" href="exercise_join1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_join2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_join3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="sql_join.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Присоединить Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(14)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL Группа </div><div class="exmenulinks"><a class="exbtn" href="exercise_groupby1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_groupby2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="sql_groupby.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL Группа Tutorial</a></div></div><div><div class="exmenuitemheader" onclick="openmenuitems(15)"><i class="fa fa-check" style="position:absolute;left:224px;padding-top:4px;"></i>SQL База данных </div><div class="exmenulinks"><a class="exbtn" href="exercise_database1.php"><i class="fa fa-check"></i> Упражнение 1</a><a class="exbtn" href="exercise_database2.php"><i class="fa fa-check"></i> Упражнение 2</a><a class="exbtn" href="exercise_database3.php"><i class="fa fa-check"></i> Упражнение 3</a><a class="exbtn" href="exercise_database4.php"><i class="fa fa-check"></i> Упражнение 4</a><a class="exbtn" href="exercise_database5.php"><i class="fa fa-check"></i> Упражнение 5</a><a class="exbtn" href="exercise_database6.php"><i class="fa fa-check"></i> Упражнение 6</a><a class="exbtn" href="exercise_database7.php"><i class="fa fa-check"></i> Упражнение 7</a><a class="exbtn" href="sql_create_db.php" style="font-size:80%;text-decoration:underline;" target="_blank">Go to SQL База данных Tutorial</a></div></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 </div>
 </div>
 <script>
@@ -1808,41 +1782,41 @@ addModeClass: true
 //  window.editor.on("change", function () {window.editor.save();});
 }
 </script>
-<div id="id01" class="w3-modal" style="z-index:3;">
+<div class="w3-modal" id="id01" style="z-index:3;">
 <div class="w3-modal-content w3-card-4 w3-center">
-<header class="w3-container w3-display-container"> 
-<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<header class="w3-container w3-display-container">
+<span class="w3-button w3-display-topright" onclick="document.getElementById('id01').style.display='none'">×</span>
 <h2>Сбросить счет?</h2>
 </header>
 <div class="w3-container w3-padding">
 <p>Это позволит сбросить счет всех 52 упражнений.</p>
 <p>Вы уверены, что хотите продолжить??</p>
-<br>
+<br/>
 <button class="w3-btn" onclick="resetScore()">Сброс</button>
-<button class="w3-btn" onclick="document.getElementById('id01').style.display='none'">Отменить</button>      
+<button class="w3-btn" onclick="document.getElementById('id01').style.display='none'">Отменить</button>
 </div>
-<br>
+<br/>
 </div>
 </div>
-<div id="id02" class="w3-modal" style="z-index:3;">
+<div class="w3-modal" id="id02" style="z-index:3;">
 <div class="w3-modal-content w3-card-4 w3-padding w3-center">
-<header class="w3-container w3-display-container"> 
-<span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<header class="w3-container w3-display-container">
+<span class="w3-button w3-display-topright" onclick="document.getElementById('id02').style.display='none'">×</span>
 <h2>Поздравления!</h2>
 </header>
 <div class="w3-container w3-padding">
 <h3>Вы закончили все 52 упражнения по SQL.</h3>
 <p>Поделитесь своим счетом на facebook:</p>
 <a href="https://www.facebook.com/sharer.php?u=https://schoolsw3.com/sql/exercise.php" target="_blank" title="Facebook">
-<span style="color:#3B5998;" class="fa fa-facebook-square fa-2x"></span></a>
-<br>
-<br>
-<br>
-<br>
-<button class="w3-btn" onclick="document.getElementById('id02').style.display='none'">Закрыть</button>      
+<span class="fa fa-facebook-square fa-2x" style="color:#3B5998;"></span></a>
+<br/>
+<br/>
+<br/>
+<br/>
+<button class="w3-btn" onclick="document.getElementById('id02').style.display='none'">Закрыть</button>
 </div>
-<br>
+<br/>
 </div>
 </div>
-</body>
+<script src="../setup.js"></script></body>
 </html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+<head>
+<title>Учебник SQL —  BETWEEN</title>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web,W3CSS,W3C,Python,веб,учебники,веб-разработка,разработка,тестирование,учебное пособие,программирование,обучение,тренировка,учебник,викторина,примеры,занятия,уроки,справочник,образцы,упражнения,исходники,исходный код,цвет,демо,советы" name="Keywords"/><meta content="84600" http-equiv="refresh"/><meta content="Хорошо организованные и просты для понимания, бесплатные учебники для самостоятельного веб строительства, с примерами HTML, CSS, JavaScript и т.д." name="Description"/><meta content="Оператор BETWEEN выбирает значения в заданном диапазоне. Эти значения могут быть числами, текстом или датами" name="Description"/><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/w3css/4/w3.css" rel="stylesheet"/><link href="/w3css/4/w3_2.css" rel="stylesheet"/>
+<script src="/lib/prism2.js"></script><link href="/lib/prism1.css" rel="stylesheet"/><!-- Yandex.RTB --><script>window.yaContextCb=window.yaContextCb||[]</script><script async="" src="https://yandex.ru/ads/system/context.js"></script><!-- //Yandex.RTB -->
+</head><body><div class="w3-container top"><a class="w3schools-logo notranslate" href="../index.html">schoolsw3<span class="dotcom">.com</span></a><div class="w3-right w3-hide-small w3-wide toptext" style="font-family:'Segoe UI',Arial,sans-serif">САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ</div></div><div id="googleSearch" style="display:none;position:absolute;z-index:4;right:52px;height:40px;background-color:#5f5f5f;letter-spacing:normal;"><div class="gcse-search"></div></div><div id="google_translate_element" style="display:none;position:absolute;z-index:3;right:111px;height:40px;background-color:#5f5f5f;text-align:right;padding-top:9px;"></div><div class="w3-card-2 topnav notranslate" id="topnav"><div style="overflow:auto;"><div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:41px"><a class="topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button" href="javascript:void(0);" onclick="open_menu()" title="Меню"></a><a class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" href="../index.html" title="Главная"></a><a class="w3-bar-item w3-button" href="../html/index.php" title="HTML Учебник">HTML</a><a class="w3-bar-item w3-button" href="../css/index.php" title="CSS Учебник">CSS</a><a class="w3-bar-item w3-button" href="../js/index.php" title="JavaScript Учебник">JAVASCRIPT</a><a class="w3-bar-item w3-button" href="../sql/index.php" title="SQL Учебник">SQL</a><a class="w3-bar-item w3-button" href="../python/index.php" title="Python Учебник">PYTHON</a><a class="w3-bar-item w3-button" href="../php/index.php" title="PHP Учебник">PHP</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ver.php" title="Bootstrap Учебник">BOOTSTRAP</a><a class="w3-bar-item w3-button" href="../howto/index.php" title="Сделать инструкции HTML, CSS и JavaScript">КАК</a><a class="w3-bar-item w3-button" href="../w3css/index.php" title="W3.CSS Учебник">W3.CSS</a><a class="w3-bar-item w3-button" href="../jquery/index.php" title="jQuery Учебник">JQUERY</a><a class="w3-bar-item w3-button" href="../java/index.php" title="Java Учебник">JAVA</a><a class="w3-bar-item w3-button" href="javascript:void(0);" id="topnavbtn_tutorials" onclick='w3_open_nav("tutorials")' title="Учебники для программиста">ВСЕ <i class="fa fa-caret-down"></i> <i class="fa fa-caret-up" style="display:none"></i></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="open_search(this)" title="Поиск на Schoolsw3"></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="open_translate(this)" title="Перевод на Schoolsw3"></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="changecodetheme(this)" title="Переключение темного кода"></a><a class="w3-bar-item w3-button w3-right" href="../forum/index.php" target="_blank">ФОРУМ</a><a class="w3-bar-item w3-button w3-right" href="javascript:void(0);" id="topnavbtn_exercises" onclick='w3_open_nav("exercises")' title="Упражнения для программиста">УПРАЖНЕНИЯ <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a><a class="w3-bar-item w3-button w3-right" href="javascript:void(0);" id="topnavbtn_references" onclick='w3_open_nav("references")' title="Справочники для программиста">СПРАВОЧНИКИ <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a></div><div class="w3-bar-block w3-card-2" id="nav_tutorials" style="display:none;"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("tutorials")' style="position:absolute;right:10px;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l3 m6"><h3>HTML и CSS</h3><a class="w3-bar-item w3-button" href="../html/index.php">Учебник HTML</a><a class="w3-bar-item w3-button" href="../css/index.php">Учебник CSS</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ver.php">Учебник Bootstrap</a><a class="w3-bar-item w3-button" href="../w3css/index.php">Учебник W3.CSS</a><a class="w3-bar-item w3-button" href="../colors/index.php">Учебник Colors</a><a class="w3-bar-item w3-button" href="../icons/index.php">Учебник Icons</a><a class="w3-bar-item w3-button" href="../graphics/index.php">Учебник Graphics</a><a class="w3-bar-item w3-button" href="../graphics/svg_intro.php">Учебник SVG</a><a class="w3-bar-item w3-button" href="../graphics/canvas_intro.php">Учебник Canvas</a><a class="w3-bar-item w3-button" href="../howto/index.php">Учебник Как</a><a class="w3-bar-item w3-button" href="../sass/index.php">Учебник Sass</a><div class="w3-hide-large w3-hide-small"><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/index.php">Учебник XML</a><a class="w3-bar-item w3-button" href="../xml/ajax_intro.php">Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href="../xml/xml_dtd_intro.php">Учебник XML DTD</a><a class="w3-bar-item w3-button" href="../xml/schema_intro.php">Учебник XML Schema</a><a class="w3-bar-item w3-button" href="../xml/xsl_intro.php">Учебник XSLT</a><a class="w3-bar-item w3-button" href="../xml/xpath_intro.php">Учебник XPath</a><a class="w3-bar-item w3-button" href="../xml/xquery_intro.php">Учебник XQuery</a></div></div><div class="w3-col l3 m6"><h3>JavaScript</h3><a class="w3-bar-item w3-button" href="../js/index.php">Учебник JavaScript</a><a class="w3-bar-item w3-button" href="../jquery/index.php">Учебник jQuery</a><a class="w3-bar-item w3-button" href="../react/index.php">Учебник React</a><a class="w3-bar-item w3-button" href="../angular/index.php">Учебник AngularJS</a><a class="w3-bar-item w3-button" href="../js/js_json_intro.php">Учебник JSON</a><a class="w3-bar-item w3-button" href="../js/js_ajax_intro.php">Учебник AJAX</a><a class="w3-bar-item w3-button" href="../w3js/index.php">Учебник W3.JS</a><h3>Программирование</h3><a class="w3-bar-item w3-button" href="../python/index.php">Учебник Python</a><a class="w3-bar-item w3-button" href="../java/index.php">Учебник Java</a><a class="w3-bar-item w3-button" href="../cpp/index.php">Учебник C++</a><a class="w3-bar-item w3-button" href="../cs/index.php">Учебник C#</a><a class="w3-bar-item w3-button" href="../python/python_ml_getting_started.php">Учебник машинное обучение</a><div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"/><br class="w3-hide-medium w3_hide-small"/></div></div><div class="w3-col l3 m6"><h3>На Сервере</h3><a class="w3-bar-item w3-button" href="../sql/index.php">Учебник SQL</a><a class="w3-bar-item w3-button" href="../php/index.php">Учебник PHP</a><a class="w3-bar-item w3-button" href="../asp/index.php">Учебник ASP</a><a class="w3-bar-item w3-button" href="../nodejs/index.php">Учебник Node.js</a><a class="w3-bar-item w3-button" href="../nodejs/nodejs_raspberrypi.php">Учебник Raspberry Pi</a> <h3>Веб Стоительство</h3><a class="w3-bar-item w3-button" href="../w3css/w3css_templates.php">Веб шаблоны</a><a class="w3-bar-item w3-button" href="../browsers/index.php">Веб Статистика</a><a class="w3-bar-item w3-button" href="../cert/index.php">Веб Сертификаты</a><a class="w3-bar-item w3-button" href="../tryit/index.php">Веб Редактор</a><a class="w3-bar-item w3-button" href="../whatis/index.php">Веб Разработка</a><a class="w3-bar-item w3-button" href="../typingspeed/index.php">Проверьте скорость набора текста</a></div><div class="w3-col l3 m6 w3-hide-medium"><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/index.php">Учебник XML</a><a class="w3-bar-item w3-button" href="../xml/ajax_intro.php">Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href="../xml/xml_dtd_intro.php">Учебник XML DTD</a><a class="w3-bar-item w3-button" href="../xml/schema_intro.php">Учебник XML Schema</a><a class="w3-bar-item w3-button" href="../xml/xsl_intro.php">Учебник XSLT</a><a class="w3-bar-item w3-button" href="../xml/xpath_intro.php">Учебник XPath</a><a class="w3-bar-item w3-button" href="../xml/xquery_intro.php">Учебник XQuery</a></div></div><br/></div><div class="w3-bar-block w3-card-2" id="nav_references"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("references")' style="position:absolute;right:0;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l3 m6"><h3>HTML</h3><a class="w3-bar-item w3-button" href="../tags/index.php">HTML Справочник тегов</a><a class="w3-bar-item w3-button" href="../tags/ref_html_browsersupport.php">HTML Поддержка Браузера</a><a class="w3-bar-item w3-button" href="../tags/ref_eventattributes.php">HTML Справочник событий</a><a class="w3-bar-item w3-button" href="../colors/index.php">HTML Справочник цвета</a><a class="w3-bar-item w3-button" href="../tags/ref_attributes.php">HTML Справочник атрибутов</a><a class="w3-bar-item w3-button" href="../tags/ref_canvas.php">HTML Справочник Canvas</a><a class="w3-bar-item w3-button" href="../graphics/svg_reference.php">HTML Справочник SVG</a><a class="w3-bar-item w3-button" href="../charsets/index.php">HTML Character Sets</a><a class="w3-bar-item w3-button" href="../graphics/google_maps_reference.php">Google Maps Справочник</a><h3>CSS</h3><a class="w3-bar-item w3-button" href="../cssref/index.php">CSS Справочник</a><a class="w3-bar-item w3-button" href="../cssref/css3_browsersupport.php">CSS Поддержка Браузера</a><a class="w3-bar-item w3-button" href="../cssref/css_selectors.php">CSS Справочник селекторов</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap 3 Справочник</a><a class="w3-bar-item w3-button" href="../bootstrap4/bootstrap_ref_all_classes.php">Bootstrap 4 Справочник</a><a class="w3-bar-item w3-button" href="../w3css/w3css_references.php">W3.CSS Справочник</a><a class="w3-bar-item w3-button" href="../icons/icons_reference.php">Icon Справочник</a><a class="w3-bar-item w3-button" href="../sass/sass_functions_string.php">Sass Справочник</a></div><div class="w3-col l3 m6"><h3>JavaScript</h3><a class="w3-bar-item w3-button" href="../jsref/index.php">JavaScript Справочник</a><a class="w3-bar-item w3-button" href="../jsref/index.php">HTML DOM Справочник</a><a class="w3-bar-item w3-button" href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><a class="w3-bar-item w3-button" href="../angular/angular_ref_directives.php">AngularJS Справочник</a><a class="w3-bar-item w3-button" href="../w3js/w3js_references.php">W3.JS Справочник</a><h3>Программмирование</h3><a class="w3-bar-item w3-button" href="../python/python_reference.php">Python Справочник</a><a class="w3-bar-item w3-button" href="../java/java_ref_keywords.php">Java Справочник</a></div><div class="w3-col l3 m6"><h3>На сервере</h3><a class="w3-bar-item w3-button" href="../sql/sql_ref_keywords.php">SQL Справочник</a><a class="w3-bar-item w3-button" href="../php/php_ref_overview.php">PHP Справочник</a><a class="w3-bar-item w3-button" href="../asp/asp_ref_response.php">ASP Справочник</a><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/dom_nodetype.php">XML Справочник</a><a class="w3-bar-item w3-button" href="../xml/dom_http.php">XML Http Справочник</a><a class="w3-bar-item w3-button" href="../xml/xsl_elementref.php">XSLT Справочник</a><a class="w3-bar-item w3-button" href="../xml/schema_elements_ref.php">XML Schema Справочник</a></div><div class="w3-col l3 m6 w3-hide-medium w3-hide-small"><h3>Набор Кодировок</h3><a class="w3-bar-item w3-button" href="../charsets/index.php">HTML Набор Кодировок</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ascii.php">HTML ASCII</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ansi.php">HTML ANSI</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ansi.php">HTML Windows-1252</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_8859.php">HTML ISO-8859-1</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_symbols.php">HTML Символы</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_utf8.php">HTML UTF-8</a></div></div><br/></div><div class="w3-bar-block w3-card-2" id="nav_exercises"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("exercises")' style="position:absolute;right:0;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l4 m6"><h3>Упражнения</h3><a class="w3-bar-item w3-button" href="../html/html_exercises.php">HTML Упражнения</a><a class="w3-bar-item w3-button" href="../css/css_exercises.php">CSS Упражнения</a><a class="w3-bar-item w3-button" href="../js/js_exercises.php">JavaScript Упражнения</a><a class="w3-bar-item w3-button" href="../sql/sql_exercises.php">SQL Упражнения</a><a class="w3-bar-item w3-button" href="../php/php_exercises.php">PHP Упражнения</a><a class="w3-bar-item w3-button" href="../python/python_exercises.php">Python Упражнения</a><a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.php">jQuery Упражнения</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.php">Bootstrap Упражнения</a><a class="w3-bar-item w3-button" href="../java/java_exercises.php">Java Упражнения</a><a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.php">C++ Упражнения</a><a class="w3-bar-item w3-button" href="../cs/cs_exercises.php">C# Упражнения</a></div><div class="w3-col l4 m6"><h3>Викторины</h3><a class="w3-bar-item w3-button" href="html_quiz.php" target="_top">HTML Викторина</a><a class="w3-bar-item w3-button" href="../css/css_quiz.php" target="_top">CSS Викторина</a><a class="w3-bar-item w3-button" href="../js/js_quiz.php" target="_top">JavaScript Викторина</a><a class="w3-bar-item w3-button" href="../sql/sql_quiz.php" target="_top">SQL Викторина</a><a class="w3-bar-item w3-button" href="../php/php_quiz.php" target="_top">PHP Викторина</a><a class="w3-bar-item w3-button" href="../python/python_quiz.php" target="_top">Python Викторина</a><a class="w3-bar-item w3-button" href="../jquery/jquery_quiz.php" target="_top">jQuery Викторина</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_quiz.php" target="_top">Bootstrap Викторина</a><a class="w3-bar-item w3-button" href="../java/java_quiz.php" target="_top">Java Викторина</a><a class="w3-bar-item w3-button" href="../cpp/cpp_quiz.php" target="_top">C++ Викторина</a><a class="w3-bar-item w3-button" href="../cs/cs_quiz.php" target="_top">C# Викторина</a><a class="w3-bar-item w3-button" href="../xml/xml_quiz.php" target="_top">XML Викторина</a></div><div class="w3-col l4 m12"><h3>Сертификаты</h3><a class="w3-bar-item w3-button" href="../cert/cert_html.php" target="_top">HTML Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_css.php" target="_top">CSS Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_javascript.php" target="_top">JavaScript Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_sql.php" target="_top">SQL Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_php.php" target="_top">PHP Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_python.php" target="_top">Python Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_jquery.php" target="_top">jQuery Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.php" target="_top">Bootstrap Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_xml.php" target="_top">XML Сертификат</a></div></div><br/></div></div></div><div class="w3-sidebar w3-collapse" id="sidenav">
+<div id="leftmenuinner">
+<div class="w3-light-grey" id="leftmenuinnerinner">
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">SQL</span> Учебник</h2>
+<a href="index.php" target="_top">SQL Главная</a>
+<a href="sql_intro.php" target="_top">SQL Введение</a>
+<a href="sql_syntax.php" target="_top">SQL Синтаксис</a>
+<a href="sql_select.php" target="_top">SQL SELECT</a>
+<a href="sql_distinct.php" target="_top">SQL SELECT DISTINCT</a>
+<a href="sql_where.php" target="_top">SQL WHERE</a>
+<a href="sql_and_or.php" target="_top">SQL AND, OR, NOT</a>
+<a href="sql_orderby.php" target="_top">SQL ORDER BY</a>
+<a href="sql_insert.php" target="_top">SQL INSERT INTO</a>
+<a href="sql_null_values.php" target="_top">SQL Null</a>
+<a href="sql_update.php" target="_top">SQL UPDATE</a>
+<a href="sql_delete.php" target="_top">SQL DELETE</a>
+<a href="sql_top.php" target="_top">SQL SELECT TOP</a>
+<a href="sql_min_max.php" target="_top">SQL MIN() и MAX()</a>
+<a href="sql_count_avg_sum.php" target="_top">SQL COUNT(), AVG() и ...</a>
+<a href="sql_like.php" target="_top">SQL LIKE</a>
+<a href="sql_wildcards.php" target="_top">SQL Подстановочный</a>
+<a href="sql_in.php" target="_top">SQL IN</a>
+<a href="sql_between.php" target="_top">SQL BETWEEN</a>
+<a href="sql_alias.php" target="_top">SQL Псевдонимы</a>
+<a href="sql_join.php" target="_top">SQL JOIN</a>
+<a href="sql_join_inner.php" target="_top">SQL JOIN Внутри</a>
+<a href="sql_join_left.php" target="_top">SQL JOIN Слева</a>
+<a href="sql_join_right.php" target="_top">SQL JOIN Справа</a>
+<a href="sql_join_full.php" target="_top">SQL JOIN Полное</a>
+<a href="sql_join_self.php" target="_top">SQL JOIN Сам</a>
+<a href="sql_union.php" target="_top">SQL UNION</a>
+<a href="sql_groupby.php" target="_top">SQL GROUP BY</a>
+<a href="sql_having.php" target="_top">SQL HAVING</a>
+<a href="sql_exists.php" target="_top">SQL Exists</a>
+<a href="sql_any_all.php" target="_top">SQL Any, All</a>
+<a href="sql_select_into.php" target="_top">SQL SELECT INTO</a>
+<a href="sql_insert_into_select.php" target="_top">SQL INSERT INTO SELECT</a>
+<a href="sql_case.php" target="_top">SQL CASE</a>
+<a href="sql_isnull.php" target="_top">SQL NULL</a>
+<a href="sql_stored_procedures.php" target="_top">SQL Хранимая</a>
+<a href="sql_comments.php" target="_top">SQL Комментарии</a>
+<a href="sql_operators.asp" target="_top">SQL Operators</a>
+<br/>
+<h2 class="left"><span class="left_h2">SQL</span> База данных</h2>
+<a href="sql_create_db.php" target="_top">SQL Создать БД</a>
+<a href="sql_drop_db.php" target="_top">SQL Откинуть БД</a>
+<a href="sql_backup_db.php" target="_top">SQL Резервная БД</a>
+<a href="sql_create_table.php" target="_top">SQL Создать таблицу</a>
+<a href="sql_drop_table.php" target="_top">SQL Откинуть таблицу</a>
+<a href="sql_alter.php" target="_top">SQL Изменить таблицу</a>
+<a href="sql_constraints.php" target="_top">SQL Ограничения</a>
+<a href="sql_notnull.php" target="_top">SQL Не ноль</a>
+<a href="sql_unique.php" target="_top">SQL Уникальный</a>
+<a href="sql_primarykey.php" target="_top">SQL Первичный ключ</a>
+<a href="sql_foreignkey.php" target="_top">SQL Внешний ключ</a>
+<a href="sql_check.php" target="_top">SQL Проверить</a>
+<a href="sql_default.php" target="_top">SQL По умолчанию</a>
+<a href="sql_create_index.php" target="_top">SQL Индекс</a>
+<a href="sql_autoincrement.php" target="_top">SQL Авто приращение</a>
+<a href="sql_dates.php" target="_top">SQL Даты</a>
+<a href="sql_view.php" target="_top">SQL Представление</a>
+<a href="sql_injection.php" target="_top">SQL Инъекция</a>
+<a href="sql_hosting.php" target="_top">SQL Хостинг</a>
+<a href="sql_datatypes.php" target="_top">SQL Типы данных</a>
+<br/>
+<h2 class="left"><span class="left_h2">SQL</span> Справочник</h2>
+<a href="sql_ref_keywords.php" target="_top">SQL Ключевые слова</a>
+<div class="ref_overview" style="margin-left:10px;background-color:#ddd">
+<a href="sql_ref_add.php" target="_top">ADD</a>
+<a href="sql_ref_add_constraint.php" target="_top">ADD CONSTRAINT</a>
+<a href="sql_ref_alter.php" target="_top">ALTER</a>
+<a href="sql_ref_alter_column.php" target="_top">ALTER COLUMN</a>
+<a href="sql_ref_alter_table.php" target="_top">ALTER TABLE</a>
+<a href="sql_ref_all.php" target="_top">ALL</a>
+<a href="sql_ref_and.php" target="_top">AND</a>
+<a href="sql_ref_any.php" target="_top">ANY</a>
+<a href="sql_ref_as.php" target="_top">AS</a>
+<a href="sql_ref_asc.php" target="_top">ASC</a>
+<a href="sql_ref_backup_database.php" target="_top">BACKUP DATABASE</a>
+<a href="sql_ref_between.php" target="_top">BETWEEN</a>
+<a href="sql_ref_case.php" target="_top">CASE</a>
+<a href="sql_ref_check.php" target="_top">CHECK</a>
+<a href="sql_ref_column.php" target="_top">COLUMN</a>
+<a href="sql_ref_constraint.php" target="_top">CONSTRAINT</a>
+<a href="sql_ref_create.php" target="_top">CREATE</a>
+<a href="sql_ref_create_database.php" target="_top">CREATE DATABASE</a>
+<a href="sql_ref_create_index.php" target="_top">CREATE INDEX</a>
+<a href="sql_ref_create_or_replace_view.php" target="_top">CREATE OR REPLACE VIEW</a>
+<a href="sql_ref_create_table.php" target="_top">CREATE TABLE</a>
+<a href="sql_ref_create_procedure.php" target="_top">CREATE PROCEDURE</a>
+<a href="sql_ref_create_unique_index.php" target="_top">CREATE UNIQUE INDEX</a>
+<a href="sql_ref_create_view.php" target="_top">CREATE VIEW</a>
+<a href="sql_ref_database.php" target="_top">DATABASE</a>
+<a href="sql_ref_default.php" target="_top">DEFAULT</a>
+<a href="sql_ref_delete.php" target="_top">DELETE</a>
+<a href="sql_ref_desc.php" target="_top">DESC</a>
+<a href="sql_ref_select_distinct.php" target="_top">DISTINCT</a>
+<a href="sql_ref_drop.php" target="_top">DROP</a>
+<a href="sql_ref_drop_column.php" target="_top">DROP COLUMN</a>
+<a href="sql_ref_drop_constraint.php" target="_top">DROP CONSTRAINT</a>
+<a href="sql_ref_drop_database.php" target="_top">DROP DATABASE</a>
+<a href="sql_ref_drop_default.php" target="_top">DROP DEFAULT</a>
+<a href="sql_ref_drop_index.php" target="_top">DROP INDEX</a>
+<a href="sql_ref_drop_table.php" target="_top">DROP TABLE</a>
+<a href="sql_ref_drop_view.php" target="_top">DROP VIEW</a>
+<a href="sql_ref_exec.php" target="_top">EXEC</a>
+<a href="sql_ref_exists.php" target="_top">EXISTS</a>
+<a href="sql_ref_foreign_key.php" target="_top">FOREIGN KEY</a>
+<a href="sql_ref_from.php" target="_top">FROM</a>
+<a href="sql_ref_full_outer_join.php" target="_top">FULL OUTER JOIN</a>
+<a href="sql_ref_group_by.php" target="_top">GROUP BY</a>
+<a href="sql_ref_having.php" target="_top">HAVING</a>
+<a href="sql_ref_in.php" target="_top">IN</a>
+<a href="sql_ref_index.php" target="_top">INDEX</a>
+<a href="sql_ref_inner_join.php" target="_top">INNER JOIN</a>
+<a href="sql_ref_insert_into.php" target="_top">INSERT INTO</a>
+<a href="sql_ref_insert_into_select.php" target="_top">INSERT INTO SELECT</a>
+<a href="sql_ref_is_null.php" target="_top">IS NULL</a>
+<a href="sql_ref_is_not_null.php" target="_top">IS NOT NULL</a>
+<a href="sql_ref_join.php" target="_top">JOIN</a>
+<a href="sql_ref_left_join.php" target="_top">LEFT JOIN</a>
+<a href="sql_ref_like.php" target="_top">LIKE</a>
+<a href="sql_ref_top.php" target="_top">LIMIT</a>
+<a href="sql_ref_not.php" target="_top">NOT</a>
+<a href="sql_ref_not_null.php" target="_top">NOT NULL</a>
+<a href="sql_ref_or.php" target="_top">OR</a>
+<a href="sql_ref_order_by.php" target="_top">ORDER BY</a>
+<a href="sql_ref_full_outer_join.php" target="_top">OUTER JOIN</a>
+<a href="sql_ref_primary_key.php" target="_top">PRIMARY KEY</a>
+<a href="sql_ref_create_procedure.php" target="_top">PROCEDURE</a>
+<a href="sql_ref_right_join.php" target="_top">RIGHT JOIN</a>
+<a href="sql_ref_top.php" target="_top">ROWNUM</a>
+<a href="sql_ref_select.php" target="_top">SELECT</a>
+<a href="sql_ref_select_distinct.php" target="_top">SELECT DISTINCT</a>
+<a href="sql_ref_select_into.php" target="_top">SELECT INTO</a>
+<a href="sql_ref_top.php" target="_top">SELECT TOP</a>
+<a href="sql_ref_set.php" target="_top">SET</a>
+<a href="sql_ref_table.php" target="_top">TABLE</a>
+<a href="sql_ref_top.php" target="_top">TOP</a>
+<a href="sql_ref_drop_table.php" target="_top">TRUNCATE TABLE</a>
+<a href="sql_ref_union.php" target="_top">UNION</a>
+<a href="sql_ref_union.php" target="_top">UNION ALL</a>
+<a href="sql_ref_unique.php" target="_top">UNIQUE</a>
+<a href="sql_ref_update.php" target="_top">UPDATE</a>
+<a href="sql_ref_values.php" target="_top">VALUES</a>
+<a href="sql_ref_view.php" target="_top">VIEW</a>
+<a href="sql_ref_where.php" target="_top">WHERE</a>
+</div>
+<a href="sql_ref_mysql.php" target="_top">MySQL Функции</a>
+<div class="ref_overview" style="margin-left:10px;background-color:#ddd">
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;">Функции строк</span>
+<a href="func_mysql_ascii.php" target="_top">ASCII</a>
+<a href="func_mysql_char_length.php" target="_top">CHAR_LENGTH</a>
+<a href="func_mysql_character_length.php" target="_top">CHARACTER_LENGTH</a>
+<a href="func_mysql_concat.php" target="_top">CONCAT</a>
+<a href="func_mysql_concat_ws.php" target="_top">CONCAT_WS</a>
+<a href="func_mysql_field.php" target="_top">FIELD</a>
+<a href="func_mysql_find_in_set.php" target="_top">FIND_IN_SET</a>
+<a href="func_mysql_format.php" target="_top">FORMAT</a>
+<a href="func_mysql_insert.php" target="_top">INSERT</a>
+<a href="func_mysql_instr.php" target="_top">INSTR</a>
+<a href="func_mysql_lcase.php" target="_top">LCASE</a>
+<a href="func_mysql_left.php" target="_top">LEFT</a>
+<a href="func_mysql_length.php" target="_top">LENGTH</a>
+<a href="func_mysql_locate.php" target="_top">LOCATE</a>
+<a href="func_mysql_lower.php" target="_top">LOWER</a>
+<a href="func_mysql_lpad.php" target="_top">LPAD</a>
+<a href="func_mysql_ltrim.php" target="_top">LTRIM</a>
+<a href="func_mysql_mid.php" target="_top">MID</a>
+<a href="func_mysql_position.php" target="_top">POSITION</a>
+<a href="func_mysql_repeat.php" target="_top">REPEAT</a>
+<a href="func_mysql_replace.php" target="_top">REPLACE</a>
+<a href="func_mysql_reverse.php" target="_top">REVERSE</a>
+<a href="func_mysql_right.php" target="_top">RIGHT</a>
+<a href="func_mysql_rpad.php" target="_top">RPAD</a>
+<a href="func_mysql_rtrim.php" target="_top">RTRIM</a>
+<a href="func_mysql_space.php" target="_top">SPACE</a>
+<a href="func_mysql_strcmp.php" target="_top">STRCMP</a>
+<a href="func_mysql_substr.php" target="_top">SUBSTR</a>
+<a href="func_mysql_substring.php" target="_top">SUBSTRING</a>
+<a href="func_mysql_substring_index.php" target="_top">SUBSTRING_INDEX</a>
+<a href="func_mysql_trim.php" target="_top">TRIM</a>
+<a href="func_mysql_ucase.php" target="_top">UCASE</a>
+<a href="func_mysql_upper.php" target="_top">UPPER</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции чисел</span>
+<a href="func_mysql_abs.php" target="_top">ABS</a>
+<a href="func_mysql_acos.php" target="_top">ACOS</a>
+<a href="func_mysql_asin.php" target="_top">ASIN</a>
+<a href="func_mysql_atan.php" target="_top">ATAN</a>
+<a href="func_mysql_atan2.php" target="_top">ATAN2</a>
+<a href="func_mysql_avg.php" target="_top">AVG</a>
+<a href="func_mysql_ceil.php" target="_top">CEIL</a>
+<a href="func_mysql_ceiling.php" target="_top">CEILING</a>
+<a href="func_mysql_cos.php" target="_top">COS</a>
+<a href="func_mysql_cot.php" target="_top">COT</a>
+<a href="func_mysql_count.php" target="_top">COUNT</a>
+<a href="func_mysql_degrees.php" target="_top">DEGREES</a>
+<a href="func_mysql_div.php" target="_top">DIV</a>
+<a href="func_mysql_exp.php" target="_top">EXP</a>
+<a href="func_mysql_floor.php" target="_top">FLOOR</a>
+<a href="func_mysql_greatest.php" target="_top">GREATEST</a>
+<a href="func_mysql_least.php" target="_top">LEAST</a>
+<a href="func_mysql_ln.php" target="_top">LN</a>
+<a href="func_mysql_log.php" target="_top">LOG</a>
+<a href="func_mysql_log10.php" target="_top">LOG10</a>
+<a href="func_mysql_log2.php" target="_top">LOG2</a>
+<a href="func_mysql_max.php" target="_top">MAX</a>
+<a href="func_mysql_min.php" target="_top">MIN</a>
+<a href="func_mysql_mod.php" target="_top">MOD</a>
+<a href="func_mysql_pi.php" target="_top">PI</a>
+<a href="func_mysql_pow.php" target="_top">POW</a>
+<a href="func_mysql_power.php" target="_top">POWER</a>
+<a href="func_mysql_radians.php" target="_top">RADIANS</a>
+<a href="func_mysql_rand.php" target="_top">RAND</a>
+<a href="func_mysql_round.php" target="_top">ROUND</a>
+<a href="func_mysql_sign.php" target="_top">SIGN</a>
+<a href="func_mysql_sin.php" target="_top">SIN</a>
+<a href="func_mysql_sqrt.php" target="_top">SQRT</a>
+<a href="func_mysql_sum.php" target="_top">SUM</a>
+<a href="func_mysql_tan.php" target="_top">TAN</a>
+<a href="func_mysql_truncate.php" target="_top">TRUNCATE</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции дат</span>
+<a href="func_mysql_adddate.php" target="_top">ADDDATE</a>
+<a href="func_mysql_addtime.php" target="_top">ADDTIME</a>
+<a href="func_mysql_curdate.php" target="_top">CURDATE</a>
+<a href="func_mysql_current_date.php" target="_top">CURRENT_DATE</a>
+<a href="func_mysql_current_time.php" target="_top">CURRENT_TIME</a>
+<a href="func_mysql_current_timestamp.php" target="_top">CURRENT_TIMESTAMP</a>
+<a href="func_mysql_curtime.php" target="_top">CURTIME</a>
+<a href="func_mysql_date.php" target="_top">DATE</a>
+<a href="func_mysql_datediff.php" target="_top">DATEDIFF</a>
+<a href="func_mysql_date_add.php" target="_top">DATE_ADD</a>
+<a href="func_mysql_date_format.php" target="_top">DATE_FORMAT</a>
+<a href="func_mysql_date_sub.php" target="_top">DATE_SUB</a>
+<a href="func_mysql_day.php" target="_top">DAY</a>
+<a href="func_mysql_dayname.php" target="_top">DAYNAME</a>
+<a href="func_mysql_dayofmonth.php" target="_top">DAYOFMONTH</a>
+<a href="func_mysql_dayofweek.php" target="_top">DAYOFWEEK</a>
+<a href="func_mysql_dayofyear.php" target="_top">DAYOFYEAR</a>
+<a href="func_mysql_extract.php" target="_top">EXTRACT</a>
+<a href="func_mysql_from_days.php" target="_top">FROM_DAYS</a>
+<a href="func_mysql_hour.php" target="_top">HOUR</a>
+<a href="func_mysql_last_day.php" target="_top">LAST_DAY</a>
+<a href="func_mysql_localtime.php" target="_top">LOCALTIME</a>
+<a href="func_mysql_localtimestamp.php" target="_top">LOCALTIMESTAMP</a>
+<a href="func_mysql_makedate.php" target="_top">MAKEDATE</a>
+<a href="func_mysql_maketime.php" target="_top">MAKETIME</a>
+<a href="func_mysql_microsecond.php" target="_top">MICROSECOND</a>
+<a href="func_mysql_minute.php" target="_top">MINUTE</a>
+<a href="func_mysql_month.php" target="_top">MONTH</a>
+<a href="func_mysql_monthname.php" target="_top">MONTHNAME</a>
+<a href="func_mysql_now.php" target="_top">NOW</a>
+<a href="func_mysql_period_add.php" target="_top">PERIOD_ADD</a>
+<a href="func_mysql_period_diff.php" target="_top">PERIOD_DIFF</a>
+<a href="func_mysql_quarter.php" target="_top">QUARTER</a>
+<a href="func_mysql_second.php" target="_top">SECOND</a>
+<a href="func_mysql_sec_to_time.php" target="_top">SEC_TO_TIME</a>
+<a href="func_mysql_str_to_date.php" target="_top">STR_TO_DATE</a>
+<a href="func_mysql_subdate.php" target="_top">SUBDATE</a>
+<a href="func_mysql_subtime.php" target="_top">SUBTIME</a>
+<a href="func_mysql_sysdate.php" target="_top">SYSDATE</a>
+<a href="func_mysql_time.php" target="_top">TIME</a>
+<a href="func_mysql_time_format.php" target="_top">TIME_FORMAT</a>
+<a href="func_mysql_time_to_sec.php" target="_top">TIME_TO_SEC</a>
+<a href="func_mysql_timediff.php" target="_top">TIMEDIFF</a>
+<a href="func_mysql_timestamp.php" target="_top">TIMESTAMP</a>
+<a href="func_mysql_to_days.php" target="_top">TO_DAYS</a>
+<a href="func_mysql_week.php" target="_top">WEEK</a>
+<a href="func_mysql_weekday.php" target="_top">WEEKDAY</a>
+<a href="func_mysql_weekofyear.php" target="_top">WEEKOFYEAR</a>
+<a href="func_mysql_year.php" target="_top">YEAR</a>
+<a href="func_mysql_yearweek.php" target="_top">YEARWEEK</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции расширений</span>
+<a href="func_mysql_bin.php" target="_top">BIN</a>
+<a href="func_mysql_binary.php" target="_top">BINARY</a>
+<a href="func_mysql_case.php" target="_top">CASE</a>
+<a href="func_mysql_cast.php" target="_top">CAST</a>
+<a href="func_mysql_coalesce.php" target="_top">COALESCE</a>
+<a href="func_mysql_connection_id.php" target="_top">CONNECTION_ID</a>
+<a href="func_mysql_conv.php" target="_top">CONV</a>
+<a href="func_mysql_convert.php" target="_top">CONVERT</a>
+<a href="func_mysql_current_user.php" target="_top">CURRENT_USER</a>
+<a href="func_mysql_database.php" target="_top">DATABASE</a>
+<a href="func_mysql_if.php" target="_top">IF</a>
+<a href="func_mysql_ifnull.php" target="_top">IFNULL</a>
+<a href="func_mysql_isnull.php" target="_top">ISNULL</a>
+<a href="func_mysql_last_insert_id.php" target="_top">LAST_INSERT_ID</a>
+<a href="func_mysql_nullif.php" target="_top">NULLIF</a>
+<a href="func_mysql_session_user.php" target="_top">SESSION_USER</a>
+<a href="func_mysql_system_user.php" target="_top">SYSTEM_USER</a>
+<a href="func_mysql_user.php" target="_top">USER</a>
+<a href="func_mysql_version.php" target="_top">VERSION</a>
+</div>
+<a href="sql_ref_sqlserver.php" target="_top">SQL Server функции</a>
+<div class="ref_overview" style="margin-left:10px;background-color:#ddd">
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;">Функции строк</span>
+<a href="func_sqlserver_ascii.php">ASCII</a>
+<a href="func_sqlserver_char.php">CHAR</a>
+<a href="func_sqlserver_charindex.php">CHARINDEX</a>
+<a href="func_sqlserver_concat.php">CONCAT</a>
+<a href="func_sqlserver_concat_with_plus.php">Concat with +</a>
+<a href="func_sqlserver_concat_ws.php">CONCAT_WS</a>
+<a href="func_sqlserver_datalength.php">DATALENGTH</a>
+<a href="func_sqlserver_difference.php">DIFFERENCE</a>
+<a href="func_sqlserver_format.php">FORMAT</a>
+<a href="func_sqlserver_left.php">LEFT</a>
+<a href="func_sqlserver_len.php">LEN</a>
+<a href="func_sqlserver_lower.php">LOWER</a>
+<a href="func_sqlserver_ltrim.php">LTRIM</a>
+<a href="func_sqlserver_nchar.php">NCHAR</a>
+<a href="func_sqlserver_patindex.php">PATINDEX</a>
+<a href="func_sqlserver_quotename.php">QUOTENAME</a>
+<a href="func_sqlserver_replace.php">REPLACE</a>
+<a href="func_sqlserver_replicate.php">REPLICATE</a>
+<a href="func_sqlserver_reverse.php">REVERSE</a>
+<a href="func_sqlserver_right.php">RIGHT</a>
+<a href="func_sqlserver_rtrim.php">RTRIM</a>
+<a href="func_sqlserver_soundex.php">SOUNDEX</a>
+<a href="func_sqlserver_space.php">SPACE</a>
+<a href="func_sqlserver_str.php">STR</a>
+<a href="func_sqlserver_stuff.php">STUFF</a>
+<a href="func_sqlserver_substring.php">SUBSTRING</a>
+<a href="func_sqlserver_translate.php">TRANSLATE</a>
+<a href="func_sqlserver_trim.php">TRIM</a>
+<a href="func_sqlserver_unicode.php">UNICODE</a>
+<a href="func_sqlserver_upper.php">UPPER</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции чисел</span>
+<a href="func_sqlserver_abs.php">ABS</a>
+<a href="func_sqlserver_acos.php">ACOS</a>
+<a href="func_sqlserver_asin.php">ASIN</a>
+<a href="func_sqlserver_atan.php">ATAN</a>
+<a href="func_sqlserver_atn2.php">ATN2</a>
+<a href="func_sqlserver_avg.php">AVG</a>
+<a href="func_sqlserver_ceiling.php">CEILING</a>
+<a href="func_sqlserver_count.php">COUNT</a>
+<a href="func_sqlserver_cos.php">COS</a>
+<a href="func_sqlserver_cot.php">COT</a>
+<a href="func_sqlserver_degrees.php">DEGREES</a>
+<a href="func_sqlserver_exp.php">EXP</a>
+<a href="func_sqlserver_floor.php">FLOOR</a>
+<a href="func_sqlserver_log.php">LOG</a>
+<a href="func_sqlserver_log10.php">LOG10</a>
+<a href="func_sqlserver_max.php">MAX</a>
+<a href="func_sqlserver_min.php">MIN</a>
+<a href="func_sqlserver_pi.php">PI</a>
+<a href="func_sqlserver_power.php">POWER</a>
+<a href="func_sqlserver_radians.php">RADIANS</a>
+<a href="func_sqlserver_rand.php">RAND</a>
+<a href="func_sqlserver_round.php">ROUND</a>
+<a href="func_sqlserver_sign.php">SIGN</a>
+<a href="func_sqlserver_sin.php">SIN</a>
+<a href="func_sqlserver_sqrt.php">SQRT</a>
+<a href="func_sqlserver_square.php">SQUARE</a>
+<a href="func_sqlserver_sum.php">SUM</a>
+<a href="func_sqlserver_tan.php">TAN</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции дат</span>
+<a href="func_sqlserver_current_timestamp.php">CURRENT_TIMESTAMP</a>
+<a href="func_sqlserver_dateadd.php">DATEADD</a>
+<a href="func_sqlserver_datediff.php">DATEDIFF</a>
+<a href="func_sqlserver_datefromparts.php">DATEFROMPARTS</a>
+<a href="func_sqlserver_datename.php">DATENAME</a>
+<a href="func_sqlserver_datepart.php">DATEPART</a>
+<a href="func_sqlserver_day.php">DAY</a>
+<a href="func_sqlserver_getdate.php">GETDATE</a>
+<a href="func_sqlserver_getutcdate.php">GETUTCDATE</a>
+<a href="func_sqlserver_isdate.php">ISDATE</a>
+<a href="func_sqlserver_month.php">MONTH</a>
+<a href="func_sqlserver_sysdatetime.php">SYSDATETIME</a>
+<a href="func_sqlserver_year.php">YEAR</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции расширений</span>
+<a href="func_sqlserver_cast.php">CAST</a>
+<a href="func_sqlserver_coalesce.php">COALESCE</a>
+<a href="func_sqlserver_convert.php">CONVERT</a>
+<a href="func_sqlserver_current_user.php">CURRENT_USER</a>
+<a href="func_sqlserver_iif.php">IIF</a>
+<a href="func_sqlserver_isnull.php">ISNULL</a>
+<a href="func_sqlserver_isnumeric.php">ISNUMERIC</a>
+<a href="func_sqlserver_nullif.php">NULLIF</a>
+<a href="func_sqlserver_session_user.php">SESSION_USER</a>
+<a href="func_sqlserver_sessionproperty.php">SESSIONPROPERTY</a>
+<a href="func_sqlserver_system_user.php">SYSTEM_USER</a>
+<a href="func_sqlserver_user_name.php">USER_NAME</a>
+</div>
+<a href="sql_ref_msaccess.php" target="_top">MS Access функции</a>
+<div class="ref_overview" style="margin-left:10px;background-color:#ddd">
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;">Функции строк</span>
+<a href="func_msaccess_asc.php">Asc</a>
+<a href="func_msaccess_chr.php">Chr</a>
+<a href="func_msaccess_concat.php">Concat with &amp;</a>
+<a href="func_msaccess_curdir.php">CurDir</a>
+<a href="func_msaccess_format.php">Format</a>
+<a href="func_msaccess_instr.php">InStr</a>
+<a href="func_msaccess_instrrev.php">InstrRev</a>
+<a href="func_msaccess_lcase.php">LCase</a>
+<a href="func_msaccess_left.php">Left</a>
+<a href="func_msaccess_len.php">Len</a>
+<a href="func_msaccess_ltrim.php">LTrim</a>
+<a href="func_msaccess_mid.php">Mid</a>
+<a href="func_msaccess_replace.php">Replace</a>
+<a href="func_msaccess_right.php">Right</a>
+<a href="func_msaccess_rtrim.php">RTrim</a>
+<a href="func_msaccess_space.php">Space</a>
+<a href="func_msaccess_split.php">Split</a>
+<a href="func_msaccess_str.php">Str</a>
+<a href="func_msaccess_strcomp.php">StrComp</a>
+<a href="func_msaccess_strconv.php">StrConv</a>
+<a href="func_msaccess_strreverse.php">StrReverse</a>
+<a href="func_msaccess_trim.php">Trim</a>
+<a href="func_msaccess_ucase.php">UCase</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции чисел</span>
+<a href="func_msaccess_abs.php">Abs</a>
+<a href="func_msaccess_atn.php">Atn</a>
+<a href="func_msaccess_avg.php">Avg</a>
+<a href="func_msaccess_cos.php">Cos</a>
+<a href="func_msaccess_count.php">Count</a>
+<a href="func_msaccess_exp.php">Exp</a>
+<a href="func_msaccess_fix.php">Fix</a>
+<a href="func_msaccess_format_number.php">Format</a>
+<a href="func_msaccess_int.php">Int</a>
+<a href="func_msaccess_max.php">Max</a>
+<a href="func_msaccess_min.php">Min</a>
+<a href="func_msaccess_randomize.php">Randomize</a>
+<a href="func_msaccess_rnd.php">Rnd</a>
+<a href="func_msaccess_round.php">Round</a>
+<a href="func_msaccess_sgn.php">Sgn</a>
+<a href="func_msaccess_sqr.php">Sqr</a>
+<a href="func_msaccess_sum.php">Sum</a>
+<a href="func_msaccess_val.php">Val</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Функции дат</span>
+<a href="func_msaccess_date.php">Date</a>
+<a href="func_msaccess_dateadd.php">DateAdd</a>
+<a href="func_msaccess_datediff.php">DateDiff</a>
+<a href="func_msaccess_datepart.php">DatePart</a>
+<a href="func_msaccess_dateserial.php">DateSerial</a>
+<a href="func_msaccess_datevalue.php">DateValue</a>
+<a href="func_msaccess_day.php">Day</a>
+<a href="func_msaccess_format_date.php">Format</a>
+<a href="func_msaccess_hour.php">Hour</a>
+<a href="func_msaccess_minute.php">Minute</a>
+<a href="func_msaccess_month.php">Month</a>
+<a href="func_msaccess_monthname.php">MonthName</a>
+<a href="func_msaccess_now.php">Now</a>
+<a href="func_msaccess_second.php">Second</a>
+<a href="func_msaccess_time.php">Time</a>
+<a href="func_msaccess_timeserial.php">TimeSerial</a>
+<a href="func_msaccess_timevalue.php">TimeValue</a>
+<a href="func_msaccess_weekday.php">Weekday</a>
+<a href="func_msaccess_weekdayname.php">WeekdayName</a>
+<a href="func_msaccess_year.php">Year</a>
+<span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Другие функции</span>
+<a href="func_msaccess_currentuser.php">CurrentUser</a>
+<a href="func_msaccess_environ.php">Environ</a>
+<a href="func_msaccess_isdate.php">IsDate</a>
+<a href="func_msaccess_isnull.php">IsNull</a>
+<a href="func_msaccess_isnumeric.php">IsNumeric</a>
+</div>
+<a href="sql_quickref.php" target="_top">SQL Краткий справочник</a>
+<br/>
+<h2 class="left"><span class="left_h2">SQL</span> Примеры</h2>
+<a href="sql_examples.php" target="_top">SQL Примеры</a>
+<a href="sql_quiz.php" target="_top">SQL Викторина</a>
+<a href="sql_exercises.php" target="_top">SQL Упражнения</a>
+<a href="sql_exam.php" target="_top">SQL Сертификат</a>
+<br/><br/>
+</div>
+</div>
+</div>
+<div class="w3-main w3-light-grey" id="belowtopnav" style="margin-left:220px;">
+<div class="w3-row w3-white"><!-- Main-->
+<div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL -  BETWEEN</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="sql_in.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="sql_alias.php">Далее ❯</a>
+</div>
+<hr/>
+<h2>BETWEEN</h2>
+<p>Оператор BETWEEN выбирает значения в заданном диапазоне. Эти значения могут быть числами, текстом или датами.</p>
+<p>Оператор BETWEEN является инклюзивным: включаются начальные и конечные значения.</p>
+<h3>Синтаксис BETWEEN</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table_name</em><br/>
+WHERE <em>column_name </em>BETWEEN <em>value1</em> AND <em>value2;</em></div></div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>Ниже приведен выбор из таблицы "Products" в образце базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>ProductID</th>
+<th>ProductName</th>
+<th>SupplierID</th>
+<th>CategoryID</th>
+<th>Unit</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Chais</td>
+<td>1</td>
+<td>1</td>
+<td>10 boxes x 20 bags</td>
+<td>18</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Chang</td>
+<td>1</td>
+<td>1</td>
+<td>24 - 12 oz bottles</td>
+<td>19</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Aniseed Syrup</td>
+<td>1</td>
+<td>2</td>
+<td>12 - 550 ml bottles</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chef Anton's Cajun Seasoning</td>
+<td>1</td>
+<td>2</td>
+<td>48 - 6 oz jars</td>
+<td>22</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Chef Anton's Gumbo Mix</td>
+<td>1</td>
+<td>2</td>
+<td>36 boxes</td>
+<td>21.35</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Пример BETWEEN</h2>
+<p>Следующая инструкция SQL выбирает все продукты с ценой от 10 до 20:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Products<br/>WHERE Price BETWEEN 10 AND 20;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_between" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>Пример NOT BETWEEN</h2>
+<p>Чтобы отобразить продукты вне диапазона предыдущего примера, используйте NOT BETWEEN:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Products<br/>WHERE Price NOT BETWEEN 10 AND 20;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_not_between" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Пример BETWEEN c IN</h2>
+<p>В следующей инструкции SQL выбираются все продукты с ценой от 10 до 20.
+Кроме того, не показывайте продукты с категорией ID 1,2 или 3:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Products<br/>WHERE Price BETWEEN 10 AND 20<br/>AND NOT CategoryID IN (1,2,3);
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_between_in" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Пример BETWEEN значение текста</h2>
+<p>Следующая инструкция SQL выбирает все продукты с именем ProductName между Carnarvon Tigers и Mozzarella di Giovanni:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Products<br/>WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella 
+di Giovanni'<br/>ORDER BY ProductName;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_between_text" target="_blank">Попробуйте сами »</a>
+</div>
+<p>Следующая инструкция SQL выбирает все продукты с именем ProductName между Carnarvon Tigers и Chef Anton's Cajun Seasoning:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Products<br/>WHERE ProductName BETWEEN "Carnarvon Tigers" AND 
+"Chef Anton's Cajun Seasoning"<br/>ORDER BY ProductName;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_between_text2" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Пример NOT BETWEEN значение текста</h2>
+<p>Следующая инструкция SQL выбирает все продукты с именем ProductName не между Carnarvon Tigers и Mozzarella di Giovanni:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Products<br/>WHERE ProductName NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella 
+di Giovanni'<br/>ORDER BY ProductName;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_not_between_text" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Образец таблицы</h2>
+<p>Ниже представлена подборка из группы «Orders" в таблице в образец базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>OrderID</th>
+<th>CustomerID</th>
+<th>EmployeeID</th>
+<th>OrderDate</th>
+<th>ShipperID</th>
+</tr>
+<tr>
+<td>10248</td>
+<td>90</td>
+<td>5</td>
+<td>7/4/1996</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10249</td>
+<td>81</td>
+<td>6</td>
+<td>7/5/1996</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10250</td>
+<td>34</td>
+<td>4</td>
+<td>7/8/1996</td>
+<td>2</td>
+</tr>
+<tr>
+<td>10251</td>
+<td>84</td>
+<td>3</td>
+<td>7/9/1996</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10252</td>
+<td>76</td>
+<td>4</td>
+<td>7/10/1996</td>
+<td>2</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Пример BETWEEN даты</h2>
+<p>Следующая инструкция SQL выбирает все заказы с датой заказа между '01-July-1996' и '31-July-1996':</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Orders<br/>WHERE OrderDate BETWEEN #01/07/1996# AND #31/07/1996#;
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_between_date&amp;ss=-1" target="_blank">Попробуйте сами »</a>
+</div>
+<p>или:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Orders<br/>WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
+</div>
+<a class="w3-btn w3-margin-bottom" href="trysql.php?filename=trysql_select_between_date2" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<form action="exercise_between1.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<div class="exercisewindow">
+<h2>Упражнение:</h2>
+<p>Используйте оператор <code class="w3-codespan">BETWEEN</code>
+для выбора всех записей, в которых значение столбца <code class="w3-codespan">Price</code> находится в диапазоне от 10 до 20.</p>
+<div class="exerciseprecontainer">
+<pre>
+SELECT * FROM Products
+WHERE Price <br class="phonebr"/><input maxlength="17" name="ex1" style="width: 180px;"/>;
+</pre>
+</div>
+<br/>
+<button class="w3-btn w3-margin-bottom" type="submit">Отправить ответ »</button>
+<p><a href="exercise_between1.php" target="_blank">Начните упражнение</a></p>
+</div>
+</form>
+<br/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="sql_in.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="sql_alias.php">Далее ❯</a>
+</div>
+</div>
+<!-- /Main-->
+<div class="w3-col l2 m12" id="right"><!--<div class="sidesection"><h4><a href="">ВАКАНСИИ НА SCHOOLSW3</a></h4></div>-->
+<div class="sidesection"><div id="skyscraper">
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+</div>
+</div>
+<!--<div class="sidesection"><h4><a href="../colors/colors_picker.php">ПОДБОР ЦВЕТА</a></h4><a href="../colors/colors_picker.php"><img src="https://www.schoolsw3.com/images/colorpicker.gif" alt="colorpicker"></a></div>--><div class="sidesection" id="sidesection_exercise" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Упражнения</h4></div><div><div class="w3-light-grey"><a href="/html/exercise.php" style="padding-top:8px" target="_blank">HTML</a><a href="/css/exercise.php" style="padding-top:8px" target="_blank">CSS</a><a href="/js/exercise_js.php" style="padding-top:8px" target="_blank">JavaScript</a><a href="/sql/exercise.php" style="padding-top:8px" target="_blank">SQL</a><a href="/php/exercise.php" style="padding-top:8px" target="_blank">PHP</a><a href="/python/exercise.php" style="padding-top:8px" target="_blank">Python</a><!--<a target="_blank" href="/bootstrap/exercise_bs3.php">Bootstrap</a><a target="_blank" href="/jquery/exercise_jq.php" style="padding-bottom:8px">jQuery</a>--></div></div></div><div class="sidesection" id="sidesection_exercise" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Тесты</h4></div><div><div class="w3-light-grey"><a href="https://www.schoolsw3.com/quiztest/quiztest_HTML.php" style="padding-top:8px" target="_blank">HTML</a><a href="https://www.schoolsw3.com/quiztest/quiztest_CSS.php" style="padding-top:8px" target="_blank">CSS</a><a href="https://www.schoolsw3.com/quiztest/quiztest_JS.php" style="padding-top:8px" target="_blank">JavaScript</a><a href="https://www.schoolsw3.com/quiztest/quiztest_SQL.php" style="padding-top:8px" target="_blank">SQL</a><a href="https://www.schoolsw3.com/quiztest/quiztest_PYTHON.php" style="padding-top:8px" target="_blank">PYTHON</a></div></div></div><div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px"><div class="w3-container w3-dark-grey"><h4><a class="w3-hover-text-white" href="../howto/index.php">КАК СДЕЛАТЬ</a></h4></div><div class="w3-container w3-left-align w3-padding-16"><a href="../howto/howto_js_tabs.php">Теги</a><br/><a href="../howto/howto_css_dropdown.php">Выпадающий</a><br/><a href="../howto/howto_js_accordion.php">Аккардионы</a><br/><a href="../howto/howto_js_sidenav.php">Боковой Навигатор</a><br/><a href="../howto/howto_js_topnav.php">Верхний Навигатор</a><br/><a href="../howto/howto_css_modals.php">Модель Бокс</a><br/><a href="../howto/howto_js_progressbar.php">Индикатор Полоса</a><br/><a href="../howto/howto_css_parallax.php">Паралакс</a><br/><a href="../howto/howto_css_login_form.php">Логин Форма</a><br/><a href="../howto/howto_html_include.php">HTML Подключение</a><br/><a href="../howto/howto_google_maps.php">Гугл Карта</a><br/><a href="../howto/howto_js_rangeslider.php">Ползунки Диапазон</a><br/><a href="../howto/howto_css_tooltip.php">Подсказки</a><br/><a href="../howto/howto_js_slideshow.php">Слайд-шоу</a><br/><a href="../howto/howto_js_filter_lists.php">Фильтр Списка</a><br/><a href="../howto/howto_js_sort_list.php">Сортировка Списка</a><br/></div></div>
+<div class="sidesection">
+<h4>ПОДЕЛИТЬСЯ</h4>
+<div class="w3-text-grey sharethis">
+<script><!--try{loc=location.pathname;if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"index.php";txt='<a href="http://www.facebook.com/sharer.php?u=https://schoolsw3.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';txt=txt+'<a href="https://twitter.com/home?status=Currently reading https://schoolsw3.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';document.write(txt);} catch(e) {}//--></script>
+<br/><br/><a href="javascript:void(0);" onclick="clickFBLike()" title="Клик SchoolsW3 на Facebook"><span class="fa fa-thumbs-o-up fa-2x"></span></a>
+<div class="w3-modal" id="fblikeframe"><div class="w3-modal-content w3-padding-64 w3-animate-zoom" id="popupDIV"></div></div>
+</div>
+</div>
+<div class="sidesection"><h4><a href="../cert/index.php" target="_blank">СЕРТИФИКАТЫ</a></h4><p><a href="../cert/cert_html.php">HTML</a><br/><a href="../cert/cert_css.php">CSS</a><br/><a href="../cert/cert_javascript.php">JavaScript</a><br/><a href="../cert/cert_sql.php">SQL</a><br/><a href="../cert/cert_python.php">Python</a><br/><a href="../cert/cert_php.php">PHP</a><br/><a href="../cert/cert_jquery.php">jQuery</a><br/><a href="../cert/cert_bootstrap.php">Bootstrap</a><br/><a href="../cert/cert_xml.php">XML</a></p><a class="w3-button w3-dark-grey" href="../cert/index.php" style="text-decoration:none">Читать далее »</a>
+</div>
+<div class="sidesection">
+<!--<form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" style="padding:0; margin:1px"><input type="hidden" name="receiver" value="410011618810988"> <input type="hidden" name="formcomment" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="short-dest" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="label" value="$order_id"><input type="hidden" name="quickpay-form" value="donate"> <input type="hidden" name="targets" value="транзакция {order_id}"> <input type="hidden" name="sum" value=" " data-type="number"> <input type="hidden" name="comment" value="САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ."><input type="hidden" name="need-fio" value="true"> <input type="hidden" name="need-email" value="true"> <input type="hidden" name="need-phone" value="false"> <input type="hidden" name="need-address" value="false"> <input type="submit" class="" value="Пожертвовать"><input type="hidden" name="sum" value="199" data-type="number" size="4"> <br>Yoomoney<br>410011618810988</form>--><!--<iframe src="https://yoomoney.ru/quickpay/button-widget?targets=schoolsw3&default-sum=199&button-text=14&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=410011618810988&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>-->
+<form action="https://yoomoney.ru/quickpay/confirm.xml" class="form i-bem" data-bem='{"form":{}}' method="POST" target="_blank"><input class="native-input native-input_type_hidden" name="quickpay-form" type="hidden" value="small"/><input class="native-input native-input_type_hidden" name="is-inner-form" type="hidden" value="true"/><input class="native-input native-input_type_hidden" name="paymentType" type="hidden" value="PC"/><input class="native-input native-input_type_hidden" name="receiver" type="hidden" value="410011618810988"/><input class="native-input native-input_type_hidden" name="targets" type="hidden" value="schoolsw3"/><input class="native-input native-input_type_hidden" name="sum" type="hidden" value="100"/><input class="native-input native-input_type_hidden" name="successURL" type="hidden" value=""/><input class="native-input native-input_type_hidden" name="label" type="hidden" value=""/><input class="native-input native-input_type_hidden" name="referer" type="hidden" value=""/><div class="widget-small__button"><button data-bem='{"button":{}}' role="button" type="submit"><span class="button__text">Пожертвовать</span></button><br/>Yoomoney<br/>410011618810988</div></form></div>
+<div class="sidesection">
+<div id="skyscraper">
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+</div>
+</div>
+<!--
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+<div id="stickyadcontainer"><div style="position:relative;margin:auto;"> 
+<div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>
+</div>
+</div>
+</div>
+-->
+</div>
+</div>
+<div class="footer w3-container w3-white" id="footer"><hr/>
+<div style="overflow:auto">
+<div class="bottomad">
+<!-- Yandex.RTB R-A-1358578-3 --><div id="yandex_rtb_R-A-1358578-3"></div><script>window.yaContextCb.push(()=>{ Ya.Context.AdvManager.render({ renderTo: 'yandex_rtb_R-A-1358578-3', blockId: 'R-A-1358578-3' })})</script><!-- // Yandex.RTB R-A-1358578-3 --></div>
+</div><hr/>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px"><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ОШИБКУ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_blank">ПЕЧАТЬ СТРАНИЦЫ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../forum/index.php" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_blank">ФОРУМ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../about/index.php" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_top">О НАС</a></div></div><hr/><div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative"><span class="w3-button w3-display-topright w3-large" onclick="this.parentElement.style.display='none'">×</span><h2>Сообщить об ошибке</h2><p>Если вы хотите сообщить об ошибке или сделать предложение, не стесняйтесь, присылайте нам электронное письмо:</p><p>and-shhipunov@mail.ru</p><br/><h2>Ваше предложение:</h2><form><div class="w3-section"> <label for="err_email">Ваш E-mail:</label><input class="w3-input w3-border" id="err_email" name="err_email" style="margin-top:5px;width:100%" type="text"/></div><div class="w3-section"> <label for="err_email">Адрес страницы:</label><input class="w3-input w3-border" disabled="disabled" id="err_url" name="err_url" style="width:100%;margin-top:5px" type="text"/></div><div class="w3-section"><label for="err_email">Описание:</label><textarea class="w3-input w3-border" id="err_desc" name="err_desc" rows="10" style="width:100%;margin-top:5px;resize:vertical;"></textarea></div><div class="form-group"> <button class="w3-button w3-dark-grey" onclick="sendErr()" type="button">Отправить</button></div><br/></form></div><div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative"><span class="w3-button w3-display-topright" onclick="this.parentElement.style.display='none'">×</span> <h2>Спасибо, за вашу помощь!</h2><p>Ваше сообщение было отправлено в SchoolsW3.</p></div><div class="w3-row w3-center w3-small"><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Учебники </h4><a href="../html/index.php">HTML Учебник</a><br/><a href="../css/index.php">CSS Учебник</a><br/><a href="../js/index.php">JavaScript Учебник</a><br/><a href="../howto/index.php">КАК Учебник</a><br/><a href="../sql/index.php">SQL Учебник</a><br/><a href="../python/index.php">Python Учебник</a><br/><a href="../w3css/index.php">W3.CSS Учебник</a><br/><a href="../bootstrap/bootstrap_ver.php">Bootstrap Учебник</a><br/><a href="../php/index.php">PHP Учебник</a><br/><a href="../jquery/index.php">jQuery Учебник</a><br/><a href="../java/index.php">Java Учебник</a><br/><a href="../cpp/index.php">C++ Учебник</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Справочники</h4><a href="../tags/index.php">HTML Справочник</a><br/><a href="../cssref/index.php">CSS Справочник</a><br/><a href="../jsref/index.php">JavaScript Справочник</a><br/><a href="../sql/sql_ref_keywords.php">SQL Справочник</a><br/><a href="../python/python_reference.php">Python Справочник</a><br/><a href="../w3css/w3css_references.php">W3.CSS Справочник</a><br/><a href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap Справочник</a><br/><a href="../php/php_ref_overview.php">PHP Справочник</a><br/><a href="../colors/colors_names.php">HTML Цвета</a><br/><a href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><br/><a href="../java/java_ref_keywords.php">Java Справочник</a><br/><a href="../angular/angular_ref_directives.php">Angular Справочник</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Примеры</h4><a href="html_examples.php">HTML Примеры</a><br/><a href="../css/css_examples.php">CSS Примеры</a><br/><a href="../js/js_examples.php">JavaScript Примеры</a><br/><a href="../howto/index.php">How To Примеры</a><br/><a href="../sql/sql_examples.php">SQL Примеры</a><br/><a href="../python/python_examples.php">Python Примеры</a><br/><a href="../w3css/w3css_examples.php">W3.CSS Примеры</a><br/><a href="../bootstrap/bootstrap_examples.php">Bootstrap Примеры</a><br/><a href="../php/php_examples.php">PHP Примеры</a><br/><a href="../jquery/jquery_examples.php">jQuery Примеры</a><br/><a href="../java/java_examples.php">Java Примеры</a><br/><a href="../xml/xml_examples.php">XML Примеры</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Веб Сертификаты</h4><a href="../cert/index.php">HTML Сертификат</a><br/><a href="../cert/index.php">CSS Сертификат</a><br/><a href="../cert/index.php">JavaScript Сертификат</a><br/><a href="../cert/index.php">SQL Сертификат</a><br/><a href="../cert/index.php">Python Сертификат</a><br/><a href="../cert/index.php">jQuery Сертификат</a><br/><a href="../cert/index.php">PHP Сертификат</a><br/><a href="../cert/index.php">Bootstrap Сертификат</a><br/><a href="../cert/index.php">XML Сертификат</a><br/><a class="w3-button w3-margin-top w3-dark-grey" href="../cert/index.php" style="text-decoration:none">Получить Сертификат »</a></div></div> </div> <hr/><div class="w3-center w3-small">SchoolsW3 оптимизирован для обучения, тестирования и тренировки. Примеры упрощают и улучшают чтение и базовое понимание.Учебники, справочники, примеры постоянно пересматриваются, для того, чтобы избежать ошибки, невозможно гарантировать правильность всего содержимого.Используя данный сайт, вы соглашаетесь прочитать и принять <a href="../about/about_copyright.php">условия использования</a>,<a href="../about/about_privacy.php">cookie и Политика конфиденциальности</a>.<a href="../about/about_copyright.php">Авторское право 1999 - 2022</a> Все права защищены.<br/><a href="../w3css/index.php">Работает на W3.CSS</a>.<br/><br/><a href="../index.html"><img alt="SchoolsW3.com" src="https://www.schoolsw3.com/images/w3schoolscom_gray.gif" style="width:150px;height:28px;border:0"/></a></div><br/><br/></div></div><script src="../lib/schools_footer.js"></script><script src="https://cse.google.com/cse.js?cx=009251009105284944376:hm8um3ylyzo"></script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-106562886-1');</script><!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter --><script>var stickyadstatus = "";function fix_stickyad() {document.getElementById("stickypos").style.position = "sticky";var elem = document.getElementById("stickyadcontainer");if (!elem) {return false;}if (document.getElementById("skyscraper")) {var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", "")); }else {var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", "")); }elem.style.width = skyWidth + "px";if (window.innerWidth <= 992) {elem.style.position = "";elem.style.top = stickypos + "px";return false;}var stickypos = document.getElementById("stickypos").offsetTop;var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));if (stickyadstatus == "") {if ((stickypos - docTop) < 60) {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}} else {if ((docTop + 60) - stickypos < 0) { elem.style.position = "";elem.style.top = stickypos + "px";stickyadstatus = "";document.getElementById("stickypos").style.position = "static";}}if (stickyadstatus == "sticky") {if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {elem.style.position = "absolute";elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";document.getElementById("stickypos").style.position = "static";} else {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}}}function w3_getStyleValue(elmnt,style) {if (window.getComputedStyle) {return window.getComputedStyle(elmnt,null).getPropertyValue(style);} else {return elmnt.currentStyle[style];}}</script></body></html>
