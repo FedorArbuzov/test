@@ -396,4 +396,4 @@ VM426:2 CSS3 Анимация"""
     #print(i[0].split('/')[-1].split('.')[0], i[1].split(':3')[1])
 
 for i in range(86):
-    print(f'<li><a href="/css-task?page=exercise_js_{i}">js задание {i}</a></li>')
+    print(f'<li><a href="/js-task?page=exercise_js_{i}">js задание {i}</a></li>')
