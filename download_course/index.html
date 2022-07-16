@@ -1,51 +1,97 @@
-<script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'selectors';excounts[0] = '4';exheadings[0] = 'Селектор';exActiveNo = 0;exnames[1] = 'howto';excounts[1] = '4';exheadings[1] = 'Инструкции';exnames[2] = 'background';excounts[2] = '5';exheadings[2] = 'Фон';exnames[3] = 'border';excounts[3] = '4';exheadings[3] = 'Границы';exnames[4] = 'margin';excounts[4] = '4';exheadings[4] = 'Поля';exnames[5] = 'padding';excounts[5] = '3';exheadings[5] = 'Отступы';exnames[6] = 'dimension';excounts[6] = '2';exheadings[6] = 'Высота/Ширина';exnames[7] = 'boxmodel';excounts[7] = '4';exheadings[7] = 'Бокс модельl';exnames[8] = 'outline';excounts[8] = '3';exheadings[7] = 'Контур';exnames[9] = 'text';excounts[9] = '5';exheadings[9] = 'Текст';exnames[10] = 'font';excounts[10] = '5';exheadings[9] = 'Шрифт';exnames[11] = 'link';excounts[11] = '4';exheadings[11] = 'Ссылки';exnames[12] = 'list';excounts[12] = '4';exheadings[12] = 'Списки';exnames[13] = 'table';excounts[13] = '6';exheadings[13] = 'Таблицы';exnames[14] = 'display_visibility';excounts[14] = '4';exheadings[14] = 'Дисплей/Видимость';exnames[15] = 'positioning';excounts[15] = '5';exheadings[15] = 'Позицирование';exnames[16] = 'overflow';excounts[16] = '3';exheadings[16] = 'Переполнение';exnames[17] = 'align';excounts[17] = '2';exheadings[17] = 'Выравнивание';exnames[18] = 'combinators';excounts[18] = '4';exheadings[18] = 'Комбинаторы';exnames[19] = 'pseudo_classes';excounts[19] = '4';exheadings[19] = 'Псевдо-классы';exnames[20] = 'pseudo_elements';excounts[20] = '3';exheadings[20] = 'Псевдо-элементы';exnames[21] = 'image_transparency';excounts[21] = '2';exheadings[21] = 'Прозрачность';exnames[22] = 'attribute_selectors';excounts[22] = '6';exheadings[22] = 'Атрибут селектора';exnames[23] = 'css3_borders';excounts[23] = '2';exheadings[23] = 'Округленные углы';exnames[24] = 'css3_border_images';excounts[24] = '2';exheadings[24] = 'Границы изображений';exnames[25] = 'css3_backgrounds';excounts[25] = '5';exheadings[25] = 'Фон изображений';exnames[26] = 'css3_colors';excounts[26] = '4';exheadings[26] = 'Цвета';exnames[27] = 'css3_gradients';excounts[27] = '7';exheadings[27] = 'Градиент';exnames[28] = 'css3_shadows';excounts[28] = '5';exheadings[28] = 'Теневой эффект';exnames[29] = 'css3_text_effects';excounts[29] = '3';exheadings[29] = 'Шрифт текста';exnames[30] = 'css3_fonts';excounts[30] = '2';exheadings[30] = 'Веб шрифт';exnames[31] = 'css3_2dtransforms';excounts[31] = '4';exheadings[31] = '2D Трансформация';exnames[32] = 'css3_3dtransforms';excounts[32] = '3';exheadings[31] = '3D Трансформация';exnames[33] = 'css3_transitions';excounts[33] = '5';exheadings[33] = 'Трансформация';exnames[34] = 'css3_animations';excounts[34] = '6';exheadings[34] = 'Анимации';</script>
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-<title>Практические упражнения — CSS</title>
-<meta name="description" content="На сайте scoolsw3.com, вы можете бесплатно проверить свои знания с помощью упражнений CSS и подготовиться к сертификации CSS" />
-<meta name="keywords" content="Упражнение,CSS,CSS селекторы,как сделать,фон,гранцы,поля,отступы,высота-ширина,бокс-модель,контур,текст,шрифт,ссылки,списки,
-таблица,дисплей,видимость,позицирование,переполнение,выравнивание,комбинаторы,псевдо-классы,псевдо-элементы,прозрачность,атрибуты селекторов,круглые углы,
-рамка изображений,фон изображений,цвет,градиент,цветовой эффект,трансформация,анимация" />
+<title>Практические упражнения — Javascript</title>
+<meta name="description" content="На сайте schoolsw3.com, вы можете бесплатно проверить свои знания с помощью упражнений Javascript и подготовиться к сертификации Javascript" />
+<meta name="keywords" content="Упражнение,Javascript,код" />
 <meta name="author" content="Щипунов Андрей Леонидович" />
-<meta name="viewport" content="width=device-width" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="/w3css/3/w3.css" />
-<link rel="stylesheet" href="/lib/codemirror.css" />
-<script src="/lib/codemirror.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"></script>
-<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-106562886-1');</script>
-<!-- Yandex.Metrika counter --><script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45941085, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true });</script><!-- /Yandex.Metrika counter -->
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+<link rel="stylesheet" href="https://schoolsw3.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://schoolsw3.com/lib/codemirror.css">
+<script src="https://schoolsw3.com/lib/codemirror.js"></script>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(45941085, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45941085" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-PQJTMH9':true});</script>
+
 <script>
-//file ID
-var fileID = "";
-var loadSave = false;
-function getSavedFile() {
-    loadSave = true;
-    var htmlCode;
-    var paramObj = {};
-    paramObj.fileid = "";
-    fileID = paramObj.fileid;
-    var paramA = JSON.stringify(paramObj);
-    var httpA = new XMLHttpRequest();
-    httpA.open("POST", globalURL, true);
-    httpA.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    httpA.onreadystatechange = function() {
-        if(httpA.readyState == 4 && httpA.status == 200) {
-            document.getElementById("textareaCode").value = httpA.responseText;
-            window.editor.getDoc().setValue(httpA.responseText);
-            loadSave = false;
-        }
-    }
-    httpA.send(paramA);   
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-106562886-1', 'auto');
+  ga('require', 'GTM-PQJTMH9');
+  ga('send', 'pageview');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106562886-1');
+</script>
+<script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-6546609234045025",
+enable_page_level_ads: true
+});
+</script>
+
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (1280) && afterResize >= (1280)) || (xbeforeResize >= (1280) && afterResize < (1280)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        
+     }
 }
 </script>
-<script>
-var exsection = "CSS";
+
+<script type="text/javascript">
+var exsection = "JS";
 var blueprint = "";
-if (exsection == "CSS") {
+if (exsection == "JS") {
+    storageBlip = "js_";
+} else if (exsection == "SQL") {
+    storageBlip = "sql_";
+} else if (exsection == "PYTHON") {
+    storageBlip = "python_";
+} else if (exsection == "HTML_2") {
+    storageBlip = "html_2_";
+} else if (exsection == "JSREF") {
+    storageBlip = "jsref_";
+} else if (exsection == "JAVA") {
+    storageBlip = "java_";
+} else if (exsection == "BS3") {
+    storageBlip = "bs3_";
+} else if (exsection == "JQ") {
+    storageBlip = "jq_";
+} else if (exsection == "PHP") {
+    storageBlip = "php_";
+} else if (exsection == "CSS") {
     storageBlip = "css_";
 } else {
     storageBlip = "";
@@ -500,6 +546,10 @@ function checkCode(jsonObj) {
                 x = convert_cssGradient(tag, x);
                 y = convert_cssGradient(tag, y);
             }
+            if (prop.indexOf("background") > -1 && x.indexOf("radial-gradient") > -1 ) {
+                x = convert_cssGradient(tag, x);
+                y = convert_cssGradient(tag, y);
+            }
             if (prop == "transform") {
                 x = convert_cssTransform(tag, x);
                 y = convert_cssTransform(tag, y);
@@ -528,7 +578,7 @@ function checkCode(jsonObj) {
                 x = convert_cssFontWeight(tag, x);
                 y = convert_cssFontWeight(tag, y);
             }
-            if (a == "STYLE" && prop == "width" ) {
+            if (a == "STYLE" && prop == "width" && tag.tagName != "IMG") {
                 feilmargin = 0;
                 x = convert_cssSize(tag, x, prop);
                 y = convert_cssSize(tag, y, prop);
@@ -795,6 +845,7 @@ function codeCheckCorrectClose() {
     document.getElementById("codeCheckCorrect").style.display = "none";
 }
 </script>
+
 <style>
 .hintBtn {
     border:none;
@@ -937,6 +988,7 @@ function codeCheckCorrectClose() {
 }
 #tryitLeaderboard {
     padding-left:30px;
+    margin-left:30px;
 }
 #correctSection {
     display:none;
@@ -975,6 +1027,7 @@ function codeCheckCorrectClose() {
     }    
     #tryitLeaderboard {
        padding-left:0;
+       margin-left:0;
     }
 }
 @media screen and (max-width: 899px) {
@@ -1034,7 +1087,7 @@ div.exmenulinks a.active {
     color:#777777;
     padding:1px 6px 2px 6px;
     width:auto;
-    /*xposition:absolute;*/
+    xposition:absolute;
     right:0;
     top:0;
     cursor:pointer;
@@ -1075,9 +1128,9 @@ div.exmenulinks a.active {
 .exmenulinks {
     height:0px;
     overflow:hidden;
-    /*webkit-transition:all 0.3s ease;
+    webkit-transition:all 0.3s ease;
     moz-transition:all 0.3s ease;
-    o-transition:all 0.3s ease;*/
+    o-transition:all 0.3s ease;
     transition:all 0.3s ease;    
 }
 .exmenulinks.active {
@@ -1105,14 +1158,18 @@ div.exmenulinks a.active {
   width:100%;
   border:1px solid #d3d3d3;
 }
-</style>
 
+</style>
 <!--[if IE]>
 <style>
 #textareaCode, #iframeResult, #textareaCode2, #iframeResult2 {height:400px;}
 td {vertical-align:top;}
 </style>
-<![endif]--><script>
+<![endif]-->
+
+
+<script>var exnames = [], excounts = [], exheadings = [];exnames[0] = 'js_variables';excounts[0] = '5';exheadings[0] = 'Variables';exActiveNo = 0;exnames[1] = 'js_operators';excounts[1] = '5';exheadings[1] = 'Operators';exnames[2] = 'js_datatypes';excounts[2] = '1';exheadings[2] = 'Data Types';exnames[3] = 'js_functions';excounts[3] = '4';exheadings[3] = 'Functions';exnames[4] = 'js_objects';excounts[4] = '3';exheadings[4] = 'Objects';exnames[5] = 'js_events';excounts[5] = '3';exheadings[5] = 'Events';exnames[6] = 'js_strings';excounts[6] = '3';exheadings[6] = 'Strings';exnames[7] = 'js_string_methods';excounts[7] = '5';exheadings[7] = 'String Methods';exnames[8] = 'js_arrays';excounts[8] = '3';exheadings[8] = 'Arrays';exnames[9] = 'js_array_methods';excounts[9] = '3';exheadings[9] = 'Array Methods';exnames[10] = 'js_array_sort';excounts[10] = '1';exheadings[10] = 'Array Sort';exnames[11] = 'js_dates';excounts[11] = '4';exheadings[11] = 'Dates';exnames[12] = 'js_math';excounts[12] = '4';exheadings[12] = 'Math';exnames[13] = 'js_comparisons';excounts[13] = '4';exheadings[13] = 'Comparisons';exnames[14] = 'js_conditions';excounts[14] = '2';exheadings[14] = 'Conditions';exnames[15] = 'js_switch';excounts[15] = '2';exheadings[15] = 'Switch';exnames[16] = 'js_loops';excounts[16] = '2';exheadings[16] = 'For Loops';exnames[17] = 'js_loop_while';excounts[17] = '2';exheadings[17] = 'While Loops';exnames[18] = 'js_break';excounts[18] = '2';exheadings[18] = 'Break Loops';exnames[19] = 'js_dom_html';excounts[19] = '9';exheadings[19] = 'HTML DOM';</script>
+<script>
 var x, exNo, answers = [];
 if (window.addEventListener) {              
     window.addEventListener("load", w3LoadExercise);
@@ -1128,7 +1185,7 @@ function w3LoadExercise() {
         x.setAttribute("type", "button");
         x.setAttribute("class", "w3-btn");    
         x.setAttribute("style", "position:absolute");            
-        x.setAttribute("title", "Нажмите, чтобы посмотреть подсказку");
+        x.setAttribute("title", "Нажмите, чтобы получить подсказку");
         x.setAttribute("onclick", "needHint(this)");            
         var t = document.createTextNode("Подсказка");
         x.appendChild(t);
@@ -1149,7 +1206,7 @@ function w3LoadExercise() {
     for (i = 0; i < exnames.length; i++) {
         answers[i] = localStorage.getItem("w3exerciseanswers_" + storageBlip + exnames[i]).split(",");
         if (i == exActiveNo) {
-            exNo = "exercise_selectors1".replace("exercise_","");
+            exNo = "exercise_js_variables1".replace("exercise_","");
             exNo = exNo.replace(exnames[i],"");
             exNo = Number(exNo);
         }
@@ -1164,6 +1221,7 @@ function w3LoadExercise() {
     if ('ontouchstart' in window || 'onmsgesturechange' in window) {
         document.getElementsByClassName("exercisemenuinner")[0].style.overflowY = "scroll";
     }
+    
 }
 function checkCompletedExercises(n) {
     var i, j, l, cc = 0, dd = 0, rr = 0, q = 0, rightAnswers, totRightAnswers = 0;
@@ -1192,7 +1250,7 @@ function checkCompletedExercises(n) {
             document.getElementsByClassName("exmenuitemheader")[i].getElementsByClassName("fa-check")[0].style.visibility = "visible";
         }
     }
-	document.getElementById("completedExercisesNo").innerHTML = "Решено " + rr + " из " + q + " Упражнений:";
+    document.getElementById("completedExercisesNo").innerHTML = "Решено " + rr + " из " + q + " Упражнений:";
     if (n != 0 && totRightAnswers == q) {
         document.getElementById('id02').style.display = 'block';    
     }
@@ -1219,11 +1277,12 @@ function needHint(x) {
     x.style.display = "none";
     document.getElementById("hint").style.visibility = "visible";
 }
+
 </script>
-<meta property="og:url"           content="https://schoolsw3.com/css/exercise.php" />
+<meta property="og:url"           content="https://schoolsw3.com/js/exercise_js.php" />
 <meta property="og:type"          content="Веб Сайт" />
-<meta property="og:title"         content="SchoolsW3 CSS Упражнения" />
-<meta property="og:description"   content="Я выполнил все упражнения CSS на schoolsw3.com" />
+<meta property="og:title"         content="Практические упражнения по Javascript на SchoolsW3" />
+<meta property="og:description"   content="Я завершил все упражнения JS на schoolsw3.com" />
 <script>window.yaContextCb=window.yaContextCb||[]</script>
 <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
@@ -1240,10 +1299,9 @@ fjs.parentNode.insertBefore(js, fjs);
 <table style="width:100%;height:100%;background-color:#f1f1f1;position:absolute;overflow:auto;min-height:650px;">
 <tr>
 <td id="topTD">
-<div id="menubtn"  class="fa fa-bars" onclick="open_menu()" onmouseover="showtooltip(0)" onmouseout="hidetooltip(0);"></div>
+<div id="menubtn"  class="fa fa-bars" onclick="open_menu()" onmouseover="showtooltip(0)" onmouseout="hidetooltip(0)" ontouchstart="open_menu();return false;"></div>
 <div class="tooltip" style="top:65px;">Меню</div>
-<div id='tryitLeaderboard' style="text-align:center;background-color:#ffffff">
-<!-- Yandex.RTB R-A-1418359-1 -->
+<div id='tryitLeaderboard'>
 <div id="yandex_rtb_R-A-1418359-1"></div>
 <script>window.yaContextCb.push(()=>{
   Ya.Context.AdvManager.render({
@@ -1252,7 +1310,6 @@ fjs.parentNode.insertBefore(js, fjs);
   })
 })</script>
 </div>
-<div>
 <div id="codeCheckWarning">
 <div id="closeCodeCheckWarning" onclick="codeCheckWarningClose()">&times;</div>
 <div id="codeCheckWarningText" class="checkText"></div>
@@ -1260,132 +1317,373 @@ fjs.parentNode.insertBefore(js, fjs);
 <div id="codeCheckCorrect">
 <div id="closeCodeCheckCorrect" onclick="codeCheckCorrectClose()">&times;</div>
 <div class="checkText">Правильно!</div>
-</div><h1>CSS Селекторы: упражнение №1</h1>
-<p>Измените цвет всех элементов &lt;p&gt; на "красный".</p>
-<p id="hint">Подсказка: используйте селектор элемента.</p>
+</div>
+    <h1>Упражнение 1</h1>
+    <div id="assignmenttext" style='display:none'>
+      <p>Создайте переменную с именем <code class="w3-codespan">carName</code>, и к ней присвоить значение <code class="w3-codespan">Вольво</code>.</p>
 
+<div id="assignmentcode">
+var @(7) = "@(6)";
+</div>
+
+<div id="correctcode">
+var carName = "Вольво";
+</div>
+
+    </div>
+    <div id="blueprint"></div>
+
+<div style="position:relative">
+  <div id="assignmentNotCorrect" onclick="closeNotCorrect(event)">
+    <h2>Не правильно</h2>
+    <p>Щелкните <u>здесь</u>, чтобы повторить попытку.</p>   
+  </div>
+  <div id="assignmentCorrect" onclick="nextexercise()">
+    <h2>Правильно!</h2>
+    <span style="cursor:pointer" id="correctnextbtn">Следующий &#10095;</span>
+  </div>
+  <pre id="assignmentcontainer"></pre>
+  <pre id="showcorrectanswercontainer"></pre>
+  <button id="showanswerbutton" class="w3-btn showanswerbutton hide-from-small" style="position:absolute;right:20px;bottom:25px;padding:15px;" type="button" onclick="showanswer();">Показать</button>
+  <button id="hideanswerbutton" class="w3-btn" style="position:absolute;right:20px;bottom:25px;padding:15px;display:none;" type="button" onclick="hideanswer();">Скрыть</button>
+</div>
+
+<br>
+<div id="answerbuttoncontainer">
+<button id="answerbutton" class="w3-btn" style="padding:20px;" type="button" onclick="checkassignmentcode();">Отправить &#10095;</button>
+</div>
+
+<br>
+<br>
+<br>
+
+<style>
+#assignmentNotCorrect, #assignmentCorrect {
+  display:none;
+  width:100%;
+  height:100%;
+  position:absolute;
+  background-color:rgba(242, 222, 222, 0.99);
+  padding:50px;
+	z-index:1;
+	color: #b94a48;
+	border: 1px solid #eed3d7;
+  cursor:pointer;
+}
+
+#assignmentCorrect {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+#assignmentcontainer, #showcorrectanswercontainer {
+  background-color:#f1f1f1;
+  padding:30px;
+  padding-top:0;
+  padding-bottom:90px;
+  min-height:250px;
+  font-family:Consolas,"Courier New", Courier, monospace;
+  font-size:120%;
+  line-height:1.7em;
+}
+
+#showcorrectanswercontainer {
+  display:none;
+}
+.editablesection {
+  background-color:#ffffff;
+  display:inline-block;
+  border:none;
+  padding:0;
+  outline-offset:0;
+  height:1.2em;
+}
+.editablesection:focus {
+  outline:2px solid #ffffff;
+}
+
+.meassureInputWidth {
+  display:inline-block;
+  position:absolute;
+}
+
+#answerbutton:focus {
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+.w3-codespan {
+  color:#000000;
+}
+
+[id^="correctcode"] {
+  display:none;
+}
+
+#showcorrectanswercontainer input {
+  color:mediumblue;
+}
+
+.phonebr {
+  display:none;
+}
+
+.showanswerbutton, .hideanswerbutton {
+  background-color:#2196F3!important;
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  padding:20px;
+}
+
+@media screen and (max-width: 899px) {
+  #answerbuttoncontainer {
+    position:fixed;
+    bottom:0;
+    background-color:rgba(85,85,85,0.9);
+    padding:20px;
+    width:100%;
+    left:0;
+  }
+  #assignmentcontainer, #showcorrectanswercontainer {
+    min-height:150px;
+    padding-bottom:60px;
+    margin-left:-20px;
+    margin-right:-20px;
+  }
+  #assignmentNotCorrect, #assignmentCorrect {
+    padding:20px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .phonebr {
+    display:initial;
+  }
+}
+
+@media (max-width:899px){.hide-from-small{display:none!important}}
+@media (min-width:900px) {.hide-from-large{display:none!important}}
+@media only screen and (max-device-width: 480px) {
+#assignmentcontainer, #showcorrectanswercontainer {
+  font-family:'Source Code Pro',Menlo,Consolas,"Courier New", Courier, monospace;
+}
+#assignmentcontainer input, #showcorrectanswercontainer input {padding:0;height:1.5em}
+</style>
 <script>
-required = {
-    "tags" : [{
-        "name" : "*p",
-        "errname" : "Элемент p не найден",
-        "css" : [{
-            "style" : "color",
-            "value" : "red",
-            "errvalue" : "Все элементы p не имеют красного цвета"
-        }]
-    }]
+var formanswers = [];
+formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');formanswers.push('');
+var originalassignmentcode;
+function initAssignment() {
+  var x, y, txt, i, newtxt, c, cc, n, numberofchar, j, inputs, templates, l, inputcount = -1;
+  document.getElementById("assignmenttext").style.display = "block";
+  x = document.getElementById("assignmentcode");
+  x.style.display = "none";
+  txt = x.innerHTML;
+  originalassignmentcode = txt;
+  newtxt = "";
+  for (i = 0; i < txt.length; i++) {
+    c = txt[i]
+    numberofchar = 0;
+    if (c == "@") {
+      inputcount++
+      if (txt[i + 1] == "(") {
+        startpos = i + 2;
+        endpos = txt.indexOf(")", startpos);
+        n = txt.substring(startpos, endpos)
+        if (!isNaN(n)) {numberofchar = n;}
+      }
+      if (numberofchar > 0) {
+        i = endpos;
+        c = "<pre class='meassureInputWidth'>"
+        for (j = 0; j < numberofchar; j++) {
+          c += " ";
+        }
+        c += "</pre>"
+        c += "<input class='editablesection' oninput='writinginput(this, " + inputcount + ")' maxlength='" + numberofchar + "'>"
+      }
+    }
+    newtxt += c;
+  }
+  document.getElementById("assignmentcontainer").innerHTML = newtxt;
+  inputs = document.getElementsByClassName("editablesection");
+  templates = document.getElementsByClassName("meassureInputWidth");
+  for (i = 0; i < inputs.length; i++) {
+    inputs[i].style.width = ((templates[i].offsetWidth) + 1) + "px";
+    templates[i].style.display = 'none';
+    templates[i].innerHTML = "w3exercise_input_no_" + i;
+    cc = formanswers[i];
+    cc = cc.replace(/&apos;/g, "'");
+    cc = cc.replace(/&quot;/g, '"');
+    inputs[i].value = cc;
+  }
+  //window.setTimeout(function () {inputs[0].focus()}, 800);
 }
+
+function checkassignmentcode() {
+  var check, correct, correct2, inputs, i, moreCorrect = true, cc, result = "";
+  check = document.getElementById("assignmentcontainer").textContent;
+  inputs = document.getElementsByClassName("editablesection");
+  for (i = 0; i < inputs.length; i++) {
+    check = check.replace("w3exercise_input_no_" + i, inputs[i].value);
+  }
+  i = 1;
+  while (moreCorrect) {
+    cc = (i == 1) ? "" : i;
+    if (document.getElementById("correctcode" + cc)) {
+      correct = document.getElementById("correctcode" + cc).textContent;
+      if (exsection == "SQL") {
+        check = check.toLowerCase();
+        correct = correct.toLowerCase();
+      }
+      if (w3_trim(check) == w3_trim(correct)) {
+        result = "correct";
+        break;
+      }
+    }
+    i++;
+    moreCorrect = (document.getElementById("correctcode" + cc));
+  }
+  if (result == "correct") {
+    answers[exActiveNo].splice((exNo-1), 1, 1);            
+    localStorage.setItem("w3exerciseanswers_" + storageBlip + exnames[exActiveNo], answers[exActiveNo].toString());
+    checkCompletedExercises();
+    document.getElementById("assignmentCorrect").style.display = "block";
+    if (exNo >= 5 && 1 == 20) {
+      document.getElementById("answerbutton").style.display = "none";
+      document.getElementById("correctnextbtn").style.display = "none";
+      document.getElementById("assignmentCorrect").onclick = "";
+    } else {
+      document.getElementById("answerbutton").innerHTML = "Следующее упражнение &#10095;";
+      document.getElementById("answerbutton").addEventListener("click", nextexercise);
+    }
+  } else {
+    document.getElementById("assignmentNotCorrect").style.display = "block";
+    document.getElementById("answerbutton").innerHTML = "Повторить";
+    document.getElementById("answerbutton").addEventListener("click", closeNotCorrect);
+    //document.getElementById("notCorrect_closeBtn").focus();
+  }
+}
+
+function writinginput(obj, n) {
+  var x;
+  document.getElementById("assignmentCorrect").style.display = "none";
+  document.getElementById("assignmentNotCorrect").style.display = "none";
+//  if (obj.value.length == obj.maxLength) {
+//    x = document.getElementsByClassName("editablesection");
+//    if ((n + 1) > (x.length - 1)) {
+//      document.getElementById("answerbutton").focus();
+//    } else {
+//      x[n + 1].focus();
+//    }
+//  }
+}
+
+function showanswer() {
+  var txt, correcttxt, cc, from, to, endpos, i, numberofchar, correctpositions = [], correctanswers = [], x, y, z, inputs;
+  correcttxt = document.getElementById("correctcode").innerHTML;
+  txt = originalassignmentcode;
+  from = 0;
+  to = 0;
+  cc = 0;
+  for (i = 0; i < txt.length; i++) {
+    c = txt[i]
+    numberofchar = 0;
+    if (c == "@") {
+      if (txt[i + 1] == "(") {
+        startpos = i + 2;
+        endpos = txt.indexOf(")", startpos);
+        n = txt.substring(startpos, endpos)
+        if (!isNaN(n)) {numberofchar = n;}
+        if (numberofchar > 0) {
+           from = i + cc;
+           to = Number(numberofchar);
+           cc += Number(numberofchar) - 3 - (numberofchar.length);
+           correctpositions.push([from,to]);
+        }
+      }
+    }
+  }
+  cc = 0;
+  for (i = 0; i < correctpositions.length; i++) {
+      x = correctpositions[i][0];
+      y = correctpositions[i][1];
+      z = correcttxt.substr(x + cc, y);
+  //console.log(correcttxt)
+  //console.log(z)
+      if (z == "&") {
+        if (correcttxt.substr(x + cc, 4) == "&lt;") { z = "<"; cc = cc + 3; }
+        if (correcttxt.substr(x + cc, 4) == "&gt;") { z = ">"; cc = cc + 3; }
+      }
+      if (z == "&l") {
+        if (correcttxt.substr(x + cc, 8) == "&lt;&gt;") { z = "<>"; cc = cc + 6; }
+      }
+      if (z == "&lt;?") {
+        if (correcttxt.substr(x + cc, 8) == "&lt;?php") { z = "<php"; cc = cc + 3; }
+      }
+      if (z == "?&") {
+        if (correcttxt.substr(x + cc, 5) == "?&gt;") { z = "?>"; cc = cc + 3; }
+      }
+      if (z == "=&") {
+        if (correcttxt.substr(x + cc, 5) == "=&gt;") { z = "=>"; cc = cc + 3; }
+      }
+      correctanswers.push(z);
+    }
+  document.getElementById("showcorrectanswercontainer").innerHTML = document.getElementById("assignmentcontainer").cloneNode(true).innerHTML;
+  inputs = document.getElementById("showcorrectanswercontainer").getElementsByClassName("editablesection");
+  for (i = 0; i < inputs.length; i++) {
+    inputs[i].value = correctanswers[i];
+    inputs[i].readOnly = true;
+  }
+  document.getElementById("assignmentcontainer").style.display = "none";
+  document.getElementById("showcorrectanswercontainer").style.display = "block";
+  document.getElementById("showanswerbutton").style.display = "none";
+  document.getElementById("hideanswerbutton").style.display = "inline";
+  document.getElementById("answerbutton").style.visibility = "hidden";
+}
+
+function hideanswer() {
+  document.getElementById("assignmentcontainer").style.display = "block";
+  document.getElementById("showcorrectanswercontainer").style.display = "none";
+  document.getElementById("showanswerbutton").style.display = "inline";
+  document.getElementById("hideanswerbutton").style.display = "none";
+  document.getElementById("answerbutton").style.visibility = "visible";
+}
+
+function nextexercise() {
+  if (exNo >= 5) {
+    location = "exercise_js.php?filename=exercise_" + exnames[exActiveNo + 1] + "1";
+  } else {
+    location = "exercise_js.php?filename=exercise_" + exnames[exActiveNo] + (exNo + 1)
+  }
+}
+
+function closeNotCorrect() {
+  document.getElementById("answerbutton").removeEventListener("click", closeNotCorrect);
+  document.getElementById("answerbutton").innerHTML = "Отправить &#10095;";
+  document.getElementById("assignmentNotCorrect").style.display = "none";    
+}
+
+initAssignment();
+
 </script>
-
-<div id="blueprint"></div>
-</div>
-</td>
-</tr>
-<tr id="editSection">
-<td id="codeTD">
-<div class="codecontainer">
-<div class="codecontainerinner">
-<div style="overflow:auto;padding-bottom:10px;">
-<div class="w3-left">Изменить Код:</div>
-<button class="w3-btn w3-right" type="button" onclick="submitTryit('', 1)">Проверка Кода &raquo;</button>
-</div>
-<textarea style="width:100%;height:95%;border:1px solid #d3d3d3;" autocomplete="off" id="textareaCode">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-
-</style>
-</head>
-<body>
-
-<h1>Это заголовок</h1>
-<p>Это параграф.</p>
-<p>Это еще один параграф.</p>
-
-</body>
-</html>
-
-</textarea>
-<form autocomplete="off" style="display:none;">
-<input type="hidden" name="code" id="code" />
-<input type="hidden" id="bt" name="bt" />
-</form>
-</div>
-</div>
-<div class="resultcontainer">
-<div class="resultcontainerinner">
-<div style="overflow:auto;padding-bottom:10px;">
-<div style="float:left;width:auto;">результат:</div>
-<div style="float:right;width:auto;"><button class="w3-btn" id="showCorrectBtn" type="button" onclick="showCorrectAnswer()">Посмотреть Ответ</button></div>
-</div>
-<div id="iframewrapper"></div>
-</div>
-</div>
-</td>
-</tr>
-<tr id="correctSection">
-<td id="codeTD2">
-<div class="codecontainer">
-<div class="codecontainerinner">
-<div style="overflow:auto;padding-bottom:10px;">
-<div style="float:left;width:auto;">Правильный Код:</div>
-<div style="float:right;width:auto;"><button class="w3-btn" type="button" style="visibility:hidden;">Манекен</button></div>        
-</div>
-
-<textarea style="width:100%;height:95%;border:1px solid #d3d3d3;" autocomplete="off" id="textareaCode2">
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p {
-    color: red;
-}
-</style>
-</head>
-<body>
-
-<h1>Это заголовок</h1>
-<p>Это параграф.</p>
-<p>Это еще один параграф.</p>
-
-</body>
-</html>
-
-</textarea>
-      <form autocomplete="off" style="display:none;">
-        <input type="hidden" name="code" id="code2" />
-        <input type="hidden" id="bt2" name="bt" />
-      </form>
-    </div>
   </div>
-  
-  <div class="resultcontainer">
-    <div class="resultcontainerinner">
-      <div style="overflow:auto;padding-bottom:10px;">
-        <div style="float:left;width:auto;">результат:</div>
-        <div style="float:right;width:auto;"><button class="w3-btn" id="hideCorrectBtn" type="button" onclick="hideCorrectAnswer()">Скрыть Ответ</button></div>
-      </div>
-      <div id="iframewrapper2"></div>
-    </div>
-  </div>
-  
 </td>
 </tr>
-</table><div id="exercisemenu" class="exercisemenu">
+</table>
+<div id="exercisemenu" class="exercisemenu">
 
 <div style="width:260px;background-color:#f1f1f1;border-right:1px solid #dddddd;overflow:auto;padding:10px 5px;">
 <div style="float:left;width:75px">
-<a href="https://schoolsw3.com" target="_blank"><span class="menubtn fa fa-home" onmouseover="showtooltip(1)" onmouseout="hidetooltip(1);"></span></a>
-<div class="tooltip">Schoolsw3.com</div>
+<a href="https://schoolsw3.com" target="_blank"><span class="menubtn fa fa-home" onmouseover="showtooltip(1)" onmouseout="hidetooltip(1)" ontouchstart="location='https://schoolsw3.com';return false;"></span></a>
+<div class="tooltip">Перейти schoolsw3.com</div>
 </div>
 <div style="float:left;width:100px;text-align:center;">
-<span onclick="modalReset()" class="menubtn fa fa fa-trash" onmouseover="showtooltip(2)" onmouseout="hidetooltip(2)"></span>
+<span onclick="modalReset()" class="menubtn fa fa fa-trash" onmouseover="showtooltip(2)" onmouseout="hidetooltip(2)" ontouchstart="modalReset();return false;"></span>
 <div class="tooltip" style="left:80px;">Сбросить Счет</div>
 </div>
 <div style="float:left; width:74px;text-align:right;">
-<span onclick="close_menu()" class="menubtn fa fa-close" onmouseover="showtooltip(3)" onmouseout="hidetooltip(3);"></span>
+<span onclick="close_menu()" class="menubtn fa fa-close" onmouseover="showtooltip(3)" onmouseout="hidetooltip(3)" ontouchstart="close_menu();return false;"></span>
 <div class="tooltip" style="right:10px;">Закрыть Меню</div>
 </div>
 </div>
@@ -1393,280 +1691,355 @@ p {
 <p id="completedExercisesNo">&nbsp;</p>
 
 </div>
+
 <div class="exercisemenuinner">
-<div>
-<div onclick='openmenuitems(0)' class='exmenuitemheader'>
-<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Селекторы</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_selectors1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_selectors2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_selectors3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_selectors4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_selectors.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Селекторы</a>
-</div></div>
-<div><div onclick='openmenuitems(1)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Инструкции</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_howto1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_howto2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_howto3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_howto4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_howto.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Инструкции</a>
-</div></div>
-<div><div onclick='openmenuitems(2)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Фон</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_background1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_background2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_background3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_background4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_background5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='css_background.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS фон</a></div></div>
-<div><div onclick='openmenuitems(3)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Границы</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_border1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_border2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_border3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_border4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_border.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Границы</a>
-</div></div>
-<div><div onclick='openmenuitems(4)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Поля</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_margin1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_margin2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_margin3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_margin4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_margin.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Поля</a>
-</div></div><div><div onclick='openmenuitems(5)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Отступы</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_padding1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_padding2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_padding3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='css_padding.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Отступы</a>
-</div></div>
-<div><div onclick='openmenuitems(6)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Высота/Ширина</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_dimension1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_dimension2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='css_dimension.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Высота/Ширина</a>
-</div></div>
-<div><div onclick='openmenuitems(7)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i> CSS Бокс модель</div><div class='exmenulinks'>
-<a class='exbtn' href='exercise_boxmodel1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_boxmodel2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_boxmodel3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_boxmodel4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_boxmodel.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Бокс модель</a></div></div>
-<div><div onclick='openmenuitems(8)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Контур</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_outline1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_outline2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_outline3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='css_outline.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Контур</a></div></div>
-<div><div onclick='openmenuitems(9)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Текст</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_text1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_text2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_text3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_text4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_text5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='css_text.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Текст</a></div></div>
-<div><div onclick='openmenuitems(10)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Шрифт</div><div class='exmenulinks'>
-<a class='exbtn' href='exercise_font1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_font2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_font3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_font4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_font5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='css_font.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Шрифт</a></div></div>
-<div><div onclick='openmenuitems(11)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Ссылка</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_link1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_link2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_link3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_link4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_link.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Ссылка</a>
-</div></div>
-<div><div onclick='openmenuitems(12)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Списки</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_list1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_list2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_list3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_list4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_list.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Списки</a></div></div>
-<div><div onclick='openmenuitems(13)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Таблица</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_table1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_table2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_table3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_table4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_table5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='exercise_table6.php'><i class='fa fa-check'></i> Упражнение 6</a>
-<a class='exbtn' href='css_table.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Таблица</a></div></div>
-<div><div onclick='openmenuitems(14)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Дисплей/Видимость</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_display_visibility1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_display_visibility2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_display_visibility3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_display_visibility4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_display_visibility.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Дисплей/Видимость</a>
-</div></div>
-<div><div onclick='openmenuitems(15)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Позицирование</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_positioning1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_positioning2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_positioning3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_positioning4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_positioning5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='css_positioning.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Позицирование</a>
-</div></div>
-<div><div onclick='openmenuitems(16)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Переполнение</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_overflow1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_overflow2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_overflow3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='css_overflow.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Переполнение</a>
-</div></div>
-<div><div onclick='openmenuitems(17)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Выравнивание</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_align1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_align2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='css_align.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Выравнивание</a>
-</div></div><div><div onclick='openmenuitems(18)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Комбинаторы</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_combinators1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_combinators2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_combinators3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_combinators4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_combinators.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Комбинаторы</a>
-</div></div>
-<div><div onclick='openmenuitems(19)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Псевдо-классы</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_pseudo_classes1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_pseudo_classes2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_pseudo_classes3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_pseudo_classes4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css_pseudo_classes.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Псевдо-классы</a>
-</div></div>
-<div><div onclick='openmenuitems(20)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Псевдо-элементы</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_pseudo_elements1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_pseudo_elements2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_pseudo_elements3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='css_pseudo_elements.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Псевдо-элементы</a>
-</div></div>
-<div><div onclick='openmenuitems(21)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Прозрачность</div><div class='exmenulinks'>
-<a class='exbtn' href='exercise_image_transparency1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_image_transparency2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='css_image_transparency.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Прозрачность</a>
-</div></div>
-<div><div onclick='openmenuitems(22)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS Атрибут селектора</div><div class='exmenulinks'>
-<a class='exbtn' href='exercise_attribute_selectors1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_attribute_selectors2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_attribute_selectors3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_attribute_selectors4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_attribute_selectors5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='exercise_attribute_selectors6.php'><i class='fa fa-check'></i> Упражнение 6</a>
-<a class='exbtn' href='css_attribute_selectors.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS Атрибут селектора</a>
-</div></div>
-<div><div onclick='openmenuitems(23)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Округленные углы</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_borders1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_borders2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='css3_borders.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Округленные углы</a>
-</div></div>
-<div><div onclick='openmenuitems(24)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Рамка изображения</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_border_images1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_border_images2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='css3_border_images.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Границы изображения</a>
-</div></div>
-<div><div onclick='openmenuitems(25)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Фон изображения</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_backgrounds1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_backgrounds2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_backgrounds3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_css3_backgrounds4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_css3_backgrounds5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='css3_backgrounds.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Фон изображения</a>
-</div></div>
-<div><div onclick='openmenuitems(26)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Цвет</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_colors1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_colors2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_colors3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_css3_colors4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css3_colors.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Цвет</a>
-</div></div>
-<div><div onclick='openmenuitems(27)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Градиент</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_gradients1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_gradients2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_gradients3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_css3_gradients4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_css3_gradients5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='exercise_css3_gradients6.php'><i class='fa fa-check'></i> Упражнение 6</a>
-<a class='exbtn' href='exercise_css3_gradients7.php'><i class='fa fa-check'></i> Упражнение 7</a>
-<a class='exbtn' href='css3_gradients.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Градиент</a>
-</div></div><div><div onclick='openmenuitems(28)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Теневой эффект</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_shadows1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_shadows2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_shadows3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_css3_shadows4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_css3_shadows5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='css3_shadows.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Теневой эффект</a></div></div>
-<div><div onclick='openmenuitems(29)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Текст эффект</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_text_effects1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_text_effects2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_text_effects3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='css3_text_effects.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Текст эффект</a>
-</div></div>
-<div><div onclick='openmenuitems(30)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Веб Шрифты</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_fonts1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_fonts2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='css3_fonts.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Веб шрифты</a>
-</div></div>
-<div><div onclick='openmenuitems(31)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 2D Трансформация</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_2dtransforms1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_2dtransforms2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_2dtransforms3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_css3_2dtransforms4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='css3_2dtransforms.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 2D Трансформация</a>
-</div></div>
-<div><div onclick='openmenuitems(32)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 3D Трансформация</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_3dtransforms1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_3dtransforms2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_3dtransforms3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='css3_3dtransforms.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 3D Трансформация</a>
-</div></div><div><div onclick='openmenuitems(33)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Трансформация</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_transitions1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_transitions2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_transitions3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_css3_transitions4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_css3_transitions5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='css3_transitions.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Трансформация</a>
-</div></div>
-<div><div onclick='openmenuitems(34)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>CSS3 Анимация</div>
-<div class='exmenulinks'>
-<a class='exbtn' href='exercise_css3_animations1.php'><i class='fa fa-check'></i> Упражнение 1</a>
-<a class='exbtn' href='exercise_css3_animations2.php'><i class='fa fa-check'></i> Упражнение 2</a>
-<a class='exbtn' href='exercise_css3_animations3.php'><i class='fa fa-check'></i> Упражнение 3</a>
-<a class='exbtn' href='exercise_css3_animations4.php'><i class='fa fa-check'></i> Упражнение 4</a>
-<a class='exbtn' href='exercise_css3_animations5.php'><i class='fa fa-check'></i> Упражнение 5</a>
-<a class='exbtn' href='exercise_css3_animations6.php'><i class='fa fa-check'></i> Упражнение 6</a>
-<a class='exbtn' href='css3_animations.php' style='font-size:80%;text-decoration:underline;'>Перейти к CSS3 Анимация</a>
-</div></div>
+<div><div onclick='openmenuitems(0)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Variables </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables5'>
+<i class='fa fa-check'></i> Упражнение 5</a>
+<a class='exbtn' href='js_variables.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Variables </a></div></div>
+<div><div onclick='openmenuitems(1)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Operators </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators5'>
+<i class='fa fa-check'></i> Упражнение 5</a>
+<a class='exbtn' href='js_operators.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Operators </a></div></div>
+<div><div onclick='openmenuitems(2)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Data Types </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_datatypes1'>
+<i class='fa fa-check'></i> Упражнение 1</a>
+<a class='exbtn' href='js_datatypes.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Data Types </a></div></div>
+<div><div onclick='openmenuitems(3)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Functions </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions4'>
+<i class='fa fa-check'></i> Упражнение 4</a>
+<a class='exbtn' href='js_functions.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Functions </a></div></div>
+<div><div onclick='openmenuitems(4)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Objects </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_objects1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_objects2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_objects3'>
+<i class='fa fa-check'></i> Упражнение 3</a>
+<a class='exbtn' href='js_objects.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Objects </a></div></div>
+<div><div onclick='openmenuitems(5)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Events </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_events1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_events2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_events3'>
+<i class='fa fa-check'></i> Упражнение 3</a>
+<a class='exbtn' href='js_events.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Events </a></div></div>
+<div><div onclick='openmenuitems(6)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Strings </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings3'>
+<i class='fa fa-check'></i> Упражнение 3</a>
+<a class='exbtn' href='js_strings.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Strings </a></div></div>
+<div><div onclick='openmenuitems(7)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS String Methods </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_string_methods1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_string_methods2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_string_methods3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_string_methods4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_string_methods5'>
+<i class='fa fa-check'></i> Упражнение 5</a>
+<a class='exbtn' href='js_string_methods.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS String Methods </a></div></div>
+<div><div onclick='openmenuitems(8)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Arrays </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays3'>
+<i class='fa fa-check'></i> Упражнение 3</a>
+<a class='exbtn' href='js_arrays.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Arrays </a></div></div>
+<div><div onclick='openmenuitems(9)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Array Methods </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_array_methods1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_array_methods2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_array_methods3'>
+<i class='fa fa-check'></i> Упражнение 3</a>
+<a class='exbtn' href='js_array_methods.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Array Methods </a></div></div>
+<div><div onclick='openmenuitems(10)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Array Sort </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_array_sort1'>
+<i class='fa fa-check'></i> Упражнение 1</a>
+<a class='exbtn' href='js_array_sort.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Array Sort </a></div></div>
+<div><div onclick='openmenuitems(11)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Dates </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates4'>
+<i class='fa fa-check'></i> Упражнение 4</a>
+<a class='exbtn' href='js_dates.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Dates </a></div></div>
+<div><div onclick='openmenuitems(12)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Math </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_math1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_math2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_math3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_math4'>
+<i class='fa fa-check'></i> Упражнение 4</a>
+<a class='exbtn' href='js_math.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Math </a></div></div>
+<div><div onclick='openmenuitems(13)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Comparisons </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons4'>
+<i class='fa fa-check'></i> Упражнение 4</a>
+<a class='exbtn' href='js_comparisons.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Comparisons </a></div></div>
+<div><div onclick='openmenuitems(14)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Conditions </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_conditions1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_conditions2'>
+<i class='fa fa-check'></i> Упражнение 2</a>
+<a class='exbtn' href='js_if_else.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Conditions </a></div></div>
+<div><div onclick='openmenuitems(15)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Switch </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_switch1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_switch2'>
+<i class='fa fa-check'></i> Упражнение 2</a>
+<a class='exbtn' href='js_switch.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Switch </a></div></div>
+<div><div onclick='openmenuitems(16)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS For Loops </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops2'>
+<i class='fa fa-check'></i> Упражнение 2</a>
+<a class='exbtn' href='js_loop_for.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS For Loops </a></div></div>
+<div><div onclick='openmenuitems(17)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS While Loops </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_loop_while1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_loop_while2'>
+<i class='fa fa-check'></i> Упражнение 2</a>
+<a class='exbtn' href='js_loop_while.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS While Loops </a></div></div>
+<div><div onclick='openmenuitems(18)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Break Loops </div><div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_break1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_break2'>
+<i class='fa fa-check'></i> Упражнение 2</a>
+<a class='exbtn' href='js_break.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS Break Loops </a></div></div>
+<div><div onclick='openmenuitems(19)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS HTML DOM </div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html5'>
+<i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html6'>
+<i class='fa fa-check'></i> Упражнение 6</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html7'>
+<i class='fa fa-check'></i> Упражнение 7</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html8'>
+<i class='fa fa-check'></i> Упражнение 8</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html9'>
+<i class='fa fa-check'></i> Упражнение 9</a>
+<a class='exbtn' href='js_htmldom_html.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Повторить JS HTML DOM </a></div></div>
+<br>
+</div>
+
+
+<!--
+<div class="exercisemenuinner">
+
+<div><div onclick='openmenuitems(0)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>
+JS Переменные</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_variables5'>
+<i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='js_variables.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Переменные</a></div></div>
+
+<div><div onclick='openmenuitems(1)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Операторы</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js_operators1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_operators5'>
+<i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='js_operators.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Операторы</a></div></div>
+
+
+<div><div onclick='openmenuitems(2)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Типы данных</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_datatypes1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='js_datatypes.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Типы данных</a></div></div>
+
+<div><div onclick='openmenuitems(3)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Функции</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_functions4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='js_functions.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Функции</a></div></div>
+
+<div><div onclick='openmenuitems(4)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Объекты</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_objects1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_objects2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_objects3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='js_objects.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Объекты</a></div></div>
+
+
+<div><div onclick='openmenuitems(5)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS События</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_events1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_events2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_events3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='js_events.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS События</a></div></div>
+
+<div><div onclick='openmenuitems(6)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Строки</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings5'>
+<i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings6'>
+<i class='fa fa-check'></i> Упражнение 6</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings7'>
+<i class='fa fa-check'></i> Упражнение 7</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings8'>
+<i class='fa fa-check'></i> Упражнение 8</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_strings9'>
+<i class='fa fa-check'></i> Упражнение 9</a><a class='exbtn' href='js_strings.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Строки</a></div></div>
+
+
+<div><div onclick='openmenuitems(7)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Массивы</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays5'>
+<i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays6'>
+<i class='fa fa-check'></i> Упражнение 6</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays7'>
+<i class='fa fa-check'></i> Упражнение 7</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_arrays8'>
+<i class='fa fa-check'></i> Упражнение 8</a><a class='exbtn' href='js_arrays.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Массивы</a></div></div>
+
+<div><div onclick='openmenuitems(8)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Даты</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dates4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='js_dates.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Даты</a></div></div>
+
+<div><div onclick='openmenuitems(9)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Математика</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_math1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_math2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_math3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_math4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='js_math.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Математика</a></div></div>
+
+<div><div onclick='openmenuitems(10)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Сравнения</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_comparisons4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='js_comparisons.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Сравнения</a></div></div>
+
+<div><div onclick='openmenuitems(11)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Условия</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_conditions1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_conditions2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='js_if_else.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Условия</a></div></div>
+
+<div><div onclick='openmenuitems(12)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Переключатель</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_switch1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_switch2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='js_switch.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Переключатель</a></div></div>
+
+<div><div onclick='openmenuitems(13)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS Циклы</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops5'>
+<i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_loops6'>
+<i class='fa fa-check'></i> Упражнение 6</a><a class='exbtn' href='js_loop_for.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS Циклы</a></div></div>
+
+<div><div onclick='openmenuitems(14)' class='exmenuitemheader'>
+<i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>JS HTML ДОМ</div>
+<div class='exmenulinks'><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html1'>
+<i class='fa fa-check'></i> Упражнение 1</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html2'>
+<i class='fa fa-check'></i> Упражнение 2</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html3'>
+<i class='fa fa-check'></i> Упражнение 3</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html4'>
+<i class='fa fa-check'></i> Упражнение 4</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html5'>
+<i class='fa fa-check'></i> Упражнение 5</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html6'>
+<i class='fa fa-check'></i> Упражнение 6</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html7'>
+<i class='fa fa-check'></i> Упражнение 7</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html8'>
+<i class='fa fa-check'></i> Упражнение 8</a><a class='exbtn' href='exercise_js.php?filename=exercise_js_dom_html9'>
+<i class='fa fa-check'></i> Упражнение 9</a><a class='exbtn' href='js_htmldom_html.php' target='_blank' style='font-size:80%;text-decoration:underline;'>
+Перейти к JS HTML ДОМ</a></div></div>
 <br>
 <br>
 <br>
 <br>
 <br>
 </div>
+-->
 </div><script>
-submitTryit('', 0)
-
 function openmenuitems(n, cc) {
     var x = document.getElementsByClassName("exmenulinks")[n];
     var y = x.cloneNode(true)
@@ -1703,8 +2076,10 @@ function hidetooltip(n) {
 function close_menu() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     document.getElementById("topTD").style.paddingLeft = "20px";    
-    document.getElementById("codeTD").style.paddingLeft = "20px";
-    document.getElementById("codeTD2").style.paddingLeft = "20px";    
+    if (document.getElementById("codeTD")) {
+      document.getElementById("codeTD").style.paddingLeft = "20px";
+      document.getElementById("codeTD2").style.paddingLeft = "20px";
+    }
     if (w > 900) {    
         document.getElementById("tryitLeaderboard").style.paddingLeft = "30px";
         document.getElementById("exercisemenu").style.display = "none";
@@ -1716,8 +2091,10 @@ function open_menu() {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w > 900) {
         document.getElementById("topTD").style.paddingLeft = "280px";    
-        document.getElementById("codeTD").style.paddingLeft = "280px";        
-        document.getElementById("codeTD2").style.paddingLeft = "280px";                
+        if (document.getElementById("codeTD")) {
+          document.getElementById("codeTD").style.paddingLeft = "280px";        
+          document.getElementById("codeTD2").style.paddingLeft = "280px";
+        }
         document.getElementById("tryitLeaderboard").style.paddingLeft = "0";
     }
     document.getElementById("exercisemenu").style.display = "block";    
@@ -1739,7 +2116,8 @@ function colorcoding() {
   });
 //  window.editor.on("change", function () {window.editor.save();});
 }
-colorcoding();
+
+
 
 </script>
 
@@ -1750,7 +2128,7 @@ colorcoding();
       <h2>Сбросить счет?</h2>
     </header>
     <div class="w3-container w3-padding">
-      <p>Сбросит счет всех 138 упражнений.</p>
+      <p>Cбросит счет всех 67 упражнений.</p>
       <p>Вы уверены, что хотите продолжить?</p>
       <br>
       <button class="w3-btn" onclick="resetScore()">Сброс</button>
@@ -1767,11 +2145,20 @@ colorcoding();
       <h2>Поздравляю!</h2>
     </header>
     <div class="w3-container w3-padding">
-      <h3>Вы закончили все 138 CSS Упражнений.</h3>
+      <h3>Вы закончили все 67 JS упражнений.</h3>
       <p>Поделитесь своим счетом на facebook:</p>
-      <a href="https://www.facebook.com/sharer.php?u=https://schoolsw3.com/css/exercise.php" target="_blank" title="Facebook"><span style="color:#3B5998;" class="fa fa-facebook-square fa-2x"></span></a>
+      
+      <a href="https://www.facebook.com/sharer.php?u=https://schoolsw3.com/js/exercise.php" target="_blank" title="Facebook"><span style="color:#3B5998;" class="fa fa-facebook-square fa-2x"></span></a>
       <br>
-      <br>
+      
+        <hr>
+        <h3>Получить Сертификат!</h3>
+        <p>Возьмите наш сертификат разработчика JavaScript, чтобы доказать, что у вас есть фундаментальные знания веб разработки с использованием JavaScript.</p>
+        <br>
+        <button class="w3-btn" onclick="window.location = '/cert/cert_javascript.php'">Получить Сертификат Сейчас!</button>      
+        <br>
+        <hr>
+        
       <br>
       <br>
       <br>
@@ -1780,5 +2167,7 @@ colorcoding();
     <br>
   </div>
 </div>
+
+
 </body>
 </html>

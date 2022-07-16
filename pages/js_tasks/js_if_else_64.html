@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+<head>
+<title>Учебник JavaScript — Операторы if...else</title>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web,W3CSS,W3C,Python,веб,учебники,веб-разработка,разработка,тестирование,учебное пособие,программирование,обучение,тренировка,учебник,викторина,примеры,занятия,уроки,справочник,образцы,упражнения,исходники,исходный код,цвет,демо,советы" name="Keywords"/><meta content="84600" http-equiv="refresh"/><meta content="Хорошо организованные и просты для понимания, бесплатные учебники для самостоятельного веб строительства, с примерами HTML, CSS, JavaScript и т.д." name="Description"/><meta content="Условные операторы используются для выполнения различных действий в зависимости от условий. В JavaScript есть следующие условные выражения: if, else, else if, switch." name="Description"/><link href="/favicon.ico" rel="icon" type="image/x-icon"/><link href="/w3css/4/w3.css" rel="stylesheet"/><link href="/w3css/4/w3_2.css" rel="stylesheet"/>
+<script src="/lib/prism2.js"></script><link href="/lib/prism1.css" rel="stylesheet"/><!-- Yandex.RTB --><script>window.yaContextCb=window.yaContextCb||[]</script><script async="" src="https://yandex.ru/ads/system/context.js"></script><!-- //Yandex.RTB -->
+</head><body><div class="w3-container top"><a class="w3schools-logo notranslate" href="../index.html">schoolsw3<span class="dotcom">.com</span></a><div class="w3-right w3-hide-small w3-wide toptext" style="font-family:'Segoe UI',Arial,sans-serif">САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ</div></div><div id="googleSearch" style="display:none;position:absolute;z-index:4;right:52px;height:40px;background-color:#5f5f5f;letter-spacing:normal;"><div class="gcse-search"></div></div><div id="google_translate_element" style="display:none;position:absolute;z-index:3;right:111px;height:40px;background-color:#5f5f5f;text-align:right;padding-top:9px;"></div><div class="w3-card-2 topnav notranslate" id="topnav"><div style="overflow:auto;"><div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:41px"><a class="topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button" href="javascript:void(0);" onclick="open_menu()" title="Меню"></a><a class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" href="../index.html" title="Главная"></a><a class="w3-bar-item w3-button" href="../html/index.php" title="HTML Учебник">HTML</a><a class="w3-bar-item w3-button" href="../css/index.php" title="CSS Учебник">CSS</a><a class="w3-bar-item w3-button" href="../js/index.php" title="JavaScript Учебник">JAVASCRIPT</a><a class="w3-bar-item w3-button" href="../sql/index.php" title="SQL Учебник">SQL</a><a class="w3-bar-item w3-button" href="../python/index.php" title="Python Учебник">PYTHON</a><a class="w3-bar-item w3-button" href="../php/index.php" title="PHP Учебник">PHP</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ver.php" title="Bootstrap Учебник">BOOTSTRAP</a><a class="w3-bar-item w3-button" href="../howto/index.php" title="Сделать инструкции HTML, CSS и JavaScript">КАК</a><a class="w3-bar-item w3-button" href="../w3css/index.php" title="W3.CSS Учебник">W3.CSS</a><a class="w3-bar-item w3-button" href="../jquery/index.php" title="jQuery Учебник">JQUERY</a><a class="w3-bar-item w3-button" href="../java/index.php" title="Java Учебник">JAVA</a><a class="w3-bar-item w3-button" href="javascript:void(0);" id="topnavbtn_tutorials" onclick='w3_open_nav("tutorials")' title="Учебники для программиста">ВСЕ <i class="fa fa-caret-down"></i> <i class="fa fa-caret-up" style="display:none"></i></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="open_search(this)" title="Поиск на Schoolsw3"></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="open_translate(this)" title="Перевод на Schoolsw3"></a><a class="topnav-icons fa w3-right w3-bar-item w3-button" href="javascript:void(0);" onclick="changecodetheme(this)" title="Переключение темного кода"></a><a class="w3-bar-item w3-button w3-right" href="../forum/index.php" target="_blank">ФОРУМ</a><a class="w3-bar-item w3-button w3-right" href="javascript:void(0);" id="topnavbtn_exercises" onclick='w3_open_nav("exercises")' title="Упражнения для программиста">УПРАЖНЕНИЯ <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a><a class="w3-bar-item w3-button w3-right" href="javascript:void(0);" id="topnavbtn_references" onclick='w3_open_nav("references")' title="Справочники для программиста">СПРАВОЧНИКИ <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a></div><div class="w3-bar-block w3-card-2" id="nav_tutorials" style="display:none;"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("tutorials")' style="position:absolute;right:10px;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l3 m6"><h3>HTML и CSS</h3><a class="w3-bar-item w3-button" href="../html/index.php">Учебник HTML</a><a class="w3-bar-item w3-button" href="../css/index.php">Учебник CSS</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ver.php">Учебник Bootstrap</a><a class="w3-bar-item w3-button" href="../w3css/index.php">Учебник W3.CSS</a><a class="w3-bar-item w3-button" href="../colors/index.php">Учебник Colors</a><a class="w3-bar-item w3-button" href="../icons/index.php">Учебник Icons</a><a class="w3-bar-item w3-button" href="../graphics/index.php">Учебник Graphics</a><a class="w3-bar-item w3-button" href="../graphics/svg_intro.php">Учебник SVG</a><a class="w3-bar-item w3-button" href="../graphics/canvas_intro.php">Учебник Canvas</a><a class="w3-bar-item w3-button" href="../howto/index.php">Учебник Как</a><a class="w3-bar-item w3-button" href="../sass/index.php">Учебник Sass</a><div class="w3-hide-large w3-hide-small"><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/index.php">Учебник XML</a><a class="w3-bar-item w3-button" href="../xml/ajax_intro.php">Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href="../xml/xml_dtd_intro.php">Учебник XML DTD</a><a class="w3-bar-item w3-button" href="../xml/schema_intro.php">Учебник XML Schema</a><a class="w3-bar-item w3-button" href="../xml/xsl_intro.php">Учебник XSLT</a><a class="w3-bar-item w3-button" href="../xml/xpath_intro.php">Учебник XPath</a><a class="w3-bar-item w3-button" href="../xml/xquery_intro.php">Учебник XQuery</a></div></div><div class="w3-col l3 m6"><h3>JavaScript</h3><a class="w3-bar-item w3-button" href="../js/index.php">Учебник JavaScript</a><a class="w3-bar-item w3-button" href="../jquery/index.php">Учебник jQuery</a><a class="w3-bar-item w3-button" href="../react/index.php">Учебник React</a><a class="w3-bar-item w3-button" href="../angular/index.php">Учебник AngularJS</a><a class="w3-bar-item w3-button" href="../js/js_json_intro.php">Учебник JSON</a><a class="w3-bar-item w3-button" href="../js/js_ajax_intro.php">Учебник AJAX</a><a class="w3-bar-item w3-button" href="../w3js/index.php">Учебник W3.JS</a><h3>Программирование</h3><a class="w3-bar-item w3-button" href="../python/index.php">Учебник Python</a><a class="w3-bar-item w3-button" href="../java/index.php">Учебник Java</a><a class="w3-bar-item w3-button" href="../cpp/index.php">Учебник C++</a><a class="w3-bar-item w3-button" href="../cs/index.php">Учебник C#</a><a class="w3-bar-item w3-button" href="../python/python_ml_getting_started.php">Учебник машинное обучение</a><div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"/><br class="w3-hide-medium w3_hide-small"/></div></div><div class="w3-col l3 m6"><h3>На Сервере</h3><a class="w3-bar-item w3-button" href="../sql/index.php">Учебник SQL</a><a class="w3-bar-item w3-button" href="../php/index.php">Учебник PHP</a><a class="w3-bar-item w3-button" href="../asp/index.php">Учебник ASP</a><a class="w3-bar-item w3-button" href="../nodejs/index.php">Учебник Node.js</a><a class="w3-bar-item w3-button" href="../nodejs/nodejs_raspberrypi.php">Учебник Raspberry Pi</a> <h3>Веб Стоительство</h3><a class="w3-bar-item w3-button" href="../w3css/w3css_templates.php">Веб шаблоны</a><a class="w3-bar-item w3-button" href="../browsers/index.php">Веб Статистика</a><a class="w3-bar-item w3-button" href="../cert/index.php">Веб Сертификаты</a><a class="w3-bar-item w3-button" href="../tryit/index.php">Веб Редактор</a><a class="w3-bar-item w3-button" href="../whatis/index.php">Веб Разработка</a><a class="w3-bar-item w3-button" href="../typingspeed/index.php">Проверьте скорость набора текста</a></div><div class="w3-col l3 m6 w3-hide-medium"><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/index.php">Учебник XML</a><a class="w3-bar-item w3-button" href="../xml/ajax_intro.php">Учебник XML AJAX</a><a class="w3-bar-item w3-button" href="../xml/dom_intro.php">Учебник XML DOM</a><a class="w3-bar-item w3-button" href="../xml/xml_dtd_intro.php">Учебник XML DTD</a><a class="w3-bar-item w3-button" href="../xml/schema_intro.php">Учебник XML Schema</a><a class="w3-bar-item w3-button" href="../xml/xsl_intro.php">Учебник XSLT</a><a class="w3-bar-item w3-button" href="../xml/xpath_intro.php">Учебник XPath</a><a class="w3-bar-item w3-button" href="../xml/xquery_intro.php">Учебник XQuery</a></div></div><br/></div><div class="w3-bar-block w3-card-2" id="nav_references"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("references")' style="position:absolute;right:0;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l3 m6"><h3>HTML</h3><a class="w3-bar-item w3-button" href="../tags/index.php">HTML Справочник тегов</a><a class="w3-bar-item w3-button" href="../tags/ref_html_browsersupport.php">HTML Поддержка Браузера</a><a class="w3-bar-item w3-button" href="../tags/ref_eventattributes.php">HTML Справочник событий</a><a class="w3-bar-item w3-button" href="../colors/index.php">HTML Справочник цвета</a><a class="w3-bar-item w3-button" href="../tags/ref_attributes.php">HTML Справочник атрибутов</a><a class="w3-bar-item w3-button" href="../tags/ref_canvas.php">HTML Справочник Canvas</a><a class="w3-bar-item w3-button" href="../graphics/svg_reference.php">HTML Справочник SVG</a><a class="w3-bar-item w3-button" href="../charsets/index.php">HTML Character Sets</a><a class="w3-bar-item w3-button" href="../graphics/google_maps_reference.php">Google Maps Справочник</a><h3>CSS</h3><a class="w3-bar-item w3-button" href="../cssref/index.php">CSS Справочник</a><a class="w3-bar-item w3-button" href="../cssref/css3_browsersupport.php">CSS Поддержка Браузера</a><a class="w3-bar-item w3-button" href="../cssref/css_selectors.php">CSS Справочник селекторов</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap 3 Справочник</a><a class="w3-bar-item w3-button" href="../bootstrap4/bootstrap_ref_all_classes.php">Bootstrap 4 Справочник</a><a class="w3-bar-item w3-button" href="../w3css/w3css_references.php">W3.CSS Справочник</a><a class="w3-bar-item w3-button" href="../icons/icons_reference.php">Icon Справочник</a><a class="w3-bar-item w3-button" href="../sass/sass_functions_string.php">Sass Справочник</a></div><div class="w3-col l3 m6"><h3>JavaScript</h3><a class="w3-bar-item w3-button" href="../jsref/index.php">JavaScript Справочник</a><a class="w3-bar-item w3-button" href="../jsref/index.php">HTML DOM Справочник</a><a class="w3-bar-item w3-button" href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><a class="w3-bar-item w3-button" href="../angular/angular_ref_directives.php">AngularJS Справочник</a><a class="w3-bar-item w3-button" href="../w3js/w3js_references.php">W3.JS Справочник</a><h3>Программмирование</h3><a class="w3-bar-item w3-button" href="../python/python_reference.php">Python Справочник</a><a class="w3-bar-item w3-button" href="../java/java_ref_keywords.php">Java Справочник</a></div><div class="w3-col l3 m6"><h3>На сервере</h3><a class="w3-bar-item w3-button" href="../sql/sql_ref_keywords.php">SQL Справочник</a><a class="w3-bar-item w3-button" href="../php/php_ref_overview.php">PHP Справочник</a><a class="w3-bar-item w3-button" href="../asp/asp_ref_response.php">ASP Справочник</a><h3>XML</h3><a class="w3-bar-item w3-button" href="../xml/dom_nodetype.php">XML Справочник</a><a class="w3-bar-item w3-button" href="../xml/dom_http.php">XML Http Справочник</a><a class="w3-bar-item w3-button" href="../xml/xsl_elementref.php">XSLT Справочник</a><a class="w3-bar-item w3-button" href="../xml/schema_elements_ref.php">XML Schema Справочник</a></div><div class="w3-col l3 m6 w3-hide-medium w3-hide-small"><h3>Набор Кодировок</h3><a class="w3-bar-item w3-button" href="../charsets/index.php">HTML Набор Кодировок</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ascii.php">HTML ASCII</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ansi.php">HTML ANSI</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_ansi.php">HTML Windows-1252</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_8859.php">HTML ISO-8859-1</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_symbols.php">HTML Символы</a><a class="w3-bar-item w3-button" href="../charsets/ref_html_utf8.php">HTML UTF-8</a></div></div><br/></div><div class="w3-bar-block w3-card-2" id="nav_exercises"><span class="w3-button w3-xlarge w3-right" onclick='w3_close_nav("exercises")' style="position:absolute;right:0;font-weight:bold;">×</span><div class="w3-row-padding" style="padding:24px 48px"><div class="w3-col l4 m6"><h3>Упражнения</h3><a class="w3-bar-item w3-button" href="../html/html_exercises.php">HTML Упражнения</a><a class="w3-bar-item w3-button" href="../css/css_exercises.php">CSS Упражнения</a><a class="w3-bar-item w3-button" href="../js/js_exercises.php">JavaScript Упражнения</a><a class="w3-bar-item w3-button" href="../sql/sql_exercises.php">SQL Упражнения</a><a class="w3-bar-item w3-button" href="../php/php_exercises.php">PHP Упражнения</a><a class="w3-bar-item w3-button" href="../python/python_exercises.php">Python Упражнения</a><a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.php">jQuery Упражнения</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.php">Bootstrap Упражнения</a><a class="w3-bar-item w3-button" href="../java/java_exercises.php">Java Упражнения</a><a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.php">C++ Упражнения</a><a class="w3-bar-item w3-button" href="../cs/cs_exercises.php">C# Упражнения</a></div><div class="w3-col l4 m6"><h3>Викторины</h3><a class="w3-bar-item w3-button" href="html_quiz.php" target="_top">HTML Викторина</a><a class="w3-bar-item w3-button" href="../css/css_quiz.php" target="_top">CSS Викторина</a><a class="w3-bar-item w3-button" href="../js/js_quiz.php" target="_top">JavaScript Викторина</a><a class="w3-bar-item w3-button" href="../sql/sql_quiz.php" target="_top">SQL Викторина</a><a class="w3-bar-item w3-button" href="../php/php_quiz.php" target="_top">PHP Викторина</a><a class="w3-bar-item w3-button" href="../python/python_quiz.php" target="_top">Python Викторина</a><a class="w3-bar-item w3-button" href="../jquery/jquery_quiz.php" target="_top">jQuery Викторина</a><a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_quiz.php" target="_top">Bootstrap Викторина</a><a class="w3-bar-item w3-button" href="../java/java_quiz.php" target="_top">Java Викторина</a><a class="w3-bar-item w3-button" href="../cpp/cpp_quiz.php" target="_top">C++ Викторина</a><a class="w3-bar-item w3-button" href="../cs/cs_quiz.php" target="_top">C# Викторина</a><a class="w3-bar-item w3-button" href="../xml/xml_quiz.php" target="_top">XML Викторина</a></div><div class="w3-col l4 m12"><h3>Сертификаты</h3><a class="w3-bar-item w3-button" href="../cert/cert_html.php" target="_top">HTML Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_css.php" target="_top">CSS Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_javascript.php" target="_top">JavaScript Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_sql.php" target="_top">SQL Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_php.php" target="_top">PHP Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_python.php" target="_top">Python Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_jquery.php" target="_top">jQuery Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.php" target="_top">Bootstrap Сертификат</a><a class="w3-bar-item w3-button" href="../cert/cert_xml.php" target="_top">XML Сертификат</a></div></div><br/></div></div></div><div class="w3-sidebar w3-collapse" id="sidenav">
+<div id="leftmenuinner">
+<div class="w3-light-grey" id="leftmenuinnerinner">
+<a class="w3-button w3-hide-large w3-large w3-display-topright" href="javascript:void(0)" onclick="close_menu()" style="right:16px;padding:3px 12px;font-weight:bold;">×</a>
+<h2 class="left">JS Учебник</h2>
+<a href="index.php" target="_top">JS Главная</a>
+<a href="js_intro.php" target="_top">JS Введение</a>
+<a href="js_whereto.php" target="_top">JS Где установить?</a>
+<a href="js_output.php" target="_top">JS Вывод</a>
+<a href="js_statements.php" target="_top">JS Заявления</a>
+<a href="js_syntax.php" target="_top">JS Синтаксис</a>
+<a href="js_comments.php" target="_top">JS Комментарии</a>
+<a href="js_variables.php" target="_top">JS Переменные</a>
+<a href="js_let.php" target="_top">JS Let</a>
+<a href="js_const.php" target="_top">JS Const</a>
+<a href="js_operators.php" target="_top">JS Операторы</a>
+<a href="js_arithmetic.php" target="_top">JS Арифметика</a>
+<a href="js_assignment.php" target="_top">JS Присваивание</a>
+<a href="js_datatypes.php" target="_top">JS Типы данных </a>
+<a href="js_functions.php" target="_top">JS Функции</a>
+<a href="js_objects.php" target="_top">JS Объекты</a>
+<a href="js_events.php" target="_top">JS События</a>
+<a href="js_strings.php" target="_top">JS Строки</a>
+<a href="js_string_methods.php" target="_top">JS Методы строк</a>
+<a href="js_string_search.php" target="_top">JS Поиск строк</a>
+<a href="js_string_templates.php" target="_top">JS Шаблоны строк</a>
+<a href="js_numbers.php" target="_top">JS Числа</a>
+<a href="js_number_methods.php" target="_top">JS Методы чисел</a>
+<a href="js_arrays.php" target="_top">JS Массивы</a>
+<a href="js_array_methods.php" target="_top">JS Методы массива</a>
+<a href="js_array_sort.php" target="_top">JS Сортировка массива</a>
+<a href="js_array_iteration.php" target="_top">JS Итерация массива</a>
+<a href="js_array_const.php" target="_top">JS Постоянный массив</a>
+<a href="js_dates.php" target="_top">JS Даты</a>
+<a href="js_date_formats.php" target="_top">JS Формат дат</a>
+<a href="js_date_methods.php" target="_top">JS Методы получения дат</a>
+<a href="js_date_methods_set.php" target="_top">JS Методы набора дат</a>
+<a href="js_math.php" target="_top">JS Объекты Math</a>
+<a href="js_random.php" target="_top">JS Случайные числа</a>
+<a href="js_booleans.php" target="_top">JS Булевы</a>
+<a href="js_comparisons.php" target="_top">JS Сравнения</a>
+<a href="js_if_else.php" target="_top">JS Оператор If...Else</a>
+<a href="js_switch.php" target="_top">JS Оператор Switch</a>
+<a href="js_loop_for.php" target="_top">JS Цикл For</a>
+<a href="js_loop_forin.php" target="_top">JS Цикл For In</a>
+<a href="js_loop_forof.php" target="_top">JS Цикл For Of</a>
+<a href="js_loop_while.php" target="_top">JS Цикл While</a>
+<a href="js_break.php" target="_top">JS Оператор Break</a>
+<a href="js_iterables.php" target="_top">JS Повторяющиеся</a>
+<a href="js_sets.php" target="_top">JS Наборы</a>
+<a href="js_maps.php" target="_top">JS Карты</a>
+<a href="js_typeof.php" target="_top">JS Typeof</a>
+<a href="js_type_conversion.php" target="_top">JS Преобразование</a>
+<a href="js_bitwise.php" target="_top">JS Битовые</a>
+<a href="js_regexp.php" target="_top">JS Выражения</a>
+<a href="js_errors.php" target="_top">JS Ошибки</a>
+<a href="js_scope.php" target="_top">JS Область</a>
+<a href="js_hoisting.php" target="_top">JS Подъемный</a>
+<a href="js_strict.php" target="_top">JS Строгий</a>
+<a href="js_this.php" target="_top">JS Ключевое слово this</a>
+<a href="js_arrow_function.php" target="_top">JS Стрелки</a>
+<a href="js_classes.php" target="_top">JS Классы</a>
+<a href="js_json.php" target="_top">JS JSON</a>
+<a href="js_debugging.php" target="_top">JS Отладчик</a>
+<a href="js_conventions.php" target="_top">JS Стиль</a>
+<a href="js_best_practices.php" target="_top">JS Практика</a>
+<a href="js_mistakes.php" target="_top">JS Ошибки</a>
+<a href="js_performance.php" target="_top">JS Эффективность</a>
+<a href="js_reserved.php" target="_top">JS Слова</a>
+<br/>
+<h2 class="left">JS Версии</h2>
+<a href="js_versions.php" target="_top">JS Версии</a>
+<a href="js_es5.php" target="_top">JS 2009 (ES5)</a>
+<a href="js_es6.php" target="_top">JS 2015 (ES6)</a>
+<a href="js_2016.php" target="_top">JS 2016</a>
+<a href="js_2017.php" target="_top">JS 2017</a>
+<a href="js_2018.php" target="_top">JS 2018</a>
+<a href="js_ie_edge.php" target="_top">JS IE/Edge</a>
+<a href="js_history.php" target="_top">JS История</a>
+<br/>
+<h2 class="left">JS Объекты</h2>
+<a href="js_object_definition.php" target="_top">Определение объекта</a>
+<a href="js_object_properties.php" target="_top">Свойства объекта</a>
+<a href="js_object_methods.php" target="_top">Методы объекта</a>
+<a href="js_object_display.php" target="_top">Отображение объекта</a>
+<a href="js_object_accessors.php" target="_top">Доступ объекта</a>
+<a href="js_object_constructors.php" target="_top">Конструкторы объекта</a>
+<a href="js_object_prototypes.php" target="_top">Прототипы объекта</a>
+<a href="js_object_iterables.php" target="_top">Повторяющиеся объекты</a>
+<a href="js_object_sets.php" target="_top">Набор объектов</a>
+<a href="js_object_maps.php" target="_top">Карты объекта</a>
+<a href="js_object_es5.php" target="_top">Справочник объектов</a>
+<br/>
+<h2 class="left">JS Функции</h2>
+<a href="js_function_definition.php" target="_top">Определение функций</a>
+<a href="js_function_parameters.php" target="_top">Параметры функции</a>
+<a href="js_function_invocation.php" target="_top">Обращение к функции</a>
+<a href="js_function_call.php" target="_top">Вызов функции</a>
+<a href="js_function_apply.php" target="_top">Применение функции</a>
+<a href="js_function_closures.php" target="_top">Закрытие функции</a>
+<br/>
+<h2 class="left">JS Классы</h2>
+<a href="js_class_intro.php" target="_top">Введение класса</a>
+<a href="js_class_inheritance.php" target="_top">Наследование класса</a>
+<a href="js_class_static.php" target="_top">Статистический класс</a>
+<br/>
+<h2 class="left">JS Асинхронный</h2>
+<a href="js_callback.php" target="_top">JS Обратный вызов</a>
+<a href="js_asynchronous.php" target="_top">JS Асинхронный</a>
+<a href="js_promise.php" target="_top">JS Обещания</a>
+<a href="js_async.php" target="_top">JS Асинхронный</a>
+<br/>
+<h2 class="left">JS HTML DOM</h2>
+<a href="js_htmldom.php" target="_top">DOM Введение</a>
+<a href="js_htmldom_methods.php" target="_top">DOM Методы</a>
+<a href="js_htmldom_document.php" target="_top">DOM Документы</a>
+<a href="js_htmldom_elements.php" target="_top">DOM Элементы</a>
+<a href="js_htmldom_html.php" target="_top">DOM HTML</a>
+<a href="js_validation.php" target="_top">DOM Формы</a>
+<a href="js_htmldom_css.php" target="_top">DOM CSS</a>
+<a href="js_htmldom_animate.php" target="_top">DOM Анимация</a>
+<a href="js_htmldom_events.php" target="_top">DOM События</a>
+<a href="js_htmldom_eventlistener.php" target="_top">DOM Прослушиватель</a>
+<a href="js_htmldom_navigation.php" target="_top">DOM Навигация</a>
+<a href="js_htmldom_nodes.php" target="_top">DOM Узлы</a>
+<a href="js_htmldom_collections.php" target="_top">DOM Коллекция</a>
+<a href="js_htmldom_nodelist.php" target="_top">DOM Список узлов</a>
+<br/>
+<h2 class="left">JS Браузер BOM</h2>
+<a href="js_window.php" target="_top">JS Window</a>
+<a href="js_window_screen.php" target="_top">JS Экран</a>
+<a href="js_window_location.php" target="_top">JS Расположение</a>
+<a href="js_window_history.php" target="_top">JS История</a>
+<a href="js_window_navigator.php" target="_top">JS Навигатор</a>
+<a href="js_popup.php" target="_top">JS Предупреждение</a>
+<a href="js_timing.php" target="_top">JS Синхронизация</a>
+<a href="js_cookies.php" target="_top">JS Куки</a>
+<br/>
+<h2 class="left">JS Веб APIы</h2>
+<a href="js_api_intro.php" target="_top">Веб API Введение</a>
+<!--//нет в меню
+<a target="_top" href="js_validation_api.php">Веб Формы API</a>
+//нет в меню-->
+<a href="js_api_history.php" target="_top">Веб API История</a>
+<a href="js_api_web_storage.php" target="_top">Веб API Хранилище</a>
+<a href="js_api_web_workers.php" target="_top">Веб API Работник</a>
+<a href="js_api_fetch.php" target="_top">Веб API Извлечь</a>
+<a href="js_api_geolocation.php" target="_top">Веб API Геолокации</a>
+<br/>
+<h2 class="left">JS AJAX</h2>
+<a href="js_ajax_intro.php" target="_top">AJAX Введение</a>
+<a href="js_ajax_http.php" target="_top">AJAX XMLHttp</a>
+<a href="js_ajax_http_send.php" target="_top">AJAX Запрос на сервер</a>
+<a href="js_ajax_http_response.php" target="_top">AJAX Ответ с сервера</a>
+<a href="js_ajax_xmlfile.php" target="_top">AJAX Файл XML</a>
+<a href="js_ajax_php.php" target="_top">AJAX Файл PHP</a>
+<a href="js_ajax_asp.php" target="_top">AJAX Файл ASP</a>
+<a href="js_ajax_database.php" target="_top">AJAX База данных</a>
+<a href="js_ajax_applications.php" target="_top">AJAX Приложения</a>
+<a href="js_ajax_examples.php" target="_top">AJAX Примеры</a>
+<br/>
+<h2 class="left">JS JSON</h2>
+<a href="js_json_intro.php" target="_top">JSON Введение</a>
+<a href="js_json_syntax.php" target="_top">JSON Синтаксис</a>
+<a href="js_json_xml.php" target="_top">JSON или XML</a>
+<a href="js_json_datatypes.php" target="_top">JSON Типы данных</a>
+<a href="js_json_parse.php" target="_top">JSON Парсинг</a>
+<a href="js_json_stringify.php" target="_top">JSON Строки</a>
+<a href="js_json_objects.php" target="_top">JSON Объекты</a>
+<a href="js_json_arrays.php" target="_top">JSON Массивы</a>
+<!--//нет в меню
+<a target="_top" href="js_json_server.php">JSON Server</a>
+//нет в меню-->
+<a href="js_json_php.php" target="_top">JSON PHP</a>
+<a href="js_json_html.php" target="_top">JSON HTML</a>
+<a href="js_json_jsonp.php" target="_top">JSON JSONP</a>
+<br/>
+<h2 class="left">JS или jQuery</h2>
+<a href="js_jquery_selectors.php" target="_top">jQuery Селекторы</a>
+<a href="js_jquery_elements.php" target="_top">jQuery Элементы</a>
+<a href="js_jquery_css.php" target="_top">jQuery CSS</a>
+<a href="js_jquery_dom.php" target="_top">jQuery DOM</a>
+<br/>
+<!--//нет в меню
+<h2 class="left">JS Графика</h2>
+<a target="_top" href="js_graphics.php">JS Graphics</a>
+<a target="_top" href="js_graphics_canvas.php">JS Canvas</a>
+<a target="_top" href="js_graphics_plotly.php">JS Plotly</a>
+<a target="_top" href="js_graphics_chartjs.php">JS Chart.js</a>
+<a target="_top" href="js_graphics_google_chart.php">JS Google Chart</a>
+<a target="_top" href="js_graphics_d3js.php">JS D3.js</a>
+//нет в меню-->
+<br/>
+<h2 class="left">JS Примеры </h2>
+<a href="js_examples.php" target="_top">JS Примеры</a>
+<a href="js_dom_examples.php" target="_top">JS HTML DOM</a>
+<a href="js_input_examples.php" target="_top">JS HTML Ввод</a>
+<a href="js_ex_dom.php" target="_top">JS HTML Объекты</a>
+<a href="js_events_examples.php" target="_top">JS HTML События</a>
+<a href="js_ex_browser.php" target="_top">JS Браузер</a>
+<a href="js_editor.php" target="_top">JS Редактор</a>
+<a href="js_exercises.php" target="_top">JS Упражнения</a>
+<a href="js_quiz.php" target="_top">JS Викторина</a>
+<a href="js_exam.php" target="_top">JS Сертификат</a>
+<br/>
+<h2 class="left">JS Справочник</h2>
+<a href="/jsref/default.php" target="_top">JavaScript Объекты</a>
+<a href="/jsref/default.php" target="_top">HTML DOM Объекты</a>
+<br/><br/><br/>
+</div>
+</div>
+</div>
+<div class="w3-main w3-light-grey" id="belowtopnav" style="margin-left:220px;">
+<div class="w3-row w3-white"><div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>JavaScript - Операторы if...else</h1>
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="js_comparisons.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="js_switch.php">Далее ❯</a>
+</div>
+<hr/>
+<p class="intro">Условные операторы используются для выполнения разных действий в зависимости от разных условий.</p>
+<hr/>
+<h2>Условные операторы</h2>
+<p>Очень часто, когда вы пишете код, вы хотите выполнять разные действия для разных решений.</p>
+<p>Вы можете использовать условные операторы в своем коде, чтобы сделать это.</p>
+<p>В JavaScript есть следующие условные выражения:</p>
+<ul>
+<li>Используйте <code class="w3-codespan">if</code>, чтобы указать блок кода, который нужно выполнить, если указанное условие true (истинно)</li>
+<li>Используйте <code class="w3-codespan">else</code>, чтобы указать блок кода, который будет выполнен, если то же условие false (ложно)</li>
+<li>Используйте <code class="w3-codespan">else if</code>, чтобы указать новое условие для проверки, если первое условие false (ложно)</li>
+<li>Используйте <code class="w3-codespan">switch</code>, чтобы указать много альтернативных блоков кода, которые должны быть выполнены</li>
+</ul>
+<div class="w3-panel w3-note">
+<p>Оператор <code class="w3-codespan">switch</code> описывается в следующей главе этого учебника.</p>
+</div>
+<hr/>
+<h2>Оператор if</h2>
+<p>Используйте <code class="w3-codespan">if</code> заявление, чтобы указать блок кода JavaScript, который будет выполняться, если условие истинно.</p>
+<h3>Синтаксис</h3>
+<div class="w3-code w3-border notranslate jsHigh"><div>
+if (<i>condition</i>) {<br/>
+  //<em>  блок кода, который должен быть выполнен, если условие истинно<br/>
+</em>}
+</div>
+</div>
+<div class="w3-panel w3-note">
+<p>Обратите внимание, что <code class="w3-codespan">if</code> это строчные буквы. Заглавные буквы (If или IF) приведут к ошибке JavaScript.
+</p></div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Сделайте приветствие "Добрый день", если час меньше 18:00:</p>
+<div class="w3-code notranslate jsHigh">
+if (hour &lt; 18) {<br/>
+  greeting = "Добрый день";<br/>
+}</div>
+<p>Результатом приветствия будет:</p>
+<div class="w3-white w3-padding notranslate">
+<code>
+<script>
+var d=new Date();
+var time=d.getHours();
+if (time<20)
+{
+document.write("Добрый день");
+}
+</script>
+</code>
+</div>
+<a class="w3-btn w3-margin-bottom w3-margin-top" href="tryit.php?filename=tryjs_ifthen" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Оператор else</h2>
+<p>Используйте <code class="w3-codespan">else</code> оператор, чтобы указать блок кода, который будет выполняться, если условие ложно.</p>
+<div class="w3-code w3-border notranslate jsHigh"><div>
+if (<i>condition</i>) {<br/>
+  //<em>  блок кода, который будет выполнен, если условие истинно<br/>
+</em>}
+else {
+<br/>
+  //<em>  блок кода, который будет выполнен, если условие ложно<br/>
+</em>}</div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Если час меньше 18, создайте приветствие "Добрый день", в противном случае "Добрый вечер":</p>
+<div class="w3-code notranslate jsHigh">
+if (hour &lt; 18) {<br/>
+  greeting = "Добрый день";<br/>
+}
+else {<br/>
+  greeting = "Добрый вечер";<br/>
+}
+</div>
+<p>Результатом приветствия будет:</p>
+<div class="w3-white w3-padding notranslate">
+<code>
+<script>
+var d=new Date();
+var time=d.getHours();
+if (time<20)
+{
+document.write("Добрый день");
+}
+else
+{
+document.write("Добрый вечер");
+}
+</script>
+</code>
+</div>
+<a class="w3-btn w3-margin-bottom w3-margin-top" href="tryit.php?filename=tryjs_ifthenelse" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Оператор else if</h2>
+<p>Используйте <code class="w3-codespan">else if</code> оператор, чтобы указать новое условие, если первое условие ложно.</p>
+<h3>Синтаксис</h3>
+<div class="w3-code w3-border notranslate jsHigh"><div>
+if (<i>condition1</i>) {<br/>
+  //<em>  блок кода, который должен быть выполнен, если условие1 истинно<br/>
+</em>}
+else if (<i>condition2</i>) {<br/>
+  //<em>  блок кода, который должен быть выполнен, если условие1 ложно, а условие2 истинно</em><br/>
+} else {<br/>
+  //<em>  блок кода для выполняться, если условие1 ложно, а условие2 ложно<br/>
+</em>}</div>
+</div>
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Если время меньше 10:00, создайте приветствие "Доброе утро", если нет, но время меньше 20:00, создайте приветствие "Добрый день", в противном случае - "Добрый вечер":</p>
+<div class="w3-code notranslate jsHigh">
+if (time &lt; 10) {<br/>
+  greeting = "Доброе утро";<br/>
+}
+else if (time &lt; 20) {<br/>
+  greeting = "Добрый день";<br/>
+}
+else {<br/>
+  greeting = "Добрый вечер";<br/>
+}
+</div>
+<p>Результатом приветствия будет:</p>
+<div class="w3-white w3-padding notranslate">
+<code>
+<script>
+var d=new Date();
+var time=d.getHours();
+if (time<10)
+{
+document.write("Доброе утро");
+}
+else if (time<20)
+{
+document.write("Добрый день");
+}
+else
+{
+document.write("Добрый вечер");
+}
+</script>
+</code>
+</div>
+<a class="w3-btn w3-margin-bottom w3-margin-top" href="tryit.php?filename=tryjs_elseif" target="_blank">Попробуйте сами »</a>
+</div>
+<hr/>
+<h2>Больше примеров</h2>
+<p><a href="tryit.php?filename=tryjs_randomlink" target="_blank">Случайная ссылка</a><br/> В этом примере будет указана ссылка либо на Schoolsw3, либо на Всемирный фонд дикой природы (WWF). При использовании случайного числа вероятность каждой ссылки составляет 50%.</p>
+<hr/>
+<form action="exercise_js.php?filename=exercise_js_conditions1" autocomplete="off" id="w3-exerciseform" method="post" spellcheck="false" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<div class="exercisewindow">
+<h2>Упражнение:</h2>
+<p>Исправьте <code class="w3-codespan">if</code> заявление для предупреждения "Привет Мир", если <code class="w3-codespan">x</code> он больше, чем <code class="w3-codespan">y</code>.</p>
+<div class="exerciseprecontainer">
+<pre>
+if <input maxlength="1" name="ex1" style="width: 14px;"/>x &gt; y<input maxlength="1" name="ex2" style="width: 14px;"/> <input maxlength="1" name="ex3" style="width: 14px;"/>
+alert("Привет Мир");
+<input maxlength="1" name="ex4" style="width: 14px;"/>
+</pre>
+</div>
+<br/>
+<button class="w3-btn w3-margin-bottom" type="submit">Отправить »</button>
+<p><a href="exercise_js.php?filename=exercise_js_conditions1" target="_blank">Упражнения</a></p>
+</div>
+</form>
+<!--
+<h2>Test Yourself with Exercises!</h2>
+<p>
+<a class="w3-btn" href="exercise_js.php?filename=exercise_js_conditions1" target="_blank">Упражнение 1 &raquo;</a>&nbsp;
+<a class="w3-btn" href="exercise_js.php?filename=exercise_js_conditions2" target="_blank">Упражнение 2 &raquo;</a>&nbsp;
+</p>
+-->
+<hr/>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="js_comparisons.php">❮ Назад</a>
+<a class="w3-right w3-btn" href="js_switch.php">Далее ❯</a>
+</div>
+</div>
+<div class="w3-col l2 m12" id="right"><!--<div class="sidesection"><h4><a href="">ВАКАНСИИ НА SCHOOLSW3</a></h4></div>-->
+<div class="sidesection"><div id="skyscraper">
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+</div>
+</div>
+<!--<div class="sidesection"><h4><a href="../colors/colors_picker.php">ПОДБОР ЦВЕТА</a></h4><a href="../colors/colors_picker.php"><img src="https://www.schoolsw3.com/images/colorpicker.gif" alt="colorpicker"></a></div>--><div class="sidesection" id="sidesection_exercise" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Упражнения</h4></div><div><div class="w3-light-grey"><a href="/html/exercise.php" style="padding-top:8px" target="_blank">HTML</a><a href="/css/exercise.php" style="padding-top:8px" target="_blank">CSS</a><a href="/js/exercise_js.php" style="padding-top:8px" target="_blank">JavaScript</a><a href="/sql/exercise.php" style="padding-top:8px" target="_blank">SQL</a><a href="/php/exercise.php" style="padding-top:8px" target="_blank">PHP</a><a href="/python/exercise.php" style="padding-top:8px" target="_blank">Python</a><!--<a target="_blank" href="/bootstrap/exercise_bs3.php">Bootstrap</a><a target="_blank" href="/jquery/exercise_jq.php" style="padding-bottom:8px">jQuery</a>--></div></div></div><div class="sidesection" id="sidesection_exercise" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px"><div class="w3-container w3-text-white"><h4>Тесты</h4></div><div><div class="w3-light-grey"><a href="https://www.schoolsw3.com/quiztest/quiztest_HTML.php" style="padding-top:8px" target="_blank">HTML</a><a href="https://www.schoolsw3.com/quiztest/quiztest_CSS.php" style="padding-top:8px" target="_blank">CSS</a><a href="https://www.schoolsw3.com/quiztest/quiztest_JS.php" style="padding-top:8px" target="_blank">JavaScript</a><a href="https://www.schoolsw3.com/quiztest/quiztest_SQL.php" style="padding-top:8px" target="_blank">SQL</a><a href="https://www.schoolsw3.com/quiztest/quiztest_PYTHON.php" style="padding-top:8px" target="_blank">PYTHON</a></div></div></div><div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px"><div class="w3-container w3-dark-grey"><h4><a class="w3-hover-text-white" href="../howto/index.php">КАК СДЕЛАТЬ</a></h4></div><div class="w3-container w3-left-align w3-padding-16"><a href="../howto/howto_js_tabs.php">Теги</a><br/><a href="../howto/howto_css_dropdown.php">Выпадающий</a><br/><a href="../howto/howto_js_accordion.php">Аккардионы</a><br/><a href="../howto/howto_js_sidenav.php">Боковой Навигатор</a><br/><a href="../howto/howto_js_topnav.php">Верхний Навигатор</a><br/><a href="../howto/howto_css_modals.php">Модель Бокс</a><br/><a href="../howto/howto_js_progressbar.php">Индикатор Полоса</a><br/><a href="../howto/howto_css_parallax.php">Паралакс</a><br/><a href="../howto/howto_css_login_form.php">Логин Форма</a><br/><a href="../howto/howto_html_include.php">HTML Подключение</a><br/><a href="../howto/howto_google_maps.php">Гугл Карта</a><br/><a href="../howto/howto_js_rangeslider.php">Ползунки Диапазон</a><br/><a href="../howto/howto_css_tooltip.php">Подсказки</a><br/><a href="../howto/howto_js_slideshow.php">Слайд-шоу</a><br/><a href="../howto/howto_js_filter_lists.php">Фильтр Списка</a><br/><a href="../howto/howto_js_sort_list.php">Сортировка Списка</a><br/></div></div>
+<div class="sidesection">
+<h4>ПОДЕЛИТЬСЯ</h4>
+<div class="w3-text-grey sharethis">
+<script><!--try{loc=location.pathname;if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"index.php";txt='<a href="http://www.facebook.com/sharer.php?u=https://schoolsw3.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';txt=txt+'<a href="https://twitter.com/home?status=Currently reading https://schoolsw3.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';document.write(txt);} catch(e) {}//--></script>
+<br/><br/><a href="javascript:void(0);" onclick="clickFBLike()" title="Клик SchoolsW3 на Facebook"><span class="fa fa-thumbs-o-up fa-2x"></span></a>
+<div class="w3-modal" id="fblikeframe"><div class="w3-modal-content w3-padding-64 w3-animate-zoom" id="popupDIV"></div></div>
+</div>
+</div>
+<div class="sidesection"><h4><a href="../cert/index.php" target="_blank">СЕРТИФИКАТЫ</a></h4><p><a href="../cert/cert_html.php">HTML</a><br/><a href="../cert/cert_css.php">CSS</a><br/><a href="../cert/cert_javascript.php">JavaScript</a><br/><a href="../cert/cert_sql.php">SQL</a><br/><a href="../cert/cert_python.php">Python</a><br/><a href="../cert/cert_php.php">PHP</a><br/><a href="../cert/cert_jquery.php">jQuery</a><br/><a href="../cert/cert_bootstrap.php">Bootstrap</a><br/><a href="../cert/cert_xml.php">XML</a></p><a class="w3-button w3-dark-grey" href="../cert/index.php" style="text-decoration:none">Читать далее »</a>
+</div>
+<div class="sidesection">
+<!--<form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" style="padding:0; margin:1px"><input type="hidden" name="receiver" value="410011618810988"> <input type="hidden" name="formcomment" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="short-dest" value="Проект «Веб учебники»: САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ"><input type="hidden" name="label" value="$order_id"><input type="hidden" name="quickpay-form" value="donate"> <input type="hidden" name="targets" value="транзакция {order_id}"> <input type="hidden" name="sum" value=" " data-type="number"> <input type="hidden" name="comment" value="САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ ДЛЯ ВЕБ РАЗРАБОТЧИКОВ."><input type="hidden" name="need-fio" value="true"> <input type="hidden" name="need-email" value="true"> <input type="hidden" name="need-phone" value="false"> <input type="hidden" name="need-address" value="false"> <input type="submit" class="" value="Пожертвовать"><input type="hidden" name="sum" value="199" data-type="number" size="4"> <br>Yoomoney<br>410011618810988</form>--><!--<iframe src="https://yoomoney.ru/quickpay/button-widget?targets=schoolsw3&default-sum=199&button-text=14&yoomoney-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=410011618810988&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>-->
+<form action="https://yoomoney.ru/quickpay/confirm.xml" class="form i-bem" data-bem='{"form":{}}' method="POST" target="_blank"><input class="native-input native-input_type_hidden" name="quickpay-form" type="hidden" value="small"/><input class="native-input native-input_type_hidden" name="is-inner-form" type="hidden" value="true"/><input class="native-input native-input_type_hidden" name="paymentType" type="hidden" value="PC"/><input class="native-input native-input_type_hidden" name="receiver" type="hidden" value="410011618810988"/><input class="native-input native-input_type_hidden" name="targets" type="hidden" value="schoolsw3"/><input class="native-input native-input_type_hidden" name="sum" type="hidden" value="100"/><input class="native-input native-input_type_hidden" name="successURL" type="hidden" value=""/><input class="native-input native-input_type_hidden" name="label" type="hidden" value=""/><input class="native-input native-input_type_hidden" name="referer" type="hidden" value=""/><div class="widget-small__button"><button data-bem='{"button":{}}' role="button" type="submit"><span class="button__text">Пожертвовать</span></button><br/>Yoomoney<br/>410011618810988</div></form></div>
+<div class="sidesection">
+<div id="skyscraper">
+<!-- Yandex.RTB R-A-1358578-2 -->
+<div id="yandex_rtb_R-A-1358578-2"></div>
+<script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-2',blockId: 'R-A-1358578-2'})})</script>
+</div>
+</div>
+<!--
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+<div id="stickyadcontainer"><div style="position:relative;margin:auto;"> 
+<div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>
+</div>
+</div>
+</div>
+-->
+</div>
+</div>
+<div class="footer w3-container w3-white" id="footer"><hr/>
+<div style="overflow:auto">
+<div class="bottomad">
+<!-- Yandex.RTB R-A-1358578-3 --><div id="yandex_rtb_R-A-1358578-3"></div><script>window.yaContextCb.push(()=>{ Ya.Context.AdvManager.render({ renderTo: 'yandex_rtb_R-A-1358578-3', blockId: 'R-A-1358578-3' })})</script><!-- // Yandex.RTB R-A-1358578-3 --></div>
+</div><hr/>
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px"><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ОШИБКУ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_blank">ПЕЧАТЬ СТРАНИЦЫ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../forum/index.php" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_blank">ФОРУМ</a></div><div class="w3-col l3 m3 s12"><a class="w3-button w3-light-grey w3-block" href="../about/index.php" style="text-decoration:none;margin-top:1px;margin-bottom:1px" target="_top">О НАС</a></div></div><hr/><div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative"><span class="w3-button w3-display-topright w3-large" onclick="this.parentElement.style.display='none'">×</span><h2>Сообщить об ошибке</h2><p>Если вы хотите сообщить об ошибке или сделать предложение, не стесняйтесь, присылайте нам электронное письмо:</p><p>and-shhipunov@mail.ru</p><br/><h2>Ваше предложение:</h2><form><div class="w3-section"> <label for="err_email">Ваш E-mail:</label><input class="w3-input w3-border" id="err_email" name="err_email" style="margin-top:5px;width:100%" type="text"/></div><div class="w3-section"> <label for="err_email">Адрес страницы:</label><input class="w3-input w3-border" disabled="disabled" id="err_url" name="err_url" style="width:100%;margin-top:5px" type="text"/></div><div class="w3-section"><label for="err_email">Описание:</label><textarea class="w3-input w3-border" id="err_desc" name="err_desc" rows="10" style="width:100%;margin-top:5px;resize:vertical;"></textarea></div><div class="form-group"> <button class="w3-button w3-dark-grey" onclick="sendErr()" type="button">Отправить</button></div><br/></form></div><div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative"><span class="w3-button w3-display-topright" onclick="this.parentElement.style.display='none'">×</span> <h2>Спасибо, за вашу помощь!</h2><p>Ваше сообщение было отправлено в SchoolsW3.</p></div><div class="w3-row w3-center w3-small"><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Учебники </h4><a href="../html/index.php">HTML Учебник</a><br/><a href="../css/index.php">CSS Учебник</a><br/><a href="../js/index.php">JavaScript Учебник</a><br/><a href="../howto/index.php">КАК Учебник</a><br/><a href="../sql/index.php">SQL Учебник</a><br/><a href="../python/index.php">Python Учебник</a><br/><a href="../w3css/index.php">W3.CSS Учебник</a><br/><a href="../bootstrap/bootstrap_ver.php">Bootstrap Учебник</a><br/><a href="../php/index.php">PHP Учебник</a><br/><a href="../jquery/index.php">jQuery Учебник</a><br/><a href="../java/index.php">Java Учебник</a><br/><a href="../cpp/index.php">C++ Учебник</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Справочники</h4><a href="../tags/index.php">HTML Справочник</a><br/><a href="../cssref/index.php">CSS Справочник</a><br/><a href="../jsref/index.php">JavaScript Справочник</a><br/><a href="../sql/sql_ref_keywords.php">SQL Справочник</a><br/><a href="../python/python_reference.php">Python Справочник</a><br/><a href="../w3css/w3css_references.php">W3.CSS Справочник</a><br/><a href="../bootstrap/bootstrap_ref_all_classes.php">Bootstrap Справочник</a><br/><a href="../php/php_ref_overview.php">PHP Справочник</a><br/><a href="../colors/colors_names.php">HTML Цвета</a><br/><a href="../jquery/jquery_ref_overview.php">jQuery Справочник</a><br/><a href="../java/java_ref_keywords.php">Java Справочник</a><br/><a href="../angular/angular_ref_directives.php">Angular Справочник</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Топ Примеры</h4><a href="html_examples.php">HTML Примеры</a><br/><a href="../css/css_examples.php">CSS Примеры</a><br/><a href="../js/js_examples.php">JavaScript Примеры</a><br/><a href="../howto/index.php">How To Примеры</a><br/><a href="../sql/sql_examples.php">SQL Примеры</a><br/><a href="../python/python_examples.php">Python Примеры</a><br/><a href="../w3css/w3css_examples.php">W3.CSS Примеры</a><br/><a href="../bootstrap/bootstrap_examples.php">Bootstrap Примеры</a><br/><a href="../php/php_examples.php">PHP Примеры</a><br/><a href="../jquery/jquery_examples.php">jQuery Примеры</a><br/><a href="../java/java_examples.php">Java Примеры</a><br/><a href="../xml/xml_examples.php">XML Примеры</a><br/></div></div><div class="w3-col l3 m6 s12"><div class="top10"><h4>Веб Сертификаты</h4><a href="../cert/index.php">HTML Сертификат</a><br/><a href="../cert/index.php">CSS Сертификат</a><br/><a href="../cert/index.php">JavaScript Сертификат</a><br/><a href="../cert/index.php">SQL Сертификат</a><br/><a href="../cert/index.php">Python Сертификат</a><br/><a href="../cert/index.php">jQuery Сертификат</a><br/><a href="../cert/index.php">PHP Сертификат</a><br/><a href="../cert/index.php">Bootstrap Сертификат</a><br/><a href="../cert/index.php">XML Сертификат</a><br/><a class="w3-button w3-margin-top w3-dark-grey" href="../cert/index.php" style="text-decoration:none">Получить Сертификат »</a></div></div> </div> <hr/><div class="w3-center w3-small">SchoolsW3 оптимизирован для обучения, тестирования и тренировки. Примеры упрощают и улучшают чтение и базовое понимание.Учебники, справочники, примеры постоянно пересматриваются, для того, чтобы избежать ошибки, невозможно гарантировать правильность всего содержимого.Используя данный сайт, вы соглашаетесь прочитать и принять <a href="../about/about_copyright.php">условия использования</a>,<a href="../about/about_privacy.php">cookie и Политика конфиденциальности</a>.<a href="../about/about_copyright.php">Авторское право 1999 - 2022</a> Все права защищены.<br/><a href="../w3css/index.php">Работает на W3.CSS</a>.<br/><br/><a href="../index.html"><img alt="SchoolsW3.com" src="https://www.schoolsw3.com/images/w3schoolscom_gray.gif" style="width:150px;height:28px;border:0"/></a></div><br/><br/></div></div><script src="../lib/schools_footer.js"></script><script src="https://cse.google.com/cse.js?cx=009251009105284944376:hm8um3ylyzo"></script><script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=UA-106562886-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-106562886-1');</script><!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter --><script>var stickyadstatus = "";function fix_stickyad() {document.getElementById("stickypos").style.position = "sticky";var elem = document.getElementById("stickyadcontainer");if (!elem) {return false;}if (document.getElementById("skyscraper")) {var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", "")); }else {var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", "")); }elem.style.width = skyWidth + "px";if (window.innerWidth <= 992) {elem.style.position = "";elem.style.top = stickypos + "px";return false;}var stickypos = document.getElementById("stickypos").offsetTop;var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));if (stickyadstatus == "") {if ((stickypos - docTop) < 60) {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}} else {if ((docTop + 60) - stickypos < 0) { elem.style.position = "";elem.style.top = stickypos + "px";stickyadstatus = "";document.getElementById("stickypos").style.position = "static";}}if (stickyadstatus == "sticky") {if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {elem.style.position = "absolute";elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";document.getElementById("stickypos").style.position = "static";} else {elem.style.position = "fixed";elem.style.top = "60px";stickyadstatus = "sticky";document.getElementById("stickypos").style.position = "sticky";}}}function w3_getStyleValue(elmnt,style) {if (window.getComputedStyle) {return window.getComputedStyle(elmnt,null).getPropertyValue(style);} else {return elmnt.currentStyle[style];}}</script></body></html>

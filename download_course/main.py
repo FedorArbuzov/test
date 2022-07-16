@@ -30,9 +30,9 @@ def format_css_try(body):
             script_tag.decompose()
     return str(soup)   
 
-theme = 'python_tasks'
+theme = 'js_tasks'
 
-url = f'https://schoolsw3.com/python/exercise.php?filename=exercise_datatypes1'
+url = f'https://schoolsw3.com/js/exercise_js.php?filename=exercise_js_variables1'
 
 r = requests.get(url)
 with open('index.html', 'w') as file:
@@ -42,7 +42,7 @@ soup = BeautifulSoup(r.text, 'html.parser')
 header = soup.find('div', {"class": "exercisemenuinner"})
 res = header.select('a[class="exbtn"]')
 
-url = f'https://schoolsw3.com/python/'
+url = f'https://schoolsw3.com/js/'
 for idx, i in enumerate(res):
     link = i['href']
     name = link.split('.')[0]

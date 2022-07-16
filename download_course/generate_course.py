@@ -381,16 +381,19 @@ VM426:2 CSS3 3D Трансформация
 VM426:2 CSS3 Трансформация
 VM426:2 CSS3 Анимация"""
 
-def chunks(lst, n):
-    """Yield successive n-sized chunks from lst."""
-    for i in range(0, len(lst), n):
-        yield lst[i:i + n]
+# def chunks(lst, n):
+#     """Yield successive n-sized chunks from lst."""
+#     for i in range(0, len(lst), n):
+#         yield lst[i:i + n]
 
-for i in chunks(s.split('\n'), 2):
-    link = i[0].split('/')[-1].split('.')[0]
-    text = i[1].split(':3')[1]
-    if 'exercise_' in link:
-        print(f'<li><a href="/css-task?page={link}">{text}</a></li>')
-    else:
-        print(f'<h3><a href="/css-theory?page={link}">{text}</a></h3>')
+# for i in chunks(s.split('\n'), 2):
+#     link = i[0].split('/')[-1].split('.')[0]
+#     text = i[1].split(':3')[1]
+#     if 'exercise_' in link:
+#         print(f'<li><a href="/css-task?page={link}">{text}</a></li>')
+#     else:
+#         print(f'<h3><a href="/css-theory?page={link}">{text}</a></h3>')
     #print(i[0].split('/')[-1].split('.')[0], i[1].split(':3')[1])
+
+for i in range(86):
+    print(f'<li><a href="/css-task?page=exercise_js_{i}">js задание {i}</a></li>')
