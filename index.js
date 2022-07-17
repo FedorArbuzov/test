@@ -5,6 +5,7 @@ const cors = require('cors');
 const path = require('path');
 
 const { onboarding } = require('./send_messages/onboarding');
+const { madeTask } = require('./send_messages/made_task');
 const { status, Last7Days } = require('./send_messages/satus');
 
 const PORT = process.env.PORT || 5000;
@@ -43,8 +44,10 @@ app.post('/', async function(request, response){
 app.get('/success-submit/:task/:userID', async function(request, response){
   let task = request.param("task");
   let userID = parseInt(request.param("userID"));
-  let achivmentMessage =  await achivmentSetLogic(userID)
+  let achivmentMessage =  await achivmentSetLogic(userID);
+  await madeTask(task, userID, db);
   console.log(achivmentMessage);
+  // Atomically increment by 1.
   axios.post(`${url}${apiToken}/sendMessage`,
     {
         chat_id: userID,
