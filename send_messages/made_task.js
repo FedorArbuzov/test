@@ -19,7 +19,7 @@ exports.madeTask = async (task, userID, db) => {
         parse_mode: 'HTML'
     })
     .then((res) => {
-        response.status(200).send({'status': 'ok'});
+      console.log('ok')
     }).catch((error) => {
         console.log(error)
         response.send(error);

@@ -45,6 +45,7 @@ app.get('/success-submit/:task/:userID', async function(request, response){
   let task = request.param("task");
   let userID = parseInt(request.param("userID"));
   await madeTask(task, userID, db);
+  response.status(200).send({'status': 'ok'});
 });
 
 app.get('/cron-status', async function(request, response){
