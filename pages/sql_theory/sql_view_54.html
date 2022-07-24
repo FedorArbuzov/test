@@ -1,0 +1,113 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - CREATE VIEW</h1>
+<hr/>
+
+<hr/>
+<h2>CREATE VIEW</h2>
+<p>В SQL представление - это виртуальная таблица, основанная на результирующем наборе инструкции SQL.</p>
+<p>Представление содержит строки и столбцы, как и настоящая таблица. Поля в представлении - это поля из одной или нескольких реальных таблиц в базе данных.</p>
+<p>Вы можете добавить в представление инструкции SQL функций, WHERE и JOIN и представить данные так, как если бы они поступали из одной таблицы.</p>
+<h3>Синтаксис CREATE VIEW</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE VIEW <em>view_name</em> AS<br/>
+SELECT <em>column1</em>, <em>column2</em>, ...<br/>
+FROM <em>table_name</em><br/>
+WHERE <em>condition</em>;</div></div>
+<p><b>Примечание:</b> В представлении всегда отображаются актуальные данные!
+Компонент database engine воссоздает данные, используя инструкцию SQL представления, каждый раз, когда пользователь запрашивает представление.</p>
+<hr/>
+<h2>Примеры SQL CREATE VIEW</h2>
+<p>Следующий SQL создает представление, в котором отображаются все клиенты из Бразилии:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE VIEW [Brazil 
+Customers] AS<br/>
+SELECT 
+CustomerName, ContactName<br/>
+FROM Customers<br/>
+WHERE 
+Country = "Brazil";</div>
+
+</div>
+<p>Мы можем запросить представление выше следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM [Brazil Customers];</div>
+
+</div>
+<p>Следующий SQL создает представление, которое выбирает каждый продукт в таблице "Products" с ценой выше средней цены:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE VIEW [Products Above Average Price] AS<br/>
+SELECT ProductName, Price<br/>
+FROM Products<br/>
+WHERE Price &gt; (SELECT AVG(Price) FROM Products);</div>
+
+</div>
+<p>Мы можем запросить представление выше следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM [Products Above Average Price];</div>
+
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>Обновление представления</h2>
+<p>Представление можно обновить с помощью команды CREATE или REPLACE VIEW.</p>
+<h3>SQL Синтаксис CREATE OR REPLACE VIEW</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE OR REPLACE VIEW <em>view_name</em> AS<br/>
+SELECT <em>column1</em>, <em>column2</em>, ...<br/>
+FROM <em>table_name</em><br/>
+WHERE <em>condition</em>;</div></div>
+<p>Следующий SQL добавляет столбец "City" в представлении "Brazil Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE OR REPLACE VIEW [Brazil Customers] AS<br/>
+SELECT CustomerName, ContactName, City<br/>
+FROM Customers<br/>
+WHERE Country = "Brazil";</div>
+
+</div>
+<hr/>
+<h2>Отбросить представления</h2>
+<p>Представление удаляется с помощью команды DROP VIEW.</p>
+<h3>SQL Синтаксис DROP VIEW</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+DROP VIEW <em>view_name</em>;</div></div>
+<p>Следующий SQL отбрасывает представление "Brazil Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+DROP VIEW [Brazil Customers];</div>
+
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

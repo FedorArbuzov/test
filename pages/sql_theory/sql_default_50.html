@@ -1,0 +1,85 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - DEFAULT</h1>
+<hr/>
+
+<hr/>
+<h2>DEFAULT</h2>
+<p>Ограничение по умолчанию используется для предоставления значения по умолчанию для столбца.</p>
+<p>Значение по умолчанию будет добавлено ко всем новым записям, если другое значение не указано.</p>
+<hr/>
+<h2>DEFAULT в CREATE TABLE</h2>
+<p>Следующий SQL устанавливает значение по умолчанию для столбца "City" при создании таблицы "Persons":</p>
+<p><b>My SQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int,<br/>
+   
+City varchar(255) DEFAULT 'Sandnes'<br/>
+);</div></div>
+<p>Ограничение по умолчанию также можно использовать для вставки системных значений с помощью таких функций, как GETDATE():</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Orders
+(<br/>
+    ID int NOT NULL,<br/>
+   
+OrderNumber int NOT NULL,<br/>
+   
+OrderDate date DEFAULT GETDATE()<br/>
+);</div></div>
+<hr/>
+<h2>DEFAULT в ALTER TABLE</h2>
+<p>Чтобы создать ограничение по умолчанию для столбца "City", когда таблица уже создана, используйте следующий SQL:</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ALTER City SET DEFAULT 'Sandnes';</div></div>
+<p><b>SQL Server:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD CONSTRAINT df_City<br/>
+DEFAULT 'Sandnes' FOR City;</div></div>
+<p><b>MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ALTER COLUMN City SET DEFAULT 'Sandnes';</div></div>
+<p><b>Oracle:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+MODIFY City DEFAULT 'Sandnes';</div></div>
+<hr/>
+<h2>Ограничение DEFAULT с DROP</h2>
+<p>Чтобы удалить ограничение по умолчанию, используйте следующий SQL:</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ALTER City DROP DEFAULT;</div></div>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ALTER COLUMN City DROP DEFAULT;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>

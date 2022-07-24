@@ -1,0 +1,133 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - DATE</h1>
+<hr/>
+
+<hr/>
+<h2>DATE</h2>
+<div class="w3-panel w3-note">
+<p>Самое сложное при работе с датами - это убедиться, что формат даты, которую вы пытаетесь вставить, совпадает с форматом столбца даты в базе данных.</p>
+</div>
+<p>Пока ваши данные содержат только часть даты, ваши запросы будут работать так, как и ожидалось.
+Однако, если задействована временная часть, все становится еще сложнее.</p>
+<hr/>
+<h2>Типы данных даты</h2>
+<p><b>MySQL</b> поставляется со следующими типами данных для хранения даты или значения даты/времени в базе данных:</p>
+<ul>
+<li>DATE - формат YYYY-MM-DD</li>
+<li>DATETIME - формат: YYYY-MM-DD HH:MI:SS</li>
+<li>TIMESTAMP - формат: YYYY-MM-DD HH:MI:SS</li>
+<li>YEAR - формат YYYY или YY</li>
+</ul>
+<p><b>SQL Server</b> поставляется со следующими типами данных для хранения даты или значения даты/времени в базе данных:</p>
+<ul>
+<li>DATE - формат YYYY-MM-DD</li>
+<li>DATETIME - формат: YYYY-MM-DD HH:MI:SS</li>
+<li>SMALLDATETIME - формат: YYYY-MM-DD HH:MI:SS</li>
+<li>TIMESTAMP - формат: уникальное число</li>
+</ul>
+<p><b>Примечание:</b> Типы дат выбираются для столбца при создании новой таблицы в базе данных!</p>
+<hr/>
+<h2>Работа с датами</h2>
+<div class="w3-panel w3-note">
+<p>Вы можете легко сравнить две даты, если нет никакого компонента времени!</p>
+</div>
+<p>Предположим, что у нас есть следующая таблица "Orders":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">OrderId</th>
+<th style="width:45%">ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Geitost</td>
+<td>2008-11-11</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Camembert Pierrot</td>
+<td>2008-11-09</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mozzarella di Giovanni</td>
+<td>2008-11-11</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Mascarpone Fabioli</td>
+<td>2008-10-29</td>
+</tr>
+</table>
+</div>
+<p>Теперь мы хотим выбрать записи с порядковым номером "2008-11-11" из приведенной выше таблицы.</p>
+<p>Мы используем следующую инструкцию SELECT:</p>
+<div class="w3-code w3-border notranslate sqlHigh"><div>
+SELECT * FROM Orders WHERE OrderDate='2008-11-11'</div></div>
+<p>Результирующий набор будет выглядеть следующим образом:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">OrderId</th>
+<th style="width:45%">ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Geitost</td>
+<td>2008-11-11</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mozzarella di Giovanni</td>
+<td>2008-11-11</td>
+</tr>
+</table>
+</div>
+<p>Теперь предположим, что таблица "Orders" выглядит следующим образом (обратите внимание на компонент time в столбце "OrderDate"):</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">OrderId</th>
+<th style="width:45%">ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Geitost</td>
+<td>2008-11-11 13:23:44</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Camembert Pierrot</td>
+<td>2008-11-09 15:45:21</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mozzarella di Giovanni</td>
+<td>2008-11-11 11:12:01</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Mascarpone Fabioli</td>
+<td>2008-10-29 14:56:59</td>
+</tr>
+</table>
+</div>
+<p>Если мы используем тот же оператор SELECT, что и выше:</p>
+<div class="w3-code w3-border notranslate sqlHigh"><div>
+SELECT * FROM Orders WHERE OrderDate='2008-11-11'</div></div>
+<p>Мы не получим никакого результата! Это происходит потому, что запрос ищет только даты без временной части.</p>
+<p><b>Совет:</b> Чтобы ваши запросы были простыми и удобными в обслуживании, не допускайте компонентов времени в ваших датах!</p>
+<br/>
+
+</div>
+    </body>
+</html>

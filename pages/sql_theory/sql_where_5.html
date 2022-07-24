@@ -1,0 +1,181 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - WHERE</h1>
+<hr/>
+
+<hr/>
+<h2>WHERE</h2>
+<p>Выражение WHERE используется для фильтрации записей.</p>
+<p>Выражение WHERE используется для извлечения только тех записей, которые удовлетворяют заданному условию.</p>
+<h3>Синтаксис WHERE</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column1</em>,<em> column2, ...</em><br/>
+FROM <em>table_name</em><br/>
+WHERE <em>condition</em>;</div></div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Выражение WHERE используется не только в инструкции SELECT, но и в инструкции UPDATE,DELETE и т.д.!</p>
+</div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>Ниже приведен выбор из таблицы "Customers" в образце базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1<br/><br/></td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Obere Str. 57</td>
+<td>Berlin</td>
+<td>12209</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Avda. de la Constitución 2222</td>
+<td>México D.F.</td>
+<td>05021</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mataderos 2312</td>
+<td>México D.F.</td>
+<td>05023</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>4<br/><br/></td>
+<td>Around the Horn</td>
+<td>Thomas Hardy</td>
+<td>120 Hanover Sq.</td>
+<td>London</td>
+<td>WA1 1DP</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Berglunds snabbköp</td>
+<td>Christina Berglund</td>
+<td>Berguvsvägen 8</td>
+<td>Luleå</td>
+<td>S-958 22</td>
+<td>Sweden</td>
+</tr>
+</table>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>Пример WHERE</h2>
+<p>Следующая инструкция SQL выбирает всех клиентов из страны "Mexico" в таблице "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers<br/>
+WHERE Country='Mexico';</div>
+
+</div>
+<hr/>
+<h2>Текстовые поля и числовые поля</h2>
+<p>SQL требует одинарных кавычек вокруг текстовых значений (большинство систем баз данных также допускают двойные кавычки).</p>
+<p>Однако числовые поля не должны заключаться в кавычки:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers<br/>
+WHERE CustomerID=1;</div>
+
+</div>
+<hr/>
+<h2>Операторов в выражении WHERE</h2>
+<p>В выражении WHERE можно использовать следующие операторы:</p>
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:20%">Оператор</th>
+<th style="width:70%">Описание</th>
+<th style="width:10%">Пример</th>
+</tr>
+<tr>
+<td>=</td>
+<td>Равный</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_equal_to" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Больше чем</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_greater_than" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Меньше чем</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_less_than" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Больше или равно</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_greater_than2" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Меньше или равно</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_less_than2" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>Не равный. <b>Примечание:</b> В некоторых версиях SQL этот оператор может быть записан как !=</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_not_equal_to" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>Между определенным диапазоном</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_between" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td>Поиск шаблона</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_like" target="_blank">Попробуйте</a></td>
+</tr>
+<tr>
+<td>IN</td>
+<td>Чтобы указать несколько возможных значений для столбца</td>
+<td><a class="w3-btn btnsmall" href="trysql.php?filename=trysql_op_in" target="_blank">Попробуйте</a></td>
+</tr>
+</table>
+<hr/>
+<form action="exercise_where1.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<a class="w3-btn w3-margin-bottom" href="/item?type=sql_tasks&amp;page=exercise_where1_4" target="_blank">Открыть упражнение</a>
+</form>
+<br/>
+
+</div>
+    </body>
+</html>

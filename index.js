@@ -59,33 +59,10 @@ app.get('/cron-status', async function(request, response){
   response.json({})
 })
 
-app.get('/test-task/', function(req, res) {
-  res.sendFile(path.join(__dirname, '/pages/test-task.html'));
-})
-
-app.get('/css-task/', function(req, res) {
+app.get('/item/', function(req, res){
+  let type = req.query.type;
   let page = req.query.page;
-  res.sendFile(path.join(__dirname, `/pages/css_tasks/${page}.html`));
-})
-
-app.get('/css-theory/', function(req, res) {
-  let page = req.query.page;
-  res.sendFile(path.join(__dirname, `/pages/css_theory/${page}.html`));
-})
-
-app.get('/js-task/', function(req, res) {
-  let page = req.query.page;
-  res.sendFile(path.join(__dirname, `/pages/js_tasks/${page}.html`));
-})
-
-app.get('/html-task/', function(req, res) {
-  let page = req.query.page;
-  res.sendFile(path.join(__dirname, `/pages/html_tasks/${page}.html`));
-})
-
-app.get('/sql-task/', function(req, res) {
-  let page = req.query.page;
-  res.sendFile(path.join(__dirname, `/pages/sql_tasks/${page}.html`));
+  res.sendFile(path.join(__dirname, `/pages/${type}/${page}.html`));
 })
 
 app.get('/editor-interface-js/', function(req, res) {
@@ -101,7 +78,6 @@ app.get('/achivments/', function(req, res) {
 })
 
 app.get('/path-js/', function(req, res) {
-  
   res.sendFile(path.join(__dirname, '/pages/js-path.html'));
 })
 

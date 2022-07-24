@@ -1,0 +1,171 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - Инъекция</h1>
+<hr/>
+
+<hr/>
+<h2>Инъекция</h2>
+<p>SQL инъекция - это метод инъекции кода, который может разрушить вашу базу данных.</p>
+<p>SQL инъекция является одним из наиболее распространенных методов взлома веб-страниц.</p>
+<p>SQL инъекция - это размещение вредоносного кода в SQL инструкции с помощью ввода веб страницы.</p>
+<hr/>
+<h2>в Веб странице</h2>
+<p>Инъекция SQL обычно происходит, когда вы просите пользователя ввести данные,
+например его имя пользователя/идентификатор пользователя, и вместо имени/идентификатора пользователь дает вам инструкцию SQL,
+которую вы неосознанно запускаете к своей базе данных.</p>
+<p>Посмотрите на следующий пример, который создает оператор SELECT, добавляя переменную (txtUserId) в строку select.
+Переменная извлекается из пользовательского ввода (getRequestString):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate">
+txtUserId = getRequestString("UserId");<br/>txtSQL = "SELECT *
+FROM Users WHERE UserId = " + txtUserId;</div>
+</div>
+<p>Остальная часть этой главы описывает потенциальные опасности использования пользовательского ввода в инструкции SQL.</p>
+<hr/>
+<h2>Инъекция, основанная на 1=1, всегда true</h2>
+<p>Еще раз взгляните на приведенный выше пример.
+Первоначальная цель кода состояла в том, чтобы создать инструкцию SQL для выбора пользователя с заданным идентификатором пользователя.</p>
+<p>Если нет ничего, что могло бы помешать пользователю ввести "Неправильный" ввод, пользователь может ввести какой-то "Умный" ввод, например:</p>
+<p>UserId: <input name="UserId" type="text" value="105 OR 1=1"/></p>
+<p>Тогда оператор SQL будет выглядеть следующим образом:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Users WHERE UserId = 105 OR 1=1;</div>
+</div>
+<p>Приведенный выше SQL является допустимым и возвращает все строки из таблицы "Users", так как OR 1=1 всегда истинно.</p>
+<p>Разве приведенный выше пример выглядит опасным? Что делать, если таблица "Users" содержит имена и пароли?</p>
+<p>Приведенная выше инструкция SQL во многом совпадает с этой:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT UserId, Name, Password
+FROM Users WHERE UserId = 105 or 1=1;</div>
+</div>
+<p>Хакер может получить доступ ко всем именам пользователей и паролям в базе данных, просто вставив 105 OR 1=1 в поле ввода.</p>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>Инъекция, основанная на ""="", всегда true</h2>
+<p>Вот пример входа пользователя на веб сайте:</p>
+<p>Пользователь:<br/>
+<input name="uName" style="padding:4px" type="text" value="Щипунов Андрей"/></p>
+<p>Пароль:<br/>
+<input name="uPass" style="padding:4px" type="text" value="мой_пароль"/></p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate">
+uName = getRequestString("username");<br/>uPass = getRequestString("userpassword");<br/>
+<br/>sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' + uPass + 
+'"'</div>
+</div>
+<div class="w3-example">
+<h3>Результат</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Users WHERE Name ="Щипунов Андрей" AND Pass ="мой_пароль"</div>
+</div>
+<p>Хакер может получить доступ к именам пользователей и паролям в базе данных,
+просто вставив " OR ""=" в текстовое поле пользователя или парол:</p>
+<p>Пользователь:<br/>
+<input name="uName" style="padding:4px" type="text" value='" or ""="'/></p>
+<p>Пароль:<br/>
+<input name="uPass" style="padding:4px" type="text" value='" or ""="'/></p>
+<p>Код на сервере создаст допустимую инструкцию SQL, подобный этому:</p>
+<div class="w3-example">
+<h3>Результат</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""</div>
+</div>
+<p>Приведенный выше SQL является допустимым и возвращает все строки из таблицы "Users", так как OR"="" всегда имеет значение TRUE.</p>
+<hr/>
+<h2>Инъекция на основе пакетных инструкций SQL</h2>
+<p>Большинство баз данных поддерживают пакетный инструкций SQL.</p>
+<p>Пакет инструкций SQL - это группа из двух или более инструкций SQL, разделенных точкой с запятой.</p>
+<p>Приведенная ниже инструкция SQL вернет все строки из таблицы "Users", а затем удалит таблицу "Suppliers".</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Users; DROP TABLE Suppliers
+</div>
+</div>
+<p>Посмотрите на следующий пример:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate">
+txtUserId = getRequestString("UserId");<br/>txtSQL = "SELECT *
+FROM Users WHERE UserId = " + txtUserId;</div>
+</div>
+<p>И следующие входные данные:</p>
+<p>Пользователь: <input name="UserId" style="width:250px" type="text" value="105; DROP TABLE Suppliers"/></p>
+<p>Допустимая инструкция SQL будет выглядеть следующим образом:</p>
+<div class="w3-example">
+<h3>Результат</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Users WHERE 
+UserId = 105; DROP TABLE Suppliers;</div>
+</div>
+<hr/>
+<h2>Используйте параметры для защиты</h2>
+<p>Для защиты веб сайта от SQL инъекции можно использовать параметры SQL.</p>
+<p>Параметры SQL - это значения, которые добавляются в SQL запрос во время выполнения контролируемым образом.</p>
+<div class="w3-example">
+<h3>Пример ASP.NET Razor</h3>
+<div class="w3-code notranslate">
+txtUserId = getRequestString("UserId");<br/>txtSQL = "SELECT *
+FROM Users WHERE UserId = @0";<br/>db.Execute(txtSQL,txtUserId);</div>
+</div>
+<p>Обратите внимание, что параметры представлены в инструкции SQL маркером @.</p>
+<p>Механизм SQL проверяет каждый параметр, чтобы убедиться,
+что он является правильным для своего столбца и обрабатывается буквально,
+а не как часть SQL, подлежащего выполнению.</p>
+<div class="w3-example">
+<h3>Пример другой</h3>
+<div class="w3-code notranslate">
+txtNam = getRequestString("CustomerName");<br/>txtAdd = getRequestString("Address");<br/>txtCit = getRequestString("City");<br/>
+txtSQL = "INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)";<br/>db.Execute(txtSQL,txtNam,txtAdd,txtCit);</div>
+</div>
+<hr/>
+<h2>Примеры</h2>
+<p>В следующих примерах показано, как создавать параметризованные запросы на некоторых распространенных веб языках.</p>
+<p>SELECT STATEMENT IN ASP.NET:</p>
+<div class="w3-example">
+<div class="w3-code notranslate">
+txtUserId = getRequestString("UserId");<br/>
+sql = "SELECT * FROM Customers WHERE CustomerId = @0";<br/>command = new SqlCommand(sql);<br/>command.Parameters.AddWithValue("@0",txtUserID);<br/>
+command.ExecuteReader();</div>
+</div>
+<p>INSERT INTO STATEMENT IN ASP.NET:</p>
+<div class="w3-example">
+<div class="w3-code notranslate">
+txtNam = getRequestString("CustomerName");<br/>txtAdd = getRequestString("Address");<br/>txtCit = getRequestString("City");<br/>
+txtSQL = "INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)";<br/>command = new SqlCommand(txtSQL);<br/>
+command.Parameters.AddWithValue("@0",txtNam);<br/>
+command.Parameters.AddWithValue("@1",txtAdd);<br/>
+command.Parameters.AddWithValue("@2",txtCit);<br/>command.ExecuteNonQuery();</div>
+</div>
+<p>INSERT INTO STATEMENT IN PHP:</p>
+<div class="w3-example">
+<div class="w3-code notranslate">
+$stmt = $dbh-&gt;prepare("INSERT INTO Customers (CustomerName,Address,City) <br/>
+VALUES (:nam, :add, :cit)");<br/>$stmt-&gt;bindParam(':nam', $txtNam);<br/>
+$stmt-&gt;bindParam(':add', $txtAdd);<br/>$stmt-&gt;bindParam(':cit', $txtCit);<br/>
+$stmt-&gt;execute();</div>
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

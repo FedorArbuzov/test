@@ -1,0 +1,120 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - LEFT JOIN</h1>
+<hr/>
+
+<hr/>
+<h2>LEFT JOIN</h2>
+<p>Ключевое слово LEFT JOIN возвращает все записи из левой таблицы (table1) и соответствующие записи из правой таблицы (table2). Результат будет нулевым с правой стороны, если нет совпадения.</p>
+<h3>Синтаксис LEFT JOIN</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table1</em><br/>
+LEFT JOIN <em>table2<br/> </em>ON <em>table1.column_name </em>=<em> table2.column_name</em>;
+</div></div>
+<p><b>Примечание:</b> В некоторых базах данных LEFT JOIN называется левым внешним соединением.</p>
+<p style="text-align:center;"><img alt="SQL LEFT JOIN" height="145" src="img_leftjoin.gif" width="200"/></p>
+<hr/>
+<h2>Демо база данных</h2>
+<p>В этом уроке мы будем использовать хорошо известный пример базы данных Northwind.</p>
+<p>Ниже приведен выбор из таблицы "Customers":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:15%">CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1<br/><br/></td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Obere Str. 57</td>
+<td>Berlin</td>
+<td>12209</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Avda. de la Constitución 2222</td>
+<td>México D.F.</td>
+<td>05021</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mataderos 2312</td>
+<td>México D.F.</td>
+<td>05023</td>
+<td>Mexico</td>
+</tr>
+</table>
+</div>
+<p>И выбор из таблицы "Orders":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:15%">OrderID</th>
+<th>CustomerID</th>
+<th>EmployeeID</th>
+<th>OrderDate</th>
+<th>ShipperID</th>
+</tr>
+<tr>
+<td>10308</td>
+<td>2</td>
+<td>7</td>
+<td>1996-09-18</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10309</td>
+<td>37</td>
+<td>3</td>
+<td>1996-09-19</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10310</td>
+<td>77</td>
+<td>8</td>
+<td>1996-09-20</td>
+<td>2</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Пример SQL LEFT JOIN</h2>
+<p>В следующей инструкции SQL будут выбраны все клиенты и любые заказы, которые они могут иметь:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT Customers.CustomerName, Orders.OrderID<br/>
+FROM Customers<br/>
+LEFT JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID<br/>
+ORDER BY Customers.CustomerName;
+</div>
+
+</div>
+<p><strong>Примечание:</strong> Ключевое слово LEFT JOIN возвращает все записи из левой таблицы (Customers),
+даже если в правой таблице (Orders) нет совпадений.</p>
+<br/>
+
+</div>
+    </body>
+</html>

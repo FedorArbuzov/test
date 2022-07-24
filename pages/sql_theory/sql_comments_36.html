@@ -1,0 +1,109 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - Комментарии</h1>
+<hr/>
+
+<hr/>
+<h2>Комментарий</h2>
+<p class="intro">Комментарии используются для объяснения разделов инструкций SQL или для предотвращения выполнения инструкций SQL.</p>
+<div class="w3-panel w3-note">
+<p><strong>Примечание: Примеры из этой главы не будут работать в Firefox и Microsoft Edge!</strong></p>
+<p>Комментарии не поддерживаются в базах данных Microsoft Access. Firefox и Microsoft Edge используют базу данных Microsoft Access в наших примерах.</p>
+</div>
+<hr/>
+<h2>Однострочные комментарии</h2>
+<p>Однострочные комментарии начинаются с --.</p>
+<p>Любой текст между -- и концом строки будет проигнорирован (не будет выполнен).</p>
+<p>В следующем примере в качестве объяснения используется однострочный комментарий:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+--Выбрать все:<br/>
+SELECT * FROM Customers;
+</div>
+
+</div>
+<p>В следующем примере используется однострочный комментарий для игнорирования конца строки:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers -- WHERE City='Berlin';
+</div>
+
+</div>
+<p>В следующем примере используется однострочный комментарий для игнорирования инструкции:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+--SELECT * FROM Customers;<br/>
+SELECT * FROM Products;
+</div>
+
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Многострочные комментарии</h2>
+<p>Многострочные комментарии начинаются с /* и заканчиваются*/.</p>
+<p>Любой текст между /* и */ будет проигнорирован.</p>
+<p>В следующем примере в качестве объяснения используется многострочный комментарий:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+/*Выберите все столбцы<br/>
+из всех записей<br/>
+в таблице клиенты:*/<br/>
+SELECT * FROM Customers;
+</div>
+
+</div>
+<p>В следующем примере используется многострочный комментарий для игнорирования многих инструкций:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+/*SELECT * FROM Customers;<br/>
+SELECT * FROM Products;<br/>
+SELECT * FROM Orders;<br/>
+SELECT * FROM Categories;*/<br/>
+SELECT * FROM Suppliers;
+</div>
+
+</div>
+<p>Чтобы проигнорировать только часть утверждения, также используйте / * * / комментарий.</p>
+<p>В следующем примере комментарий используется для игнорирования части строки:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT CustomerName, /*City,*/ Country FROM Customers;
+</div>
+
+</div>
+<p>В следующем примере комментарий используется для игнорирования части инструкции:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers WHERE (CustomerName LIKE 'L%'<br/>
+OR CustomerName LIKE 'R%' /*OR CustomerName LIKE 'S%'<br/>
+OR CustomerName LIKE 'T%'*/ OR CustomerName LIKE 'W%')<br/>
+AND Country='USA'<br/>
+ORDER BY CustomerName;</div>
+
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

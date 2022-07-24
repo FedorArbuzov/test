@@ -1,0 +1,150 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - EXISTS</h1>
+<hr/>
+
+<hr/>
+<h2>EXISTS</h2>
+<p>Оператор EXISTS используется для проверки наличия любой записи в подзапросе.</p>
+<p>Оператор EXISTS возвращает true, если подзапрос возвращает одну или несколько записей.</p>
+<h3>EXISTS Syntax</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table_name</em><br/>
+WHERE 
+EXISTS<br/>(SELECT <em>column_name </em>FROM <em>table_name</em> WHERE
+<em>condition</em>);</div></div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>Ниже приведен выбор из таблицы "Products" в образце базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>ProductID</th>
+<th>ProductName</th>
+<th>SupplierID</th>
+<th>CategoryID</th>
+<th>Unit</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Chais</td>
+<td>1</td>
+<td>1</td>
+<td>10 boxes x 20 bags</td>
+<td>18</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Chang</td>
+<td>1</td>
+<td>1</td>
+<td>24 - 12 oz bottles</td>
+<td>19</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Aniseed Syrup</td>
+<td>1</td>
+<td>2</td>
+<td>12 - 550 ml bottles</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chef Anton's Cajun Seasoning</td>
+<td>2</td>
+<td>2</td>
+<td>48 - 6 oz jars</td>
+<td>22</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Chef Anton's Gumbo Mix</td>
+<td>2</td>
+<td>2</td>
+<td>36 boxes</td>
+<td>21.35</td>
+</tr>
+</table>
+</div>
+<p>И выбор из таблицы "Suppliers":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>SupplierID</th>
+<th>SupplierName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Exotic Liquid</td>
+<td>Charlotte Cooper</td>
+<td>49 Gilbert St.</td>
+<td>London</td>
+<td>EC1 4SD</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>2</td>
+<td>New Orleans Cajun Delights</td>
+<td>Shelley Burke</td>
+<td>P.O. Box 78934</td>
+<td>New Orleans</td>
+<td>70117</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Grandma Kelly's Homestead</td>
+<td>Regina Murphy</td>
+<td>707 Oxford Rd.</td>
+<td>Ann Arbor</td>
+<td>48104</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Tokyo Traders</td>
+<td>Yoshi Nagase</td>
+<td>9-8 Sekimai Musashino-shi</td>
+<td>Tokyo</td>
+<td>100</td>
+<td>Japan</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Примеры SQL EXISTS</h2>
+<p>Следующая инструкция SQL возвращает TRUE и перечисляет поставщиков с ценой продукта менее 20:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT SupplierName<br/>FROM Suppliers<br/>WHERE EXISTS (SELECT ProductName FROM 
+Products WHERE Products.SupplierID = Suppliers.supplierID AND Price &lt; 20);</div>
+
+</div>
+<p>Следующая инструкция SQL возвращает TRUE и перечисляет поставщиков с ценой продукта равной 22:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT SupplierName<br/>FROM Suppliers<br/>WHERE EXISTS (SELECT ProductName FROM 
+Products WHERE Products.SupplierID = Suppliers.supplierID AND Price = 22);</div>
+
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,175 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - FOREIGN KEY</h1>
+<hr/>
+
+<hr/>
+<h2>FOREIGN KEY</h2>
+<p>FOREIGN KEY - это ключ, используемый для соединения двух таблиц вместе.</p>
+<p>FOREIGN KEY - это поле (или набор полей) в одной таблице, которое ссылается на первичный ключ в другой таблице.</p>
+<p>Таблица, содержащая внешний ключ, называется дочерней таблицей, а таблица, содержащая ключ кандидат, называется ссылочной или родительской таблицей.</p>
+<p>Посмотрите на следующие две таблицы:</p>
+<p>Таблица "Persons":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>PersonID</th>
+<th>LastName</th>
+<th>FirstName</th>
+<th>Age</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Hansen</td>
+<td>Ola</td>
+<td>30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Svendson</td>
+<td>Tove</td>
+<td>23</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pettersen</td>
+<td>Kari</td>
+<td>20</td>
+</tr>
+</table>
+</div>
+<p>Таблица "Orders":</p>
+<table class="w3-table-all notranslate" style="width:50%">
+<tr>
+<th>OrderID</th>
+<th>OrderNumber</th>
+<th>PersonID</th>
+</tr>
+<tr>
+<td>1</td>
+<td>77895</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>44678</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>22456</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>24562</td>
+<td>1</td>
+</tr>
+</table>
+<p>Обратите внимание, что столбец "PersonID" в таблице "Orders" указывает на столбец "PersonID" в таблице "Persons".</p>
+<p>Столбец "PersonID" в таблице "Persons" является первичным ключом в таблице "Persons".</p>
+<p>Столбец "PersonID" в таблице "Orders" является внешним ключом в таблице "Orders".</p>
+<p>Ограничение внешнего ключа используется для предотвращения действий, которые могут привести к разрушению связей между таблицами.</p>
+<p>Ограничение внешнего ключа также предотвращает вставку недопустимых данных в столбец внешнего ключа,
+поскольку это должно быть одно из значений, содержащихся в таблице, на которую он указывает.</p>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>FOREIGN KEY в CREATE TABLE</h2>
+<p>Следующий SQL создает внешний ключ в столбце "PersonID" при создании таблицы "Orders":</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Orders
+(<br/>
+   
+OrderID int NOT NULL,<br/>
+   
+OrderNumber int NOT NULL,<br/>
+   
+PersonID int,<br/>
+   
+PRIMARY KEY (OrderID),<br/>
+   
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)<br/>
+);</div></div>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Orders
+(<br/>
+   
+OrderID int NOT NULL PRIMARY KEY,<br/>
+   
+OrderNumber int NOT NULL,<br/>
+   
+PersonID int FOREIGN KEY REFERENCES Persons(PersonID)<br/>
+);</div></div>
+<p>Чтобы разрешить именование ограничения внешнего ключа и определить ограничение внешнего ключа для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Orders
+(<br/>
+   
+OrderID int NOT NULL,<br/>
+   
+OrderNumber int NOT NULL,<br/>
+   
+PersonID int,<br/>
+   
+PRIMARY KEY (OrderID),<br/>
+   
+CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)<br/>
+   
+REFERENCES Persons(PersonID)<br/>
+);</div></div>
+<hr/>
+<h2>FOREIGN KEY в ALTER TABLE</h2>
+<p>Чтобы создать ограничение внешнего ключа для столбца "PersonID", когда таблица "Orders" уже создана, используйте следующий SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Orders<br/>
+ADD FOREIGN KEY (PersonID)
+REFERENCES Persons(PersonID);</div></div>
+<p>Чтобы разрешить именование ограничения внешнего ключа и определить ограничение внешнего ключа для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Orders<br/>
+ADD CONSTRAINT FK_PersonOrder<br/>
+FOREIGN KEY (PersonID)
+REFERENCES Persons(PersonID);</div></div>
+<hr/>
+<h2>Ограничение FOREIGN KEY с DROP</h2>
+<p>Чтобы удалить ограничение внешнего ключа, используйте следующий SQL:</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Orders<br/>
+DROP FOREIGN KEY FK_PersonOrder;</div></div>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Orders<br/>
+DROP CONSTRAINT FK_PersonOrder;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>

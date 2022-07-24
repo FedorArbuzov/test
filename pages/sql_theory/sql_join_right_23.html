@@ -1,0 +1,115 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - RIGHT JOIN</h1>
+<hr/>
+
+<hr/>
+<h2>RIGHT JOIN</h2>
+<p>Ключевое слово RIGHT JOIN возвращает все записи из правой таблицы (table2) и совпадающие записи из левой таблицы (table1).
+Результат равен нулю с левой стороны, когда нет совпадения.</p>
+<h3>Синтаксис RIGHT JOIN</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table1</em><br/>
+RIGHT JOIN <em>table2<br/> </em>ON <em>table1.column_name </em>=<em> table2.column_name</em>;
+</div></div>
+<p><b>Примечание:</b> В некоторых базах данных RIGHT JOIN называется правым внешним соединением.</p>
+<p style="text-align:center;"><img alt="SQL RIGHT JOIN" height="145" src="img_rightjoin.gif" width="200"/></p>
+<hr/>
+<h2>Демо база данных</h2>
+<p>В этом уроке мы будем использовать хорошо известный пример базы данных Northwind.</p>
+<p>Ниже приведен выбор из таблицы "Orders":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:15%">OrderID</th>
+<th>CustomerID</th>
+<th>EmployeeID</th>
+<th>OrderDate</th>
+<th>ShipperID</th>
+</tr>
+<tr>
+<td>10308</td>
+<td>2</td>
+<td>7</td>
+<td>1996-09-18</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10309</td>
+<td>37</td>
+<td>3</td>
+<td>1996-09-19</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10310</td>
+<td>77</td>
+<td>8</td>
+<td>1996-09-20</td>
+<td>2</td>
+</tr>
+</table>
+</div>
+<p>И выбор из таблицы "Employees":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>EmployeeID</th>
+<th>LastName</th>
+<th>FirstName</th>
+<th>BirthDate</th>
+<th>Photo</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Davolio</td>
+<td>Nancy</td>
+<td>12/8/1968</td>
+<td>EmpID1.pic</td>
+</tr>
+<td>2</td>
+<td>Fuller</td>
+<td>Andrew</td>
+<td>2/19/1952</td>
+<td>EmpID2.pic</td>
+
+<tr>
+<td>3</td>
+<td>Leverling</td>
+<td>Janet</td>
+<td>8/30/1963</td>
+<td>EmpID3.pic</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Пример SQL RIGHT JOIN</h2>
+<p>Следующая инструкция SQL вернет всех сотрудников и все заказы, которые они могли бы разместить:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName<br/>
+FROM Orders<br/>
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID<br/>
+ORDER BY Orders.OrderID;</div>
+
+</div>
+<p><strong>Примечание:</strong> Ключевое слово RIGHT JOIN возвращает все записи из правой таблицы (Employees),
+даже если в левой таблице (Orders) нет совпадений.</p>
+<hr/>
+<form action="exercise_join3.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<a class="w3-btn w3-margin-bottom" href="/item?type=sql_tasks&amp;page=exercise_join3_55" target="_blank">Открыть упражнение</a>
+</form>
+<br/>
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - CASE</h1>
+<hr/>
+
+<hr/>
+<h2>CASE</h2>
+<p>Инструкция CASE проходит через условия и возвращает значение, когда выполняется первое условие (например, инструкция IF-THEN-ELSE).
+Таким образом , как только условие истинно, оно прекратит чтение и вернет результат.
+Если никакие условия не являются истинными, он возвращает значение в предложении ELSE.</p>
+<p>Если нет никакой другой части и никакие условия не истинны, он возвращает NULL.</p>
+<h2>Синтаксис CASE</h2>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CASE<br/>    WHEN <em>condition1</em> THEN <em>result1</em><br/>    
+WHEN <em>condition2</em> THEN <em>result2</em><br/>    WHEN 
+<em>conditionN</em> THEN <em>resultN</em><br/>    ELSE <em>result</em><br/>END;</div></div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>Ниже приведен выбор из таблицы "OrderDetails" в образце базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>OrderDetailID</th>
+<th>OrderID</th>
+<th>ProductID</th>
+<th>Quantity</th>
+</tr>
+<tr>
+<td>1</td>
+<td>10248</td>
+<td>11</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10248</td>
+<td>42</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10248</td>
+<td>72</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10249</td>
+<td>14</td>
+<td>9</td>
+</tr>
+<tr>
+<td>5</td>
+<td>10249</td>
+<td>51</td>
+<td>40</td>
+</tr>
+</table>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Примеры SQL CASE</h2>
+<p>Следующий SQL проходит через условия и возвращает значение при выполнении первого условия:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT OrderID, Quantity,<br/>CASE<br/>    WHEN Quantity &gt; 30 
+THEN "Количество больше чем 30"<br/>    WHEN Quantity = 
+30 THEN "Количество составляет 30"<br/>    ELSE "Количество до 30"<br/>
+END AS QuantityText<br/>FROM OrderDetails;</div>
+
+</div>
+<p>Следующий SQL будет заказывать клиентов по городам. Однако, если город равен нулю, тогда порядок по странам:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT CustomerName, City, Country<br/>FROM Customers<br/>ORDER BY<br/>(CASE<br/>    
+WHEN City IS NULL THEN Country<br/>    ELSE City<br/>END);</div>
+
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

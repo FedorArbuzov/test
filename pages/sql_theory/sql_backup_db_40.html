@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - BACKUP DATABASE</h1>
+<hr/>
+
+<hr/>
+<h2>BACKUP DATABASE</h2>
+<p>Инструкция BACKUP DATABASE используется в SQL сервере для создания полной резервной копии существующей базы данных SQL.</p>
+<h3>Синтаксис</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+BACKUP DATABASE <em>databasename</em><br/>TO DISK = '<em>filepath</em>'; </div>
+</div>
+<hr/>
+<h2>BACKUP WITH DIFFERENTIAL</h2>
+<p>Дифференциальная резервная копия создает резервные копии только тех частей базы данных,
+которые изменились с момента последней полной резервной копии.</p>
+<h3>Синтаксис</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+BACKUP DATABASE <em>databasename</em><br/>TO DISK = '<em>filepath</em>'<br/>WITH DIFFERENTIAL;</div>
+</div>
+<hr/>
+<h2>Пример BACKUP DATABASE</h2>
+<p>Следующая инструкция SQL создает полную резервную копию существующей базы данных "testDB" на диске D:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+BACKUP DATABASE testDB<br/>TO DISK = 'D:\backups\testDB.bak';</div>
+</div>
+<div class="w3-panel w3-note">
+<p><b>Совет:</b> Всегда создавайте резервную копию базы данных на диске, отличном от реальной базы данных.
+Тогда, если вы получите сбой диска, вы не потеряете файл резервной копии вместе с базой данных.</p>
+</div>
+<hr/>
+<h2>Пример BACKUP WITH DIFFERENTIAL</h2>
+<p>Следующая инструкция SQL создает дифференциальную резервную копию базы данных "testDB":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+BACKUP DATABASE testDB<br/>TO DISK = 'D:\backups\testDB.bak'<br/>WITH DIFFERENTIAL;</div>
+</div>
+<div class="w3-panel w3-note">
+<p><b>Совет:</b> Дифференциальная резервная копия сокращает время резервного копирования (так как резервная копия выполняется только для изменений).</p>
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

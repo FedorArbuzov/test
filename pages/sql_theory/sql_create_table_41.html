@@ -1,0 +1,101 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - CREATE TABLE</h1>
+<hr/>
+
+<hr/>
+<h2>CREATE TABLE</h2>
+<p>Инструкция CREATE TABLE используется для создания новой таблицы в базе данных.</p>
+<h3>Синтаксис</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE <em>table_name </em>(<br/>
+<em>    column1 datatype</em>,<br/>
+<em>    column2 datatype</em>,<br/>
+<em>    column3 datatype</em>,<br/>
+  
+....<br/>
+);</div>
+</div>
+<p>Параметры столбцов задают имена столбцов таблицы.</p>
+<p>Параметр datatype указывает тип данных, которые может содержать столбец (например, varchar, integer, date и т.д.).</p>
+<p><strong>Совет:</strong> Для получения обзора доступных типов данных перейдите <a href="sql_datatypes.php">Справочник Типы данных</a>.</p>
+<hr/>
+<h2>Пример CREATE TABLE</h2>
+<p>В следующем примере создается таблица "Persons", содержащая пять столбцов:  PersonID, LastName, FirstName, Address, и City:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+   
+PersonID int,<br/>
+   
+LastName varchar(255),<br/>
+   
+FirstName varchar(255),<br/>
+   
+Address varchar(255),<br/>
+   
+City varchar(255) <br/>
+);
+</div>
+
+</div>
+<p>Столбец PersonID имеет тип int и будет содержать целое число.</p>
+<p>Столбцы LastName, FirstName, Address, and City имеют тип varchar и будут содержать символы,
+а максимальная длина этих полей составляет 255 символов.</p>
+<p>Пустая таблица "Persons" теперь будет выглядеть так:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>PersonID</th>
+<th>LastName</th>
+<th>FirstName</th>
+<th>Address</th>
+<th>City</th>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</table>
+</div>
+<p><strong>Совет:</strong> Пустая таблица "Persons" теперь может быть заполнена данными с помощью инструкции SQL INSERT INTO.</p>
+<hr/>
+<h2>Создать таблицу, используя другую таблицу</h2>
+<p>Копия существующей таблицы также может быть создана с помощью команды CREATE TABLE.</p>
+<p>Новая таблица получает те же определения столбцов. Можно выбрать все столбцы или отдельные столбцы.</p>
+<p>Если вы создадите новую таблицу, используя существующую таблицу, новая таблица будет заполнена существующими значениями из старой таблицы.</p>
+<h3>Синтаксис</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE <em>new_table_name</em> AS<br/>    
+SELECT <em>column1, column2,...</em><br/>    FROM <em>
+existing_table_name</em><br/>    WHERE ....;</div>
+</div>
+<p>Следующий SQL создает новую таблицу под названием "TestTables" (которая является копией таблицы "Customers"):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE TestTable AS<br/>SELECT customername, contactname<br/>FROM customers; </div>
+
+</div>
+<hr/>
+<form action="exercise_database3.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<a class="w3-btn w3-margin-bottom" href="/item?type=sql_tasks&amp;page=exercise_database3_62" target="_blank">Открыть упражнение</a>
+</form>
+<br/>
+
+</div>
+    </body>
+</html>

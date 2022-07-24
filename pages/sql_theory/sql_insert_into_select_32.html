@@ -1,0 +1,162 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - INSERT INTO SELECT</h1>
+<hr/>
+
+<hr/>
+<h2>INSERT INTO SELECT</h2>
+<p>Инструкция INSERT INTO SELECT копирует данные из одной таблицы и вставляет их в другую таблицу.</p>
+<ul>
+<li>INSERT INTO SELECT требует, чтобы типы данных в исходной и целевой таблицах совпадали</li>
+<li>Существующие записи в целевой таблице остаются неизменными</li>
+</ul>
+<h3>Синтаксис INSERT INTO SELECT</h3>
+<p>Копирование всех столбцов из одной таблицы в другую таблицу:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO <em>table2</em><br/>
+SELECT * FROM <em>table1<br/></em>WHERE <em>condition</em>;</div></div>
+<p>Скопируйте только некоторые столбцы из одной таблицы в другую таблицу:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO <em>table2 </em>(<em>column1</em>, <em>column2</em>, <em>column3</em>, ...)<br/>
+SELECT <em>column1</em>, <em>column2</em>, <em>column3</em>, ...<br/> FROM <em>table1</em><br/>
+WHERE <em>condition</em>;</div>
+</div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>В этом уроке мы будем использовать хорошо известный пример базы данных Northwind.</p>
+<p>Ниже приведен выбор из таблицы "Customers":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:15%">CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1<br/><br/></td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Obere Str. 57</td>
+<td>Berlin</td>
+<td>12209</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Avda. de la Constitución 2222</td>
+<td>México D.F.</td>
+<td>05021</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mataderos 2312</td>
+<td>México D.F.</td>
+<td>05023</td>
+<td>Mexico</td>
+</tr>
+</table>
+</div>
+<p>И выбор из таблицы "Suppliers":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>SupplierID</th>
+<th>SupplierName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>Postal Code</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Exotic Liquid</td>
+<td>Charlotte Cooper</td>
+<td>49 Gilbert St.</td>
+<td>Londona</td>
+<td>EC1 4SD</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>2</td>
+<td>New Orleans Cajun Delights</td>
+<td>Shelley Burke</td>
+<td>P.O. Box 78934</td>
+<td>New Orleans</td>
+<td>70117</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Grandma Kelly's Homestead</td>
+<td>Regina Murphy</td>
+<td>707 Oxford Rd.</td>
+<td>Ann Arbor</td>
+<td>48104</td>
+<td>USA</td>
+</tr>
+</table>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Примеры SQL INSERT INTO SELECT</h2>
+<p>Следующая инструкция SQL копирует "Suppliers" в "Customers" (столбцы, которые не заполнены данными, будут содержать NULL):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO Customers (CustomerName, 
+City, Country)<br/>
+SELECT SupplierName, City, Country FROM Suppliers;
+</div>
+
+</div>
+<p>Следующая инструкция SQL копирует "Suppliers" в "Customers" (заполните все столбцы):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, 
+Country)<br/>SELECT SupplierName, ContactName, Address, City, PostalCode, 
+Country FROM Suppliers;
+</div>
+
+</div>
+<p>Следующая инструкция SQL копирует только немецких поставщиков в раздел "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO Customers (CustomerName, 
+City, Country)<br/>
+SELECT SupplierName, City, Country FROM Suppliers<br/>WHERE Country='Germany';
+</div>
+
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

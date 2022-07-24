@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - SELECT INTO</h1>
+<hr/>
+
+<hr/>
+<h2>SELECT INTO</h2>
+<p>Инструкция SELECT INTO копирует данные из одной таблицы в новую.</p>
+<h3>Синтаксис SELECT INTO</h3>
+<p>Скопируйте все столбцы в новую таблицу:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT *<br/>
+INTO <em>newtable</em> [IN <em>externaldb</em>]<br/>
+FROM <em>oldtable<br/></em>WHERE <em>condition</em>;</div></div>
+<p>Скопируйте только некоторые столбцы в новую таблицу:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column1</em>, <em>column2</em>, <em>column3</em>, ...<br/>
+INTO <em>newtable</em> [IN <em>externaldb</em>]<br/> 
+FROM <em>oldtable<br/></em>WHERE <em>condition;</em></div></div>
+<p>Новая таблица будет создана с именами столбцов и типами, определенными в старой таблице. Вы можете создать новые имена столбцов, используя предложение AS.</p>
+<hr/>
+<h2>Примеры SQL SELECT INTO</h2>
+<p>Следующая инструкция SQL создает резервную копию клиентов:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT * INTO CustomersBackup2017<br/>
+FROM Customers;</div></div>
+<p>Следующая инструкция SQL использует предложение IN для копирования таблицы в новую таблицу в другой базе данных:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT *
+INTO CustomersBackup2017 IN 'Backup.mdb'<br/>
+FROM Customers;</div></div>
+<p>Следующая инструкция SQL копирует только несколько столбцов в новую таблицу:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT CustomerName, ContactName INTO CustomersBackup2017<br/>
+FROM Customers;</div></div>
+<p>Следующая инструкция SQL копирует только немецких клиентов в новую таблицу:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT *
+INTO CustomersGermany<br/>
+FROM Customers<br/>
+WHERE Country = 'Germany';</div></div>
+<p>Следующая инструкция SQL копирует данные из нескольких таблиц в новую таблицу:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT Customers.CustomerName, Orders.OrderID<br/>INTO CustomersOrderBackup2017<br/>
+FROM Customers<br/>
+LEFT JOIN Orders
+ON Customers.CustomerID = Orders.CustomerID;</div>
+</div>
+<p><strong>Совет:</strong> SELECT INTO также можно использовать для создания новой пустой таблицы, используя схему другой таблицы.
+Просто добавьте предложение WHERE, которое приводит к тому, что запрос не возвращает никаких данных:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT * INTO <em>newtable</em><br/>FROM <em>oldtable</em><br/>WHERE 1 = 0;</div>
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - Создание ограничений</h1>
+<hr/>
+
+<hr/>
+<p class="intro">SQL Ограничения используются для указания правил для данных в таблице.</p>
+<hr/>
+<h2>Создание ограничений</h2>
+<p>Ограничения могут быть заданы при создании таблицы с помощью инструкции CREATE TABLE или после создания таблицы с помощью инструкции ALTER TABLE.</p>
+<h3>Синтаксис</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE <em>table_name </em>(<br/>
+<em>    column1 datatype</em> <em>constraint</em>,<br/>
+<em>    column2 datatype</em> <em>constraint</em>,<br/>
+<em>    column3 datatype</em> <em>constraint</em>,<br/>
+   
+....<br/>
+);
+</div>
+</div>
+<hr/>
+<h2>Ограничения</h2>
+<p>SQL ограничения используются для указания правил для данных в таблице.</p>
+<p>Ограничения используются для ограничения типа данных, которые могут быть помещены в таблицу.
+Это обеспечивает точность и достоверность данных в таблице.
+Если существует какое-либо нарушение между ограничением и действием данных, действие прерывается.</p>
+<p>Ограничения могут быть на уровне столбцов или таблиц.
+Ограничения уровня столбца применяются к столбцу, а ограничения уровня таблицы ко всей таблице.</p>
+<p>В SQL обычно используются следующие ограничения:</p>
+<ul>
+<li><strong><a href="sql_notnull.php">NOT NULL</a></strong> - Гарантирует, что столбец не может иметь нулевое значение</li>
+<li><strong><a href="sql_unique.php">UNIQUE</a></strong> - Гарантирует, что все значения в столбце будут разными</li>
+<li><strong><a href="sql_primarykey.php">PRIMARY KEY</a></strong> - Комбинация NOT NULL и UNIQUE. 
+Уникально идентифицирует каждую строку в таблице</li>
+<li><strong><a href="sql_foreignkey.php">FOREIGN KEY</a></strong> - Однозначно идентифицирует строку/запись в другой таблице</li>
+<li><strong><a href="sql_check.php">CHECK</a></strong> - Гарантирует, что все значения в столбце удовлетворяют определенному условию</li>
+<li><strong><a href="sql_default.php">DEFAULT</a></strong> - Задает значение по умолчанию для столбца, если значение не указано</li>
+<li><strong><a href="sql_create_index.php">INDEX</a></strong> - Используется для быстрого создания и извлечения данных из базы данных</li>
+</ul>
+<br/>
+
+</div>
+    </body>
+</html>

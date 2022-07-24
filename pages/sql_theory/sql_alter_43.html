@@ -1,0 +1,216 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - ALTER TABLE</h1>
+<hr/>
+
+<hr/>
+<h2>ALTER TABLE</h2>
+<p>Инструкция ALTER TABLE используется для добавления, удаления или изменения столбцов в существующей таблице.</p>
+<p>Инструкция ALTER TABLE также используется для добавления и удаления различных ограничений на существующую таблицу.</p>
+<hr/>
+<h2>ALTER TABLE - ADD column</h2>
+<p>Чтобы добавить столбец в таблицу, используйте следующее Синтаксис:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE <em>table_name</em><br/>
+ADD <em>column_name datatype</em>;</div></div>
+<p>Следующий SQL - добавляет колонку "Email" для таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Customers<br/>ADD Email varchar(255);
+</div>
+
+</div>
+<hr/>
+<h2>ALTER TABLE - DROP COLUMN</h2>
+<p>Чтобы удалить столбец в таблице, используйте следующую команду синтаксис
+(обратите внимание, что некоторые системы баз данных не позволяют удалить столбец):</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE <em>table_name</em><br/>
+DROP COLUMN <em>column_name</em>;</div></div>
+<p>Следующий SQL удаляет столбец "Email" из таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Customers<br/>DROP COLUMN Email;
+</div>
+
+</div>
+<hr/>
+<h2>ALTER TABLE - ALTER/MODIFY COLUMN</h2>
+<p>Чтобы изменить тип данных столбца в таблице, используйте следующие синтаксис:</p>
+<p><b>SQL Сервер / MS Доступ:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE <em>table_name</em><br/>
+ALTER COLUMN <em>column_name datatype</em>;</div></div>
+<p><b>My SQL / Оракул (предыдущая версия 10G):</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE <em>table_name</em><br/>
+MODIFY COLUMN <em>column_name datatype</em>;</div></div>
+<p><b>Оракул 10G и более поздние версии:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE <em>table_name</em><br/>
+MODIFY <em>column_name datatype</em>;</div></div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>Пример ALTER TABLE </h2>
+<p>Посмотрите на таблицу "Persons":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>ID</th>
+<th>LastName</th>
+<th>FirstName</th>
+<th>Address</th>
+<th>City</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Hansen</td>
+<td>Ola</td>
+<td>Timoteivn 10</td>
+<td>Sandnes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Svendson</td>
+<td>Tove</td>
+<td>Borgvn 23</td>
+<td>Sandnes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pettersen</td>
+<td>Kari</td>
+<td>Storgt 20</td>
+<td>Stavanger</td>
+</tr>
+</table>
+</div>
+<p>Теперь мы хотим добавить столбец с именем "DateOfBirth" в таблицу "Persons".</p>
+<p>Мы используем следующую инструкцию SQL:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD DateOfBirth date;</div></div>
+<p>Обратите внимание, что новый столбец "DateOfBirth" имеет тип date и будет содержать дату.
+Тип данных указывает, какой тип данных может содержать столбец.
+Для получения полного описания всех типов данных, доступных в MS Access, MySQL и SQL Server,
+перейдите к нашему полному <a href="sql_datatypes.php">Справочнику типов данных</a>.</p>
+<p>Таблица "Persons" теперь будет выглядеть так:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>ID</th>
+<th>LastName</th>
+<th>FirstName</th>
+<th>Address</th>
+<th>City</th>
+<th>DateOfBirth</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Hansen</td>
+<td>Ola</td>
+<td>Timoteivn 10</td>
+<td>Sandnes</td>
+<td> </td>
+</tr>
+<tr>
+<td>2</td>
+<td>Svendson</td>
+<td>Tove</td>
+<td>Borgvn 23</td>
+<td>Sandnes</td>
+<td> </td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pettersen</td>
+<td>Kari</td>
+<td>Storgt 20</td>
+<td>Stavanger</td>
+<td> </td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Пример изменения типа данных</h2>
+<p>Теперь мы хотим изменить тип данных столбца с именем "DateOfBirth" в таблице "Persons".</p>
+<p>Мы используем следующую инструкцию SQL:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ALTER COLUMN DateOfBirth year;</div></div>
+<p>Обратите внимание, что столбец "DateOfBirth" теперь имеет тип year и будет содержать year в двух или четырехзначном формате.</p>
+<hr/>
+<h2>Пример DROP COLUMN</h2>
+<p>В первую очередь, мы хотим удалить столбец с именем "DateOfBirth" в таблице "Persons".</p>
+<p>Мы используем следующую инструкцию SQL:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+DROP COLUMN DateOfBirth;</div></div>
+<p>Таблица "Persons" теперь будет выглядеть так:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>ID</th>
+<th>LastName</th>
+<th>FirstName</th>
+<th>Address</th>
+<th>City</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Hansen</td>
+<td>Ola</td>
+<td>Timoteivn 10</td>
+<td>Sandnes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Svendson</td>
+<td>Tove</td>
+<td>Borgvn 23</td>
+<td>Sandnes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pettersen</td>
+<td>Kari</td>
+<td>Storgt 20</td>
+<td>Stavanger</td>
+</tr>
+</table>
+</div>
+<hr/>
+<form action="exercise_database6.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<a class="w3-btn w3-margin-bottom" href="/item?type=sql_tasks&amp;page=exercise_database6_65" target="_blank">Открыть упражнение</a>
+</form>
+<br/>
+
+</div>
+    </body>
+</html>

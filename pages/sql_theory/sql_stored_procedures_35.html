@@ -1,0 +1,153 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - Хранимая процедура для SQL Server</h1>
+<hr/>
+
+<hr/>
+<h2>Что такое хранимая процедура?</h2>
+<p>Хранимая процедура - это подготовленный SQL-код, который можно сохранить, чтобы этот код можно было повторно использовать снова и снова.</p>
+<p>Поэтому, если у вас есть SQL-запрос, который вы пишете снова и снова, сохраните его как хранимую процедуру, а затем просто вызовите ее для выполнения.</p>
+<p>Вы также можете передать параметры хранимой процедуре, чтобы она могла действовать на основе передаваемых значений параметров.</p>
+<h3>Синтаксис хранимой процедуры</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE PROCEDURE <em>procedure_name</em><br/>
+AS<br/><em>sql_statement</em><br/>
+GO;</div></div>
+<h3>Выполнение хранимой процедуры</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+EXEC <em>procedure_name</em>;</div></div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>Ниже приведен выбор из таблицы "Customers" в образце базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1<br/><br/></td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Obere Str. 57</td>
+<td>Berlin</td>
+<td>12209</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Avda. de la Constitución 2222</td>
+<td>México D.F.</td>
+<td>05021</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mataderos 2312</td>
+<td>México D.F.</td>
+<td>05023</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>4<br/><br/></td>
+<td>Around the Horn</td>
+<td>Thomas Hardy</td>
+<td>120 Hanover Sq.</td>
+<td>London</td>
+<td>WA1 1DP</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Berglunds snabbköp</td>
+<td>Christina Berglund</td>
+<td>Berguvsvägen 8</td>
+<td>Luleå</td>
+<td>S-958 22</td>
+<td>Sweden</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Пример хранимой процедуры</h2>
+<p>Следующая инструкция SQL создает хранимую процедуру с именем "SelectAllCustomers" , которая выбирает все записи из таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE PROCEDURE SelectAllCustomers<br/>AS<br/>SELECT * FROM Customers<br/>GO;
+</div>
+</div>
+<p>Выполните описанную выше хранимую процедуру следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+EXEC SelectAllCustomers;
+</div>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Хранимая процедура с одним параметром</h2>
+<p>Следующая инструкция SQL создает хранимую процедуру, которая выбирает клиентов из определенного города из таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE PROCEDURE SelectAllCustomers 
+@City nvarchar(30)<br/>AS<br/>SELECT * FROM Customers WHERE 
+City = @City<br/>GO;
+</div>
+</div>
+<p>Выполните описанную выше хранимую процедуру следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+EXEC SelectAllCustomers @City = "London";</div>
+</div>
+<hr/>
+<h2>Хранимая процедура с несколькими параметрами</h2>
+<p>Настройка нескольких параметров очень проста. Просто перечислите каждый параметр и тип данных, разделенные запятой, как показано ниже.</p>
+<p>Следующая инструкция SQL создает хранимую процедуру,
+которая выбирает клиентов из определенного города с определенным почтовым кодом из таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE PROCEDURE SelectAllCustomers 
+@City nvarchar(30), @PostalCode nvarchar(10)<br/>AS<br/>SELECT * FROM Customers WHERE 
+City = @City AND PostalCode = @PostalCode<br/>GO;
+</div>
+</div>
+<p>Выполните описанную выше хранимую процедуру следующим образом:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+EXEC SelectAllCustomers @City = "London", @PostalCode = "WA1 1DP";</div>
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

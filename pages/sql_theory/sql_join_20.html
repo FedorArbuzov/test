@@ -1,0 +1,140 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - JOIN</h1>
+<hr/>
+
+<hr/>
+<h2>JOIN</h2>
+<p>Предложение JOIN используется для объединения строк из двух или более таблиц на основе связанного столбца между ними.</p>
+<p>Давайте рассмотрим выборку из таблицы "Orders":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:15%">OrderID</th>
+<th>CustomerID</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>10308</td>
+<td>2</td>
+<td>1996-09-18</td>
+</tr>
+<tr>
+<td>10309</td>
+<td>37</td>
+<td>1996-09-19</td>
+</tr>
+<tr>
+<td>10310</td>
+<td>77</td>
+<td>1996-09-20</td>
+</tr>
+</table>
+</div>
+<p>Затем посмотрите на выборку из таблицы "Customers":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:15%">CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mexico</td>
+</tr>
+</table>
+</div>
+<p>Обратите внимание, что столбец "CustomerID" в таблице "Orders" ссылается на "CustomerID" в таблице "Customers".
+Связь между двумя приведенными выше таблицами представляет собой столбец "CustomerID".</p>
+<p>Затем мы можем создать следующий заявление SQL (содержащий внутреннее соединение),
+который выбирает записи, имеющие совпадающие значения в обеих таблицах:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate<br/>
+FROM Orders<br/>
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+</div>
+
+</div>
+<p>и он будет производить что-то вроде этого:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th style="width:15%">OrderID</th>
+<th style="width:70%">CustomerName</th>
+<th style="width:15%">OrderDate</th>
+</tr>
+<tr>
+<td>10308</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>9/18/1996</td>
+</tr>
+<tr>
+<td>10365</td>
+<td>Antonio Moreno Taquería</td>
+<td>11/27/1996</td>
+</tr>
+<tr>
+<td>10383</td>
+<td>Around the Horn</td>
+<td>12/16/1996</td>
+</tr>
+<tr>
+<td>10355</td>
+<td>Around the Horn</td>
+<td>11/15/1996</td>
+</tr>
+<tr>
+<td>10278</td>
+<td>Berglunds snabbköp</td>
+<td>8/12/1996</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Различные типы соединений SQL</h2>
+<p>Вот различные типы соединений в SQL:</p>
+<ul>
+<li><b>(INNER) JOIN</b>: Возвращает записи, имеющие совпадающие значения в обеих таблицах</li>
+<li><b>LEFT (OUTER) JOIN</b>: Возвращает все записи из левой таблицы и совпадающие записи из правой таблицы</li>
+<li><b>RIGHT (OUTER) JOIN</b>: Возвращает все записи из правой таблицы и совпадающие записи из левой таблицы</li>
+<li><b>FULL (OUTER) JOIN</b>: Возвращает все записи при наличии совпадения в левой или правой таблице</li>
+</ul>
+<p>
+<img alt="SQL INNER JOIN" height="145" src="img_innerjoin.gif" width="200"/> 
+<img alt="SQL LEFT JOIN" height="145" src="img_leftjoin.gif" width="200"/> 
+<img alt="SQL RIGHT JOIN" height="145" src="img_rightjoin.gif" width="200"/> 
+<img alt="SQL FULL OUTER JOIN" height="145" src="img_fulljoin.gif" width="200"/>
+</p>
+<hr/>
+<form action="exercise_join1.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<a class="w3-btn w3-margin-bottom" href="/item?type=sql_tasks&amp;page=exercise_join1_53" target="_blank">Открыть упражнение</a>
+</form>
+<br/>
+
+</div>
+    </body>
+</html>

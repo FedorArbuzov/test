@@ -1,0 +1,115 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - SELECT</h1>
+<hr/>
+
+<hr/>
+<h2>SELECT</h2>
+<p>Инструкция SELECT используется для выбора данных из базы данных.</p>
+<p>Возвращаемые данные хранятся в таблице результатов, называемой результирующим набором.</p>
+<h3>SELECT синтаксис</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column1</em>,<em> column2, ...</em><br/>
+FROM <em>table_name</em>;</div></div>
+<p>Вот, колонка1, колонка2, ... имена полей таблицы, из которой вы хотите выбрать данные.
+Если вы хотите выбрать все поля, доступные в таблице, используйте следующий синтаксис:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM <em>table_name</em>;</div></div>
+<hr/>
+<h2>Демо баз данных</h2>
+<p>Ниже приведена выборка из таблицы "клиенты" в базе данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1<br/><br/></td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Obere Str. 57</td>
+<td>Berlin</td>
+<td>12209</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Avda. de la Constitución 2222</td>
+<td>México D.F.</td>
+<td>05021</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mataderos 2312</td>
+<td>México D.F.</td>
+<td>05023</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>4<br/><br/></td>
+<td>Around the Horn</td>
+<td>Thomas Hardy</td>
+<td>120 Hanover Sq.</td>
+<td>London</td>
+<td>WA1 1DP</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Berglunds snabbköp</td>
+<td>Christina Berglund</td>
+<td>Berguvsvägen 8</td>
+<td>Luleå</td>
+<td>S-958 22</td>
+<td>Sweden</td>
+</tr>
+</table>
+</div>
+<hr/>
+<h2>Выбор столбцов</h2>
+<p>Следующая инструкция SQL выбирает "CustomerName" и "Город" столбцы из таблицы "Клиенты":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT CustomerName, City FROM Customers;
+</div>
+
+</div>
+<hr/>
+<h2>Выбрать все</h2>
+<p>Следующая инструкция SQL выбирает все столбцы из таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers;
+</div>
+
+</div>
+<hr/>
+<form action="exercise_select1.php" autocomplete="off" id="w3-exerciseform" method="post" target="_blank">
+<h2>Проверьте себя с помощью упражнений</h2>
+<a class="w3-btn w3-margin-bottom" href="/item?type=sql_tasks&amp;page=exercise_select1_0" target="_blank">Открыть упражнение</a>
+</form>
+<br/>
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - IFNULL(), ISNULL(), COALESCE(), и NVL()</h1>
+<hr/>
+
+<hr/>
+<h2>IFNULL(), ISNULL(), COALESCE(), и NVL()</h2>
+<p>Посмотрите на следующую таблицу "Products":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>P_Id</th>
+<th>ProductName</th>
+<th>UnitPrice</th>
+<th>UnitsInStock</th>
+<th>UnitsOnOrder</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Jarlsberg</td>
+<td>10.45</td>
+<td>16</td>
+<td>15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mascarpone</td>
+<td>32.56</td>
+<td>23</td>
+<td> </td>
+</tr>
+<tr>
+<td>3</td>
+<td>Gorgonzola</td>
+<td>15.67</td>
+<td>9</td>
+<td>20</td>
+</tr>
+</table>
+</div>
+<p>Предположим, что столбец "UnitsOnOrder" является необязательным и может содержать нулевые значения.</p>
+<p>Посмотрите на следующую инструкцию SELECT:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName, UnitPrice * (UnitsInStock + UnitsOnOrder)<br/>
+FROM Products;</div>
+</div>
+<p>В приведенном выше примере, если какое-либо из значений "UnitsOnOrder" равно NULL, результат будет равен нулю.</p>
+<hr/>
+<h2>Решения</h2>
+<p><b>MySQL</b></p>
+<p>MySQL функция <a href="func_mysql_ifnull.php">IFNULL()</a> позволяет возвращать альтернативное значение, если выражение равно нулю:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))<br/>
+FROM Products;</div></div>
+<p>или мы можем использовать функцию <a href="func_mysql_coalesce.php">COALESCE()</a>, например:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))<br/>
+FROM Products;</div></div>
+<p><b>SQL Server</b></p>
+<p>SQL Server функция <a href="func_sqlserver_isnull.php">ISNULL()</a> позволяет возвращать альтернативное значение, если выражение равно нулю:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName, UnitPrice * (UnitsInStock + ISNULL(UnitsOnOrder, 0))<br/>
+FROM Products;</div></div>
+<p><b>MS Access</b></p>
+<p>MS Access функция <a href="func_msaccess_isnull.php">IsNull()</a> возвращает TRUE (-1), если выражение имеет нулевое значение, в противном случае FALSE (0):</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName, UnitPrice * (UnitsInStock + IIF(IsNull(UnitsOnOrder), 0, UnitsOnOrder))<br/>
+FROM Products;</div></div>
+<p><b>Oracle</b></p>
+<p>Oracle функция NVL() достигает того же результата:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName, UnitPrice * (UnitsInStock + NVL(UnitsOnOrder, 0))<br/>
+FROM Products;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>

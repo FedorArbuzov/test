@@ -1,0 +1,130 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - Синтаксис</h1>
+<hr/>
+
+<hr/>
+<h2>Таблица базы данных</h2>
+<p>База данных чаще всего содержит одну или несколько таблиц. Каждая таблица идентифицируется по имени (например, "клиенты" или "заказы"). Таблицы содержат записи (строки) с данными.</p>
+<p>В этом уроке мы будем использовать хорошо известный образец базы данных Northwind (входит в MS Access и MS SQL Server).</p>
+<p>Ниже приведен выбор из таблицы "клиенты":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1<br/><br/></td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Obere Str. 57</td>
+<td>Berlin</td>
+<td>12209</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Avda. de la Constitución 2222</td>
+<td>México D.F.</td>
+<td>05021</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mataderos 2312</td>
+<td>México D.F.</td>
+<td>05023</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>4<br/><br/></td>
+<td>Around the Horn</td>
+<td>Thomas Hardy</td>
+<td>120 Hanover Sq.</td>
+<td>London</td>
+<td>WA1 1DP</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Berglunds snabbköp</td>
+<td>Christina Berglund</td>
+<td>Berguvsvägen 8</td>
+<td>Luleå</td>
+<td>S-958 22</td>
+<td>Sweden</td>
+</tr>
+</table>
+</div>
+<p>Приведенная выше таблица содержит пять записей (по одной для каждого клиента)
+и семь столбцов (CustomerID, CustomerName, ContactName, Address, City, PostalCode и Country).</p>
+<hr/>
+<h2>Инструкций</h2>
+<p>Большинство действий, которые необходимо выполнить с базой данных, выполняются с помощью инструкций SQL.</p>
+<p>Следующая инструкция SQL выбирает все записи в таблице "клиенты":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers;
+</div>
+
+</div>
+<p>В этом уроке мы расскажем вам все о различных SQL инструкций.</p>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Имейте в виду, что...</h2>
+<ul>
+<li>Ключевые слова SQL не чувствительны к регистру: select - это то же самое, что SELECT</li>
+</ul>
+<p>В этом уроке мы напишем все ключевые слова SQL в верхнем регистре.</p>
+<hr/>
+<h2>Точка с запятой после инструкций SQL?</h2>
+<p>Некоторые системы баз данных требуют точку с запятой в конце каждой инструкции SQL.</p>
+<p>Точка с запятой - это стандартный способ разделения каждой инструкции SQL в системах баз данных,
+которые позволяют выполнять несколько инструкций SQL в одном вызове сервера.</p>
+<p>В этом учебнике мы будем использовать точку с запятой в конце каждой инструкции SQL.</p>
+<hr/>
+<h2>Некоторые из наиболее важных команд SQL</h2>
+<ul>
+<li><b>SELECT</b> - извлечение данных из базы данных</li>
+<li><b>UPDATE</b> - обновление данных в базе данных</li>
+<li><b>DELETE</b> - удаляет данные из базы данных</li>
+<li><b>INSERT INTO</b> - вставка новых данных в базу данных</li>
+<li><b>CREATE DATABASE</b> - создает новую базу данных</li>
+<li><b>ALTER DATABASE</b> - изменяет базу данных</li>
+<li><b>CREATE TABLE</b> - создает новую таблицу</li>
+<li><b>ALTER TABLE</b> - изменения в таблице</li>
+<li><b>DROP TABLE</b> - удаляет таблицу</li>
+<li><b>CREATE INDEX</b> - создает индекс (ключ поиска)</li>
+<li><b>DROP INDEX</b> - удаляет индекс
+</li>
+</ul>
+<br/>
+
+</div>
+    </body>
+</html>

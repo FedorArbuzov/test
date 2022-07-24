@@ -1,0 +1,170 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - SELECT TOP, LIMIT, ROWNUM</h1>
+<hr/>
+
+<hr/>
+<h2>TOP</h2>
+<p>Инструкция SELECT TOP используется для указания количества возвращаемых записей.</p>
+<p>Инструкция SELECT TOP полезно для больших таблиц с тысячами записей. Возврат большого количества записей может повлиять на производительность.</p>
+<div class="w3-panel w3-note">
+<p><b>Примечание:</b> Не все базы данных поддерживают SELECT TOP.
+MySQL поддерживает предложение LIMIT для выбора ограниченного числа записей, в то время как Oracle использует ROWNUM.</p>
+</div>
+<p><strong>Синтаксис SQL Server / MS Access:</strong></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT TOP <em>number</em>|<em>percent</em> <em>column_name(s)</em><br/>
+FROM <em>table_name<br/></em>WHERE <em>condition</em>;</div></div>
+<p><strong>Синтаксис MySQL:</strong></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table_name<br/></em>WHERE <em>condition</em><br/>
+LIMIT <em>number</em>;</div></div>
+<p><strong>Синтаксис Oracle:</strong></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table_name</em><br/>
+WHERE ROWNUM &lt;= <em>number</em>;</div></div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>Ниже приведен выбор из таблицы "Customers" в образце базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>CustomerID</th>
+<th>CustomerName</th>
+<th>ContactName</th>
+<th>Address</th>
+<th>City</th>
+<th>PostalCode</th>
+<th>Country</th>
+</tr>
+<tr>
+<td>1<br/><br/></td>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+<td>Obere Str. 57</td>
+<td>Berlin</td>
+<td>12209</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ana Trujillo Emparedados y helados</td>
+<td>Ana Trujillo</td>
+<td>Avda. de la Constitución 2222</td>
+<td>México D.F.</td>
+<td>05021</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Antonio Moreno Taquería</td>
+<td>Antonio Moreno</td>
+<td>Mataderos 2312</td>
+<td>México D.F.</td>
+<td>05023</td>
+<td>Mexico</td>
+</tr>
+<tr>
+<td>4<br/><br/></td>
+<td>Around the Horn</td>
+<td>Thomas Hardy</td>
+<td>120 Hanover Sq.</td>
+<td>London</td>
+<td>WA1 1DP</td>
+<td>UK</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Berglunds snabbköp</td>
+<td>Christina Berglund</td>
+<td>Berguvsvägen 8</td>
+<td>Luleå</td>
+<td>S-958 22</td>
+<td>Sweden</td>
+</tr>
+</table>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>Примеры SQL TOP, LIMIT и ROWNUM</h2>
+<p>Следующая инструкция SQL выбирает первые три записи из таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT TOP 3 * FROM Customers;
+</div>
+
+</div>
+<p>Следующий оператор SQL показывает эквивалентный пример использования предложения LIMIT:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers<br/>LIMIT 3;</div>
+
+</div>
+<p>Следующая инструкция SQL показывает соответствующий пример использования параметра ROWNUM:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers<br/>WHERE ROWNUM  &lt;= 3;
+</div>
+</div>
+<hr/>
+<h2>Пример SQL TOP PERCENT</h2>
+<p>Следующая инструкция SQL выбирает первые 50% записей из таблицы "Customers":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT TOP 50 PERCENT * FROM Customers;
+</div>
+
+</div>
+<hr/>
+<h2>Добавить WHERE</h2>
+<p>Следующая инструкция SQL выбирает первые три записи из таблицы "Customers", где страна - "Germany":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT TOP 3 * FROM Customers<br/>WHERE Country='Germany';
+</div>
+
+</div>
+<p>Следующий оператор SQL показывает эквивалентный пример использования LIMIT:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers<br/>WHERE Country='Germany'<br/>LIMIT 3;</div>
+
+</div>
+<p>Следующая инструкция SQL показывает соответствующий пример использования параметра ROWNUM:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT * FROM Customers<br/>WHERE Country='Germany' AND ROWNUM  &lt;= 3;
+</div>
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

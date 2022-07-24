@@ -1,0 +1,144 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - AUTO INCREMENT</h1>
+<hr/>
+
+<hr/>
+<h2>AUTO INCREMENT</h2>
+<p>Автоматическое приращение позволяет автоматически генерировать уникальное число при вставке новой записи в таблицу.</p>
+<p>Часто поле первичного ключа, которое мы хотели бы создавать автоматически при каждой вставке новой записи.</p>
+<hr/>
+<h2>Синтаксис для MySQL</h2>
+<p>Следующая инструкция SQL определяет, что столбец "Personid", 
+который должен быть полем первичного ключа с автоматическим приращением в поле первичного ключа в таблице "Persons":</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+   
+Personid int NOT NULL AUTO_INCREMENT,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+    Age int,<br/>
+   
+PRIMARY KEY (Personid)<br/>
+);</div></div>
+<p>MySQL использует ключевое слово AUTO_INCREMENT для выполнения функции автоматического приращения.</p>
+<p>По умолчанию начальное значение для AUTO_INCREMENT равно 1, и оно будет увеличиваться на 1 для каждой новой записи.</p>
+<p>Чтобы последовательность AUTO_INCREMENT начиналась с другого значения, используйте следующую инструкцию SQL:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons AUTO_INCREMENT=100;</div></div>
+<p>Чтобы вставить новую запись в таблицу "Persons",
+нам не нужно будет указывать значение для столбца "Personid" (уникальное значение будет добавлено автоматически):</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO Persons (FirstName,LastName)<br/>
+VALUES ('Lars','Monsen');</div></div>
+<p>Приведенная выше инструкция SQL вставит новую запись в таблицу "Persons".
+Столбцу "Personid" будет присваивается уникальное значение.
+Столбец "FirstName" будет иметь значение "Lars", а столбец "LastName"- "Monsen".</p>
+<hr/>
+<h2>Синтаксис для SQL Server</h2>
+<p>Следующая инструкция SQL определяет столбец "Personid" как поле первичного ключа автоинкремента в таблице "Persons":</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+   
+Personid int IDENTITY(1,1) PRIMARY KEY,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int<br/>
+);</div></div>
+<p>MS SQL Server использует ключевое слово IDENTITY для выполнения функции автоматического приращения.</p>
+<p>В приведенном выше примере начальное значение идентификатора равно 1, и оно будет увеличиваться на 1 для каждой новой записи.</p>
+<p><strong>Совет:</strong> Чтобы указать, что столбец "Personid" должен начинаться со значения 10 и увеличиваться на 5, измените его на IDENTITY(10,5).</p>
+<p>Чтобы вставить новую запись в таблицу "Persons",
+нам не нужно будет указывать значение для столбца "Personid" (уникальное значение будет добавлено автоматически):</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO Persons (FirstName,LastName)<br/>
+VALUES ('Lars','Monsen');</div></div>
+<p>Приведенная выше инструкция SQL вставит новую запись в таблицу" Persons".
+Столбцу "Personid" будет присвоено уникальное значение.
+Столбец "FirstName" будет иметь значение "Lars", а столбец "LastName"- "Monsen".</p>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script>
+</div>
+<hr/>
+<h2>Синтаксис для Access</h2>
+<p>Следующая инструкция SQL определяет столбец "Personid" как поле первичного ключа автоинкремента в таблице "Persons":</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+   
+Personid AUTOINCREMENT PRIMARY KEY,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int<br/>
+);</div></div>
+<p>MS Access использует ключевое слово AUTOINCREMENT для выполнения функции автоматического приращения.</p>
+<p>По умолчанию начальное значение для AUTOINCREMENT равно 1, и оно будет увеличиваться на 1 для каждой новой записи.</p>
+<p><strong>Совет:</strong> Чтобы указать, что столбец "Personid" должен начинаться со значения 10 и увеличиваться на 5,
+измените значение autoincrement на AUTOINCREMENT(10,5).</p>
+<p>Чтобы вставить новую запись в таблицу "Persons",
+нам не нужно будет указывать значение для столбца "Personid" (уникальное значение будет добавлено автоматически):</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO Persons (FirstName,LastName)<br/>
+VALUES ('Lars','Monsen');</div></div>
+<p>Приведенная выше инструкция SQL вставит новую запись в таблицу "Persons".
+Столбцу "Personid" будет присвоено уникальное значение.
+Столбец "FirstName" будет иметь значение "Lars", а столбец "LastName" - "Monsen".</p>
+<hr/>
+<h2>Синтаксис для Oracle</h2>
+<p>В Oracle код немного сложнее.</p>
+<p>Вам нужно будет создать поле автоинкремента с объектом SEQUENCE (этот объект генерирует числовую последовательность).</p>
+<p>Используйте следующий синтаксис CREATE SEQUENCE:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE SEQUENCE seq_person<br/>
+MINVALUE 1<br/>
+START WITH 1<br/>
+INCREMENT BY 1<br/>
+CACHE 10; </div></div>
+<p>Приведенный выше код создает объект последовательности под названием "seq_person", который начинается с 1 и будет увеличиваться на 1.
+Он также будет кэшировать до 10 значений для повышения производительности.
+Параметр "CACHE" указывает, сколько значений последовательности будет храниться в памяти для более быстрого доступа.</p>
+<p>Чтобы вставить новую запись в таблицу "Persons",
+нам придется использовать функцию "nextval" (эта функция извлекает следующее значение из последовательности "seq_person"):</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+INSERT INTO Persons (Personid,FirstName,LastName)<br/>
+VALUES (seq_person.nextval,'Lars','Monsen');</div></div>
+<p>Приведенная выше инструкция SQL вставит новую запись в таблицу "Persons".
+Столбецу "Personid" будет присвоен следующий номер из последовательности "seq_person".
+Столбец "FirstName" будет иметь значение "Lars", а столбец "LastName"- "Monsen".</p>
+<br/>
+
+</div>
+    </body>
+</html>

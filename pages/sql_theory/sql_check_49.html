@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - CHECK</h1>
+<hr/>
+
+<hr/>
+<h2>CHECK</h2>
+<p>CHECK используется для ограничения диапазона значений, который может быть помещен в столбец.</p>
+<p>Если вы определяете контрольное ограничение для одного столбца, оно допускает только определенные значения для этого столбца.</p>
+<p>Если вы определяете контрольное ограничение для таблицы, оно может ограничивать значения в определенных столбцах на основе значений в других столбцах строки.</p>
+<hr/>
+<h2>CHECK в CREATE TABLE</h2>
+<p>Следующий SQL создает контрольное ограничение для столбца "Age" при создании таблицы "Persons".
+Ограничение проверки гарантирует, что вы не можете иметь ни одного человека моложе 18 лет:</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int,<br/>
+   
+CHECK (Age&gt;=18)<br/>
+);</div></div>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int CHECK (Age&gt;=18)<br/>
+);</div></div>
+<p>Чтобы разрешить именование контрольного ограничения и определить контрольное ограничение для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int,<br/>
+   
+City varchar(255),<br/>
+   
+CONSTRAINT CHK_Person CHECK (Age&gt;=18 AND City='Sandnes')<br/>
+);</div></div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>CHECK в ALTER TABLE</h2>
+<p>Чтобы создать контрольное ограничение для столбца "Age", когда таблица уже создана, используйте следующий SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD CHECK (Age&gt;=18);</div></div>
+<p>Чтобы разрешить именование контрольного ограничения и определить контрольное ограничение для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD CONSTRAINT CHK_PersonAge CHECK (Age&gt;=18 AND City='Sandnes');</div></div>
+<hr/>
+<h2>Ограничение CHECK с DROP</h2>
+<p>Чтобы удалить ограничение CHECK, используйте следующий SQL:</p>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+DROP CONSTRAINT CHK_PersonAge;</div></div>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+DROP CHECK CHK_PersonAge;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>

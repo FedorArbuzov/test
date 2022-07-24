@@ -1,0 +1,111 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - PRIMARY KEY</h1>
+<hr/>
+
+<hr/>
+<h2>PRIMARY KEY</h2>
+<p>Ограничение PRIMARY KEY однозначно идентифицирует каждую запись в таблице.</p>
+<p>Первичные ключи должны содержать уникальные значения и не могут содержать нулевые значения.</p>
+<p>Таблица может иметь только один первичный ключ, а в таблице этот первичный ключ может состоять из одного или нескольких столбцов (полей).</p>
+<hr/>
+<h2>PRIMARY KEY в CREATE TABLE</h2>
+<p>Следующий SQL создает первичный ключ о "ID" в столбик, когда таблица "Persons"  создается:</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int,<br/>
+   
+PRIMARY KEY (ID)<br/>
+);</div></div>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL PRIMARY KEY,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int<br/>
+);</div></div>
+<p>Чтобы разрешить именование ограничения первичного ключа и определить ограничение
+первичного ключа для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int,<br/>
+   
+CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)<br/>
+);</div></div>
+<p><b>Примечание:</b> В приведенном выше примере существует только один первичный ключ (PK_Person). 
+Однако значение первичного ключа состоит из двух столбцов (ID + LastName).<br/>
+</p>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>PRIMARY KEY в ALTER TABLE</h2>
+<p>Чтобы создать ограничение первичного ключа для столбца "ID", когда таблица уже создана, используйте следующий SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD PRIMARY KEY (ID);</div></div>
+<p>Чтобы разрешить именование ограничения первичного ключа и
+определить ограничение первичного ключа для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);</div></div>
+<p><b>Примечание:</b> Если вы используете инструкцию ALTER TABLE для добавления первичного ключа, то столбец(ы) первичного ключа должен(ы) быть 
+уже объявлено, что они не содержат нулевых значений (при первом создании таблицы).</p>
+<hr/>
+<h2>Ограничение PRIMARY KEY с DROP</h2>
+<p>Чтобы удалить ограничение первичного ключа, используйте следующий SQL:</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+DROP PRIMARY KEY;</div></div>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+DROP CONSTRAINT PK_Person;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>

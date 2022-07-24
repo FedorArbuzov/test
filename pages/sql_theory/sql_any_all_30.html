@@ -1,0 +1,173 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - ANY и ALL</h1>
+<hr/>
+
+<hr/>
+<h2>ANY и ALL</h2>
+<p>Операторы ANY и ALL используются с предложением WHERE или HAVING.</p>
+<p>Оператор ANY возвращает true, если какое-либо из значений подзапроса удовлетворяет условию.</p>
+<p>Оператор ALL возвращает true, если все значения подзапроса удовлетворяют условию.</p>
+<h3>Синтаксис ANY</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table_name</em><br/>
+WHERE 
+<em>column_name operator</em> ANY<br/>(SELECT <em>column_name </em>FROM <em>table_name</em> WHERE
+<em>condition</em>);</div></div>
+<h3>Синтаксис ALL</h3>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+SELECT <em>column_name(s)</em><br/>
+FROM <em>table_name</em><br <em="" where=""/>column_name operator ALL<br/>(SELECT <em>column_name </em>FROM <em>table_name </em>WHERE <em>condition</em>);</div></div>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> <em>Оператор</em> должен быть стандартным оператором сравнения (=, &lt;&gt;, !=, &gt;, &gt;=, &lt;, or &lt;=).</p>
+</div>
+<hr/>
+<h2>Демо база данных</h2>
+<p>Ниже приведен выбор из таблицы "Products" в образце базы данных Northwind:</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>ProductID</th>
+<th>ProductName</th>
+<th>SupplierID</th>
+<th>CategoryID</th>
+<th>Unit</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Chais</td>
+<td>1</td>
+<td>1</td>
+<td>10 boxes x 20 bags</td>
+<td>18</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Chang</td>
+<td>1</td>
+<td>1</td>
+<td>24 - 12 oz bottles</td>
+<td>19</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Aniseed Syrup</td>
+<td>1</td>
+<td>2</td>
+<td>12 - 550 ml bottles</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chef Anton's Cajun Seasoning</td>
+<td>2</td>
+<td>2</td>
+<td>48 - 6 oz jars</td>
+<td>22</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Chef Anton's Gumbo Mix</td>
+<td>2</td>
+<td>2</td>
+<td>36 boxes</td>
+<td>21.35</td>
+</tr>
+</table>
+</div>
+<p>И выбор из таблицы "OrderDetails":</p>
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+<tr>
+<th>OrderDetailID</th>
+<th>OrderID</th>
+<th>ProductID</th>
+<th>Quantity</th>
+</tr>
+<tr>
+<td>1</td>
+<td>10248</td>
+<td>11</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10248</td>
+<td>42</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10248</td>
+<td>72</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10249</td>
+<td>14</td>
+<td>9</td>
+</tr>
+<tr>
+<td>5</td>
+<td>10249</td>
+<td>51</td>
+<td>40</td>
+</tr>
+</table>
+</div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Примеры SQL ANY</h2>
+<p>Оператор ANY возвращает TRUE, если какое-либо из значений подзапроса удовлетворяет условию.</p>
+<p>Следующий оператор SQL возвращает TRUE и перечисляет названия продуктов, если он находит какие-либо записи в таблице OrderDetails, что количество = 10:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName<br/>FROM Products<br/>WHERE ProductID = ANY (SELECT 
+ProductID FROM OrderDetails WHERE Quantity = 10);</div>
+
+</div>
+<p>Следующий оператор SQL возвращает TRUE и перечисляет названия продуктов, если он находит какие-либо записи в таблице OrderDetails, что количество &gt; 99:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName<br/>FROM Products<br/>WHERE ProductID = ANY (SELECT ProductID 
+FROM OrderDetails WHERE Quantity &gt; 99);</div>
+
+</div>
+<hr/>
+<h2>Пример SQL ALL</h2>
+<p>Оператор ALL возвращает TRUE, если все значения подзапроса удовлетворяют условию.</p>
+<p>Следующая инструкция SQL возвращает TRUE и перечисляет названия продуктов,
+если все записи в таблице OrderDetails имеют значение quantity = 10
+( таким образом, этот пример возвращает FALSE, поскольку не все записи в таблице OrderDetails имеют значение quantity = 10):</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+SELECT ProductName<br/>FROM Products<br/>WHERE ProductID = ALL (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);</div>
+
+</div>
+<br/>
+
+</div>
+    </body>
+</html>

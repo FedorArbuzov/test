@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - NOT NULL</h1>
+<hr/>
+
+<hr/>
+<h2>NOT NULL</h2>
+<p>По умолчанию столбец может содержать нулевые значения.</p>
+<p>Ограничение NOT NULL заставляет столбец не принимать нулевые значения.</p>
+<p>Это заставляет поле всегда содержать значение, что означает,
+что вы не можете вставить новую запись или обновить запись без добавления значения в это поле.</p>
+<hr/>
+<h2>NOT NULL в CREATE TABLE</h2>
+<p>Следующий SQL гарантирует, что столбцы "ID", "LastName", и "FirstName"
+не будут принимать нулевые значения при создании таблицы "Persons":</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons (<br/>    ID int NOT NULL,<br/>    
+LastName varchar(255) NOT NULL,<br/>    FirstName varchar(255) 
+NOT NULL,<br/>    Age int<br/>); </div>
+
+</div>
+<hr/>
+<h2>NOT NULL в ALTER TABLE</h2>
+<p>Чтобы создать ограничение NOT NULL для столбца "Age", когда таблица "Persons" уже создана, используйте следующий SQL:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+MODIFY Age int NOT NULL;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>

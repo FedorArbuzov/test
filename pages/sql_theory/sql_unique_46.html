@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - UNIQUE</h1>
+<hr/>
+
+<hr/>
+<h2>UNIQUE</h2>
+<p>Ограничение UNIQUE гарантирует, что все значения в столбце будут разными.</p>
+<p>Как ограничения UNIQUE, так и ограничения PRIMARY KEY обеспечивают гарантию уникальности для столбца или набора столбцов.</p>
+<p>Ограничение первичного ключа автоматически имеет уникальное ограничение.</p>
+<p>Однако в каждой таблице может быть много уникальных ограничений, но только одно ограничение первичного ключа для каждой таблицы.</p>
+<hr/>
+<h2>Ограничение UNIQUE в CREATE TABLE</h2>
+<p>Следующий SQL создает уникальное ограничение для столбца "ID" при создании таблицы "Persons":</p>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL UNIQUE,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int<br/>
+);
+</div></div>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int,<br/>
+   
+UNIQUE (ID)<br/>
+);</div></div>
+<p>Чтобы назвать уникальное ограничение и определить уникальное ограничение для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE TABLE Persons
+(<br/>
+    ID int NOT NULL,<br/>
+   
+LastName varchar(255) NOT NULL,<br/>
+   
+FirstName varchar(255),<br/>
+   
+Age int,<br/>
+   
+CONSTRAINT UC_Person UNIQUE (ID,LastName)<br/>
+);</div></div>
+<hr/>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- Yandex.RTB R-A-1358578-4 -->
+<div id="yandex_rtb_R-A-1358578-4"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1358578-4',
+    blockId: 'R-A-1358578-4'
+  })
+})</script></div>
+<hr/>
+<h2>Ограничение UNIQUE в ALTER TABLE</h2>
+<p>Чтобы создать уникальное ограничение для столбца "ID", когда таблица уже создана, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD UNIQUE (ID);</div></div>
+<p>Чтобы назвать уникальное ограничение и определить уникальное ограничение для нескольких столбцов, используйте следующий синтаксис SQL:</p>
+<p><b>MySQL / SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+ADD CONSTRAINT UC_Person UNIQUE (ID,LastName);</div></div>
+<hr/>
+<h2>Ограничение UNIQUE с DROP</h2>
+<p>Чтобы удалить уникальное ограничение, используйте следующий SQL:</p>
+<p><b>MySQL:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+DROP INDEX UC_Person;</div>
+</div>
+<p><b>SQL Server / Oracle / MS Access:</b></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE Persons<br/>
+DROP CONSTRAINT UC_Person;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>

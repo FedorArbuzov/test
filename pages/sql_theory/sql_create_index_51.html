@@ -1,0 +1,66 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../w3.css">
+    </head>
+    <body>
+        <div class="w3-col l10 m12" id="main">
+<div id="mainLeaderboard" style="overflow:hidden;"><div id="yandex_rtb_R-A-1358578-1"></div><script>window.yaContextCb.push(()=>{Ya.Context.AdvManager.render({renderTo: 'yandex_rtb_R-A-1358578-1',blockId: 'R-A-1358578-1'})})</script></div><h1>SQL - CREATE INDEX</h1>
+<hr/>
+
+<hr/>
+<h2>CREATE INDEX</h2>
+<p>Инструкция CREATE INDEX используется для создания индексов в таблицах.</p>
+<p>Индексы используются для более быстрого извлечения данных из базы данных, чем в других случаях.Пользователи не могут видеть индексы, они просто используются для ускорения поиска/запросов.</p>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Обновление таблицы с индексами занимает больше времени, чем обновление таблицы без них (поскольку индексы также нуждаются в обновлении). Поэтому создавайте индексы только для тех столбцов, по которым будет часто выполняться поиск.</p>
+</div>
+<h3>Синтаксис CREATE INDEX</h3>
+<p>Создает индекс в таблице. Допускается дублирование значений:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE INDEX <em>index_name</em><br/>
+ON <em>table_name</em> (<em>column1</em>, <em>column2</em>, ...);</div></div>
+<h3>Синтаксис CREATE UNIQUE INDEX</h3>
+<p>Создает уникальный индекс для таблицы. Повторяющиеся значения не допускаются:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE UNIQUE INDEX <em>index_name</em><br/>
+ON <em>table_name</em> (<em>column1</em>, <em>column2</em>, ...);</div></div>
+<p><b>Примечание:</b> Синтаксис для создания индексов различается в разных базах данных. Поэтому: проверьте синтаксис для создания индексов в вашей базе данных.</p>
+<hr/>
+<h2>Пример CREATE INDEX</h2>
+<p>Приведенная ниже инструкция SQL создает индекс с именем "idx_lastname" в столбце "LastName" таблицы "Persons":</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE INDEX idx_lastname<br/>
+ON Persons (LastName);</div></div>
+<p>Если вы хотите создать индекс для комбинации столбцов, вы можете перечислить имена столбцов в круглых скобках, разделенных запятыми:</p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+CREATE INDEX idx_pname<br/>
+ON Persons (LastName, FirstName);</div></div>
+<hr/>
+<h2>DROP INDEX</h2>
+<p>Инструкция DROP INDEX используется для удаления индекса в таблице.</p>
+<p><strong>MS Access:</strong></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+DROP INDEX <em>index_name</em> ON <em>table_name</em>;</div></div>
+<p><strong>SQL Server:</strong></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+DROP INDEX <em>table_name</em>.<em>index_name</em>;</div></div>
+<p><strong>DB2/Oracle:</strong></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+DROP INDEX <em>index_name</em>;</div></div>
+<p><strong>MySQL:</strong></p>
+<div class="w3-example">
+<div class="w3-code notranslate sqlHigh">
+ALTER TABLE <em>table_name<br/></em>DROP INDEX <em>index_name</em>;</div></div>
+<br/>
+
+</div>
+    </body>
+</html>
