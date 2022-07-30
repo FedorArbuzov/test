@@ -81,6 +81,10 @@ app.get('/path-js/', function(req, res) {
   res.sendFile(path.join(__dirname, '/pages/js-path.html'));
 })
 
+app.get('/path-sql/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/pages/sql-path.html'));
+})
+
 console.log(`start on ${PORT}`);
 app.listen(PORT);
 
